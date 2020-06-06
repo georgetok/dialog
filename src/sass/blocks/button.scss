@@ -1,0 +1,141 @@
+.button {
+  @include reset-button;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: auto;
+  max-width: 100%;
+  min-width: 230px;
+  min-height: 50px;
+  padding: 0;
+
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+
+  border-radius: 4px;
+
+  cursor: pointer;
+
+  fill: $color-contrast;
+
+  transition:
+    color $transition-props,
+    background-color $transition-props;
+
+  span {
+    padding: 12px 20px;
+  }
+
+  svg {
+    margin-left: auto;
+    margin-right: 17px;
+  }
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.button--light {
+  color: $color-base;
+
+  background-color: #ffffff;
+
+  &:hover,
+  &:focus {
+    color: $color-accent;
+  }
+}
+
+.button--accent {
+  color: $color-contrast;
+
+  background-color: $color-accent;
+
+  &:hover,
+  &:focus {
+
+    background-color: $color-accent-dark;
+  }
+}
+
+.button--dark {
+  color: $color-contrast;
+
+  background-color: $color-base;
+
+  &:hover,
+  &:focus {
+
+    background-color: $color-accent;
+  }
+}
+
+.button--small {
+  min-width: 210px;
+  min-height: 40px;
+
+  font-size: 14px;
+  line-height: 19px;
+
+  span {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+}
+
+.button--hero {
+  @include mobile-md {
+    width: 100%;
+  }
+}
+
+.button--features-1 {
+  flex-shrink: 0;
+  margin-right: 50px;
+
+  span {
+    padding-right: 30px;
+  }
+
+  @include tablet {
+    max-width: 360px;
+    margin-right: 0;
+    margin-bottom: 18px;
+  }
+}
+
+.button--features-2 {
+  width: 235px;
+
+  @include tablet {
+    max-width: 360px;
+    width: 100%;
+  }
+}
+
+.button--install {
+  display: inline-flex;
+  margin-left: 30px;
+
+  @include tablet {
+    margin-left: 20px;
+  }
+
+  @include mobile-md {
+    display: none;
+  }
+
+  span {
+    padding-right: 31px;
+  }
+}
+
+.button--offer {
+  @include mobile-md {
+    width: 100%;
+  }
+}

@@ -1,0 +1,30 @@
+mixin button(text, props)
+  - let className
+    case props.styleType
+      when 'dark'
+        -className = 'button button--dark'
+      when 'accent'
+        -className = 'button button--accent'
+      when 'small'
+        -className = 'button button--small'
+      when 'light'
+      default
+        -className = 'button button--light'
+    -className = props.additionalClassName ? className + ' ' + props.additionalClassName : className;
+    if (props.isLink)
+      a(class!= className href!= props.href ? props.href : '#')
+        span= text
+        block
+    else
+      button(class!= className type!= props.type ? props.type : 'button')
+        span= text
+        block
+//- argTypes
+  text: string,
+  props: {
+    styleType: oneOf['dark', 'accent', 'light', small],
+    type: oneOf['button', 'submit', 'reset'],
+    isLink: bool,
+    href: string,
+    additionalClassName: string,
+  }

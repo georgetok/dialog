@@ -1,0 +1,18 @@
+mixin field-select(props)
+  .field-select(class= props.isSmall ? 'field-select--small' : null class= props.additionalClassName ? props.additionalClassName : null)
+    label
+      select(name=props.name required)
+        option(value="") Количество пользователей
+        each item in props.options
+          option(value=item)=item
+      span(class= props.isLabelHidden ? 'visually-hidden' : null)=props.label
+
+//- argTypes
+  props: {
+    name: string,
+    label: string,
+    isLabelHidden: bool,
+    isSmall: bool,
+    additionalClassName: string,
+    options: array,
+  }

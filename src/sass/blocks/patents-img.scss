@@ -1,0 +1,69 @@
+.patents-img {
+  padding-top: 5px;
+  padding-bottom: 32px;
+}
+
+.patents-img__wrapper {
+  @include make-block-wrapper;
+  padding-left: calc(var(--indent) - 20px);
+  padding-right: calc(var(--indent) - 20px);
+
+  @include laptop {
+    padding-left: calc(var(--indent) - 15px);
+    padding-right: calc(var(--indent) - 15px);
+  }
+
+  @include mobile-md {
+    padding-left: calc(var(--indent) - 10px);
+    padding-right: calc(var(--indent) - 10px);
+  }
+}
+
+.patents-img__list {
+  @include no-list;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.patents-img__list--end {
+  align-items: stretch;
+}
+
+.patents-img__item {
+  display: flex;
+  flex-direction: column;
+  //justify-content: flex-end;
+  width: calc(100% / 3 - 40px);
+  margin: 35px 20px;
+
+  @include laptop {
+    width: calc(100% / 3 - 30px);
+    margin: 25px 15px;
+  }
+
+  @include mobile-md {
+    width: calc(100% / 2 - 20px);
+    margin: 18px 10px;
+  }
+}
+
+.patents-img__box {
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+  margin-bottom: 29px;
+  border: 1px solid $color-accent-light;
+
+  @include laptop {
+    margin-bottom: 25px;
+  }
+
+  @include mobile-md {
+    margin-bottom: 19px;
+  }
+
+  img {
+    display: block;
+    width: 100%;
+  }
+}

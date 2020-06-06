@@ -1,0 +1,73 @@
+.field-select {
+  color: $color-gray-dark;
+
+  label {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  select {
+    padding-top: 6px;
+    padding-bottom: 13px;
+    padding-right: 25px;
+    font-size: 21px;
+    line-height: 27px;
+    letter-spacing: 0.275px;
+    color: inherit;
+    background-color: inherit;
+    background-image: url("../img/library/arrow-select.svg");
+    background-repeat: no-repeat;
+    background-position: right 6px top 16px;
+    border: none;
+    border-radius: 0;
+    border-bottom: 1px solid $color-gray-light;
+    cursor: pointer;
+    appearance: none;
+    transition: border-bottom $transition-props;
+
+    @include mobile-md {
+      padding-bottom: 15px;
+      font-size: 18px;
+      line-height: 23px;
+    }
+  }
+
+  option {
+    font-weight: 400;
+  }
+
+  span {
+    font-size: 14px;
+    line-height: 18px;
+    letter-spacing: 0.01em;
+    opacity: 0;
+    color: $color-accent;
+    transition: opacity $transition-props;
+  }
+
+  select:hover,
+  select:focus {
+    color: $color-base;
+    outline: none;
+    border-bottom: 1px solid $color-accent;
+  }
+
+  select:focus + span {
+    opacity: 1;
+  }
+
+  select:valid {
+    color: $color-base;
+  }
+
+  select:valid + span {
+    opacity: 1;
+  }
+}
+
+.field-select--small {
+  select {
+    font-size: 18px;
+    line-height: 23px;
+  }
+}

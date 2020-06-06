@@ -1,0 +1,19 @@
+mixin field-text(props)
+  .field-text(class= props.isSmall ? 'field-text--small' : null class= props.additionalClassName ? props.additionalClassName : null)
+    label
+      input(type=props.type name=props.name, pattern= props.pattern ? props.pattern : null placeholder= props.placeholder ? props.placeholder : null  title= props.title ? props.title : null required= props.isRequired ? 'required' : null)
+      span(class= props.isLabelHidden ? 'visually-hidden' : null)=props.label
+
+//- argTypes
+  props: {
+    type: string, oneOf['text', 'email', 'tel', etc]
+    name: string,
+    label: string,
+    isLabelHidden: bool,
+    pattern: string,
+    placeholder: string,
+    title: string,
+    isRequired: bool,
+    isSmall: bool,
+    additionalClassName: string,
+  }

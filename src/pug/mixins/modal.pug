@@ -1,0 +1,6 @@
+mixin modal(id)
+  .modal(id!=id)
+    .modal__overlay
+      .modal__content
+        button(type="button" aria-label="Закрыть").modal__close
+        block

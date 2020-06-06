@@ -1,0 +1,553 @@
+extends ../global/layout
+include ../mixins/svg
+include ../mixins/button
+include ../mixins/button-play
+include ../mixins/field-text
+include ../mixins/field-select
+include ../mixins/field-checkbox
+include ../mixins/field-textarea
+include ../mixins/card-blog
+
+block variables
+  -
+    const lang = "ru";
+    const title = "UI-KIT";
+
+block content
+  -
+    const typography = [
+      {title: 'H1', classNameMod: '--h1', content: '<h1>Dialog помогает командам стать эффективнее</h1>'},
+      {title: 'H2', classNameMod: '--h2', content: '<h2>Dialog помогает командам стать эффективнее</h2>'},
+      {title: 'H3', classNameMod: '--h3', content: '<h3>Dialog помогает командам стать эффективнее</h3>'},
+      {title: 'H4', classNameMod: '--h4', content: '<h4>Dialog помогает командам стать эффективнее</h4>'},
+      {title: 'H5', classNameMod: '--h5', content: '<h5>Dialog помогает командам стать эффективнее</h5>'},
+      {title: 'H6', classNameMod: '--h6', content: '<h6>Dialog помогает командам стать эффективнее</h6>'},
+      {title: 'Subhead', classNameMod: '--subhead', content: '<strong>Корпоративный мессенджер для совместной работы и безопасного общения</strong>'},
+      {title: 'txt_blog', classNameMod: '--blog', content: '<p>Оперативное взаимодействие и обмен данными важны для компаний любого размера и профиля деятельности. Мы реализовали решение, которое позволит нам не только оптимизировать процесс коммуникации.</p> <p>Но и повысить эффективность совместной работы за счет создания единого цифрового рабочего пространства.</p>'},
+      {title: 'txt_big', classNameMod: '--big', content: '<p>Оперативное взаимодействие и обмен данными важны для компаний любого размера и профиля деятельности. Мы реализовали решение, которое позволит нам не только оптимизировать процесс коммуникации.</p> <p>Но и повысить эффективность совместной работы за счет создания единого цифрового рабочего пространства.</p>'},
+      {title: 'txt', classNameMod: '--txt', content: '<p>Оперативное взаимодействие и обмен данными важны для компаний любого размера и профиля деятельности. Мы реализовали решение, которое позволит нам не только оптимизировать процесс коммуникации.</p> <p>Но и повысить эффективность совместной работы за счет создания единого цифрового рабочего пространства.</p>'},
+      {title: 'txt_bold', classNameMod: '--bold', content: '<p>Оперативное взаимодействие и обмен данными важны для компаний любого размера и профиля деятельности. Мы реализовали решение, которое позволит нам не только оптимизировать процесс коммуникации.</p> <p>Но и повысить эффективность совместной работы за счет создания единого цифрового рабочего пространства.</p>'},
+      {title: 'txt_sm', classNameMod: '--sm', content: '<p>Оперативное взаимодействие и обмен данными важны для компаний любого размера и профиля деятельности. Мы реализовали решение, которое позволит нам не только оптимизировать процесс коммуникации.</p> <p>Но и повысить эффективность совместной работы за счет создания единого цифрового рабочего пространства.</p>'},
+      {title: 'txt_sm_bold', classNameMod: '--sm-bold', content: '<p>Оперативное взаимодействие и обмен данными важны для компаний любого размера и профиля деятельности. Мы реализовали решение, которое позволит нам не только оптимизировать процесс коммуникации.</p> <p>Но и повысить эффективность совместной работы за счет создания единого цифрового рабочего пространства.</p>'},
+    ];
+    const listCompact = [
+      'Интеграция с Active Directory AD / LDAP',
+      'DLP – предотвращение утечек',
+      'Интеграция с Антивирусным ПО',
+      'SIEM — идентификация угроз',
+      'Шифрование передачи данных по протоколам TLS, DTLS',
+      'Независимый аудит безопасности ПО',
+    ];
+    const list = [
+      'Мессенджер dialog соответствует требованиям Единого реестра российских программ для электронных вычислительных машин и баз данных и состоит в реестре отечественного ПО.',
+      'Компания является членом Ассоциации документальной электросвязи (АДЭ).',
+      'ООО «Диалог» входит в реестр Организаторов Распространения Информации (ОРИ) Роскомнадзор.',
+    ];
+    const listBlog = [
+      'Считаете ли вы себя ценным членом команды?',
+      'Считаете ли, что я достаточно прислушиваюсь к вашим рекомендациям?',
+      'Что я делаю хорошо, а что необходимо улучшить?',
+      'Что вы делаете не так и хотите исправить?',
+      'Как, по-вашему, выглядит идеальная версия этого проекта?',
+      'Какие проблемы и интересные задачи довелось решать в последнее время и насколько успешно?',
+      'Какие цели вы ставили перед собой и каковы достижения?',
+      'Опишите любые другие аспекты работы, которые кажутся вам важными.',
+    ];
+    const layout = [
+      {
+        title: 'Row',
+        classNameRowMod: '',
+        cols:[
+          {
+            classNameColMod: '--2'
+          },
+        ],
+      },
+      {
+        title: 'Row top',
+        classNameRowMod: '--top',
+        cols:[
+          {
+            classNameColMod: '--2'
+          },
+          {
+            classNameColMod: '--2'
+          },
+        ],
+      },
+      {
+        title: 'Row middle',
+        classNameRowMod: '--middle',
+        cols:[
+          {
+            classNameColMod: '--2'
+          },
+          {
+            classNameColMod: '--2'
+          },
+        ],
+      },
+      {
+        title: 'Row bottom',
+        classNameRowMod: '--bottom',
+        cols:[
+          {
+            classNameColMod: '--2'
+          },
+          {
+            classNameColMod: '--2'
+          },
+        ],
+      },
+      {
+        title: 'Row around',
+        classNameRowMod: '--around',
+        cols:[
+          {
+            classNameColMod: '--2'
+          },
+          {
+            classNameColMod: '--2'
+          },
+          {
+            classNameColMod: '--2'
+          },
+        ],
+      },
+      {
+        title: 'Row between',
+        classNameRowMod: '--between',
+        cols:[
+          {
+            classNameColMod: '--2'
+          },
+          {
+            classNameColMod: '--2'
+          },
+          {
+            classNameColMod: '--2'
+          },
+        ],
+      },
+      {
+        title: 'Col-1',
+        classNameRowMod: '--transparent',
+        cols:[
+          {
+            classNameColMod: '--1'
+          },
+        ],
+      },
+      {
+        title: 'Col-2',
+        classNameRowMod: '--transparent',
+        cols:[
+          {
+            classNameColMod: '--2'
+          },
+        ],
+      },
+      {
+        title: 'Col-3',
+        classNameRowMod: '--transparent',
+        cols:[
+          {
+            classNameColMod: '--3'
+          },
+        ],
+      },
+      {
+        title: 'Col-4',
+        classNameRowMod: '--transparent',
+        cols:[
+          {
+            classNameColMod: '--4'
+          },
+        ],
+      },
+      {
+        title: 'Col-5',
+        classNameRowMod: '--transparent',
+        cols:[
+          {
+            classNameColMod: '--5'
+          },
+        ],
+      },
+      {
+        title: 'Col-6',
+        classNameRowMod: '--transparent',
+        cols:[
+          {
+            classNameColMod: '--6'
+          },
+        ],
+      },
+      {
+        title: 'Col-7',
+        classNameRowMod: '--transparent',
+        cols:[
+          {
+            classNameColMod: '--7'
+          },
+        ],
+      },
+      {
+        title: 'Col-8',
+        classNameRowMod: '--transparent',
+        cols:[
+          {
+            classNameColMod: '--8'
+          },
+        ],
+      },
+      {
+        title: 'Col-9',
+        classNameRowMod: '--transparent',
+        cols:[
+          {
+            classNameColMod: '--9'
+          },
+        ],
+      },
+      {
+        title: 'Col-10',
+        classNameRowMod: '--transparent',
+        cols:[
+          {
+            classNameColMod: '--10'
+          },
+        ],
+      },
+      {
+        title: 'Col-11',
+        classNameRowMod: '--transparent',
+        cols:[
+          {
+            classNameColMod: '--11'
+          },
+        ],
+      },
+      {
+        title: 'Col-12',
+        classNameRowMod: '--transparent',
+        cols:[
+          {
+            classNameColMod: '--12'
+          },
+        ],
+      },
+      {
+        title: 'Col-offset-1',
+        classNameRowMod: '--transparent',
+        cols:[
+          {
+            classNameColMod: '--offset-1'
+          },
+        ],
+      },
+      {
+        title: 'Col-offset-2',
+        classNameRowMod: '--transparent',
+        cols:[
+          {
+            classNameColMod: '--offset-2'
+          },
+        ],
+      },
+      {
+        title: 'Col-offset-3',
+        classNameRowMod: '--transparent',
+        cols:[
+          {
+            classNameColMod: '--offset-3'
+          },
+        ],
+      },
+      {
+        title: 'Col-offset-4',
+        classNameRowMod: '--transparent',
+        cols:[
+          {
+            classNameColMod: '--offset-4'
+          },
+        ],
+      },
+      {
+        title: 'Col-offset-5',
+        classNameRowMod: '--transparent',
+        cols:[
+          {
+            classNameColMod: '--offset-5'
+          },
+        ],
+      },
+      {
+        title: 'Col-offset-6',
+        classNameRowMod: '--transparent',
+        cols:[
+          {
+            classNameColMod: '--offset-6'
+          },
+        ],
+      },
+      {
+        title: 'Col-offset-7',
+        classNameRowMod: '--transparent',
+        cols:[
+          {
+            classNameColMod: '--offset-7'
+          },
+        ],
+      },
+      {
+        title: 'Col-offset-8',
+        classNameRowMod: '--transparent',
+        cols:[
+          {
+            classNameColMod: '--offset-8'
+          },
+        ],
+      },
+      {
+        title: 'Col-offset-9',
+        classNameRowMod: '--transparent',
+        cols:[
+          {
+            classNameColMod: '--offset-9'
+          },
+        ],
+      },
+      {
+        title: 'Col-offset-10',
+        classNameRowMod: '--transparent',
+        cols:[
+          {
+            classNameColMod: '--offset-10'
+          },
+        ],
+      },
+      {
+        title: 'Col-offset-11',
+        classNameRowMod: '--transparent',
+        cols:[
+          {
+            classNameColMod: '--offset-11'
+          },
+        ],
+      },
+      {
+        title: 'Col-offset-0',
+        classNameRowMod: '--transparent',
+        cols:[
+          {
+            classNameColMod: '--offset-0'
+          },
+        ],
+      },
+    ]
+
+  .ui-kit
+    .ui-kit__wrapper
+      .ui-kit__typography-text.ui-kit__typography-text--h1.ui-kit__title
+        h1 Библиотека компонентов
+      ul
+        li.ui-kit__block
+          .ui-kit__subtitle
+            h6 Links
+          .ui-kit__content.ui-kit__content--item-indent
+            ul
+              li
+                a(class="link link--simple" href="#!") Ссылка
+              li
+                a(class="link link--with-icon" href="#!") Узнать подробнее
+                  +svg('arrow-right', 16, 15)
+              li
+                a(class="link link--with-icon" href="#!") Dialog Server
+                  +svg('arrow-bottom', 15, 16)
+              li
+                a(class="link link--with-icon link--small" href="#!") Dialog Server
+                  +svg('arrow-bottom-small', 14, 14)
+        li.ui-kit__block
+          .ui-kit__subtitle
+            h6 Buttons
+          .ui-kit__content.ui-kit__content--item-indent
+            ul
+              li
+                +button('Оставить заявку', {})
+              li
+                +button('Отправить заявку', {styleType: 'accent'})
+              li
+                +button('Смотреть еще', {styleType: 'dark'})
+              li
+                +button('Получить предложение', {styleType: 'small', additionalClassName: 'button--accent'})
+              li
+                +button('Узнать стоимость лицензии', {styleType: 'accent'})
+                  +svg('arrow-right', 16, 15)
+              li
+                +button('Технологические партнеры', {styleType: 'dark'})
+                  +svg('arrow-right', 16, 15)
+              li
+                +button('Скачать  для macOS', {styleType: 'dark'})
+                  +svg('arrow-bottom', 15, 16)
+              li
+                +button-play()
+
+        li.ui-kit__block
+          .ui-kit__subtitle
+            h6 Icons
+          .ui-kit__content.ui-kit__content--item-indent
+            ul
+              li
+                .round-icon
+                  +svg('icon-bubble-lock', 52, 47)
+              li
+                .round-icon.round-icon--small
+                  +svg('icon-hands', 35, 30)
+        li.ui-kit__block
+          .ui-kit__subtitle
+            h6 Form fields
+          .ui-kit__content.ui-kit__content--item-indent
+            ul
+              li
+                +field-text({
+                  type: 'text',
+                  name: 'name',
+                  label: 'Ваше имя',
+                  isLabelHidden: false,
+                  placeholder: 'Ваше имя',
+                  isRequired: true,
+                  isSmall: false,
+                })
+              li
+                +field-text({
+                  type: 'text',
+                  name: 'name',
+                  label: 'Ваше имя',
+                  isLabelHidden: false,
+                  placeholder: 'Ваше имя',
+                  isRequired: true,
+                  isSmall: true,
+                })
+              li
+                +field-select({
+                  name: 'users',
+                  label: 'Количество пользователей',
+                  isLabelHidden: false,
+                  isSmall: false,
+                  options: ['1 - 100', '101 - 500', '501 и больше'],
+                })
+              li
+                +field-select({
+                  name: 'users',
+                  label: 'Количество пользователей',
+                  isLabelHidden: false,
+                  isSmall: true,
+                  options: ['1-100', '101-500', '501 и больше'],
+                })
+              li
+                +field-checkbox({
+                  name: 'accepted',
+                  label: 'Я согласен на обработку персональных данных',
+                  isRequired: true,
+                  isChecked: true,
+                })
+              li
+                +field-checkbox({
+                  name: 'accepted',
+                  label: 'Я согласен на обработку персональных данных',
+                  isRequired: true,
+                  isChecked: false,
+                })
+              li
+                +field-textarea({
+                  name: 'message',
+                  label: 'Чем мы можем вам помочь?',
+                  placeholder: 'Добрый день! Отправляю вам резюме на вакансию Ведущего разработчика',
+                  isRequired: true,
+                })
+        li.ui-kit__block
+          .ui-kit__subtitle
+            h6 Карточка блога
+          .ui-kit__content.ui-kit__content--item-indent
+            .ui-kit__card-wrap
+              +card-blog({
+                href: '#!',
+                imgPath: 'img/blog-1-desktop',
+                imgType: 'jpg',
+                imgAlt: 'Изображение приложения',
+                imgWidth: 380,
+                title: 'Корпоративный мессенджер для локальной сети',
+                text: 'Ключевые особенности и проблемы применения массовых и коммерческих онлайн и оффлайн средств общения для внутренних коммуникаций',
+                date: '27 февраля, 2020',
+                time: '1 мин',
+              })
+              +card-blog({
+                href: '#!',
+                imgPath: 'img/blog-1-desktop',
+                imgType: 'jpg',
+                imgAlt: 'Изображение приложения',
+                imgWidth: 380,
+                title: 'Чат-боты для бизнеса',
+                text: 'Как оптимизировать процессы и повысить продажи, используя чат-боты',
+                date: '27 февраля, 2020',
+                time: '1 мин',
+              })
+              +card-blog({
+                href: '#!',
+                imgPath: 'img/blog-1-desktop',
+                imgType: 'jpg',
+                imgAlt: 'Изображение приложения',
+                imgWidth: 380,
+                title: 'Корпоративный мессенджер для локальной сети',
+                text: 'Ключевые особенности и проблемы применения массовых и коммерческих онлайн и оффлайн средств общения для внутренних коммуникаций',
+                date: '27 февраля, 2020',
+                time: '1 мин',
+              })
+        li
+          ul
+            each item in typography
+              - const itemClassName = `ui-kit__typography-text ui-kit__typography-text${item.classNameMod}`
+              li.ui-kit__block
+                .ui-kit__subtitle
+                  h6= item.title
+                .ui-kit__content
+                  div(class!= itemClassName) !{item.content}
+            li.ui-kit__block
+              .ui-kit__subtitle
+                h6 list_compact
+              .ui-kit__content
+                ul
+                  each item in listCompact
+                    li.ui-kit__typography-text.ui-kit__typography-text--list-compact
+                      p=item
+            li.ui-kit__block
+              .ui-kit__subtitle
+                h6 list
+              .ui-kit__content
+                ul
+                  each item in list
+                    li.ui-kit__typography-text.ui-kit__typography-text--list
+                      p=item
+            li.ui-kit__block
+              .ui-kit__subtitle
+                h6 list_blog
+              .ui-kit__content
+                ul
+                  each item in listBlog
+                    li.ui-kit__typography-text.ui-kit__typography-text--list-blog
+                      p=item
+        li
+          ul
+            each item in layout
+              li.ui-kit__block.ui-kit__block--layout
+                .ui-kit__subtitle
+                  h6=item.title
+                .ui-kit__content
+                  .ui-kit__layout
+                    -const rowClassName = item.classNameRowMod ? `ui-kit__row ui-kit__row${item.classNameRowMod}` : 'ui-kit__row';
+                    div(class!=rowClassName)
+                      each col in item.cols
+                        -const colClassName = `ui-kit__col ui-kit__col${col.classNameColMod}`;
+                        div(class!=colClassName)
+

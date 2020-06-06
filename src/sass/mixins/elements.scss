@@ -1,0 +1,93 @@
+@mixin content-box-component {
+  box-sizing: content-box;
+}
+
+@mixin visually-hidden {
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+
+  border: 0;
+
+  clip: rect(0 0 0 0);
+}
+
+@mixin no-hidden {
+  position: static;
+
+  width: 100%;
+  height: auto;
+  margin: 0;
+  padding: 0;
+  overflow: auto;
+
+  border: none;
+
+  clip: auto;
+}
+
+@mixin no-list {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+@mixin reset-button {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+
+  background-color: transparent;
+  border: 0;
+  box-shadow: 0;
+}
+
+@mixin reset-toggle-button {
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+
+  clip: rect(0 0 0 0);
+}
+
+@mixin insert-icon-bg($width, $height, $url) {
+  background-image: url($url);
+  background-size: $width $height;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+@mixin make-block-wrapper {
+  width: 100%;
+  max-width: $width-desktop;
+  margin: 0 auto;
+}
+
+@mixin interactive-opacity {
+  transition: opacity $transition-props;
+
+  &:hover,
+  &:focus {
+    opacity: 0.7;
+  }
+
+  &:active {
+    opacity: 0.5;
+  }
+}
+
+@mixin active-opacity {
+  transition: opacity $transition-props;
+
+  &:active {
+    opacity: 0.5;
+  }
+}

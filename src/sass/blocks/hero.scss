@@ -1,0 +1,127 @@
+.hero__wrapper {
+  @include make-block-wrapper;
+
+  display: flex;
+  align-items: center;
+  padding-left: var(--indent);
+  padding-right: var(--indent);
+
+  @include tablet {
+    flex-direction: column-reverse;
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+.hero__left {
+  width: 40%;
+  margin-right: auto;
+  //padding-top: 84px;
+  padding-right: 90px;
+
+  @include laptop {
+    //padding-top: 42px;
+    padding-right: 10px;
+  }
+
+  @include tablet {
+    width: calc(100% - (var(--indent) * 2));
+    margin-bottom: 60px;
+    margin-left: var(--indent);
+    margin-right: var(--indent);
+    padding-right: 35%;
+  }
+
+  @include mobile-md {
+    //padding-top: 25px;
+    padding-right: 0;
+  }
+}
+
+.hero__title {
+  @include typography-h1;
+
+  margin-bottom: 28px;
+  letter-spacing: -0.01em;
+
+  @include mobile-md {
+    margin-bottom: 10px;
+  }
+}
+
+.hero__text {
+  @include typography-txt-blog;
+
+  &:not(:last-child) {
+    margin-bottom: 30px;
+
+    @include mobile-md {
+      margin-bottom: 20px;
+    }
+  }
+}
+
+.hero__right {
+  width: 56%;
+  padding-top: 90px;
+  padding-bottom: 75px;
+
+  @include laptop {
+    padding-top: 100px;
+    padding-bottom: 103px;
+  }
+
+  @include tablet {
+    position: relative;
+    width: 100%;
+    padding-bottom: 25px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 34px;
+      right: -29px;
+      width: 80px;
+      height: 80px;
+      background-image: url("../img/bg-hero-round-s.svg");
+      background-repeat: no-repeat;
+      background-position: 0 0;
+      background-size: 80px 80px;
+    }
+  }
+}
+
+.hero__img {
+  width: 100%;
+
+  @include tablet {
+    position: relative;
+    max-width: 684px;
+    margin: 0 auto;
+
+    @include mobile-md {
+      width: calc(100% - (var(--indent) * 2));
+      margin: 0 auto;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: -25px;
+      left: -40px;
+      width: 109px;
+      height: 109px;
+      background-image: url("../img/bg-hero-square.svg");
+      background-repeat: no-repeat;
+      background-position: 0 0;
+      background-size: 109px 109px;
+    }
+  }
+
+  img {
+    position: relative;
+    z-index: 2;
+    display: block;
+    width: 100%;
+  }
+}

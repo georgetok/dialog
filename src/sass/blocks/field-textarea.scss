@@ -1,0 +1,48 @@
+.field-textarea {
+  color: $color-gray-dark;
+
+  label {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  textarea {
+    width: 100%;
+    min-height: 120px;
+    padding: 12px 14px;
+    font-size: 16px;
+    line-height: 24px;
+    appearance: none;
+    color: inherit;
+    border: 1px solid $color-gray-light;
+    border-radius: 2px;
+    background-color: inherit;
+    transition: border $transition-props;
+    resize: none;
+  }
+
+  textarea::placeholder {
+    color: $color-base;
+  }
+
+  span {
+    margin-bottom: 15px;
+    font-size: 18px;
+    line-height: 23px;
+    letter-spacing: 0.275px;
+    color: inherit;
+    transition: color $transition-props;
+  }
+
+  textarea:hover,
+  textarea:focus {
+    color: $color-base;
+    outline: 0;
+    border: 1px solid $color-accent;
+  }
+
+  textarea:hover + span,
+  textarea:focus + span {
+    color: $color-accent;
+  }
+}

@@ -1,0 +1,315 @@
+.quote {
+  padding-top: 101px;
+  padding-bottom: 95px;
+
+  @include laptop {
+    padding-bottom: 70px;
+  }
+
+  @include mobile-md {
+    padding-top: 50px;
+    padding-bottom: 53px;
+  }
+}
+
+.quote__wrapper {
+  @include make-block-wrapper;
+  padding-left: var(--indent);
+  padding-right: var(--indent);
+
+  @include mobile-md {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  h2 {
+    @include typography-h2;
+    margin-bottom: 42px;
+    letter-spacing: -0.005em;
+
+    @include laptop {
+      margin-bottom: 52px;
+    }
+
+    @include mobile-md {
+      margin-bottom: 33px;
+      padding-left: var(--indent);
+      padding-right: var(--indent);
+    }
+  }
+}
+
+.quote__desc {
+  display: flex;
+  align-items: center;
+  margin-bottom: 36px;
+
+  @include laptop {
+    margin-bottom: 50px;
+  }
+
+  @include mobile-md {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 30px;
+    padding-left: var(--indent);
+    padding-right: var(--indent);
+  }
+
+  p {
+    @include typography-txt-blog;
+    max-width: 770px;
+    width: 85%;
+
+    @include mobile-md {
+      width: 100%;
+    }
+  }
+}
+
+.quote__desc-icon {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  //align-items: center;
+  width: 104px;
+  height: 104px;
+  margin-right: 30px;
+  border: 1px solid $color-accent-light;
+  box-shadow:
+    0 4px 12px rgba(47, 27, 73, 0.12),
+    0 1px 1px rgba(47, 41, 64, 0.08);
+  border-radius: 12px;
+
+  @include laptop {
+    width: 80px;
+    height: 80px;
+    margin-right: 20px;
+  }
+
+  @include mobile-md {
+    margin-right: 0;
+    margin-bottom: 13px;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 72px;
+    height: 72px;
+    border-radius: 50%;
+    background-image: linear-gradient(51.27deg, #00713d -1.09%, #3ca022 90.1%);
+
+    @include laptop {
+      width: 55px;
+      height: 55px;
+    }
+  }
+
+  svg {
+    position: relative;
+    margin-top: 28px;
+
+    @include laptop {
+      width: 44px;
+      height: 44px;
+      margin-top: 21px;
+    }
+  }
+}
+
+.quote__content {
+  display: flex;
+  margin-bottom: 32px;
+  padding-top: 30px;
+  padding-bottom: 20px;
+  border-top: 1px solid $color-accent-light;
+  border-bottom: 1px solid $color-accent-light;
+  background-image: url("../img/bg-quote.svg");
+  background-repeat: no-repeat;
+  background-position: 0 30px;
+  background-size: 153px 120px;
+
+  @include laptop {
+    margin-bottom: 26px;
+    padding-bottom: 37px;
+    background-position: 0 36px;
+    background-size: 120px 92px;
+  }
+
+  @include mobile-md {
+    position: relative;
+    flex-direction: column;
+    margin-bottom: 22px;
+    padding-bottom: 18px;
+    background-position: -32px 17px;
+    border-top: 0;
+    border-bottom: 0;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: var(--indent);
+      width: calc(100% - (var(--indent) * 2));
+      height: 1px;
+      background-color: $color-accent-light;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: var(--indent);
+      width: calc(100% - (var(--indent) * 2));
+      height: 1px;
+      background-color: $color-accent-light;
+    }
+  }
+}
+
+.quote__content-text {
+  width: 77%;
+  padding-top: 40px;
+  padding-bottom: 30px;
+  padding-left: 106px;
+  padding-right: 40px;
+
+  @include laptop {
+    margin-right: 4px;
+    padding-top: 40px;
+    padding-bottom: 30px;
+    padding-left: 79px;
+    padding-right: 55px;
+  }
+
+  @include mobile-md {
+    width: calc(100% - (var(--indent) * 2));
+    margin-left: var(--indent);
+    margin-right: var(--indent);
+    padding-top: 11px;
+    padding-bottom: 22px;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  p {
+    @include typography-txt-big;
+  }
+}
+
+.quote__content-avatar {
+  width: 23%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  @include laptop {
+    width: 22%;
+    justify-content: flex-end;
+  }
+
+  @include mobile-md {
+    flex-direction: row;
+    justify-content: flex-start;
+    width: calc(100% - (var(--indent) * 2));
+    margin-left: var(--indent);
+    margin-right: var(--indent);
+    margin-bottom: 13px;
+  }
+}
+
+.quote__avatar-img {
+  position: relative;
+  margin-bottom: 13px;
+
+  @include mobile-md {
+    max-width: 150px;
+    width: 41%;
+    margin-right: 23px;
+    margin-bottom: 0;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: -1px;
+    right: -16px;
+    width: 58px;
+    height: 58px;
+    background-image: url("../img/logo-sber.svg");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-size: 58px 58px;
+
+    @include laptop {
+      bottom: 0;
+      right: -13px;
+    }
+
+    @include mobile-md {
+      bottom: -4px;
+      right: -9px;
+      width: 48px;
+      height: 48px;
+      background-size: 48px 48px;
+    }
+  }
+
+  img {
+    display: block;
+    border-radius: 50%;
+
+    @include mobile-md {
+      width: 100%;
+    }
+  }
+}
+
+.quote__avatar-wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+
+  @include mobile-md {
+    max-width: 170px;
+    width: 52%;
+  }
+}
+
+.quote__avatar-name {
+  padding-left: 5px;
+  margin-bottom: 7px;
+
+  @include laptop {
+    margin-bottom: 5px;
+    padding-left: 0;
+  }
+
+  @include mobile-md {
+    margin-top: 15px;
+  }
+
+  p {
+    @include typography-h6;
+  }
+}
+
+.quote__avatar-post {
+  padding-left: 5px;
+
+  @include laptop {
+    margin-bottom: 9px;
+    padding-left: 0;
+  }
+
+  p {
+    margin: 0;
+    font-size: 14px;
+    line-height: 20px;
+    color: $color-gray-dark;
+  }
+}

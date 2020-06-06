@@ -1,0 +1,30 @@
+include ./picture
+include ./svg
+
+mixin card-blog(props)
+  .card__item(class= props.additionalClassName ? props.additionalClassName : null)
+    a(href=props.href).card__card
+      .card__img
+        +picture(props.imgPath, props.imgType, props.imgAlt, props.imgWidth)
+      .card__content
+        h3=props.title
+        p=props.text
+        .card__info
+          b=props.date
+          div
+            +svg('icon-watch', 17, 17)
+            span=props.time
+
+//- argTypes
+  props: {
+    href: string,
+    imgPath: string,
+    imgType: string,
+    imgAlt: string,
+    imgWidth: number,
+    title: string,
+    text: string,
+    date: string,
+    time: string,
+    additionalClassName: string,
+  }

@@ -1,0 +1,527 @@
+.main-nav {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+
+  @include laptop {
+    justify-content: flex-start;
+    flex-direction: column;
+  }
+}
+
+.main-nav__top-links {
+  @include no-list;
+
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+
+  @include laptop {
+    flex-direction: column;
+
+    & > li {
+      width: 100%;
+    }
+  }
+}
+
+.main-nav__link,
+.main-nav__button {
+  @include reset-button;
+
+  position: relative;
+  z-index: 3;
+  display: block;
+
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 19px;
+  color: $color-base;
+
+  fill: $color-base;
+
+  cursor: pointer;
+
+  transition: color $transition-props, fill $transition-props;
+
+  @include laptop {
+    display: flex;
+    padding: 10px 40px 14px;
+
+    font-size: 16px;
+    line-height: 25px;
+
+    border-bottom: 1px solid $color-accent-light;
+  }
+
+  @include mobile-md {
+    padding: 10px 20px 14px;
+  }
+
+  &:hover,
+  &:focus,
+  &--expanded {
+    outline: none;
+
+    color: $color-accent;
+
+    fill: $color-accent;
+
+    @include laptop {
+      color: $color-base;
+    }
+  }
+}
+
+.main-nav__link {
+  padding-right: 30px;
+
+  &--no-padding {
+    padding-right: 0;
+
+    @include laptop {
+      border-bottom: none;
+    }
+
+    @include mobile-md {
+      padding: 0;
+    }
+  }
+
+  &--included {
+    width: 235px;
+    margin-bottom: 11px;
+    padding: 5px 20px 5px 17px;
+
+    @include laptop {
+      width: 100%;
+      padding: 10px 40px 14px 65px;
+      margin-bottom: 0;
+    }
+
+    @include mobile-md {
+      padding: 10px 40px 14px 31px;
+    }
+  }
+
+  span:nth-child(1) {
+    @include laptop {
+      display: none;
+    }
+  }
+
+  span:nth-child(2) {
+    display: none;
+
+    @include laptop {
+      display: inline;
+    }
+  }
+}
+
+.main-nav__button {
+  display: inline-flex;
+  align-items: center;
+  padding: 0;
+
+  svg {
+    margin-left: 5px;
+    margin-right: 23px;
+
+    transition: transform $transition-props;
+  }
+
+  @include laptop {
+    display: flex;
+    justify-content: space-between;
+
+    width: 100%;
+    padding: 10px 40px 14px;
+
+    svg {
+      display: none;
+    }
+
+    &::after {
+      content: "";
+
+      display: block;
+
+      width: 25px;
+      height: 25px;
+      margin-left: 20px;
+
+      border-radius: 50%;
+
+      background-color: $color-contrast;
+      background-image: url("../img/header/plus.svg");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 16px 16px;
+
+      box-shadow: 0 2px 4px rgba(47, 27, 73, 0.08), 0 1px 1px rgba(47, 41, 64, 0.1);
+    }
+  }
+
+  @include mobile-md {
+    padding: 10px 20px 14px;
+  }
+
+  &--expanded {
+    @include laptop {
+      &::after {
+        background-image: url("../img/header/minimize.svg");
+        background-size: 15px 16px;
+      }
+    }
+  }
+}
+
+.main-nav__top-block {
+  position: relative;
+}
+
+.main-nav__user-actions {
+  align-self: flex-start;
+
+  display: flex;
+  align-items: center;
+
+  padding-left: 7px;
+
+  @include laptop {
+    width: 100%;
+    padding: 20px 43px 30px 39px;
+    justify-content: space-between;
+  }
+
+  @include mobile-md {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+
+    padding: 20px 20px 30px 21px;
+  }
+}
+
+.main-nav__action-btn {
+  margin-right: 20px;
+
+  @include mobile-md {
+    width: 100%;
+    max-width: 400px;
+    min-height: 50px;
+    margin: 0 0 10px;
+
+
+    font-size: 16px;
+    line-height: 20px;
+  }
+}
+
+.main-nav__included-button {
+  @include reset-button;
+
+  position: relative;
+  z-index: 3;
+
+  width: 240px;
+
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 19px;
+  color: $color-base;
+
+  fill: $color-accent;
+
+  cursor: pointer;
+
+  @include laptop {
+    width: 100%;
+    padding: 11px 46px 14px 65px;
+
+    font-size: 16px;
+    line-height: 25px;
+
+    border-bottom: 1px solid $color-accent-light;
+  }
+
+  @include mobile-md {
+    padding: 11px 25px 14px 31px;
+  }
+
+  &:not(:last-child) {
+    padding-bottom: 10px;
+
+    @include laptop {
+      padding-bottom: 14px;
+    }
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  span {
+    width: 100%;
+    padding: 5px 15px 5px 10px;
+
+    display: inline-flex;
+    justify-content: space-between;
+    align-items: center;
+
+    border-radius: 2px;
+
+    background-color: transparent;
+
+    transition: background-color $transition-props;
+
+    @include laptop {
+      padding: 0;
+
+      &::after {
+        content: "";
+
+        display: block;
+
+        width: 13px;
+        height: 9px;
+        margin-left: 20px;
+
+        background-image: url("../img/header/tick-down.svg");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 13px 9px;
+      }
+    }
+  }
+
+  svg {
+    margin-left: 10px;
+
+    @include laptop {
+      display: none;
+    }
+  }
+
+  &--expanded span {
+    background-color: $bg-gray;
+
+    @include laptop {
+      background-color: transparent;
+
+      &::after {
+        background-image: url("../img/header/tick-up.svg");
+      }
+    }
+  }
+}
+
+.main-nav__dropdown {
+  display: none;
+  justify-content: flex-start;
+  flex-direction: column;
+
+  width: auto;
+  min-width: 240px;
+  padding-top: 16px;
+
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 9;
+
+  transition: min-width 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+
+  @include laptop {
+    position: relative;
+
+    display: flex;
+    padding: 0;
+
+    overflow: hidden;
+
+    transition: max-height $transition-props;
+
+    &.is-hide {
+      /* stylelint-disable */
+      max-height: 0 !important;
+      /* stylelint-enable */
+    }
+  }
+
+  &--right {
+    left: auto;
+    right: 0;
+
+    .main-nav__included-button {
+      margin-left: auto;
+    }
+
+    .main-nav__included-box {
+      &::before {
+        left: auto;
+        right: 0;
+      }
+
+      &--bordered {
+        &::after {
+          left: auto;
+          right: 240px;
+        }
+      }
+    }
+
+    .main-nav__link--included {
+      margin-left: auto;
+      padding-left: 10px;
+    }
+
+    .main-nav__middle-dropdown {
+      right: auto;
+      left: 0;
+
+      padding: 19px 10px 11px 10px;
+    }
+  }
+
+  &--expanded {
+    display: flex;
+  }
+
+  &--long {
+    min-width: 480px;
+
+    transition: min-width 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+  }
+}
+
+.main-nav__included-box {
+  --box-height: "auto";
+
+  @include no-list;
+
+  position: relative;
+
+  width: 100%;
+  min-height: var(--box-height);
+  padding: 20px 0 10px;
+  border-radius: 2px;
+
+  background-color: $color-contrast;
+  box-shadow: 0 4px 12px rgba(47, 27, 73, 0.18), 0 1px 1px rgba(47, 41, 64, 0.12);
+
+  @include laptop {
+    padding: 0;
+
+    background-color: $bg-gray;
+  }
+
+  &::before {
+    content: "";
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+
+    z-index: 2;
+
+    display: block;
+    width: 240px;
+    height: 100%;
+
+    background-color: $color-contrast;
+
+    border-radius: 2px 0 0 2px;
+
+    @include laptop {
+      display: none;
+    }
+  }
+
+  &--bordered {
+    &::after {
+      content: "";
+
+      position: absolute;
+      top: 10px;
+      bottom: 10px;
+      left: 240px;
+
+      display: block;
+      width: 1px;
+      height: calc(100% - 20px);
+
+      background-color: $color-accent-light;
+
+      @include laptop {
+        display: none;
+      }
+    }
+  }
+}
+
+.main-nav__included-item {
+  display: flex;
+}
+
+.main-nav__middle-block {
+  width: 100%;
+  display: flex;
+
+  @include laptop {
+    flex-direction: column;
+  }
+}
+
+.main-nav__middle-dropdown {
+  @include no-list;
+
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 1;
+
+  display: none;
+
+  width: 240px;
+
+  padding: 19px 10px 11px 10px;
+
+  &--expanded {
+    display: block;
+  }
+
+  @include laptop {
+    position: static;
+    z-index: auto;
+
+    display: block;
+    width: 100%;
+    padding: 0;
+
+    overflow: hidden;
+
+    transition: max-height $transition-props;
+
+    &.is-hide {
+      /* stylelint-disable */
+      max-height: 0 !important;
+      /* stylelint-enable */
+    }
+  }
+
+  & .main-nav__link--included {
+    @include laptop {
+      padding-left: 85px;
+
+      font-weight: 400;
+      color: $color-gray-dark;
+    }
+
+    @include mobile-md {
+      padding-left: 47px;
+    }
+  }
+}

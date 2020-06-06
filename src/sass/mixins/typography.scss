@@ -1,0 +1,222 @@
+@mixin typography-h1 {
+  margin: 0;
+
+  font-size: var(--h1-size);
+  line-height: var(--h1-lh);
+  font-weight: 500;
+}
+
+@mixin typography-h2 {
+  margin: 0;
+
+  font-size: var(--h2-size);
+  line-height: var(--h2-lh);
+  font-weight: 500;
+}
+
+@mixin typography-h3 {
+  margin: 0;
+
+  font-size: var(--h3-size);
+  line-height: var(--h3-lh);
+  font-weight: 500;
+}
+
+@mixin typography-h4 {
+  margin: 0;
+
+  font-size: var(--h4-size);
+  line-height: var(--h4-lh);
+  font-weight: 500;
+}
+
+@mixin typography-h5 {
+  margin: 0;
+
+  font-size: var(--h5-size);
+  line-height: var(--h5-lh);
+  font-weight: 500;
+}
+
+@mixin typography-h6 {
+  margin: 0;
+
+  font-size: var(--h6-size);
+  line-height: var(--h6-lh);
+  font-weight: 500;
+}
+
+@mixin typography-subhead {
+  margin: 0;
+
+  font-size: var(--subhead-size);
+  line-height: var(--subhead-lh);
+  font-weight: 500;
+}
+
+@mixin typography-txt-blog {
+  margin: 0;
+
+  font-size: var(--txt-blog-size);
+  line-height: var(--txt-blog-lh);
+  font-weight: 400;
+
+  &:not(:last-child) {
+    margin-bottom: 20px;
+  }
+}
+
+@mixin typography-txt-big {
+  margin: 0;
+
+  font-size: var(--txt-big-size);
+  line-height: var(--txt-big-lh);
+  font-weight: 400;
+
+  &:not(:last-child) {
+    margin-bottom: 20px;
+  }
+}
+
+@mixin typography-txt {
+  margin: 0;
+
+  font-size: var(--txt-size);
+  line-height: var(--txt-lh);
+  font-weight: 400;
+
+  &:not(:last-child) {
+    margin-bottom: 20px;
+  }
+}
+
+@mixin typography-txt-bold {
+  margin: 0;
+
+  font-size: var(--txt-size);
+  line-height: var(--txt-lh);
+  font-weight: 500;
+
+  &:not(:last-child) {
+    margin-bottom: 20px;
+  }
+}
+
+@mixin typography-txt-sm {
+  margin: 0;
+
+  font-size: var(--txt-sm-size);
+  line-height: var(--txt-sm-lh);
+  font-weight: 400;
+
+  &:not(:last-child) {
+    margin-bottom: 10px;
+  }
+}
+
+@mixin typography-txt-sm-bold {
+  margin: 0;
+
+  font-size: var(--txt-sm-size);
+  line-height: var(--txt-sm-lh);
+  font-weight: 500;
+
+  &:not(:last-child) {
+    margin-bottom: 10px;
+  }
+}
+
+@mixin typography-list-compact {
+  margin: 0;
+
+  position: relative;
+  //display: flex;
+  //align-items: baseline;
+
+  p {
+    margin-top: 0;
+    margin-bottom: 10px;
+    padding-left: 28px;
+
+    font-size: var(--txt-size);
+    line-height: var(--txt-lh);
+    font-weight: 400;
+  }
+
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 4px;
+    left: 0;
+
+    //flex-shrink: 0;
+
+    //display: block;
+    width: 16px;
+    height: 16px;
+    //margin-right: 11px;
+
+    background-image: url("../img/library/check-round.svg");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+  }
+}
+
+@mixin typography-list {
+  margin: 0;
+
+  position: relative;
+
+  p {
+    margin-top: 0;
+    margin-bottom: 15px;
+    padding-left: 18px;
+
+    font-size: var(--txt-size);
+    line-height: var(--txt-lh);
+    font-weight: 400;
+  }
+
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 8px;
+    left: 0;
+
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: $color-accent;
+  }
+}
+
+@mixin typography-list-blog {
+  margin: 0;
+
+  position: relative;
+
+  p {
+    margin-top: 0;
+    margin-bottom: 18px;
+    padding-left: 18px;
+
+    font-size: var(--txt-blog-size);
+    line-height: var(--txt-blog-lh);
+    font-weight: 400;
+  }
+
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 14px;
+    left: 0;
+
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: $color-accent;
+  }
+}

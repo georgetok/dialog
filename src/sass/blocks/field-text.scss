@@ -1,0 +1,78 @@
+.field-text {
+  color: $color-gray-dark;
+
+  label {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  input {
+    width: 100%;
+    padding-top: 6px;
+    padding-bottom: 12px;
+    padding-right: 12px;
+    font-size: 21px;
+    line-height: 27px;
+    letter-spacing: 0.275px;
+    color: inherit;
+    border: none;
+    border-radius: 0;
+    border-bottom: 1px solid $color-gray-light;
+    background-color: inherit;
+    appearance: none;
+    transition: border-bottom $transition-props;
+
+    @include mobile-md {
+      padding-top: 14px;
+      padding-bottom: 14px;
+      font-size: 18px;
+      line-height: 23px;
+    }
+  }
+
+  span {
+    font-size: 14px;
+    line-height: 18px;
+    letter-spacing: 0.01em;
+    opacity: 0;
+    color: inherit;
+    transition: opacity $transition-props;
+  }
+
+  input::placeholder {
+    color: inherit;
+  }
+
+  input:hover,
+  input:focus {
+    color: $color-base;
+    outline: 0;
+    border-bottom: 1px solid $color-accent;
+  }
+
+  input:focus::placeholder {
+    color: $color-base;
+  }
+
+  input:focus + span {
+    opacity: 1;
+    color: $color-accent;
+  }
+
+  input:not(:placeholder-shown) {
+    color: $color-base;
+  }
+
+  input:not(:placeholder-shown) + span {
+    opacity: 1;
+    color: $color-accent;
+  }
+}
+
+.field-text--small {
+  input {
+    padding-bottom: 14px;
+    font-size: 18px;
+    line-height: 23px;
+  }
+}

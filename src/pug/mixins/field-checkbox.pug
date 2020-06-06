@@ -1,0 +1,15 @@
+mixin field-checkbox(props)
+  .filed-checkbox(class= props.additionalClassName ? props.additionalClassName : null)
+    label
+      input.visually-hidden(type="checkbox" name=props.name checked= props.isChecked ? 'checked' : null required= props.isRequired ? 'required' : null)
+      span=props.label
+
+
+//- argTypes
+  props: {
+    name: string,
+    label: string,
+    isRequired: bool,
+    isChecked: bool,
+    additionalClassName: string,
+  }

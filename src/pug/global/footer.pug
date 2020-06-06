@@ -1,0 +1,108 @@
+include ../mixins/svg
+include ../mixins/picture
+mixin footer
+  -
+    const navigation = [
+      {
+        title:'Dialog',
+        items: [
+            {text: 'Функции', path: '#!'},
+            {text: 'Безопасность', path: '#!'},
+            {text: 'Скачать', path: '#!'},
+            {text: 'SDK', path: '#!'},
+            {text: 'Интеграции', path: '#!'},
+            {text: 'Помощь', path: '#!'},
+          ]
+        },
+      {
+        title:'<span>О компании</span><span>Компания</span>',
+        items: [
+          {text:'Партнерам', path: '#!'},
+          {text:'Патенты и сертификаты', path: '#!'},
+          {text:'Блог', path: '#!'},
+          {text:'Карьера', path: '#!'},
+          {text:'О нас', path: '#!'},
+        ],
+      }
+    ];
+    const socials = [
+      {
+        label: 'Страница Dialog в Facebook',
+        iconPath: 'social-fb',
+        iconWidth: 11,
+        iconHeight: 23,
+        link: '#!',
+      },
+      {
+        label: 'Страница Dialog в Вконтакте',
+        iconPath: 'social-vk',
+        iconWidth: 23,
+        iconHeight: 13,
+        link: '#!',
+      },
+      {
+        label: 'Канал Dialog на Youtube',
+        iconPath: 'social-yt',
+        iconWidth: 24,
+        iconHeight: 18,
+        link: '#!',
+      },
+      {
+        label: 'Twitter Dialog',
+        iconPath: 'social-tw',
+        iconWidth: 21,
+        iconHeight: 18,
+        link: '#!',
+      },
+      {
+        label: 'Профиль Dialog на GitHub',
+        iconPath: 'social-gh',
+        iconWidth: 19,
+        iconHeight: 22,
+        link: '#!',
+      }
+    ];
+    const docsLinks = [
+      {link: '#!', text: 'Социальная ответственность'},
+      {link: '#!', text: 'Правовая информация'},
+      {link: '#!', text: 'Обработка персональных данных'},
+      {link: '#!', text: 'Политика по противодействию коррупции'},
+    ]
+
+  footer.footer
+    .footer__wrapper
+      .footer__logo
+        a(href="/").footer__link
+            img(src="img/library/logo-dialog-white.svg" alt="Логотип мессенджера Dialog" width="139")
+      ul.footer__contacts
+        li
+          a(href="tel:+78007758202").footer__link +7 (800) 775-82-02
+        li
+          a(href="mailto:info@dlg.im").footer__link.footer__link--underline info@dlg.im
+      .footer__navigation-box
+        section.footer-nav
+          h2.visually-hidden Навигация
+          .footer-nav__container
+            each box in navigation
+              .footer-nav__content-box
+                h3 !{box.title}
+                ul
+                  each link in box.items
+                    li
+                      a(href!=link.path).link.link--invert=link.text
+      .footer__social-box
+        ul.social
+          each social in socials
+            li
+              a(href!=social.link aria-label!=social.label target="_blank" rel="noopener noreferrer")
+                +svg(social.iconPath, social.iconWidth, social.iconHeight)
+      ul.footer__doc-links
+        each doc in docsLinks
+          li
+            a(href!=doc.link target="_blank" rel="noopener noreferrer")=doc.text
+      .footer__copyright
+        p © 2016—2020 ООО «Диалог»
+        p ИНН: 7804568396
+      .footer__promo-link
+        a(href="#!" target="_blank" rel="noopener noreferrer" aria-label="Сколково").footer__link
+          img(src="img/footer/sk-logo.svg" alt="Надпись: участник Сколково" width="100")

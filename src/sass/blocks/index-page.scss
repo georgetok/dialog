@@ -1,0 +1,27 @@
+.index-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: $bg-blue;
+
+  ul {
+    @include no-list;
+    @include make-block-wrapper;
+
+    padding: 0 var(--indent);
+  }
+
+  a {
+    @include typography-txt-big;
+
+    color: $color-base;
+
+    text-decoration: underline;
+
+    &:hover,
+    &:focus {
+      color: $color-accent;
+    }
+  }
+}

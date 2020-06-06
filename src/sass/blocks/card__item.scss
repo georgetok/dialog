@@ -1,0 +1,126 @@
+.card__item {
+  display: flex;
+  max-width: calc((100% / 3) - 40px);
+  flex-grow: 1;
+  flex-shrink: 0;
+  margin: 20px;
+
+  @include laptop {
+    max-width: calc((100% / 2) - 30px);
+    margin: 15px;
+  }
+
+  @include mobile-md {
+    max-width: 100%;
+    margin: 10px 0;
+  }
+}
+
+.card__card {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  text-decoration: none;
+  background-color: $color-contrast;
+  //border: 1px solid $color-accent-light;
+  border-radius: 2px;
+  transition: box-shadow $transition-props;
+  box-shadow:
+    0 4px 12px rgba(47, 27, 73, 0.12),
+    0 1px 1px rgba(47, 41, 64, 0.08);
+
+  &:hover,
+  &:focus {
+    /*нужно уточнить ховер эффекты*/
+    box-shadow:
+      0 4px 12px rgba(47, 27, 73, 0.12),
+      0 1px 1px rgba(47, 41, 64, 0.08);
+  }
+}
+
+.card__img {
+  img {
+    display: block;
+    width: 100%;
+  }
+}
+
+.card__content {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  min-height: 274px;
+  padding-top: 25px;
+  padding-bottom: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+
+  @include laptop {
+    min-height: 240px;
+    padding-top: 22px;
+    padding-bottom: 18px;
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+
+  @include mobile-md {
+    min-height: auto;
+    padding-top: 23px;
+    padding-bottom: 21px;
+    padding-right: 18px;
+    padding-left: 18px;
+  }
+
+  h3 {
+    @include typography-h6;
+    margin-bottom: 17px;
+    color: $color-base;
+  }
+
+  p {
+    @include typography-txt;
+    color: $color-base;
+  }
+}
+
+.card__info {
+  @include typography-txt-sm;
+  display: flex;
+  justify-content: space-between;
+  margin-top: auto;
+  color: $color-gray-light;
+
+  fill: $color-gray-light;
+
+  @include laptop {
+    font-size: 12px;
+    line-height: 20px;
+  }
+
+  @include mobile-md {
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  b {
+    margin: 0;
+    font-weight: inherit;
+  }
+
+  div {
+    display: flex;
+    align-items: center;
+  }
+
+  svg {
+    margin-right: 5px;
+
+    @include laptop {
+      margin-right: 13px;
+    }
+
+    @include mobile-md {
+      margin-right: 5px;
+    }
+  }
+}

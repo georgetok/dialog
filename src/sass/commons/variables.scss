@@ -1,0 +1,34 @@
+// COLORS
+$color-base: #000000;
+$color-base-trans: rgba(0, 0, 0, 0.9);
+$color-contrast: #ffffff;
+$color-contrast-trans: rgba(255, 255, 255, 0.8);
+$color-accent: #887cbd;
+$color-accent-dark: #7367ab;
+$color-accent-light: #eae7fb;
+$color-gray-dark: #6a6575;
+$color-gray-light: #a69db2;
+$color-gray: #94919a;
+$color-gray-icon: #212027;
+$color-gray-social: #302c33;
+
+// BACKGROUND-COLORS
+$bg-blue: #eff2fd;
+$bg-sand: #fdf8ed;
+$bg-gray: #f6f6f9;
+
+// SIZES
+$width-mobile: 320px;
+$width-big-mobile: 360px;
+$width-tablet: 768px;
+$width-laptop: 1024px;
+$width-desktop: 1440px;
+
+// FONTS
+$base-font: "Euclid-CircularA", "Arial", sans-serif;
+
+//TRANSITIONS
+$transition-duration: 0.3s;
+$transition-timing-function: ease-in-out;
+$transition-props: $transition-duration $transition-timing-function;
+

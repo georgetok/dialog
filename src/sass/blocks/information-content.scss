@@ -1,0 +1,256 @@
+.information-content {
+  --information--top-padding: 93px;
+  padding-top: var(--information--top-padding);
+  padding-bottom: 88px;
+
+  @include laptop {
+    --information--top-padding: 82px;
+    padding-bottom: 84px;
+  }
+
+  @include mobile-md {
+    --information--top-padding: 43px;
+    padding-bottom: 0;
+  }
+}
+
+.information-content__wrapper {
+  @include make-block-wrapper;
+  display: flex;
+  align-items: flex-start;
+  padding-left: var(--indent);
+  padding-right: var(--indent);
+
+  @include mobile-md {
+    flex-direction: column;
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+.information-content__content {
+  width: 64%;
+  margin-right: auto;
+
+  @include mobile-md {
+    width: 100%;
+    margin-bottom: 25px;
+    padding-left: var(--indent);
+    padding-right: var(--indent);
+  }
+
+  h2 {
+    @include typography-h3;
+    margin-top: 50px;
+    margin-bottom: 23px;
+    padding-right: 130px;
+
+    @include laptop {
+      margin-top: 56px;
+    }
+
+    @include mobile-md {
+      margin-top: 76px;
+      margin-bottom: 25px;
+      padding-right: 0;
+    }
+
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+
+  p {
+    @include typography-txt;
+  }
+
+  ul {
+    @include no-list;
+    padding-top: 7px;
+    padding-left: 19px;
+
+    &:not(:last-child) {
+      margin-bottom: 35px;
+
+      @include mobile-md {
+        margin-bottom: 29px;
+      }
+    }
+  }
+
+  li {
+    @include typography-txt;
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 10px;
+      left: -17px;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background-color: $color-accent;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 15px;
+    }
+  }
+}
+
+.information-content__sidebar {
+  position: sticky;
+  top: calc(var(--header-height) + var(--information--top-padding));
+  max-width: 285px;
+  width: 23.4%;
+
+  @include laptop {
+    width: 25.7%;
+  }
+
+  @include mobile-md {
+    position: static;
+    max-width: 100%;
+    width: 100%;
+    padding-top: 43px;
+    padding-bottom: 35px;
+    background-color: $bg-gray;
+  }
+
+  h2 {
+    @include typography-h6;
+    margin-bottom: 18px;
+    padding: 0 10px;
+
+    @include mobile-md {
+      margin-bottom: 0;
+      padding-left: 20px;
+      padding-right: 20px;
+      padding-bottom: 25px;
+      font-size: 24px;
+      line-height: 31px;
+      border-bottom: 1px solid $color-accent-light;
+    }
+  }
+
+  ul {
+    @include no-list;
+  }
+
+  li {
+    @include typography-txt-sm;
+
+    @include mobile-md {
+      &:not(:last-child) {
+        margin-bottom: 0;
+
+        a {
+          border-bottom: 1px solid $color-accent-light;
+        }
+      }
+    }
+  }
+}
+
+.information-content__link {
+  @include typography-txt-sm;
+  display: block;
+  padding: 10px;
+  color: $color-base;
+  border-radius: 2px;
+  transition: opacity $transition-props;
+
+  @include mobile-md {
+    padding-top: 18px;
+    padding-bottom: 18px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 0;
+  }
+
+  &:hover,
+  &:focus {
+    opacity: 0.7;
+  }
+}
+
+
+.information-content__link--active {
+  font-weight: 500;
+  background-color: $bg-gray;
+
+  @include mobile-md {
+    background-color: $color-contrast;
+  }
+}
+
+.information-content__link--doc {
+  span {
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: -3px;
+      right: -21px;
+      width: 16px;
+      height: 20px;
+      background-image: url("../img/icon-download.svg");
+      background-repeat: no-repeat;
+      background-position: 0 0;
+
+      @include mobile-md {
+        bottom: -1px;
+        right: -23px;
+      }
+    }
+  }
+}
+
+.information-content__link-box {
+  display: flex;
+  flex-direction: column;
+  margin-top: 33px;
+  margin-bottom: 40px;
+  padding-left: 60px;
+  padding-right: 110px;
+
+  @include laptop {
+    margin-top: 29px;
+  }
+
+  @include tablet {
+    padding-right: 0;
+  }
+
+  @include mobile-md {
+    margin-top: 31px;
+    margin-bottom: 25px;
+    padding-left: 34px;
+  }
+
+  a {
+    @include typography-txt;
+    position: relative;
+    color: $color-accent;
+    fill: $color-accent;
+
+    &:not(:last-child) {
+      margin-bottom: 15px;
+    }
+
+    @include interactive-opacity;
+  }
+
+  svg {
+    position: absolute;
+    top: -2px;
+    left: -38px;
+
+    @include mobile-md {
+      top: 5px;
+      left: -36px;
+    }
+  }
+}

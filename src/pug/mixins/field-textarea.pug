@@ -1,0 +1,15 @@
+mixin field-textarea(props)
+  .field-textarea(class= props.additionalClassName ? props.additionalClassName : null)
+    label
+      textarea(name=props.name, placeholder=props.placeholder required= props.isRequired ? 'required' : null)
+      span= props.label
+
+
+//- argTypes
+  props: {
+    name: string,
+    label: string,
+    placeholder: string,
+    isRequired: bool,
+    additionalClassName: string,
+  }

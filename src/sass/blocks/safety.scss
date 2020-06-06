@@ -1,0 +1,173 @@
+.safety {
+  padding-top: 105px;
+  padding-bottom: 105px;
+
+  @include laptop {
+    padding-top: 94px;
+    padding-bottom: 71px;
+  }
+
+  @include mobile-md {
+    padding-top: 60px;
+    padding-bottom: 53px;
+  }
+}
+
+.safety__wrapper {
+  @include make-block-wrapper;
+  padding-left: var(--indent);
+  padding-right: var(--indent);
+}
+
+.safety__title {
+  @include typography-h2;
+  margin-bottom: 70px;
+  letter-spacing: -0.005em;
+
+  @include laptop {
+    margin-bottom: 53px;
+  }
+
+  @include tablet {
+    margin-bottom: 35px;
+  }
+}
+
+.safety__list {
+  @include no-list;
+
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 36px;
+
+  @include laptop {
+    margin-bottom: 43px;
+  }
+
+  @include tablet {
+    flex-direction: column;
+  }
+
+  @include mobile-md {
+    margin-bottom: 0;
+  }
+}
+
+.safety__item {
+  position: relative;
+  //width: 48.3%;
+  width: calc(100% / 2 - 22px);
+  padding-left: 106px;
+
+  @include laptop {
+    width: 48%;
+    //max-width: 454px;
+    padding-left: 0;
+    padding-top: 106px;
+  }
+
+  @include tablet {
+    width: 100%;
+  }
+
+  @include mobile-md {
+    padding-top: 93px;
+  }
+
+  &:nth-child(odd) {
+    margin-right: auto;
+
+    @include tablet {
+      margin-bottom: 25px;
+    }
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 2px;
+    left: 0;
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    background-color: $color-accent;
+
+    @include mobile-md {
+      width: 75px;
+      height: 75px;
+    }
+  }
+
+  h3 {
+    @include typography-h5;
+    margin-bottom: 14px;
+
+    @include laptop {
+      margin-bottom: 17px;
+    }
+
+    @include tablet {
+      margin-bottom: 15px;
+      font-size: 24px;
+      line-height: 31px;
+    }
+  }
+
+  p {
+    @include typography-txt;
+
+    @include laptop {
+      &:not(:last-child) {
+        margin-bottom: 22px;
+      }
+    }
+  }
+}
+
+.safety__item--safe {
+  &::before {
+    background-image: url("../img/library/icon-safe.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 52px 47px;
+
+    @include mobile-md {
+      background-size: 42px 37px;
+    }
+  }
+}
+
+.safety__item--cloud {
+  &::before {
+    background-image: url("../img/library/icon-cloud.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 49px 52px;
+
+    @include mobile-md {
+      background-size: 39px 42px;
+    }
+  }
+}
+
+.safety__listbox {
+  @include no-list;
+  padding-left: 13px;
+
+  @include tablet {
+    padding-left: 0;
+  }
+
+  li {
+    @include typography-list-compact;
+  }
+
+  b {
+    font-weight: 500;
+  }
+
+  img {
+    display: block;
+    margin-top: 3px;
+  }
+}

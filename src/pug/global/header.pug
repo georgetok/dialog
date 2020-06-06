@@ -1,0 +1,262 @@
+include ../mixins/button
+include ../mixins/svg
+
+mixin header
+  -
+    const navLinks = [
+      {
+        text: "Сегменты",
+        link: null,
+        submenu: [
+          {
+            text: "Промышленность",
+            link: "#!",
+          },
+          {
+            text: "Телекоммуникации",
+            link: "#!",
+          },
+          {
+            text: "Нефтегаз",
+            link: "#!",
+          },
+          {
+            text: "Финансы",
+            link: "#!",
+          },
+          {
+            text: "Машиностроение",
+            link: "#!",
+          },
+        ],
+      },
+      {
+        text: "Решения",
+        link: null,
+        submenu: [
+          {
+            text: "Отрасли",
+            link: null,
+            submenu: [
+              {
+                text: "Промышленность",
+                link: "#!",
+              },
+              {
+                text: "Телекоммуникации",
+                link: "#!",
+              },
+              {
+                text: "Нефтегаз",
+                link: "#!",
+              },
+              {
+                text: "Финансы",
+                link: "#!",
+              },
+              {
+                text: "Машиностроение",
+                link: "#!",
+              },
+            ],
+          },
+          {
+            text: "Департаменты",
+            link: null,
+            submenu: [
+              {
+                text: "HR",
+                link: "#!",
+              },
+              {
+                text: "IT и Разработка",
+                link: "#!",
+              },
+              {
+                text: "Коммерческий отдел",
+                link: "#!",
+              },
+              {
+                text: "Маркетинг",
+                link: "#!",
+              },
+              {
+                text: "Клиентский сервис",
+                link: "#!",
+              },
+            ],
+          },
+          {
+            text: "Техническая поддержка",
+            link: "#!",
+          },
+        ],
+      },
+      {
+        text: "О продукте",
+        link: null,
+        submenu: [
+          {
+            text: "Отрасли",
+            link: null,
+            submenu: [
+              {
+                text: "Промышленность",
+                link: "#!",
+              },
+              {
+                text: "Телекоммуникации",
+                link: "#!",
+              },
+              {
+                text: "Нефтегаз",
+                link: "#!",
+              },
+              {
+                text: "Финансы",
+                link: "#!",
+              },
+              {
+                text: "Машиностроение",
+                link: "#!",
+              },
+            ],
+          },
+          {
+            text: "Техническая поддержка",
+            link: "#!",
+          },
+        ],
+      },
+      {
+        text: "Партнерам",
+        link: '#!',
+      },
+      {
+        text: "База знаний",
+        link: null,
+        submenu: [
+          {
+            text: "Департаменты",
+            link: null,
+            submenu: [
+              {
+                text: "HR",
+                link: "#!",
+              },
+              {
+                text: "IT и Разработка",
+                link: "#!",
+              },
+              {
+                text: "Коммерческий отдел",
+                link: "#!",
+              },
+              {
+                text: "Маркетинг",
+                link: "#!",
+              },
+              {
+                text: "Клиентский сервис",
+                link: "#!",
+              },
+            ],
+          },
+          {
+            text: "Отрасли",
+            link: null,
+            submenu: [
+              {
+                text: "Промышленность",
+                link: "#!",
+              },
+              {
+                text: "Телекоммуникации",
+                link: "#!",
+              },
+              {
+                text: "Нефтегаз",
+                link: "#!",
+              },
+              {
+                text: "Финансы",
+                link: "#!",
+              },
+              {
+                text: "Машиностроение",
+                link: "#!",
+              },
+              {
+                text: "Телекоммуникации",
+                link: "#!",
+              },
+              {
+                text: "Нефтегаз",
+                link: "#!",
+              },
+              {
+                text: "Финансы",
+                link: "#!",
+              },
+              {
+                text: "Машиностроение",
+                link: "#!",
+              },
+            ],
+          },
+          {
+            text: "Техническая поддержка",
+            link: "#!",
+          },
+        ],
+      },
+      {
+        text: "Блог",
+        link: '#!',
+      },
+      {
+        text: "Помощь",
+        link: '#!',
+      },
+    ];
+
+  header.header.js-header
+    .header__wrapper
+      a(href="/").header__logo
+        img(src="img/library/logo-dialog.svg" alt="Логотип мессенджера Dialog")
+      .header__content-box
+        .header__top-panel
+          a(href="/").header__nav-logo
+            img(src="img/library/logo-dialog.svg" alt="Логотип мессенджера Dialog")
+          button(aria-label='Закрыть меню' type="button").header__close-button
+        nav.header__nav-container.main-nav
+          ul.main-nav__top-links
+            each topItem, index in navLinks
+              if (topItem.link)
+                li
+                  a(href!=topItem.link).main-nav__link=topItem.text
+              else
+                li.main-nav__top-block
+                  button(type="button").main-nav__button=topItem.text
+                    +svg('tick', 8, 5)
+                  .main-nav__dropdown
+                    ul.main-nav__included-box
+                      each middleItem in topItem.submenu
+                        li.main-nav__included-item
+                          if (middleItem.link)
+                            a(href!=middleItem.link).main-nav__link.main-nav__link--included=middleItem.text
+                          else
+                            .main-nav__middle-block
+                              button(type="button").main-nav__included-button
+                                span=middleItem.text
+                                  +svg('tick-right', 7, 11)
+                              ul.main-nav__middle-dropdown
+                                each lowItem in middleItem.submenu
+                                  li.main-nav__included-item
+                                    a(href!=lowItem.link).main-nav__link.main-nav__link--included=lowItem.text
+          .main-nav__user-actions
+            +button('Получить предложение', {styleType: 'accent', additionalClassName: 'button--small main-nav__action-btn js-open-modal'})
+            a(href="#!").main-nav__link.main-nav__link--no-padding
+              span En
+              span In English
+      button(aria-label='Открыть меню' type="button").header__burger-button

@@ -1,0 +1,16 @@
+mixin head(title)
+  head
+    meta(charset="utf-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1")
+    meta(name="format-detection" content="telephone=no")
+    title!= title
+
+    //- FONTS
+    link(rel="preload" href="fonts/Euclid-CircularA-Medium.woff2" as="font" crossorigin="anonymous")
+    link(rel="preload" href="fonts/Euclid-CircularA-Regular.woff2" as="font" crossorigin="anonymous")
+
+    //- ICON
+    //- link(rel="shortcut icon" href="favicon.ico")
+
+    //- STYLES
+    link(rel="stylesheet" href="css/style.min.css")

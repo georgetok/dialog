@@ -1,0 +1,41 @@
+@mixin retina {
+  @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+    @content;
+  }
+}
+
+//ADAPTIVE BACKGROUND
+// webp needs modernizr 3.6.0 https://modernizr.com/download/?-webp-setclasses
+
+//! example: @include make-adaptive-bg('img/test', 'png')
+@mixin make-adaptive-bg($image-path, $imageType) {
+  background-image: url(""+$image-path+"@1x."+$imageType);
+
+  @include retina {
+    background-image: url(""+$image-path+"@2x."+$imageType);
+  }
+
+  .webp & {
+    background-image: url(""+$image-path+"@1x.webp");
+
+    @include retina {
+      background-image: url(""+$image-path+"@2x.webp");
+    }
+  }
+}
+
+@mixin no-adaptive-bg {
+  background-image: none;
+
+  @include retina {
+    background-image: none;
+  }
+
+  .webp & {
+    background-image: none;
+
+    @include retina {
+      background-image: none;
+    }
+  }
+}

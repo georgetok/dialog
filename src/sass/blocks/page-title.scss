@@ -1,0 +1,27 @@
+.page-title {
+  padding-top: 94px;
+  padding-bottom: 97px;
+
+  @include laptop {
+    padding-top: 74px;
+  }
+
+  @include mobile-md {
+    padding-top: 77px;
+  }
+}
+
+.page-title__wrapper {
+  @include make-block-wrapper;
+  padding-left: var(--indent);
+  padding-right: var(--indent);
+
+  h1 {
+    @include typography-h1;
+    letter-spacing: -0.01em;
+
+    @include mobile-md {
+      letter-spacing: 0;
+    }
+  }
+}

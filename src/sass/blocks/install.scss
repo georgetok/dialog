@@ -1,0 +1,188 @@
+.install {
+  padding-top: 83px;
+  padding-bottom: 70px;
+
+  @include laptop {
+    padding-top: 78px;
+  }
+
+  @include tablet {
+    padding-top: 50px;
+    padding-bottom: 38px;
+  }
+}
+
+.install__wrapper {
+  @include make-block-wrapper;
+  padding-left: calc(var(--indent) - 30px);
+  padding-right: calc(var(--indent) - 30px);
+
+  @include tablet {
+    padding-left: calc(var(--indent) - 20px);
+    padding-right: calc(var(--indent) - 20px);
+  }
+
+  @include mobile-md {
+    padding-left: calc(var(--indent) - 15px);
+    padding-right: calc(var(--indent) - 15px);
+  }
+}
+
+.install__title {
+  @include typography-h2;
+  margin-bottom: 21px;
+  padding-left: 30px;
+  padding-right: 30px;
+  letter-spacing: -0.005em;
+
+  @include laptop {
+    margin-bottom: 23px;
+  }
+
+  @include tablet {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  @include mobile-md {
+    margin-bottom: 38px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
+.install__icon-list {
+  @include no-list;
+
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+
+  @include laptop {
+    margin-bottom: 8px;
+  }
+
+  @include mobile-md {
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    grid-auto-flow: row;
+    row-gap: 20px;
+    column-gap: 12px;
+    justify-content: space-between;
+
+    width: auto;
+    margin-bottom: 38px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  li {
+    justify-self: center;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+
+    width: 60px;
+    margin: 30px;
+
+    @include tablet {
+      width: 55px;
+      margin: 20px;
+    }
+
+    @include mobile-md {
+      margin: 0;
+    }
+  }
+
+  svg {
+    margin-bottom: 11px;
+
+    @include tablet {
+      width: 55px;
+      height: 55px;
+      margin-bottom: 4px;
+    }
+  }
+
+  span {
+    @include typography-txt-sm;
+    width: 70px;
+    text-align: center;
+  }
+}
+
+.install__content {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-bottom: 36px;
+
+  @include laptop {
+    margin-bottom: 26px;
+  }
+
+  @include tablet {
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+
+  @include mobile-md {
+    flex-direction: column;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
+.install__col {
+  width: calc(100% / 3 - 40px);
+  margin: 20px;
+
+  @include laptop {
+    width: calc(100% / 3 - 30px);
+    margin: 15px;
+  }
+
+  @include mobile-md {
+    width: 100%;
+    margin: 0;
+    margin-bottom: 23px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  h3 {
+    @include typography-h6;
+    margin-bottom: 16px;
+
+    @include mobile-md {
+      margin-bottom: 6px;
+    }
+  }
+}
+
+.install__col--list {
+  ul {
+    @include no-list;
+  }
+
+  li {
+    @include typography-list-compact;
+  }
+
+  b {
+    font-weight: 500;
+  }
+}
+
+.install__col--text {
+  p {
+    @include typography-txt;
+  }
+}

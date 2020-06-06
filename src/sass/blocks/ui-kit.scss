@@ -1,0 +1,320 @@
+.ui-kit {
+  display: flex;
+
+  background-color: $bg-gray;
+}
+
+.ui-kit__wrapper {
+  @include make-block-wrapper;
+
+  padding: 0 var(--indent);
+
+  ul {
+    @include no-list;
+  }
+
+  li {
+    margin-bottom: 40px;
+  }
+}
+
+.ui-kit__block {
+  display: flex;
+
+  &--layout {
+    margin-bottom: 0 !important;
+  }
+
+  @include mobile-md {
+    flex-direction: column;
+  }
+}
+
+.ui-kit__title {
+  display: flex;
+  justify-content: center;
+
+  width: 100%;
+  padding: 40px 0 40px;
+}
+
+.ui-kit__subtitle {
+  width: 20%;
+
+  flex: 0 0 auto;
+
+  display: flex;
+
+  h6 {
+    @include typography-h6;
+
+    margin: 0 0 0 auto;
+
+    @include mobile-md {
+      margin: 0 0 10px;
+    }
+  }
+}
+
+.ui-kit__content {
+  flex: 1 0 auto;
+
+  width: 80%;
+  padding-left: 30px;
+
+  @include mobile-md {
+    width: 100%;
+    padding-left: 0;
+  }
+
+  li {
+    margin-bottom: 0;
+  }
+
+  &--item-indent {
+    li {
+      margin-bottom: 20px;
+    }
+  }
+}
+
+.ui-kit__typography-text {
+  &--h1 {
+    h1 {
+      @include typography-h1;
+    }
+  }
+
+  &--h2 {
+    h2 {
+      @include typography-h2;
+    }
+  }
+
+  &--h3 {
+    h3 {
+      @include typography-h3;
+    }
+  }
+
+  &--h4 {
+    h4 {
+      @include typography-h4;
+    }
+  }
+
+  &--h5 {
+    h5 {
+      @include typography-h5;
+    }
+  }
+
+  &--h6 {
+    h6 {
+      @include typography-h6;
+    }
+  }
+
+  &--subhead {
+    strong {
+      @include typography-subhead;
+    }
+  }
+
+  &--blog {
+    p {
+      @include typography-txt-blog;
+    }
+  }
+
+  &--big {
+    p {
+      @include typography-txt-big;
+    }
+  }
+
+  &--txt {
+    p {
+      @include typography-txt;
+    }
+  }
+
+  &--bold {
+    p {
+      @include typography-txt-bold;
+    }
+  }
+
+  &--sm {
+    p {
+      @include typography-txt-sm;
+    }
+  }
+
+  &--sm-bold {
+    p {
+      @include typography-txt-sm-bold;
+    }
+  }
+
+  &--list-compact {
+    @include typography-list-compact;
+  }
+
+  &--list {
+    @include typography-list;
+  }
+
+  &--list-blog {
+    @include typography-list-blog;
+  }
+}
+
+
+.ui-kit__layout {
+  padding: 0 0 20px;
+
+  background-image: linear-gradient(to right, $bg-blue 0, $bg-blue 8.33333333%, $color-accent-light 8.33333334%, $color-accent-light 16.66666667%, $bg-blue 16.66666668%, $bg-blue 25%, $color-accent-light 25.0000001%, $color-accent-light 33.33333333%, $bg-blue 33.33333334%, $bg-blue 41.66666667%, $color-accent-light 41.66666668%, $color-accent-light 50%, $bg-blue 50.00000001%, $bg-blue 58.33333333%, $color-accent-light 58.33333334%, $color-accent-light 66.66666667%, $bg-blue 66.66666668%, $bg-blue 75%, $color-accent-light 75.0000001%, $color-accent-light 83.33333333%, $bg-blue 83.33333334%, $bg-blue 91.66666667%, $color-accent-light 91.66666668%, $color-accent-light 100%);
+}
+
+.ui-kit__row {
+  @include row;
+
+  height: 50px;
+
+  background-color: $color-accent;
+
+  &--top {
+    @include row-top;
+  }
+
+  &--middle {
+    @include row-middle;
+  }
+
+  &--bottom {
+    @include row-bottom;
+  }
+
+  &--around {
+    @include row-around;
+  }
+
+  &--between {
+    @include row-between;
+  }
+
+  &--transparent {
+    height: auto;
+    background-color: transparent;
+  }
+}
+
+.ui-kit__col {
+  height: 30px;
+
+  background-color: $color-accent-light;
+
+  border: 2px solid $color-gray-light;
+
+  &--1 {
+    @include col-1;
+  }
+
+  &--2 {
+    @include col-2;
+  }
+
+  &--3 {
+    @include col-3;
+  }
+
+  &--4 {
+    @include col-4;
+  }
+
+  &--5 {
+    @include col-5;
+  }
+
+  &--6 {
+    @include col-6;
+  }
+
+  &--7 {
+    @include col-7;
+  }
+
+  &--8 {
+    @include col-8;
+  }
+
+  &--9 {
+    @include col-9;
+  }
+
+  &--10 {
+    @include col-10;
+  }
+
+  &--11 {
+    @include col-11;
+  }
+
+  &--12 {
+    @include col-12;
+  }
+
+  &--offset-1 {
+    @include col-offset-1;
+  }
+
+  &--offset-2 {
+    @include col-offset-2;
+  }
+
+  &--offset-3 {
+    @include col-offset-3;
+  }
+
+  &--offset-4 {
+    @include col-offset-4;
+  }
+
+  &--offset-5 {
+    @include col-offset-5;
+  }
+
+  &--offset-6 {
+    @include col-offset-6;
+  }
+
+  &--offset-7 {
+    @include col-offset-7;
+  }
+
+  &--offset-8 {
+    @include col-offset-8;
+  }
+
+  &--offset-9 {
+    @include col-offset-9;
+  }
+
+  &--offset-10 {
+    @include col-offset-10;
+  }
+
+  &--offset-11 {
+    @include col-offset-11;
+  }
+
+  &--offset-0 {
+    @include col-offset-0;
+  }
+}
+
+.ui-kit__card-wrap {
+  display: flex;
+  flex-wrap: wrap;
+}

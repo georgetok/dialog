@@ -1,0 +1,33 @@
+body {
+  padding: 0;
+  margin: 0;
+
+  // iOS fix fonts sizes on landscape mode
+  text-size-adjust: 100%;
+
+  // iOS no highlighting elements after tap
+  -webkit-tap-highlight-color: transparent;
+
+  // Mac betterment fonts view
+  -webkit-font-smoothing: antialiased;
+}
+
+// Mac betterment fonts view
+@-moz-document url-prefix("") {
+  body {
+    font-weight: 200;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+// IE fix
+main {
+  display: block;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}

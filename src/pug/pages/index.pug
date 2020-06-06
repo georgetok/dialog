@@ -1,0 +1,23 @@
+include ../global/head
+-
+  const lang = "ru";
+  const title = "INDEX";
+
+html(lang=lang)
+  +head(title, bodyClassName)
+  body
+    .page
+      .page__content.index-page
+        ul
+          li
+            a(href="main.html") Главная страница (main.html)
+          li
+            a(href="patents.html") Патенты и сертификаты (patents.html)
+          li
+            a(href="legal.html") Правовая информация (legal.html)
+          li
+            a(href="public.html") Социальная ответственность (public.html)
+          li
+            a(href="ui-kit.html") Библиотека (ui-kit.html)
+
+

@@ -1,0 +1,27 @@
+// Base font
+@font-face {
+  font-family: "Euclid-CircularA";
+  font-style: normal;
+  font-weight: 400;
+
+  font-display: swap;
+  src:
+    local("Euclid CircularA Regular"),
+    local("Euclid-CircularA-Regular"),
+    url("../fonts/Euclid-CircularA-Regular.woff2") format("woff2"),
+    url("../fonts/Euclid-CircularA-Regular.woff") format("woff");
+  unicode-range: "U+0400-045F", "U+0490-0491", "U+04B0-04B1", "U+2116";
+}
+
+@font-face {
+  font-family: "Euclid-CircularA";
+  font-style: normal;
+  font-weight: 500;
+
+  font-display: swap;
+  src:
+    local("Euclid CircularA Medium"),
+    local("Euclid-CircularA-Medium"),
+    url("../fonts/Euclid-CircularA-Medium.woff2") format("woff2"),
+    url("../fonts/Euclid-CircularA-Medium.woff") format("woff");
+}

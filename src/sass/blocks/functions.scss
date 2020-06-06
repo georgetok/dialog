@@ -1,0 +1,73 @@
+.functions {
+  padding-top: 80px;
+  padding-bottom: 29px;
+
+  // background-image:
+  //   url("../img/bg-square-yellow.svg"),
+  //   url("../img/bg-square-purple.svg"),
+  //   url("../img/bg-round-blue.svg");
+  // background-repeat: no-repeat;
+  // background-position:
+  //   top 42.5% left 47.8%,
+  //   top 93.8% left 53.7%,
+  //   top 40% right 5%;
+  // background-size:
+  //   120px auto,
+  //   110px auto,
+  //   128px auto;
+
+  @include laptop {
+    padding-bottom: 42px;
+    // background-position:
+    //   top 310px left 36.8%,
+    //   bottom 47px left 46.8%,
+    //   top 293px right 1.4%;
+  }
+
+  @include tablet {
+    // background-position:
+    //   top 310px left 36.8%,
+    //   bottom 43px left 46.8%,
+    //   top 293px right 1.4%;
+    // background-size:
+    //   100px auto,
+    //   90px auto,
+    //   108px auto;
+  }
+
+  @include mobile-md {
+    padding-top: 60px;
+    padding-bottom: 20px;
+    padding-left: 0;
+    padding-right: 0;
+    //background-image: none;
+  }
+}
+
+.functions__wrapper {
+  @include make-block-wrapper;
+  padding-left: calc(var(--indent) - 40px);
+  padding-right: calc(var(--indent) - 40px);
+
+  @include mobile-md {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+.functions__title {
+  @include typography-h2;
+  margin-bottom: 38px;
+  padding-left: 40px;
+  padding-right: 40px;
+
+  @include laptop {
+    margin-bottom: 28px;
+  }
+
+  @include mobile-md {
+    margin-bottom: 32px;
+    padding-left: var(--indent);
+    padding-right: var(--indent);
+  }
+}

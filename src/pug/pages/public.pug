@@ -1,0 +1,41 @@
+extends ../global/layout
+include ../mixins/page-title
+include ../mixins/svg
+include ../mixins/button
+include ../mixins/picture
+
+block variables
+  -
+    const lang = "ru";
+    const title = "Dialog";
+
+block content
+  -
+  +page-title('Социальная ответственность')
+  .information-content
+    .information-content__wrapper
+      .information-content__content
+        h2 Результаты специальной оценки условий труда
+        p Согласно результатам проведённой специальной оценки условий труда рабочие места подразделений Общества в&nbsp;улучшении условий труда не&nbsp;нуждаются.
+        .information-content__link-box
+          a(href="img/patents/register.pdf" target="_blank")
+            +svg('icon-pdf',23, 28)
+            | Сводная ведомость результатов проведения специальной оценки условий труда ООО &laquo;Диалог&raquo;
+          a(href="img/patents/list.pdf" target="_blank")
+            +svg('icon-pdf',23, 28)
+            | Перечень рекомендуемых мероприятий по&nbsp;улучшению условий труда
+      .information-content__sidebar
+        h2 Библиотека документов:
+        ul
+          li
+            a(class="information-content__link information-content__link--active" href="public.html")
+              span Социальная ответственность
+          li
+            a(class="information-content__link" href="legal.html")
+              span Правовая информация
+          li
+            a(class="information-content__link information-content__link--doc" href="" target="_blank")
+              span Обработка персональных данных
+          li
+            a(class="information-content__link information-content__link--doc" href="" target="_blank")
+              span Политика по противодействию коррупции

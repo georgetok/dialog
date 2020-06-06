@@ -15,25 +15,25 @@ block content
   -
     const advantages = [
       {
-      iconPath: "icon-hands",
-      iconWidth: 35,
-      iconHeight: 31,
-      title: "Эффективная командная работа",
-      text: "Dialog позволяет настроить интеграции с\u00A0сервисами компании и\u00A0оптимизировать бизнес-процессы."
+        iconPath: "icon-hands",
+        iconWidth: 35,
+        iconHeight: 31,
+        title: "Эффективная командная работа",
+        text: "Dialog позволяет настроить интеграции с\u00A0сервисами компании и\u00A0оптимизировать бизнес-процессы."
       },
       {
-      iconPath: "icon-lock",
-      iconWidth: 30,
-      iconHeight: 30,
-      title: "Безопасное общение",
-      text: "Соответствие отраслевым стандартам безопасности, контроль и\u00A0защита на\u00A0разных уровнях."
+        iconPath: "icon-lock",
+        iconWidth: 30,
+        iconHeight: 30,
+        title: "Безопасное общение",
+        text: "Соответствие отраслевым стандартам безопасности, контроль и\u00A0защита на\u00A0разных уровнях."
       },
       {
-      iconPath: "icon-purse",
-      iconWidth: 28,
-      iconHeight: 26,
-      title: "Сокращение затрат на\u00A0коммуникации",
-      text: "Совмещение разрозненных инструментов в\u00A0одной платформе оптимизирует расходы на\u00A0ПО, оборудование, обслуживание и\u00A0поддержку."
+        iconPath: "icon-purse",
+        iconWidth: 28,
+        iconHeight: 26,
+        title: "Сокращение затрат на\u00A0коммуникации",
+        text: "Совмещение разрозненных инструментов в\u00A0одной платформе оптимизирует расходы на\u00A0ПО, оборудование, обслуживание и\u00A0поддержку."
       }
     ];
     const functions = [
@@ -125,7 +125,11 @@ block content
       .functions__tabs.tabs
         .tabs__controls
           each item, index in functions
-            button.tabs__control(class=(item.active ? "tabs__control--active" : null) type="button" data-tab-index=index)
+            button.tabs__control(
+                class=(item.active ? "tabs__control--active" : null)
+                type="button"
+                data-tab-index=index
+              )
               span
                 +svg(item.iconPath, item.iconWidth, item.iconHeight)
               b= item.title
@@ -144,7 +148,6 @@ block content
                 picture
                   source(type="image/webp" media="(min-width: 768px)" srcset=`img/${item.picPathDesk}@1x.webp 1x, img/${item.picPathDesk}@2x.webp 2x`)
                   source(type="image/webp" srcset=`img/${item.picPathMob}@1x.webp 1x, img/${item.picPathMob}@2x.webp 2x`)
-
                   source(media="(min-width: 768px)" srcset=`img/${item.picPathDesk}@1x.png 1x, img/${item.picPathDesk}@2x.png 2x`)
                   img(src=`img/${item.picPathMob}@1x.png`, srcset=`img/${item.picPathMob}@2x.png 2x`, width=item.picWidth, alt="Фото приложения Dialog")
   section.safety.box.box--white

@@ -128,10 +128,7 @@
 
 @mixin typography-list-compact {
   margin: 0;
-
   position: relative;
-  //display: flex;
-  //align-items: baseline;
 
   p {
     margin-top: 0;
@@ -149,13 +146,8 @@
     position: absolute;
     top: 4px;
     left: 0;
-
-    //flex-shrink: 0;
-
-    //display: block;
     width: 16px;
     height: 16px;
-    //margin-right: 11px;
 
     background-image: url("../img/library/check-round.svg");
     background-size: 100% 100%;

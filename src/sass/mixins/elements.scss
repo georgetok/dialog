@@ -44,7 +44,7 @@
 
   background-color: transparent;
   border: 0;
-  box-shadow: 0;
+  box-shadow: none;
 }
 
 @mixin reset-toggle-button {
@@ -67,6 +67,12 @@
 
 @mixin make-block-wrapper {
   width: 100%;
+  max-width: $width-desktop;
+  margin: 0 auto;
+}
+
+@mixin make-sm-block-wrapper {
+  width: 70%;
   max-width: $width-desktop;
   margin: 0 auto;
 }

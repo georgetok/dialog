@@ -1,0 +1,79 @@
+.protection {
+  padding-top: 105px;
+  padding-bottom: 105px;
+
+  @include tablet {
+    padding-top: 55px;
+    padding-bottom: 55px;
+  }
+
+  h3 {
+    @include typography-h3;
+  }
+
+  h2 {
+    @include typography-h2;
+    margin-left: 20px;
+    letter-spacing: -0.005em;
+  }
+
+  .wrap {
+    &--img {
+      margin-top: 20px;
+
+      .col {
+        margin-top: 0;
+      }
+
+      .col--right {
+        @include col-6;
+        @include row-end;
+
+
+        @include mobile-sm {
+          display: none;
+        }
+      }
+
+      .col--left {
+        @include col-6;
+        z-index: 1;
+
+        h3 {
+          margin-top: 50px;
+        }
+
+        @include tablet {
+          padding-right: 50px;
+        }
+        @include mobile-sm {
+          @include col-12;
+          margin-bottom: 25px;
+        }
+      }
+    }
+
+    &--cards {
+      @include gap-xs;
+      flex-wrap: wrap;
+      margin-top: 15px;
+
+      @include mobile-sm {
+        margin-top: 25px;
+      }
+
+      .col {
+        @include col-4;
+
+        @include tablet {
+          @include col-6;
+        }
+
+        @include mobile-sm {
+          @include col-12;
+        }
+
+      }
+    }
+  }
+}

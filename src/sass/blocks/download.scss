@@ -1,0 +1,50 @@
+.download {
+  padding-bottom: 100px;
+
+  .wrap--cards {
+    @include gap-xs;
+    margin-top: -150px;
+    flex-wrap: wrap;
+
+    @include mobile-sm {
+      margin-top: 0;
+    }
+  }
+
+  .col {
+    flex-basis: calc(100% / 5);
+    max-width: calc(100% / 5);
+
+    @include laptop {
+      flex-basis: calc(100% / 3);
+      max-width: calc(100% / 3);
+    }
+    @include mobile-md {
+      flex-basis: calc(100% / 2);
+      max-width: calc(100% / 2);
+    }
+    @include mobile-sm {
+      flex-basis: 100%;
+      max-width: 100%;
+    }
+  }
+
+
+}
+
+#windows-col,
+#linux-col,
+#ios-col,
+#android-col,
+#macos-col,
+#web-col,
+#windows-hero,
+#linux-hero,
+#ios-hero,
+#android-hero,
+#macos-hero,
+#web-hero {
+  &:not(.is-visible) {
+    display: none;
+  }
+}

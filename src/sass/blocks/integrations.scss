@@ -1,0 +1,36 @@
+.integrations {
+  padding-top: 108px;
+  overflow: hidden;
+
+  .wrap--cards {
+    @include gap-sm;
+    flex-wrap: wrap;
+
+    .col {
+      @include col-4;
+
+      @include tablet {
+        @include col-6;
+      }
+
+      @include mobile-sm {
+        @include col-12;
+      }
+
+    }
+  }
+
+  @include tablet {
+    padding-top: 40px;
+  }
+
+  h2 {
+    @include typography-h2;
+    margin-bottom: 30px;
+  }
+
+  h3 {
+    @include typography-h3;
+    margin-bottom: 30px;
+  }
+}

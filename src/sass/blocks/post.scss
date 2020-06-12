@@ -1,0 +1,96 @@
+.post {
+  padding-top: 42px;
+  padding-bottom: 86px;
+  overflow: hidden;
+
+  @include laptop {
+    padding-top: 90px;
+    padding-bottom: 73px;
+  }
+
+  @include mobile-md {
+    padding-top: 50px;
+    padding-bottom: 55px;
+  }
+}
+
+.post__nav {
+  border-bottom: 1px dashed $color-accent-light;
+}
+
+.post__title {
+  &:not(#_) {
+    margin-top: 40px;
+  }
+
+  &--h1 {
+    @include typography-h2;
+  }
+
+  &--h2 {
+    @include typography-h3;
+  }
+
+  &--h3 {
+    @include typography-h4;
+  }
+
+  &--sub {
+    @include typography-txt-big;
+    color: $color-base;
+    display: block;
+    margin-bottom: 40px;
+  }
+}
+
+.post__text {
+  @include typography-txt-big;
+  color: $color-base;
+  display: block;
+  margin-top: 30px;
+
+  &:not(#_) {
+    margin-bottom: 35px;
+  }
+}
+
+.post__time {
+  @include typography-txt-sm;
+  display: flex;
+  justify-content: space-between;
+  margin-top: auto;
+  color: $color-gray-light;
+  fill: $color-gray-light;
+
+  @include laptop {
+    font-size: 12px;
+    line-height: 20px;
+  }
+
+  @include mobile-md {
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  p {
+    margin-right: 20px;
+  }
+
+  svg {
+    margin-right: 5px;
+  }
+}
+
+.post__wrapper {
+  @include make-sm-block-wrapper;
+  padding-left: calc(var(--indent));
+  padding-right: calc(var(--indent));
+
+  @include mobile-md {
+    @include make-block-wrapper;
+  }
+}
+
+.post__image{
+  margin-top: 50px;
+}

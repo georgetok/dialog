@@ -1,0 +1,45 @@
+.cta {
+  padding: var(--indent);
+  @include mobile-md {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  &--purple {
+    padding: calc(var(--indent) * 1.5);
+    @include mobile-sm {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+
+  &--form {
+    padding-top: 60px;
+    padding-bottom: 80px;
+  }
+
+  &__title {
+    @include typography-h2;
+    width: 80%;
+    text-align: center;
+    margin-bottom: 30px;
+
+    @include mobile-md {
+      margin-bottom: 20px;
+    }
+    @include mobile-sm {
+      width: 100%;
+    }
+  }
+
+  &__subh {
+    @include typography-subhead;
+
+    margin-bottom: 30px;
+
+    @include mobile-md {
+      margin-bottom: 20px;
+    }
+  }
+}
+

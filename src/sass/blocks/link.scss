@@ -12,7 +12,6 @@
   }
 }
 
-
 .link--simple {
   position: relative;
 
@@ -39,13 +38,29 @@
 
 .link--with-icon {
   display: inline-flex;
-  //align-items: center;
   color: $color-base;
   fill: $color-accent;
   font-weight: 500;
 
   svg {
     margin-left: 12px;
+    margin-top: 6px;
+
+    @include mobile-md {
+      margin-left: 8px;
+      margin-top: 3px;
+    }
+  }
+}
+
+.link--with-icon-reverse {
+  display: inline-flex;
+  color: $color-base;
+  fill: $color-accent;
+  font-weight: 500;
+
+  svg {
+    margin-right: 12px;
     margin-top: 6px;
 
     @include mobile-md {
@@ -99,18 +114,6 @@
 .link--quote {
   @include mobile-md {
     margin-left: var(--indent);
-  }
-}
-
-.link--blog {
-  margin-left: 20px;
-
-  @include laptop {
-    margin-left: 11px;
-  }
-
-  @include mobile-md {
-    margin-left: 0;
   }
 }
 

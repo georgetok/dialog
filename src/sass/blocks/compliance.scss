@@ -1,0 +1,155 @@
+.compliance {
+  padding-bottom: 105px;
+
+  &__list {
+    @include no-list;
+
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 36px;
+
+    @include laptop {
+      margin-bottom: 43px;
+    }
+
+    @include tablet {
+      flex-direction: column;
+    }
+
+    @include mobile-md {
+      margin-bottom: 0;
+    }
+  }
+
+  &__list-item {
+    position: relative;
+    width: calc(100% / 2 - 22px);
+    margin-top: 45px;
+
+    @include laptop {
+      width: 48%;
+      padding-left: 0;
+    }
+
+    @include tablet {
+      width: 100%;
+    }
+
+    &:nth-child(odd) {
+      margin-right: auto;
+
+      @include tablet {
+        margin-bottom: 25px;
+      }
+    }
+
+
+    h3 {
+      @include typography-h5;
+      margin-bottom: 14px;
+
+      @include laptop {
+        margin-bottom: 17px;
+      }
+
+      @include tablet {
+        margin-bottom: 15px;
+        font-size: 24px;
+        line-height: 31px;
+      }
+    }
+
+    p {
+      @include typography-txt;
+
+      @include laptop {
+        &:not(:last-child) {
+          margin-bottom: 22px;
+        }
+      }
+    }
+  }
+
+  &__listbox {
+    @include no-list;
+
+    @include tablet {
+      padding-left: 0;
+    }
+
+    li {
+      @include typography-list-compact;
+
+      &:not(:first-child) {
+        margin-top: 30px;
+      }
+    }
+
+    b {
+      font-weight: 500;
+    }
+  }
+
+  &__subtitle {
+    @include typography-subhead;
+  }
+
+  &__title {
+    @include typography-h2;
+    letter-spacing: -0.005em;
+
+    @include laptop {
+      margin-bottom: 53px;
+    }
+
+    @include tablet {
+      margin-bottom: 35px;
+    }
+  }
+
+  &__link {
+    &--more {
+      margin-top: 30px;
+    }
+  }
+
+  .wrap {
+    &--img {
+      padding-left: 28px;
+
+      a {
+        margin-top: 20px;
+      }
+
+      img {
+        width: 100%;
+      }
+
+      .col {
+        @include col-3;
+        @include row;
+        flex-direction: column;
+        justify-content: space-between;
+        @include mobile-sm{
+          @include col-4;
+        }
+      }
+    }
+
+    &--txt {
+      width: 82%;
+      margin-left: 20px;
+    }
+
+    &--link {
+      a,
+      svg {
+        margin-top: 20px;
+      }
+
+      svg {
+        margin-left: 5px;
+      }
+    }
+  }
+}

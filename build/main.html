@@ -172,7 +172,7 @@
         </div>
       </header>
       <main class="page__content">
-        <section class="hero box box--hero box--purple">
+        <section class="hero hero--main hero--reverse box box--hero box--purple">
           <div class="hero__wrapper">
             <div class="hero__left">
               <h1 class="hero__title">Dialog</h1>
@@ -633,14 +633,14 @@
           <div class="blog__wrapper">
             <h2 class="blog__title">Блог компании</h2>
             <ul class="blog__list">
-              <li class="blog__item"><a class="blog__card" href="#!">
+              <li class="blog__item"><a class="blog__card" href="/post.html">
                   <div class="blog__img-box">
                     <picture>
-                      <source type="image/webp" srcset="img/blog-1-desktop@1x.webp 1x, img/blog-1-desktop@2x.webp 2x"/><img src="img/blog-1-desktop@1x.jpg" srcset="img/blog-1-desktop@2x.jpg 2x" alt="Изображение приложения" width="380" loading="lazy"/>
+                      <source type="image/webp" srcset="img/pages/blog/blog-1-desktop@1x.webp 1x, img/pages/blog/blog-1-desktop@2x.webp 2x"/><img src="img/pages/blog/blog-1-desktop@1x.jpg" srcset="img/pages/blog/blog-1-desktop@2x.jpg 2x" alt="Изображение приложения" width="380" loading="lazy"/>
                     </picture>
                   </div>
                   <div class="blog__text-box">
-                    <h3>Корпоративный мессенджер для локальной сети</h3>
+                    <h3 class="blog__card-title">Корпоративный мессенджер для локальной сети</h3>
                     <div class="blog__text-info">
                       <p>27 февраля, 2020</p>
                       <div>
@@ -650,14 +650,14 @@
                       </div>
                     </div>
                   </div></a></li>
-              <li class="blog__item"><a class="blog__card" href="#!">
+              <li class="blog__item"><a class="blog__card" href="/post.html">
                   <div class="blog__img-box">
                     <picture>
-                      <source type="image/webp" srcset="img/blog-2-desktop@1x.webp 1x, img/blog-2-desktop@2x.webp 2x"/><img src="img/blog-2-desktop@1x.jpg" srcset="img/blog-2-desktop@2x.jpg 2x" alt="Изображение приложения" width="380" loading="lazy"/>
+                      <source type="image/webp" srcset="img/pages/blog/blog-2-desktop@1x.webp 1x, img/pages/blog/blog-2-desktop@2x.webp 2x"/><img src="img/pages/blog/blog-2-desktop@1x.jpg" srcset="img/pages/blog/blog-2-desktop@2x.jpg 2x" alt="Изображение приложения" width="380" loading="lazy"/>
                     </picture>
                   </div>
                   <div class="blog__text-box">
-                    <h3>Корпоративный мессенджер&nbsp;&mdash; виды, возможности и&nbsp;сферы применения</h3>
+                    <h3 class="blog__card-title">Корпоративный мессенджер&nbsp;&mdash; виды, возможности и&nbsp;сферы применения</h3>
                     <div class="blog__text-info">
                       <p>27 февраля, 2020</p>
                       <div>
@@ -667,14 +667,14 @@
                       </div>
                     </div>
                   </div></a></li>
-              <li class="blog__item"><a class="blog__card" href="#!">
+              <li class="blog__item"><a class="blog__card" href="/post.html">
                   <div class="blog__img-box">
                     <picture>
-                      <source type="image/webp" srcset="img/blog-3-desktop@1x.webp 1x, img/blog-3-desktop@2x.webp 2x"/><img src="img/blog-3-desktop@1x.jpg" srcset="img/blog-3-desktop@2x.jpg 2x" alt="Изображение приложения" width="380" loading="lazy"/>
+                      <source type="image/webp" srcset="img/pages/blog/blog-3-desktop@1x.webp 1x, img/pages/blog/blog-3-desktop@2x.webp 2x"/><img src="img/pages/blog/blog-3-desktop@1x.jpg" srcset="img/pages/blog/blog-3-desktop@2x.jpg 2x" alt="Изображение приложения" width="380" loading="lazy"/>
                     </picture>
                   </div>
                   <div class="blog__text-box">
-                    <h3>Цифровая гигиена: как уберечь переписку в&nbsp;мессенджерах от&nbsp;конкурентов</h3>
+                    <h3 class="blog__card-title">Цифровая гигиена: как уберечь переписку в&nbsp;мессенджерах от&nbsp;конкурентов</h3>
                     <div class="blog__text-info">
                       <p>27 февраля, 2020</p>
                       <div>
@@ -684,35 +684,35 @@
                       </div>
                     </div>
                   </div></a></li>
-            </ul><a class="link link--with-icon link--blog" href="#!">Смотреть все
+            </ul><a class="link link--with-icon" href="/blog">Смотреть все
               <svg width="16" height="15" aria-hidden="true">
                 <use xlink:href="img/sprite.svg#arrow-right"></use>
               </svg></a>
           </div>
         </section>
-        <div class="offer box box--white">
-          <div class="offer__wrapper">
-            <h2 class="offer__title">Получить предложение</h2>
-            <div class="offer__form">
+        <div class="form form--main box box--white">
+          <div class="form__wrapper">
+            <h2 class="form__title">Получить предложение</h2>
+            <div class="form__form">
               <form action="#" method="POST" autocomplete="on" id="offer-form">
-                <div class="offer__input-text-wrap">
-                  <div class="offer__form-field offer__form-field--text offer__form-field--m offer__form-field--1">
+                <div class="form__input-text-wrap">
+                  <div class="form__form-field form__form-field--text form__form-field--m form__form-field--1">
                     <input type="text" id="name-1" name="name" pattern="([A-Za-zА-ЯЁа-яё-]{2,}\s?)+" placeholder="Ваше имя" title="Имя может состоять только из букв, пробелов и дефиса" required="required"/>
                     <label for="name-1">Ваше имя</label>
                   </div>
-                  <div class="offer__form-field offer__form-field--text offer__form-field--m offer__form-field--3">
+                  <div class="form__form-field form__form-field--text form__form-field--m form__form-field--3">
                     <input type="email" id="email-1" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" placeholder="Эл. почта" title="Email адрес должен быть типа: user@mail.com" required="required"/>
                     <label for="email-1">Эл. почта</label>
                   </div>
-                  <div class="offer__form-field offer__form-field--text offer__form-field--s offer__form-field--2">
+                  <div class="form__form-field form__form-field--text form__form-field--s form__form-field--2">
                     <input type="tel" id="phone-1" name="phone" placeholder="Телефон" title="Номер телефона должен начинаться с символов +7 и содержать 11 цифр" pattern="7\d{10}" data-mask="+{7}(000)000-00-00" required="required"/>
                     <label for="phone-1">Телефон</label>
                   </div>
-                  <div class="offer__form-field offer__form-field--text offer__form-field--s offer__form-field--4">
+                  <div class="form__form-field form__form-field--text form__form-field--s form__form-field--4">
                     <input type="text" id="company-1" name="company" placeholder="Название компании" required="required"/>
                     <label for="company-1">Название компании</label>
                   </div>
-                  <div class="offer__form-field offer__form-field--text offer__form-field--5">
+                  <div class="form__form-field form__form-field--text form__form-field--5">
                     <select id="quantity-1" name="quantity-users" required="required">
                       <option value="">Количество пользователей</option>
                       <option value="1-100">1-100</option>
@@ -722,17 +722,17 @@
                     <label for="quantity-1">Количество пользователей</label>
                   </div>
                 </div>
-                <div class="offer__checkbox-wrap">
-                  <div class="offer__form-field offer__form-field--checkbox">
+                <div class="form__checkbox-wrap">
+                  <div class="form__form-field form__form-field--checkbox">
                     <input class="visually-hidden" type="checkbox" id="accept-1" name="accepted" checked="checked" required="required"/>
                     <label for="accept-1">Я согласен на обработку персональных данных</label>
                   </div>
-                  <div class="offer__form-field offer__form-field--checkbox">
+                  <div class="form__form-field form__form-field--checkbox">
                     <input class="visually-hidden" type="checkbox" id="subscribe-1" name="subscribe"/>
                     <label for="subscribe-1">Подписаться на новостную рассылку</label>
                   </div>
                 </div>
-                <button class="button button--accent button--offer" type="submit"><span>Отправить заявку</span>
+                <button class="button button--accent button--form" type="submit"><span>Отправить заявку</span>
                 </button>
               </form>
             </div>
@@ -818,29 +818,29 @@
       <div class="modal__overlay">
         <div class="modal__content">
           <button class="modal__close" type="button" aria-label="Закрыть"></button>
-          <div class="offer offer--modal box box--white">
-            <div class="offer__wrapper offer__wrapper--modal">
-              <h2 class="offer__title offer__title--modal">Получить предложение</h2>
-              <div class="offer__form">
+          <div class="form form--main form--modal box box--white">
+            <div class="form__wrapper form__wrapper--modal">
+              <h2 class="form__title form__title--modal">Получить предложение</h2>
+              <div class="form__form">
                 <form action="#" method="POST" autocomplete="on" id="modal-offer-form">
-                  <div class="offer__input-text-wrap">
-                    <div class="offer__form-field offer__form-field--text offer__form-field--m offer__form-field--1 offer__form-field--modal">
+                  <div class="form__input-text-wrap">
+                    <div class="form__form-field form__form-field--text form__form-field--m form__form-field--1 form__form-field--modal">
                       <input type="text" id="name-2" name="name" pattern="([A-Za-zА-ЯЁа-яё-]{2,}\s?)+" placeholder="Ваше имя" title="Имя может состоять только из букв, пробелов и дефиса" required="required"/>
                       <label for="name-2">Ваше имя</label>
                     </div>
-                    <div class="offer__form-field offer__form-field--text offer__form-field--m offer__form-field--3 offer__form-field--modal">
+                    <div class="form__form-field form__form-field--text form__form-field--m form__form-field--3 form__form-field--modal">
                       <input type="email" id="email-2" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" placeholder="Эл. почта" title="Email адрес должен быть типа: user@mail.com" required="required"/>
                       <label for="email-2">Эл. почта</label>
                     </div>
-                    <div class="offer__form-field offer__form-field--text offer__form-field--s offer__form-field--2 offer__form-field--modal">
+                    <div class="form__form-field form__form-field--text form__form-field--s form__form-field--2 form__form-field--modal">
                       <input type="tel" id="phone-2" name="phone" placeholder="Телефон" title="Номер телефона должен начинаться с символов +7 и содержать 11 цифр" pattern="7\d{10}" data-mask="+{7}(000)000-00-00" required="required"/>
                       <label for="phone-2">Телефон</label>
                     </div>
-                    <div class="offer__form-field offer__form-field--text offer__form-field--s offer__form-field--4 offer__form-field--modal">
+                    <div class="form__form-field form__form-field--text form__form-field--s form__form-field--4 form__form-field--modal">
                       <input type="text" id="company-2" name="company" placeholder="Название компании" required="required"/>
                       <label for="company-2">Название компании</label>
                     </div>
-                    <div class="offer__form-field offer__form-field--text offer__form-field--5 offer__form-field--modal">
+                    <div class="form__form-field form__form-field--text form__form-field--5 form__form-field--modal">
                       <select id="quantity-2" name="quantity-users" required="required">
                         <option value="">Количество пользователей</option>
                         <option value="1-100">1-100</option>
@@ -850,17 +850,17 @@
                       <label for="quantity-2">Количество пользователей</label>
                     </div>
                   </div>
-                  <div class="offer__checkbox-wrap">
-                    <div class="offer__form-field offer__form-field--checkbox offer__form-field--modal">
+                  <div class="form__checkbox-wrap">
+                    <div class="form__form-field form__form-field--checkbox form__form-field--modal">
                       <input class="visually-hidden" type="checkbox" id="accept-2" name="accepted" checked="checked" required="required"/>
                       <label for="accept-2">Я согласен на обработку персональных данных</label>
                     </div>
-                    <div class="offer__form-field offer__form-field--checkbox offer__form-field--modal">
+                    <div class="form__form-field form__form-field--checkbox form__form-field--modal">
                       <input class="visually-hidden" type="checkbox" id="subscribe-2" name="subscribe"/>
                       <label for="subscribe-2">Подписаться на новостную рассылку</label>
                     </div>
                   </div>
-                  <button class="button button--accent button--offer" type="submit"><span>Отправить заявку</span>
+                  <button class="button button--accent button--form" type="submit"><span>Отправить заявку</span>
                   </button>
                 </form>
               </div>

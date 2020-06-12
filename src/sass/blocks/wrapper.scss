@@ -1,0 +1,7 @@
+.wrapper {
+  &--main {
+    @include make-block-wrapper;
+    padding-left: var(--indent);
+    padding-right: var(--indent);
+  }
+}

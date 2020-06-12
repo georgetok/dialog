@@ -1,0 +1,35 @@
+.feedback {
+  .wrap {
+    @include tablet {
+      flex-wrap: wrap;
+    }
+  }
+
+  .col {
+    &--left:not(#_) {
+      width: calc(100% / 12 * 7);
+
+      @include tablet {
+        width: 100%;
+      }
+    }
+
+    &--right:not(#_) {
+      width: calc(100% / 12 * 4);
+
+      @include laptop {
+        width: calc(100% / 12 * 5);
+      }
+      @include tablet {
+        width: 100%;
+        margin-top: 40px;
+      }
+      @include mobile-md {
+        margin-top: 0;
+        width: calc(100% + var(--indent) * 2);
+        margin-left: calc(var(--indent) * -1);
+        margin-right: calc(var(--indent) * -1);
+      }
+    }
+  }
+}

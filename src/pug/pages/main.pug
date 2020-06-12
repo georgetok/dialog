@@ -100,12 +100,18 @@ block content
     ];
 
 
-  section.hero.box.box--hero.box--purple
+  section.hero.hero--main.hero--reverse.box.box--hero.box--purple
     .hero__wrapper
       .hero__left
         h1.hero__title Dialog
         p.hero__text Корпоративный мессенджер для совместной работы и&nbsp;безопасного общения
-        +button('Оставить заявку', {type: 'button', isLink: false, additionalClassName: 'button--hero js-open-modal-hero'})
+        +button(
+          'Оставить заявку',
+          {
+            type: 'button',
+            isLink: false,
+            additionalClassName: 'button--hero js-open-modal-hero'
+          })
       .hero__right
         .hero__img
           +picture('img/hero', 'png', 'Фото ноутбука и мобильного телефона', 682)
@@ -318,39 +324,39 @@ block content
       h2.blog__title Блог компании
       ul.blog__list
         li.blog__item
-          a(href="#!").blog__card
+          a(href="/post.html").blog__card
             .blog__img-box
-              +picture('img/blog-1-desktop', 'jpg', 'Изображение приложения', 380)
+              +picture('img/pages/blog/blog-1-desktop', 'jpg', 'Изображение приложения', 380)
             .blog__text-box
-              h3 Корпоративный мессенджер для локальной сети
+              h3.blog__card-title Корпоративный мессенджер для локальной сети
               .blog__text-info
                 p 27 февраля, 2020
                 div
                   +svg('icon-watch', 17, 17)
                   span 1 мин
         li.blog__item
-          a(href="#!").blog__card
+          a(href="/post.html").blog__card
             .blog__img-box
-              +picture('img/blog-2-desktop', 'jpg', 'Изображение приложения', 380)
+              +picture('img/pages/blog/blog-2-desktop', 'jpg', 'Изображение приложения', 380)
             .blog__text-box
-              h3 Корпоративный мессенджер&nbsp;&mdash; виды, возможности и&nbsp;сферы применения
+              h3.blog__card-title Корпоративный мессенджер&nbsp;&mdash; виды, возможности и&nbsp;сферы применения
               .blog__text-info
                 p 27 февраля, 2020
                 div
                   +svg('icon-watch', 17, 17)
                   span 1 мин
         li.blog__item
-          a(href="#!").blog__card
+          a(href="/post.html").blog__card
             .blog__img-box
-              +picture('img/blog-3-desktop', 'jpg', 'Изображение приложения', 380)
+              +picture('img/pages/blog/blog-3-desktop', 'jpg', 'Изображение приложения', 380)
             .blog__text-box
-              h3 Цифровая гигиена: как уберечь переписку в&nbsp;мессенджерах от&nbsp;конкурентов
+              h3.blog__card-title Цифровая гигиена: как уберечь переписку в&nbsp;мессенджерах от&nbsp;конкурентов
               .blog__text-info
                 p 27 февраля, 2020
                 div
                   +svg('icon-watch', 17, 17)
                   span 1 мин
-      a(class="link link--with-icon link--blog" href="#!") Смотреть все
+      a(class="link link--with-icon" href="/blog") Смотреть все
         +svg('arrow-right', 16, 15)
   +form(false, 1, 'offer-form')
 

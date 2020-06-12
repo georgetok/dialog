@@ -1,39 +1,39 @@
 include ./button
 
 mixin form (isModal, idNumber, formId)
-  .offer(class=(isModal ? 'offer--modal' : null)).box.box--white
-    .offer__wrapper(class=(isModal ? 'offer__wrapper--modal' : null))
-      h2.offer__title(class=(isModal ? 'offer__title--modal' : null)) Получить предложение
-      .offer__form
+  .form.form--main(class=(isModal ? 'form--modal' : null)).box.box--white
+    .form__wrapper(class=(isModal ? 'form__wrapper--modal' : null))
+      h2.form__title(class=(isModal ? 'form__title--modal' : null)) Получить предложение
+      .form__form
         form(action="#" method="POST" autocomplete="on" id!=formId)
-          .offer__input-text-wrap
-            .offer__form-field.offer__form-field--text.offer__form-field--m.offer__form-field--1(class=(isModal ? 'offer__form-field--modal' : null))
+          .form__input-text-wrap
+            .form__form-field.form__form-field--text.form__form-field--m.form__form-field--1(class=(isModal ? 'form__form-field--modal' : null))
               input(type="text" id=`name-${idNumber}` name="name" pattern="([A-Za-zА-ЯЁа-яё-]{2,}\\s?)+" placeholder='Ваше имя' title="Имя может состоять только из букв, пробелов и дефиса" required)
               label(for=`name-${idNumber}`) Ваше имя
-            .offer__form-field.offer__form-field--text.offer__form-field--m.offer__form-field--3(class=(isModal ? 'offer__form-field--modal' : null))
+            .form__form-field.form__form-field--text.form__form-field--m.form__form-field--3(class=(isModal ? 'form__form-field--modal' : null))
               input(type="email" id=`email-${idNumber}` name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,}$" placeholder="Эл. почта" title="Email адрес должен быть типа: user@mail.com" required)
               label(for=`email-${idNumber}`) Эл. почта
-            .offer__form-field.offer__form-field--text.offer__form-field--s.offer__form-field--2(class=(isModal ? 'offer__form-field--modal' : null))
+            .form__form-field.form__form-field--text.form__form-field--s.form__form-field--2(class=(isModal ? 'form__form-field--modal' : null))
               input(type="tel" id=`phone-${idNumber}` name="phone" placeholder="Телефон" title="Номер телефона должен начинаться с символов +7 и содержать 11 цифр" pattern="7\\d{10}" data-mask="+{7}(000)000-00-00" required)
               label(for=`phone-${idNumber}`) Телефон
-            .offer__form-field.offer__form-field--text.offer__form-field--s.offer__form-field--4(class=(isModal ? 'offer__form-field--modal' : null))
+            .form__form-field.form__form-field--text.form__form-field--s.form__form-field--4(class=(isModal ? 'form__form-field--modal' : null))
               input(type="text" id=`company-${idNumber}` name="company" placeholder="Название компании" required)
               label(for=`company-${idNumber}`) Название компании
-            .offer__form-field.offer__form-field--text.offer__form-field--5(class=(isModal ? 'offer__form-field--modal' : null))
+            .form__form-field.form__form-field--text.form__form-field--5(class=(isModal ? 'form__form-field--modal' : null))
               select(id=`quantity-${idNumber}` name="quantity-users" required)
                 option(value="") Количество пользователей
                 option(value="1-100") 1-100
                 option(value="101-500") 101-500
                 option(value="501 и больше") 501 и больше
               label(for=`quantity-${idNumber}`) Количество пользователей
-          .offer__checkbox-wrap
-            .offer__form-field.offer__form-field--checkbox(class=(isModal ? 'offer__form-field--modal' : null))
+          .form__checkbox-wrap
+            .form__form-field.form__form-field--checkbox(class=(isModal ? 'form__form-field--modal' : null))
               input.visually-hidden(type="checkbox" id=`accept-${idNumber}` name="accepted" checked required)
               label(for=`accept-${idNumber}`) Я согласен на обработку персональных данных
-            .offer__form-field.offer__form-field--checkbox(class=(isModal ? 'offer__form-field--modal' : null))
+            .form__form-field.form__form-field--checkbox(class=(isModal ? 'form__form-field--modal' : null))
               input.visually-hidden(type="checkbox" id=`subscribe-${idNumber}` name="subscribe")
               label(for=`subscribe-${idNumber}`) Подписаться на новостную рассылку
-          +button('Отправить заявку', {styleType: 'accent', type: 'submit', additionalClassName: 'button--offer'})
+          +button('Отправить заявку', {styleType: 'accent', type: 'submit', additionalClassName: 'button--form'})
       //- if isModal
-      //-   button(aria-label='Закрыть меню' type="button").offer__close-button
+      //-   button(aria-label='Закрыть меню' type="button").form__close-button
 

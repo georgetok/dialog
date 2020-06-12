@@ -1,0 +1,74 @@
+extends ../global/layout
+include ../mixins/svg
+include ../mixins/button
+include ../mixins/button-play
+include ../mixins/picture
+include ../mixins/form
+
+block variables
+  -
+    const lang = "ru";
+    const title = "Dialog";
+    const routeClass = "js-route-main";
+
+block content
+  section.hero.hero--main.hero--career.box.box--carier
+    .hero__wrapper
+      .hero__left
+        h1.hero__title Хочешь реализовать свои таланты?
+        p.hero__text Присоединяйся к команде Dialog 
+        +button(
+          'Открытые вакансии',
+          {
+            styleType: 'accent',
+            isLink: false,
+            additionalClassName: 'button--hero js-open-modal-carier'
+          })
+          +svg('arrow-right', 16, 15)
+
+      .hero__right
+        .hero__img
+          +picture('/img/pages/integrations/hero', 'png', 'Фото ноутбука и мобильного телефона', 682)
+  section.mission.box.box--lilac
+    .wrapper.wrapper--main
+      .wrap.wrap--mission
+        .mission__left
+          h2.mission__title Мы создаем Dialog
+          p.mission__description Компания занимается разработкой корпоративного мессенджера Dialog более 4 лет. Dialog объединяет специалистов в области IT-коммуникаций, безопасности данных, real-time распределенных систем, Big Data и других смежных с месседжингом областей.
+          p.mission__description На данный момент в Dialog работает более 120 человек, которые в разное время занимались разработкой продуктов для крупнейших компаний, лидирующих в области систем безопасности и хранения данных.
+        .mission__right
+          .mission__count
+            span.mission__text.mission__tick
+            span.mission__text.mission__text--big > 120
+            span.mission__text.mission__text--small человек в команде
+            br
+            span.mission__text.mission__text--big 2
+            span.mission__text.mission__text--small города, офис в Москве  и Санкт-Петербурге
+  section.gallery.box.box--lilac
+    .wrap.wrap--images
+      each val, index in Array(15)
+        .col
+          .gallery__img-wrapper
+            +picture(`/img/gallery/gallery${index + 1}`, 'png', 'Фото ноутбука и мобильного телефона', 333)
+  section.box.box--lilac
+    .wrapper.wrapper--main
+      .cta.cta--purple
+        .wrap.wrap--c.wrap--w
+          .wrap.wrap--c.wrap--s
+            h2.cta__title В нашу быстрорастущую команду требуется много талантов 
+          .wrap.wrap--c.wrap--s
+            p.cta__subh Узнайте больше об открытых вакансиях и работе в компании
+        .wrap.wrap--c
+          +button(
+            'Открытые вакансии',
+            {
+              styleType: 'accent',
+              isLink: false,
+              additionalClassName: 'button--hero js-open-modal-carier'
+            })
+            +svg('arrow-right', 16, 15)
+
+
+  +form(false, 1, 'offer-form')
+
+

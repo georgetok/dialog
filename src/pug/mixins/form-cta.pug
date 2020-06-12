@@ -1,0 +1,22 @@
+include ./button
+
+mixin form-cta (idNumber,formId)
+  .form.form--cta
+    .form__wrapper
+      form(action="#" method="POST" autocomplete="on" id!=formId class="form__content")
+        h3.form__title Подпишитесь на свежие статьи блога!
+        .form__row
+          .form__input-text-wrap
+            .form__field
+              input(
+                type="email"
+                id=`email-${idNumber}`
+                name="email"
+                pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,}$"
+                placeholder="Ваша эл. почта"
+                title="Email адрес должен быть типа: user@mail.com"
+                required
+              )
+              label(for=`email-${idNumber}`) Ваша эл. почта
+
+          +button('Подписаться', {styleType: 'light', type: 'submit', additionalClassName: 'form__button button--form'})

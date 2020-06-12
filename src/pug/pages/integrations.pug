@@ -1,0 +1,113 @@
+extends ../global/layout
+include ../mixins/svg
+include ../mixins/button
+include ../mixins/button-play
+include ../mixins/picture
+include ../mixins/form
+
+block variables
+  -
+    const lang = "ru";
+    const title = "Dialog";
+    const routeClass = "js-route-main";
+    const licenseImages = {
+    title: 'Лицензии',
+    images: [
+    {
+    imgPath: 'img/patents/license-fsb',
+    imgType: 'jpg',
+    imgAlt: 'Фотография лицензии',
+    imgWidth: 80,
+    linkName: 'ФСБ'
+    },
+    {
+    imgPath: 'img/patents/fstek-1',
+    imgType: 'jpg',
+    imgAlt: 'Фотография сертификата',
+    imgWidth: 80,
+    linkName: 'ФСТЭК'
+    },
+    {
+    imgPath: 'img/patents/fstek-2',
+    imgType: 'jpg',
+    imgAlt: 'Фотография сертификата',
+    imgWidth: 80,
+    linkName: 'ФСТЭК'
+    }
+    ]
+    };
+
+block content
+  section.hero.hero--main.hero--integrations
+    .hero__wrapper
+      .hero__left
+        h1.hero__title Интеграции делают Dialog еще лучше
+      .hero__right
+        .hero__img
+          +picture(
+            'img/pages/integrations/hero',
+            'png',
+            'Фото ноутбука и мобильного телефона',
+            682
+          )
+  section.integrations
+    .wrapper.wrapper--main
+      h2 Интегрируйте свои приложения с Dialog  и автоматизируйте рабочие процессы
+      .wrap.wrap--cards
+        .col
+          .card.card--outline
+            .wrap.wrap--c.wrap--up
+              +svg('icon-api-dialog', 150, 90)
+            .wrap.wrap--c.wrap--dc.wrap--mid
+              h4 Dialog API
+              p API позволяет другим приложениям взаимодействовать с Dialog. Используйте функции корпоративного мессенджера и создавайте новые сервисы для нужд бизнеса.
+        .col
+          .card.card--outline
+            .wrap.wrap--c.wrap--up
+              +svg('icon-sdk', 150, 90)
+            .wrap.wrap--c.wrap--dc.wrap--mid
+              h4 Dialog Bot SDK
+              p Bot SDK позволяет создавать ботов и чат-ботов для Dialog. Боты оптимизируют повторяющиеся рутинные операции и освобождают время для более сложных задач.
+            .wrap.wrap--bot.wrap--sb.wrap--w
+              p Документация
+              p Python | Java | Javascript
+        .col
+          .card.card--outline
+            .wrap.wrap--c.wrap--up
+              +svg('icon-graphql', 150, 90)
+            .wrap.wrap--c.wrap--dc.wrap--mid
+              h4 GraphQL
+              p Интегрируйте Dialog с внешними системами и управляйте данными через команды GraphQL.
+    .box--pattern
+
+  section.integrations
+    .wrapper.wrapper--main
+      h3 Интеграция с минимальным использованием кода
+      .wrap.wrap--cards
+        .col
+          .card.card--outline
+            .wrap.wrap--c.wrap--up
+              +svg('icon-zapier', 150, 90)
+            .wrap.wrap--c.wrap--dc.wrap--mid
+              h4 Zapier
+              p Используйте данные и происходящие события в более чем 1000 интеграциях для автоматизации вашего рабочего процесса.
+            .wrap.wrap--bot.wrap--sb.wrap--w
+              p Настройте интеграцию прямо сейчас
+        .col
+          .card.card--outline
+            .wrap.wrap--c.wrap--up
+              +svg('icon-webhooks', 150, 90)
+            .wrap.wrap--c.wrap--dc.wrap--mid
+              h4 Webhooks
+              p Функции Dialog в WebHooks как простой способ получения автоматических сообщений и обновления данных, отправленных в текстовый канал на вашем сервере/
+    .box--pattern
+
+  section.cta.cta--purple.box--purple
+    .wrapper.wrapper--main
+      .wrap.wrap--c
+        h2 Появились вопросы?
+      .wrap.wrap--c
+        +button('Свяжитесь с нами', {
+          styleType: 'light',
+          isLink: true
+        })

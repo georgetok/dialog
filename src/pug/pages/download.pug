@@ -4,6 +4,7 @@ include ../mixins/button
 include ../mixins/button-play
 include ../mixins/picture
 include ../mixins/form
+include ../mixins/download
 
 block variables
   -
@@ -11,16 +12,117 @@ block variables
     const title = "Dialog";
     const routeClass = "js-route-main";
 
+
 block content
-  section.hero.box.box--hero.box--purple
-    .hero__wrapper
-      .hero__left
-        h1.hero__title Dialog
-        p.hero__text Корпоративный мессенджер для совместной работы и&nbsp;безопасного общения
-        +button('Оставить заявку', {type: 'button', isLink: false, additionalClassName: 'button--hero js-open-modal-hero'})
-      .hero__right
-        .hero__img
-          +picture('img/hero', 'png', 'Фото ноутбука и мобильного телефона', 682)
-  +form(false, 1, 'offer-form')
+
+  section.hero.hero--download.box--lilac
+    +hero({
+      id: "macos",
+      title: "macOS",
+      text: "Работает на macOS 10.10 (Yosemite) и выше",
+      link: "/",
+    })
+    +hero({
+      id: "windows",
+      title: "Windows",
+      text: "Работает на macOS 10.10 (Yosemite) и выше",
+      link: "/",
+    })
+    +hero({
+      id: "ios",
+      title: "iOS",
+      text: "Работает на macOS 10.10 (Yosemite) и выше",
+      link: "/",
+    })
+    +hero({
+      id: "android",
+      title: "Windows",
+      text: "Работает на macOS 10.10 (Yosemite) и выше",
+      link: "/",
+    })
+    +hero({
+      id: "linux",
+      title: "Windows",
+      text: "Работает на macOS 10.10 (Yosemite) и выше",
+      link: "/",
+    })
+
+  section.download
+    .wrapper.wrapper--main
+      .wrap.wrap--cards
+        +col({
+          id: 'windows',
+          title: 'Скачать для Windows',
+          iconName: 'windows',
+          link: '/',
+          select: ['.exe', '.msi'],
+        })
+        +col({
+          id: 'linux',
+          title: 'Скачать для Linux',
+          iconName: 'linux',
+          link: '/',
+          select: ['.deb', '.deb x86', '.rpm x86', '.rpm'],
+        })
+        +col({
+          id: 'ios',
+          title: 'Скачать для iOS',
+          iconName: 'ios',
+          qrName: 'ios',
+          link: '/',
+        })
+        +col({
+          id: 'android',
+          title: 'Скачать для Android',
+          qrName: 'android',
+          iconName: 'android',
+          link: '/',
+        })
+        +col({
+          id: 'macos',
+          title: 'Скачать для macOS',
+          iconName: 'ios',
+          qrName: 'ios',
+          link: '/',
+        })
+        +col({
+          id: 'web',
+          title: 'Открыть Web версию',
+          link: '/',
+          isNoInstruction: true,
+          isButton: true
+        })
+
+  script.
+    let os = "Not known";
+
+    if (
+      os === "Not known" ||
+      navigator.appVersion.indexOf("Mac") !== -1 ||
+      (navigator.appVersion.indexOf("Android") !== -1
+        && navigator.appVersion.indexOf("Linux") !== -1)
+    ) {
+      document.getElementById('macos-hero').classList.add("is-visible");
+      document.getElementById('macos-col').classList.remove("is-visible");
+    } else if (navigator.appVersion.indexOf("Win") !== -1) {
+      os = "Windows OS";
+      document.getElementById('windows-hero').classList.add("is-visible");
+      document.getElementById('windows-col').classList.remove("is-visible");
+    } else if (navigator.appVersion.indexOf("Android") !== -1) {
+      os = "Android OS"
+      document.getElementById('android-hero').classList.add("is-visible");
+      document.getElementById('android-col').classList.remove("is-visible");
+    } else if (navigator.appVersion.indexOf("Linux") !== -1) {
+      os = "Linux OS"
+      document.getElementById('linux-hero').classList.add("is-visible");
+      document.getElementById('linux-col').classList.remove("is-visible");
+    } else if (navigator.appVersion.indexOf("iOS") !== -1) {
+      os = "iOS OS"
+      document.getElementById('linux-hero').classList.add("is-visible");
+      document.getElementById('linux-col').classList.remove("is-visible");
+    };
 
 
+
+    console.log(JSON.stringify(os));
+    console.log(JSON.stringify(navigator.appVersion));

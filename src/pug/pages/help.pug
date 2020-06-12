@@ -3,7 +3,8 @@ include ../mixins/svg
 include ../mixins/button
 include ../mixins/button-play
 include ../mixins/picture
-include ../mixins/form
+include ../mixins/form-feedback
+include ../mixins/page-title
 
 block variables
   -
@@ -12,15 +13,24 @@ block variables
     const routeClass = "js-route-main";
 
 block content
-  section.hero.box.box--hero.box--purple
-    .hero__wrapper
-      .hero__left
-        h1.hero__title Dialog
-        p.hero__text Корпоративный мессенджер для совместной работы и&nbsp;безопасного общения
-        +button('Оставить заявку', {type: 'button', isLink: false, additionalClassName: 'button--hero js-open-modal-hero'})
-      .hero__right
-        .hero__img
-          +picture('img/hero', 'png', 'Фото ноутбука и мобильного телефона', 682)
-  +form(false, 1, 'offer-form')
-
-
+  +page-title('Обратная связь')
+  .feedback
+    .wrapper.wrapper--main
+      .wrap.wrap--gap-lg.wrap--as.wrap--sb
+        .col.col--left
+          +form-feedback(false, 1, 'offer-form')
+        .col.col--right
+          .card.card--dark
+            h2.card__title Корпоративным клиентам
+            p.card__sub Если вы пользователь dialog enterprise — воспользуйтесь центром поддержки для корпоративных клиентов.  Или запросите доступ у вашего администратора.
+          .card.card--transparent
+            a(href="/" target="_blank")
+              | Центр поддержки клиентов
+              +svg('arrow-right',12, 10)
+            p.card__sub
+              span
+                | Связаться со службой поддержки можно также по &nbsp;
+              span
+                | email:&nbsp;
+              a(href="/" target="_blank")
+                | support@dlg.im

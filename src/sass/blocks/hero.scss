@@ -1,5 +1,6 @@
 .hero {
   overflow: hidden;
+
   &__wrapper {
     @include make-block-wrapper;
     display: flex;
@@ -242,26 +243,23 @@
   &--career,
   &--integrations {
     overflow: hidden;
-    @include tablet {
-      .hero__wrapper {
-        flex-direction: column;
-      }
-      .hero__right {
-        padding-top: 0;
-      }
-      .hero__left {
-        padding-top: 50px;
-      }
-    }
+
 
     .hero__left {
+      width: 45%;
       padding-right: 0px;
+
       &::after {
         display: none;
       }
     }
 
+    .hero__right {
+      width: 50%;
+    }
+
     .hero__img {
+
       position: relative;
 
       &::before {
@@ -285,6 +283,52 @@
         content: "";
         display: block;
         position: absolute;
+      }
+    }
+
+    @include tablet {
+      .hero__wrapper {
+        flex-direction: column;
+      }
+      .hero__right {
+        padding-top: 0;
+        width: calc(100% - (var(--indent)*2));
+      }
+      .hero__left {
+        width: calc(100% - (var(--indent)*2));
+        padding-top: 50px;
+      }
+      .hero__img {
+        width: 100%;
+      }
+    }
+  }
+
+  &--career {
+    .hero__img {
+      &::before {
+        background-image: url("../img/bg-hero-square-orange.svg");
+
+        @include tablet {
+          display: none;
+        }
+      }
+
+      &::after {
+        right: 0;
+        top: 0;
+        bottom: auto;
+        width: 65%;
+        padding-bottom: 26.5%;
+        transform: translate(50%, -50%);
+        background-size: 50%;
+        background-image: url("../img/pattern.svg");
+
+        @include tablet {
+          left: 0;
+          right: auto;
+          transform: translate(-50%, -50%);
+        }
       }
     }
   }
@@ -319,7 +363,7 @@
     }
   }
 
-  &--career,
+
   &--integrations {
     .hero__img {
       &::before {

@@ -619,26 +619,3 @@
     padding: 0;
   }
 }
-
-.select {
-  min-height: 50px;
-  padding: 0 20px;
-  cursor: pointer;
-  appearance: none;
-  font-weight: bold;
-
-  &--dark {
-    color: $color-contrast;
-    background: url("../img/arrow-select.svg") no-repeat right 20px center black;
-
-    &:hover,
-    &:focus,
-    &:active {
-      background-color: $color-accent;
-      outline: none;
-    }
-  }
-}
-
-
-

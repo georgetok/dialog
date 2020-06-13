@@ -310,7 +310,7 @@
                       <use xlink:href="img/sprite.svg#icon-windows"></use>
                     </svg>
                   </div>
-                  <select class="card__select select select--dark" placeholder="скачать">
+                  <select id="choice-windows">
                     <option selected="selected" disabled="disabled">Скачать</option>
                     <option name="0">.exe</option>
                     <option name="1">.msi</option>
@@ -325,7 +325,7 @@
                       <use xlink:href="img/sprite.svg#icon-linux"></use>
                     </svg>
                   </div>
-                  <select class="card__select select select--dark" placeholder="скачать">
+                  <select id="choice-linux">
                     <option selected="selected" disabled="disabled">Скачать</option>
                     <option name="0">.deb</option>
                     <option name="1">.deb x86</option>
@@ -387,40 +387,6 @@
             </div>
           </div>
         </section>
-        <script>
-          let os = "Not known";
-          
-          if (
-            os === "Not known" ||
-            navigator.appVersion.indexOf("Mac") !== -1 ||
-            (navigator.appVersion.indexOf("Android") !== -1
-              && navigator.appVersion.indexOf("Linux") !== -1)
-          ) {
-            document.getElementById('macos-hero').classList.add("is-visible");
-            document.getElementById('macos-col').classList.remove("is-visible");
-          } else if (navigator.appVersion.indexOf("Win") !== -1) {
-            os = "Windows OS";
-            document.getElementById('windows-hero').classList.add("is-visible");
-            document.getElementById('windows-col').classList.remove("is-visible");
-          } else if (navigator.appVersion.indexOf("Android") !== -1) {
-            os = "Android OS"
-            document.getElementById('android-hero').classList.add("is-visible");
-            document.getElementById('android-col').classList.remove("is-visible");
-          } else if (navigator.appVersion.indexOf("Linux") !== -1) {
-            os = "Linux OS"
-            document.getElementById('linux-hero').classList.add("is-visible");
-            document.getElementById('linux-col').classList.remove("is-visible");
-          } else if (navigator.appVersion.indexOf("iOS") !== -1) {
-            os = "iOS OS"
-            document.getElementById('linux-hero').classList.add("is-visible");
-            document.getElementById('linux-col').classList.remove("is-visible");
-          };
-          
-          
-          
-          console.log(JSON.stringify(os));
-          console.log(JSON.stringify(navigator.appVersion));
-        </script>
       </main>
       <div class="page__footer">
         <footer class="footer">

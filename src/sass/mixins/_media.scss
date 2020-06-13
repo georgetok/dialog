@@ -10,6 +10,12 @@
   }
 }
 
+@mixin mid {
+  @media (max-width: $width-mid - 1) {
+    @content;
+  }
+}
+
 @mixin mobile-md {
   @media (max-width: $width-tablet - 1) {
     @content;

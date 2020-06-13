@@ -9,7 +9,7 @@ mixin col(props)
         .card__qr
           +svg(`qr-${props.qrName}`, '150','150')
       if props.select
-        select.card__select.select.select--dark(placeholder="скачать")
+        select(id=`choice-${props.id}`)
           option(selected disabled) Скачать
           each val, index in props.select
             option(name=index)=val

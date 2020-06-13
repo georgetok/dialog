@@ -63,5 +63,8 @@
     "src/js/**/*.js",
     "src/img/**/*.svg",
     "src/sass/**/*.{sass,scss}"
-  ]
+  ],
+  "dependencies": {
+    "choices.js": "^9.0.1"
+  }
 }

@@ -203,20 +203,15 @@
     .hero__right {
       min-width: 60%;
       padding-top: 90px;
-      padding-bottom: 75px;
-
-
-      @include laptop {
+      padding-bottom: 70px;
+      @include mid {
         margin-right: calc(var(--indent) * -1);
-        padding-top: 100px;
-        padding-bottom: 103px;
         min-width: 90%;
-
       }
 
       @include tablet {
         position: relative;
-        padding-bottom: 25px;
+        padding-bottom: 55px;
       }
 
       @include mobile-sm {

@@ -1,0 +1,40 @@
+.select {
+  &.select--choice {
+    min-height: 50px;
+    cursor: pointer;
+    //appearance: none;
+    font-weight: bold;
+
+    &.select--dark {
+      .choices__inner {
+        background: $color-base;
+        color: $color-contrast;
+        border-color: $color-base;
+      }
+      .choices__list--dropdown{
+        border-color: $color-base;
+      }
+      .choices__item {
+        background: $color-base;
+        color: $color-contrast;
+        font-size: 16px;
+      }
+      .choices__item--choice{
+        background: #38373a;
+        &.is-highlighted{
+          background: $color-base;
+        }
+      }
+      &.choices[data-type*=select-one]:after{
+        border-color: $color-contrast transparent transparent;
+      }
+      &.choices[data-type*=select-one].is-open:after{
+        border-color: transparent transparent $color-contrast;
+      }
+    }
+
+    .choices__item--disabled {
+      display: none;
+    }
+  }
+}

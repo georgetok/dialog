@@ -225,6 +225,17 @@
   margin-left: 91.66666667%;
 }
 
+@mixin gap-xxs {
+  margin: 0 -5px;
+  width: calc(100% + 10px);
+
+  & > [class*="col"] {
+    padding-left: 5px;
+    padding-right: 5px;
+    margin-top: 10px;
+  }
+}
+
 @mixin gap-xs {
   margin: 0 -10px;
   width: calc(100% + 20px);

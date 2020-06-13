@@ -116,13 +116,17 @@
   .wrap {
     &--img {
       padding-left: 28px;
+      @include gap-xxs;
 
-      a {
-        margin-top: 20px;
+      @include mobile-xs {
+        flex-wrap: wrap;
       }
+
 
       img {
         width: 100%;
+        height: 100%;
+        object-fit: contain;
       }
 
       .col {
@@ -130,8 +134,11 @@
         @include row;
         flex-direction: column;
         justify-content: space-between;
-        @include mobile-sm{
+        @include mobile-sm {
           @include col-4;
+        }
+        @include mobile-xs {
+          @include col-6;
         }
       }
     }
@@ -141,10 +148,16 @@
       margin-left: 20px;
     }
 
+    &--preview {
+      width: 100%;
+    }
+
     &--link {
+      margin: 20px 10px 10px;
+
       a,
       svg {
-        margin-top: 20px;
+        display: block;
       }
 
       svg {

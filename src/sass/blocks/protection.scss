@@ -29,6 +29,14 @@
         @include col-6;
         @include row-end;
 
+        @include tablet {
+          padding-right: 50px;
+          @include col-8;
+        }
+
+        @include mobile-md {
+          padding-right: 0;
+        }
 
         @include mobile-sm {
           display: none;
@@ -45,7 +53,9 @@
 
         @include tablet {
           padding-right: 50px;
+          @include col-8;
         }
+
         @include mobile-sm {
           @include col-12;
           margin-bottom: 25px;

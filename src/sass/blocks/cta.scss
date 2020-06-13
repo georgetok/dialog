@@ -1,5 +1,5 @@
 .cta {
-  padding: var(--indent);
+  padding: 70px;
   @include mobile-md {
     padding-left: 0;
     padding-right: 0;
@@ -9,6 +9,7 @@
     @include mobile-sm {
       padding-left: 0;
       padding-right: 0;
+      padding: 40px;
     }
   }
 

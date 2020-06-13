@@ -319,6 +319,7 @@
 
   &--security {
     padding-bottom: 40px;
+
     .hero__img {
       &::before {
         left: 0;
@@ -358,9 +359,19 @@
   &--integrations {
     .hero__img {
       &::before {
+        left: 0;
+        bottom: 0;
+        top: auto;
+        width: 22%;
+        padding-bottom: 22%;
+        transform: translate(-33%, 33%);
+        background-size: 100%;
         background-image: url("../img/bg-hero-square-orange.svg");
         @include tablet {
-          background-image: none;
+          left: auto;
+          right: 0;
+          top: 0;
+          transform: translate(50%, -50%);
         }
       }
     }

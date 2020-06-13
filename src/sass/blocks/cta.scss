@@ -6,7 +6,6 @@
   }
 
   &--purple {
-    padding: calc(var(--indent) * 1.5);
     @include mobile-sm {
       padding-left: 0;
       padding-right: 0;

@@ -33,12 +33,7 @@ if (route) {
 
 let os = "Not known";
 
-if (
-  os === "Not known" ||
-  navigator.appVersion.indexOf("Mac") !== -1 ||
-  (navigator.appVersion.indexOf("Android") !== -1
-    && navigator.appVersion.indexOf("Linux") !== -1)
-) {
+if (navigator.appVersion.indexOf("Mac") !== -1) {
   document.getElementById('macos-hero').classList.add("is-visible");
   document.getElementById('macos-col').classList.remove("is-visible");
 } else if (navigator.appVersion.indexOf("Win") !== -1) {
@@ -59,6 +54,11 @@ if (
   document.getElementById('linux-col').classList.remove("is-visible");
 }
 
+console.log('MacOS', navigator.appVersion.indexOf("Mac") !== -1);
+console.log('iOS', navigator.appVersion.indexOf("iOS") !== -1);
+console.log('Android', navigator.appVersion.indexOf("Android") !== -1);
+console.log('Linux', navigator.appVersion.indexOf("Linux") !== -1);
+console.log('Windows', navigator.appVersion.indexOf("Windows") !== -1);
 console.log(JSON.stringify(os));
 console.log(JSON.stringify(navigator.appVersion));
 
@@ -72,8 +72,10 @@ const choiceOptions = {
 
 const windowsChoiceSelector = document.getElementById('choice-windows');
 const linuxChoiceSelector = document.getElementById('choice-linux');
+const macosChoiceSelector = document.getElementById('choice-macos');
 const windowsChoice = new Choices(windowsChoiceSelector, choiceOptions);
 const linuxChoice = new Choices(linuxChoiceSelector, choiceOptions);
+const macosChoice = new Choices(macosChoiceSelector, choiceOptions);
 
 windowsChoiceSelector.addEventListener('choice', function (event) {
   let a = document.createElement('a');
@@ -93,7 +95,7 @@ linuxChoiceSelector.addEventListener('choice', function (event) {
   a.parentNode.removeChild(a);
 });
 
-windowsChoiceSelector.addEventListener('choice', function (event) {
+macosChoiceSelector.addEventListener('choice', function (event) {
   let a = document.createElement('a');
   document.body.appendChild(a);
   a.download = "event";
@@ -101,4 +103,3 @@ windowsChoiceSelector.addEventListener('choice', function (event) {
   a.click();
   a.parentNode.removeChild(a);
 });
-

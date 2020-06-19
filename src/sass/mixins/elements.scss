@@ -72,8 +72,8 @@
 }
 
 @mixin make-sm-block-wrapper {
-  width: 70%;
-  max-width: $width-desktop;
+  width: 100%;
+  max-width: calc(800px + var(--indent) * 2);
   margin: 0 auto;
 }
 

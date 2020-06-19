@@ -41,42 +41,33 @@ mixin hero(props)
   div(id=`${props.id}-hero`)
     .hero__wrapper
       .hero__left
-        h1.hero__title Скачать Dialog для&nbsp;
+        h1.hero__title
+          span Dialog для&nbsp;
           span=props.title
-        +button('Скачать', {
-          styleType: 'dark',
-          isLink: false,
-          additionalClassName:
-            'hero__button'
-        })
+        button.button.button--dark.hero__button
+          if props.icon
+            +svg(`icon-${props.icon}`, 15, 15)
+          span= props.buttonText
+
         p.hero__text=props.text
         a.link.link--accent.hero__link(href=props.link) Инструкция по установке
 
       .hero__right
         .hero__img
           +picture(
-            `img/pages/download/hero-${props.id}-desktop`,
+            `img/pages/download/hero-${props.id}`,
             'png',
             'Фото ноутбука и мобильного телефона',
             780
           )
             source(
-              media="(min-width:769px)"
               srcset=
               `
-                img/pages/download/hero-${props.id}-desktop@1x.webp 1x,
-                img/pages/download/hero-${props.id}-desktop@2x.webp 2x
+                img/pages/download/hero-${props.id}@1x.webp 1x,
+                img/pages/download/hero-${props.id}@2x.webp 2x
               `
             )
 
-            source(
-              media="(max-width:550px)"
-              srcset=
-              `
-                img/pages/download/hero-${props.id}-mobile@1x.webp 1x,
-                img/pages/download/hero-${props.id}-mobile@2x.webp 2x
-              `
-            )
 
 //- argTypes
   props: {

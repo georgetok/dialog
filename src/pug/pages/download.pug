@@ -21,30 +21,37 @@ block content
       title: "macOS",
       text: "Работает на macOS 10.10 (Yosemite) и выше",
       link: "/",
+      buttonText:'скачать'
     })
     +hero({
       id: "windows",
       title: "Windows",
-      text: "Работает на macOS 10.10 (Yosemite) и выше",
+      text: "Работает на Windows 8 и выше",
       link: "/",
+      buttonText:'скачать'
+    })
+    +hero({
+      id: "linux",
+      title: "Linux",
+      text: "Работает на Linux 4.6.x и выше ",
+      link: "/",
+      buttonText:'скачать'
     })
     +hero({
       id: "ios",
       title: "iOS",
-      text: "Работает на macOS 10.10 (Yosemite) и выше",
+      text: "Работает на iOS 8.1 и выше",
       link: "/",
+      buttonText:'Скачать с App Store',
+      icon: 'apple'
     })
     +hero({
       id: "android",
-      title: "Windows",
-      text: "Работает на macOS 10.10 (Yosemite) и выше",
+      title: "Android",
+      text: "Работает на Android 8.1 и выше",
       link: "/",
-    })
-    +hero({
-      id: "linux",
-      title: "Windows",
-      text: "Работает на macOS 10.10 (Yosemite) и выше",
-      link: "/",
+      buttonText:'Скачать из Google Play',
+      icon: 'google-play'
     })
 
   section.download
@@ -56,6 +63,13 @@ block content
           iconName: 'windows',
           link: '/',
           select: ['.exe', '.msi'],
+        })
+        +col({
+          id: 'macos',
+          title: 'Скачать для macOS',
+          iconName: 'macos',
+          select: ['.deb', '.deb x86', '.rpm x86', '.rpm'],
+          link: '/',
         })
         +col({
           id: 'linux',
@@ -76,13 +90,6 @@ block content
           title: 'Скачать для Android',
           qrName: 'android',
           iconName: 'android',
-          link: '/',
-        })
-        +col({
-          id: 'macos',
-          title: 'Скачать для macOS',
-          iconName: 'ios',
-          qrName: 'ios',
           link: '/',
         })
         +col({

@@ -32,6 +32,31 @@
 
 }
 
+#ios-hero,
+#android-hero {
+  button {
+    position: relative;
+
+    span {
+      padding: 12px 20px 12px 50px;
+    }
+  }
+
+  img {
+    max-width: 200px;
+    display: block;
+    margin: auto;
+  }
+
+  svg {
+    margin-right: 0;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    left: 15px;
+  }
+}
+
 #windows-col,
 #linux-col,
 #ios-col,

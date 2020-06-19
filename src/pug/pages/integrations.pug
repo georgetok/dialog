@@ -63,7 +63,7 @@ block content
               h4 Dialog API
               p API позволяет другим приложениям взаимодействовать с Dialog. Используйте функции корпоративного мессенджера и создавайте новые сервисы для нужд бизнеса.
             .wrap.wrap--bot.wrap--sb.wrap--w
-              a.link(href="/") Документация
+              a.link.link--accent(href="/") Документация
 
         .col
           .card.card--outline
@@ -73,8 +73,8 @@ block content
               h4 Dialog Bot SDK
               p Bot SDK позволяет создавать ботов и чат-ботов для Dialog. Боты оптимизируют повторяющиеся рутинные операции и освобождают время для более сложных задач.
             .wrap.wrap--bot.wrap--sb.wrap--w
-              a.link(href="/") Документация
-              a.link(href="/") Python | Java | Javascript
+              a.link.link--accent(href="/") Документация
+              a.link.link--accent(href="/") Python | Java | Javascript
 
         .col
           .card.card--outline
@@ -97,7 +97,7 @@ block content
               h4 Zapier
               p Используйте данные и происходящие события в более чем 1000 интеграциях для автоматизации вашего рабочего процесса.
             .wrap.wrap--bot.wrap--sb.wrap--w
-              a.link(href="/") Настройте интеграцию прямо сейчас
+              a.link.link--accent(href="/") Настройте интеграцию прямо сейчас
         .col
           .card.card--outline
             .wrap.wrap--c.wrap--up
@@ -110,9 +110,13 @@ block content
   section.cta.cta--purple.box--purple
     .wrapper.wrapper--main
       .wrap.wrap--c
-        h2 Появились вопросы?
+        h2.cta__title.cta__title--sm Появились вопросы?
       .wrap.wrap--c
-        +button('Свяжитесь с нами', {
-          styleType: 'light',
-          isLink: true
-        })
+        +button(
+          'Свяжитесь с нами',
+          {
+            type: 'button',
+            styleType: 'light',
+            isLink: false,
+            additionalClassName: 'button--hero js-open-modal-hero'
+          })

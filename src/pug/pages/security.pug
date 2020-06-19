@@ -108,8 +108,7 @@ block content
         li.compliance__list-item.compliance__item--safe
           ul.compliance__listbox
             li
-              p
-                b ООО «Диалог» имеет лицензии ФСТЭК на разработку и техническую защиту конфиденциальной информации, лицензию ФСБ России на разработку и распространение защищенных информационных систем.
+              p ООО «Диалог» имеет лицензии ФСТЭК на разработку и техническую защиту конфиденциальной информации, лицензию ФСБ России на разработку и распространение защищенных информационных систем.
               p В состав лицензируемого вида деятельности входят работы, предусмотренные пунктами 2, 3, 8, 9, 12, 13, 14, 15, 17, 18, 20, 21, 22, 23, 24, 25, 26 перечня выполняемых работ и оказываемых услуг в отношении шифровальных (криптографических) средств.
               .wrap.wrap--img
                 each it in licenseImages.images
@@ -119,17 +118,15 @@ block content
                         source(type="image/webp" srcset=`${it.imgPath}@2x.webp`)
                         img(src=`${it.imgPath}@2x.${it.imgType}` alt=it.imgAlt width=it.imgWidth loading="lazy")
                     .wrap.wrap--link.wrap--ac
-                      a(class="link link--with-icon link--patents" href=`${it.imgPath}@2x.${it.imgType}` download)=it.linkName
-                        +svg('arrow-bottom', 16, 12)
+                      a(class="link link--icon-accent link--with-icon link--patents" href=`${it.imgPath}@2x.${it.imgType}` download)=it.linkName
+                        +svg('arrow-bottom', 20, 16)
         li.compliance__list-item.compliance__list-item--cloud
           ul.compliance__listbox
             li
-              p
-                b Мессенджер Dialog соответствует требованиям Единого реестра российских программ для электронных вычислительных машин и баз данных, состоит в реестре отечественного ПО.
+              p Мессенджер Dialog соответствует требованиям Единого реестра российских программ для электронных вычислительных машин и баз данных, состоит в реестре отечественного ПО.
             li
-              p
-                b Компания-разработчик ООО «Диалог» состоит в реестре аккредитованных организаций, осуществляющих деятельность в области информационных технологий на территории РФ (No 436 от 07.09.2016).
-      a(class="compliance__link--more link link--with-icon" href="#!") Узнать подробнее
+              p Компания-разработчик ООО «Диалог» состоит в реестре аккредитованных организаций, осуществляющих деятельность в области информационных технологий на территории РФ (No 436 от 07.09.2016).
+      a(class="compliance__link--more link link--icon-accent link--with-icon" href="#!") Узнать подробнее
         +svg('arrow-right', 16, 15)
   section
     +form(false, 1, 'offer-form')

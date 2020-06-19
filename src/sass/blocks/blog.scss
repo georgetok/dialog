@@ -20,7 +20,7 @@
     }
   }
 
-  .blog__item--wide {
+  .blog__item:first-child {
     width: calc(100% - 40px);
 
     @include laptop {
@@ -32,7 +32,9 @@
     }
 
     @media(min-width: 767px) {
-
+      .blog__img-box {
+        padding-bottom: 30%;
+      }
       .blog__title {
         @include typography-h3;
 
@@ -61,6 +63,7 @@
     margin-left: -20px;
     width: calc(100% + 40px)
   }
+
 }
 
 .blog__wrapper {
@@ -164,6 +167,7 @@
   position: relative;
   height: 0;
   padding-bottom: 62.5%;
+
   img {
     display: block;
     width: 100%;

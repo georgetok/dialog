@@ -33,34 +33,35 @@ if (route) {
 
 let os = "Not known";
 
-if (navigator.appVersion.indexOf("Mac") !== -1) {
-  document.getElementById('macos-hero').classList.add("is-visible");
-  document.getElementById('macos-col').classList.remove("is-visible");
-} else if (navigator.appVersion.indexOf("Win") !== -1) {
+if (navigator.userAgent.indexOf("Mac") !== -1 && navigator.userAgent.indexOf("iPhone") !== -1) {
+   os = "iOS OS";
+  document.getElementById('ios-hero').classList.add("is-visible");
+  document.getElementById('ios-col').classList.remove("is-visible");
+} else if (navigator.userAgent.indexOf("Win") !== -1) {
   os = "Windows OS";
   document.getElementById('windows-hero').classList.add("is-visible");
   document.getElementById('windows-col').classList.remove("is-visible");
-} else if (navigator.appVersion.indexOf("Android") !== -1) {
+} else if (navigator.userAgent.indexOf("Android") !== -1) {
   os = "Android OS";
   document.getElementById('android-hero').classList.add("is-visible");
   document.getElementById('android-col').classList.remove("is-visible");
-} else if (navigator.appVersion.indexOf("Linux") !== -1) {
+} else if (navigator.userAgent.indexOf("Linux") !== -1) {
   os = "Linux OS";
   document.getElementById('linux-hero').classList.add("is-visible");
   document.getElementById('linux-col').classList.remove("is-visible");
-} else if (navigator.appVersion.indexOf("iOS") !== -1) {
-  os = "iOS OS";
-  document.getElementById('linux-hero').classList.add("is-visible");
-  document.getElementById('linux-col').classList.remove("is-visible");
+} else{
+  os = "MacOS OS";
+  document.getElementById('macos-hero').classList.add("is-visible");
+  document.getElementById('macos-col').classList.remove("is-visible");
 }
 
-console.log('MacOS', navigator.appVersion.indexOf("Mac") !== -1);
-console.log('iOS', navigator.appVersion.indexOf("iOS") !== -1);
-console.log('Android', navigator.appVersion.indexOf("Android") !== -1);
-console.log('Linux', navigator.appVersion.indexOf("Linux") !== -1);
-console.log('Windows', navigator.appVersion.indexOf("Windows") !== -1);
+console.log('MacOS', navigator.userAgent.indexOf("Mac") !== -1);
+console.log('like Mac', navigator.userAgent.indexOf("like Mac") !== -1);
+console.log('Android', navigator.userAgent.indexOf("Android") !== -1);
+console.log('Linux', navigator.userAgent.indexOf("Linux") !== -1);
+console.log('Windows', navigator.userAgent.indexOf("Windows") !== -1);
 console.log(JSON.stringify(os));
-console.log(JSON.stringify(navigator.appVersion));
+console.log(JSON.stringify(navigator.userAgent));
 
 const choiceOptions = {
   searchEnabled: false,

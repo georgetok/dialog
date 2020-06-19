@@ -3,7 +3,7 @@ include ../mixins/svg
 include ../mixins/button
 include ../mixins/button-play
 include ../mixins/picture
-include ../mixins/form
+include ../mixins/form-career
 
 block variables
   -
@@ -57,10 +57,10 @@ block content
           .wrap.wrap--c.wrap--s
             h2.cta__title В нашу быстрорастущую команду требуется много талантов 
           .wrap.wrap--c.wrap--s
-            p.cta__subh Узнайте больше об открытых вакансиях и работе в компании
+            p.cta__sub Узнайте больше об открытых вакансиях и работе в компании
         .wrap.wrap--c
           +button(
-            'Открытые вакансии',
+            'Смотреть все вакансии',
             {
               styleType: 'accent',
               isLink: false,
@@ -69,6 +69,6 @@ block content
             +svg('arrow-right', 16, 15)
 
 
-  +form(false, 1, 'offer-form')
+  +form-career(1, 'career-form')
 
 

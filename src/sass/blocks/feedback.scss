@@ -1,9 +1,16 @@
 .feedback {
   .wrap {
-    @include tablet {
-      flex-wrap: wrap;
+    &--main {
+      @include mobile-md {
+        flex-wrap: wrap;
+      }
+    }
+
+    &--mt {
+      margin-top: 5px;
     }
   }
+
 
   .col {
     &--left:not(#_) {
@@ -15,14 +22,10 @@
     }
 
     &--right:not(#_) {
-      width: calc(100% / 12 * 4);
+      width: calc(100% / 12 * 4.8);
 
-      @include laptop {
-        width: calc(100% / 12 * 5);
-      }
       @include tablet {
         width: 100%;
-        margin-top: 40px;
       }
       @include mobile-md {
         margin-top: 0;

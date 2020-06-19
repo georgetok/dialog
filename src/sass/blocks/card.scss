@@ -31,6 +31,7 @@
       padding-left: 28px;
       margin-top: 0;
       margin-bottom: 10px;
+      font-weight: 500;
 
       &::before {
         content: "";
@@ -74,35 +75,43 @@
 
     .wrap--bot {
       padding: 0 20px 20px;
+      margin-top: auto;
 
-      p {
+      a {
         font-size: var(--txt-sm-size);
         line-height: var(--txt-sm-lh);
         font-weight: 400;
         margin-top: 0;
         margin-bottom: 0;
-        color: $color-accent;
       }
     }
   }
 
-  &--transparent {
-    padding: 30px;
-    margin-top: 10px;
-  }
+  &--help {
+    padding: 30px 40px;
+    @include tablet {
+      padding: 30px;
+    }
 
-  &--dark {
-    background: $bg-sand;
-    padding: 30px;
+    @include mobile-md {
+      padding: 20px
+    }
+
+    .card__sub {
+      @include typography-txt;
+      margin-top: 0px;
+    }
 
     .card__title {
       @include typography-h3;
       margin-top: 0;
     }
+  }
 
+  &--dark {
+    background: $bg-sand;
     .card__sub {
-      @include typography-txt-big;
-      margin-top: 30px;
+      margin-top: 20px;
     }
   }
 

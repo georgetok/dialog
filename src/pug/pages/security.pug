@@ -120,7 +120,7 @@ block content
                         img(src=`${it.imgPath}@2x.${it.imgType}` alt=it.imgAlt width=it.imgWidth loading="lazy")
                     .wrap.wrap--link.wrap--ac
                       a(class="link link--with-icon link--patents" href=`${it.imgPath}@2x.${it.imgType}` download)=it.linkName
-                      +svg('arrow-bottom', 16, 12)
+                        +svg('arrow-bottom', 16, 12)
         li.compliance__list-item.compliance__list-item--cloud
           ul.compliance__listbox
             li
@@ -131,5 +131,5 @@ block content
                 b Компания-разработчик ООО «Диалог» состоит в реестре аккредитованных организаций, осуществляющих деятельность в области информационных технологий на территории РФ (No 436 от 07.09.2016).
       a(class="compliance__link--more link link--with-icon" href="#!") Узнать подробнее
         +svg('arrow-right', 16, 15)
-  section.form.form--main
+  section
     +form(false, 1, 'offer-form')

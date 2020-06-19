@@ -30,8 +30,12 @@
         @include row-end;
 
         @include tablet {
-          padding-right: 50px;
           @include col-8;
+          padding-right: 50px;
+          img {
+            width: 450px !important;
+            margin-top: 20px;
+          }
         }
 
         @include mobile-md {
@@ -52,8 +56,8 @@
         }
 
         @include tablet {
-          padding-right: 50px;
           @include col-8;
+          padding-right: 50px;
         }
 
         @include mobile-sm {

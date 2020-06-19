@@ -64,7 +64,7 @@ console.log(JSON.stringify(navigator.appVersion));
 
 const choiceOptions = {
   searchEnabled: false,
-  itemSelectText: 'Press to download',
+  itemSelectText: '',
   classNames: {
     containerOuter: 'card__select select select--choice select--dark choices',
   }
@@ -76,7 +76,6 @@ const windowsChoice = new Choices(windowsChoiceSelector, choiceOptions);
 const linuxChoice = new Choices(linuxChoiceSelector, choiceOptions);
 
 windowsChoiceSelector.addEventListener('choice', function (event) {
-  console.log(event);
   let a = document.createElement('a');
   document.body.appendChild(a);
   a.download = "file test";
@@ -86,7 +85,6 @@ windowsChoiceSelector.addEventListener('choice', function (event) {
 });
 
 linuxChoiceSelector.addEventListener('choice', function (event) {
-  console.log(event);
   let a = document.createElement('a');
   document.body.appendChild(a);
   a.download = "event";
@@ -96,7 +94,6 @@ linuxChoiceSelector.addEventListener('choice', function (event) {
 });
 
 windowsChoiceSelector.addEventListener('choice', function (event) {
-  console.log(event);
   let a = document.createElement('a');
   document.body.appendChild(a);
   a.download = "event";

@@ -12,46 +12,73 @@
     padding-top: 50px;
     padding-bottom: 55px;
   }
+
+  .post__content, .post__header {
+    p {
+      @include typography-txt-big;
+      color: $color-base;
+      display: block;
+      margin-top: 30px;
+      margin-bottom: 35px;
+    }
+
+    button {
+      background: $color-base;
+      color: $color-contrast;
+    }
+
+    a {
+      color: $color-accent;
+    }
+
+    h1 {
+      @include typography-h2;
+      margin-top: 40px;
+      margin-bottom: 40px;
+    }
+
+    h2 {
+      @include typography-h3;
+    }
+
+    h3 {
+      @include typography-h4;
+    }
+
+    h6 {
+      @include typography-txt-big;
+      font-weight: 500;
+      color: $color-base;
+      display: block;
+      margin-bottom: 40px;
+    }
+
+    ul, ol {
+      list-style: none;
+      padding-left: 30px;
+
+      li {
+        position: relative;
+        margin-top: 20px;
+      }
+
+      li::before {
+        content: "\2022";
+        color: $color-accent;
+        font-weight: bold;
+        display: inline-block;
+        width: 1em;
+        position: absolute;
+        top: 0;
+        left: -20px;
+      }
+    }
+  }
+
 }
 
 .post__nav {
   border-bottom: 1px dashed $color-accent-light;
-}
-
-.post__title {
-  &:not(#_) {
-    margin-top: 40px;
-  }
-
-  &--h1 {
-    @include typography-h2;
-  }
-
-  &--h2 {
-    @include typography-h3;
-  }
-
-  &--h3 {
-    @include typography-h4;
-  }
-
-  &--sub {
-    @include typography-txt-big;
-    color: $color-base;
-    display: block;
-    margin-bottom: 40px;
-  }
-}
-
-.post__text {
-  @include typography-txt-big;
-  color: $color-base;
-  display: block;
-  margin-top: 30px;
-
-  &:not(#_) {
-    margin-bottom: 35px;
-  }
 }
 
 .post__time {
@@ -59,8 +86,8 @@
   display: flex;
   justify-content: space-between;
   margin-top: auto;
-  color: $color-gray-light;
-  fill: $color-gray-light;
+  color: $color-gray-dark;
+  fill: $color-gray-dark;
 
   @include laptop {
     font-size: 12px;
@@ -70,6 +97,10 @@
   @include mobile-md {
     font-size: 14px;
     line-height: 20px;
+  }
+
+  p, span {
+    font-weight: 500;
   }
 
   p {
@@ -91,12 +122,17 @@
   }
 }
 
-.post__image{
+.post__image {
   margin-top: 50px;
+  margin-bottom: 50px;
+  display: flex;
+  justify-content: center;
+
 }
 
-.post__header{
-  .box--pattern{
+.post__header {
+  .box--pattern {
     margin-top: -7vw;
   }
 }
+

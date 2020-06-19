@@ -7,160 +7,23 @@
     <title>Dialog</title>
     <link rel="preload" href="fonts/Euclid-CircularA-Medium.woff2" as="font" crossorigin="anonymous"/>
     <link rel="preload" href="fonts/Euclid-CircularA-Regular.woff2" as="font" crossorigin="anonymous"/>
-    <link rel="stylesheet" href="css/style.min.css"/>
+    <link rel="stylesheet" href="../css/style.min.css"/>
   </head>
   <body>
     <div class="page">
       <header class="header js-header">
-        <div class="header__wrapper"><a class="header__logo" href="/"><img src="img/library/logo-dialog.svg" alt="Логотип мессенджера Dialog"/></a>
+        <div class="header__wrapper"><a class="header__logo" href="/"><img src="../img/library/logo-dialog.svg" alt="Логотип мессенджера Dialog"/></a>
           <div class="header__content-box">
-            <div class="header__top-panel"><a class="header__nav-logo" href="/"><img src="img/library/logo-dialog.svg" alt="Логотип мессенджера Dialog"/></a>
+            <div class="header__top-panel"><a class="header__nav-logo" href="/"><img src="../img/library/logo-dialog.svg" alt="Логотип мессенджера Dialog"/></a>
               <button class="header__close-button" aria-label="Закрыть меню" type="button"></button>
             </div>
             <nav class="header__nav-container main-nav">
               <ul class="main-nav__top-links">
-                <li class="main-nav__top-block">
-                  <button class="main-nav__button" type="button">Сегменты
-                    <svg width="8" height="5" aria-hidden="true">
-                      <use xlink:href="img/sprite.svg#tick"></use>
-                    </svg>
-                  </button>
-                  <div class="main-nav__dropdown">
-                    <ul class="main-nav__included-box">
-                      <li class="main-nav__included-item"><a class="main-nav__link main-nav__link--included" href="#!">Промышленность</a>
-                      </li>
-                      <li class="main-nav__included-item"><a class="main-nav__link main-nav__link--included" href="#!">Телекоммуникации</a>
-                      </li>
-                      <li class="main-nav__included-item"><a class="main-nav__link main-nav__link--included" href="#!">Нефтегаз</a>
-                      </li>
-                      <li class="main-nav__included-item"><a class="main-nav__link main-nav__link--included" href="#!">Финансы</a>
-                      </li>
-                      <li class="main-nav__included-item"><a class="main-nav__link main-nav__link--included" href="#!">Машиностроение</a>
-                      </li>
-                    </ul>
-                  </div>
-                </li>
-                <li class="main-nav__top-block">
-                  <button class="main-nav__button" type="button">Решения
-                    <svg width="8" height="5" aria-hidden="true">
-                      <use xlink:href="img/sprite.svg#tick"></use>
-                    </svg>
-                  </button>
-                  <div class="main-nav__dropdown">
-                    <ul class="main-nav__included-box">
-                      <li class="main-nav__included-item">
-                        <div class="main-nav__middle-block">
-                          <button class="main-nav__included-button" type="button"><span>Отрасли
-                              <svg width="7" height="11" aria-hidden="true">
-                                <use xlink:href="img/sprite.svg#tick-right"></use>
-                              </svg></span></button>
-                          <ul class="main-nav__middle-dropdown">
-                            <li class="main-nav__included-item"><a class="main-nav__link main-nav__link--included" href="#!">Промышленность</a></li>
-                            <li class="main-nav__included-item"><a class="main-nav__link main-nav__link--included" href="#!">Телекоммуникации</a></li>
-                            <li class="main-nav__included-item"><a class="main-nav__link main-nav__link--included" href="#!">Нефтегаз</a></li>
-                            <li class="main-nav__included-item"><a class="main-nav__link main-nav__link--included" href="#!">Финансы</a></li>
-                            <li class="main-nav__included-item"><a class="main-nav__link main-nav__link--included" href="#!">Машиностроение</a></li>
-                          </ul>
-                        </div>
-                      </li>
-                      <li class="main-nav__included-item">
-                        <div class="main-nav__middle-block">
-                          <button class="main-nav__included-button" type="button"><span>Департаменты
-                              <svg width="7" height="11" aria-hidden="true">
-                                <use xlink:href="img/sprite.svg#tick-right"></use>
-                              </svg></span></button>
-                          <ul class="main-nav__middle-dropdown">
-                            <li class="main-nav__included-item"><a class="main-nav__link main-nav__link--included" href="#!">HR</a></li>
-                            <li class="main-nav__included-item"><a class="main-nav__link main-nav__link--included" href="#!">IT и Разработка</a></li>
-                            <li class="main-nav__included-item"><a class="main-nav__link main-nav__link--included" href="#!">Коммерческий отдел</a></li>
-                            <li class="main-nav__included-item"><a class="main-nav__link main-nav__link--included" href="#!">Маркетинг</a></li>
-                            <li class="main-nav__included-item"><a class="main-nav__link main-nav__link--included" href="#!">Клиентский сервис</a></li>
-                          </ul>
-                        </div>
-                      </li>
-                      <li class="main-nav__included-item"><a class="main-nav__link main-nav__link--included" href="#!">Техническая поддержка</a>
-                      </li>
-                    </ul>
-                  </div>
-                </li>
-                <li class="main-nav__top-block">
-                  <button class="main-nav__button" type="button">О продукте
-                    <svg width="8" height="5" aria-hidden="true">
-                      <use xlink:href="img/sprite.svg#tick"></use>
-                    </svg>
-                  </button>
-                  <div class="main-nav__dropdown">
-                    <ul class="main-nav__included-box">
-                      <li class="main-nav__included-item">
-                        <div class="main-nav__middle-block">
-                          <button class="main-nav__included-button" type="button"><span>Отрасли
-                              <svg width="7" height="11" aria-hidden="true">
-                                <use xlink:href="img/sprite.svg#tick-right"></use>
-                              </svg></span></button>
-                          <ul class="main-nav__middle-dropdown">
-                            <li class="main-nav__included-item"><a class="main-nav__link main-nav__link--included" href="#!">Промышленность</a></li>
-                            <li class="main-nav__included-item"><a class="main-nav__link main-nav__link--included" href="#!">Телекоммуникации</a></li>
-                            <li class="main-nav__included-item"><a class="main-nav__link main-nav__link--included" href="#!">Нефтегаз</a></li>
-                            <li class="main-nav__included-item"><a class="main-nav__link main-nav__link--included" href="#!">Финансы</a></li>
-                            <li class="main-nav__included-item"><a class="main-nav__link main-nav__link--included" href="#!">Машиностроение</a></li>
-                          </ul>
-                        </div>
-                      </li>
-                      <li class="main-nav__included-item"><a class="main-nav__link main-nav__link--included" href="#!">Техническая поддержка</a>
-                      </li>
-                    </ul>
-                  </div>
-                </li>
-                <li><a class="main-nav__link" href="#!">Партнерам</a></li>
-                <li class="main-nav__top-block">
-                  <button class="main-nav__button" type="button">База знаний
-                    <svg width="8" height="5" aria-hidden="true">
-                      <use xlink:href="img/sprite.svg#tick"></use>
-                    </svg>
-                  </button>
-                  <div class="main-nav__dropdown">
-                    <ul class="main-nav__included-box">
-                      <li class="main-nav__included-item">
-                        <div class="main-nav__middle-block">
-                          <button class="main-nav__included-button" type="button"><span>Департаменты
-                              <svg width="7" height="11" aria-hidden="true">
-                                <use xlink:href="img/sprite.svg#tick-right"></use>
-                              </svg></span></button>
-                          <ul class="main-nav__middle-dropdown">
-                            <li class="main-nav__included-item"><a class="main-nav__link main-nav__link--included" href="#!">HR</a></li>
-                            <li class="main-nav__included-item"><a class="main-nav__link main-nav__link--included" href="#!">IT и Разработка</a></li>
-                            <li class="main-nav__included-item"><a class="main-nav__link main-nav__link--included" href="#!">Коммерческий отдел</a></li>
-                            <li class="main-nav__included-item"><a class="main-nav__link main-nav__link--included" href="#!">Маркетинг</a></li>
-                            <li class="main-nav__included-item"><a class="main-nav__link main-nav__link--included" href="#!">Клиентский сервис</a></li>
-                          </ul>
-                        </div>
-                      </li>
-                      <li class="main-nav__included-item">
-                        <div class="main-nav__middle-block">
-                          <button class="main-nav__included-button" type="button"><span>Отрасли
-                              <svg width="7" height="11" aria-hidden="true">
-                                <use xlink:href="img/sprite.svg#tick-right"></use>
-                              </svg></span></button>
-                          <ul class="main-nav__middle-dropdown">
-                            <li class="main-nav__included-item"><a class="main-nav__link main-nav__link--included" href="#!">Промышленность</a></li>
-                            <li class="main-nav__included-item"><a class="main-nav__link main-nav__link--included" href="#!">Телекоммуникации</a></li>
-                            <li class="main-nav__included-item"><a class="main-nav__link main-nav__link--included" href="#!">Нефтегаз</a></li>
-                            <li class="main-nav__included-item"><a class="main-nav__link main-nav__link--included" href="#!">Финансы</a></li>
-                            <li class="main-nav__included-item"><a class="main-nav__link main-nav__link--included" href="#!">Машиностроение</a></li>
-                            <li class="main-nav__included-item"><a class="main-nav__link main-nav__link--included" href="#!">Телекоммуникации</a></li>
-                            <li class="main-nav__included-item"><a class="main-nav__link main-nav__link--included" href="#!">Нефтегаз</a></li>
-                            <li class="main-nav__included-item"><a class="main-nav__link main-nav__link--included" href="#!">Финансы</a></li>
-                            <li class="main-nav__included-item"><a class="main-nav__link main-nav__link--included" href="#!">Машиностроение</a></li>
-                          </ul>
-                        </div>
-                      </li>
-                      <li class="main-nav__included-item"><a class="main-nav__link main-nav__link--included" href="#!">Техническая поддержка</a>
-                      </li>
-                    </ul>
-                  </div>
-                </li>
-                <li><a class="main-nav__link" href="#!">Блог</a></li>
-                <li><a class="main-nav__link" href="#!">Помощь</a></li>
+                <li><a class="main-nav__link" href="/security.html">Безопастность</a></li>
+                <li><a class="main-nav__link" href="/integrations.html">Интеграции</a></li>
+                <li><a class="main-nav__link" href="/career.html">Карьера</a></li>
+                <li><a class="main-nav__link" href="/blog.html">Блог</a></li>
+                <li><a class="main-nav__link" href="/help.html">Помощь</a></li>
               </ul>
               <div class="main-nav__user-actions">
                 <button class="button button--accent button--small main-nav__action-btn js-open-modal" type="button"><span>Получить предложение</span>
@@ -193,7 +56,7 @@
                 <div class="wrap wrap--ac wrap--icon">
                   <div class="round-icon">
                     <svg width="90" height="45" aria-hidden="true">
-                      <use xlink:href="img/sprite.svg#icon-security"></use>
+                      <use xlink:href="../img/sprite.svg#icon-security"></use>
                     </svg>
                   </div>
                   <h2>Защита информации</h2>
@@ -252,7 +115,7 @@
             <div class="wrap wrap--icon wrap--as">
               <div class="round-icon">
                 <svg width="60" height="45" aria-hidden="true">
-                  <use xlink:href="img/sprite.svg#icon-compliance"></use>
+                  <use xlink:href="../img/sprite.svg#icon-compliance"></use>
                 </svg>
               </div>
               <div class="wrap wrap--txt wrap--w">
@@ -273,11 +136,10 @@
                             <source type="image/webp" srcset="img/patents/license-fsb@2x.webp"><img src="img/patents/license-fsb@2x.jpg" alt="Фотография лицензии" width="80" loading="lazy">
                           </picture>
                         </div>
-                        <div class="wrap wrap--link wrap--ac"><a class="link link--with-icon link--patents" href="img/patents/license-fsb@2x.jpg" download>ФСБ</a>
-                          <svg width="16" height="12" aria-hidden="true">
-                            <use xlink:href="img/sprite.svg#arrow-bottom"></use>
-                          </svg>
-                        </div>
+                        <div class="wrap wrap--link wrap--ac"><a class="link link--with-icon link--patents" href="img/patents/license-fsb@2x.jpg" download>ФСБ
+                            <svg width="16" height="12" aria-hidden="true">
+                              <use xlink:href="../img/sprite.svg#arrow-bottom"></use>
+                            </svg></a></div>
                       </div>
                       <div class="col">
                         <div class="wrap wrap--preview">
@@ -285,11 +147,10 @@
                             <source type="image/webp" srcset="img/patents/fstek-1@2x.webp"><img src="img/patents/fstek-1@2x.jpg" alt="Фотография сертификата" width="80" loading="lazy">
                           </picture>
                         </div>
-                        <div class="wrap wrap--link wrap--ac"><a class="link link--with-icon link--patents" href="img/patents/fstek-1@2x.jpg" download>ФСТЭК</a>
-                          <svg width="16" height="12" aria-hidden="true">
-                            <use xlink:href="img/sprite.svg#arrow-bottom"></use>
-                          </svg>
-                        </div>
+                        <div class="wrap wrap--link wrap--ac"><a class="link link--with-icon link--patents" href="img/patents/fstek-1@2x.jpg" download>ФСТЭК
+                            <svg width="16" height="12" aria-hidden="true">
+                              <use xlink:href="../img/sprite.svg#arrow-bottom"></use>
+                            </svg></a></div>
                       </div>
                       <div class="col">
                         <div class="wrap wrap--preview">
@@ -297,11 +158,10 @@
                             <source type="image/webp" srcset="img/patents/fstek-2@2x.webp"><img src="img/patents/fstek-2@2x.jpg" alt="Фотография сертификата" width="80" loading="lazy">
                           </picture>
                         </div>
-                        <div class="wrap wrap--link wrap--ac"><a class="link link--with-icon link--patents" href="img/patents/fstek-2@2x.jpg" download>ФСТЭК</a>
-                          <svg width="16" height="12" aria-hidden="true">
-                            <use xlink:href="img/sprite.svg#arrow-bottom"></use>
-                          </svg>
-                        </div>
+                        <div class="wrap wrap--link wrap--ac"><a class="link link--with-icon link--patents" href="img/patents/fstek-2@2x.jpg" download>ФСТЭК
+                            <svg width="16" height="12" aria-hidden="true">
+                              <use xlink:href="../img/sprite.svg#arrow-bottom"></use>
+                            </svg></a></div>
                       </div>
                     </div>
                   </li>
@@ -319,12 +179,12 @@
               </li>
             </ul><a class="compliance__link--more link link--with-icon" href="#!">Узнать подробнее
               <svg width="16" height="15" aria-hidden="true">
-                <use xlink:href="img/sprite.svg#arrow-right"></use>
+                <use xlink:href="../img/sprite.svg#arrow-right"></use>
               </svg></a>
           </div>
         </section>
-        <section class="form form--main">
-          <div class="form form--main box box--white">
+        <section>
+          <div class="form form--main fomr--career box box--white">
             <div class="form__wrapper">
               <h2 class="form__title">Получить предложение</h2>
               <div class="form__form">
@@ -389,22 +249,18 @@
                   <div class="footer-nav__content-box">
                     <h3>Dialog</h3>
                     <ul>
-                      <li><a class="link link--invert" href="#!">Функции</a></li>
-                      <li><a class="link link--invert" href="#!">Безопасность</a></li>
-                      <li><a class="link link--invert" href="#!">Скачать</a></li>
-                      <li><a class="link link--invert" href="#!">SDK</a></li>
-                      <li><a class="link link--invert" href="#!">Интеграции</a></li>
-                      <li><a class="link link--invert" href="#!">Помощь</a></li>
+                      <li><a class="link link--invert" href="/security.html">Безопасность</a></li>
+                      <li><a class="link link--invert" href="/integrations.html">Интеграции</a></li>
+                      <li><a class="link link--invert" href="/download.html">Скачать</a></li>
+                      <li><a class="link link--invert" href="/help.html">Помощь</a></li>
                     </ul>
                   </div>
                   <div class="footer-nav__content-box">
                     <h3><span>О компании</span><span>Компания</span></h3>
                     <ul>
-                      <li><a class="link link--invert" href="#!">Партнерам</a></li>
-                      <li><a class="link link--invert" href="#!">Патенты и сертификаты</a></li>
-                      <li><a class="link link--invert" href="#!">Блог</a></li>
-                      <li><a class="link link--invert" href="#!">Карьера</a></li>
-                      <li><a class="link link--invert" href="#!">О нас</a></li>
+                      <li><a class="link link--invert" href="/patents.html">Свидетельства и лицензии</a></li>
+                      <li><a class="link link--invert" href="/blog.html">Блог</a></li>
+                      <li><a class="link link--invert" href="/career.html">Карьера</a></li>
                     </ul>
                   </div>
                 </div>
@@ -414,23 +270,23 @@
               <ul class="social">
                 <li><a href="#!" aria-label="Страница Dialog в Facebook" target="_blank" rel="noopener noreferrer">
                     <svg width="11" height="23" aria-hidden="true">
-                      <use xlink:href="img/sprite.svg#social-fb"></use>
+                      <use xlink:href="../img/sprite.svg#social-fb"></use>
                     </svg></a></li>
                 <li><a href="#!" aria-label="Страница Dialog в Вконтакте" target="_blank" rel="noopener noreferrer">
                     <svg width="23" height="13" aria-hidden="true">
-                      <use xlink:href="img/sprite.svg#social-vk"></use>
+                      <use xlink:href="../img/sprite.svg#social-vk"></use>
                     </svg></a></li>
                 <li><a href="#!" aria-label="Канал Dialog на Youtube" target="_blank" rel="noopener noreferrer">
                     <svg width="24" height="18" aria-hidden="true">
-                      <use xlink:href="img/sprite.svg#social-yt"></use>
+                      <use xlink:href="../img/sprite.svg#social-yt"></use>
                     </svg></a></li>
                 <li><a href="#!" aria-label="Twitter Dialog" target="_blank" rel="noopener noreferrer">
                     <svg width="21" height="18" aria-hidden="true">
-                      <use xlink:href="img/sprite.svg#social-tw"></use>
+                      <use xlink:href="../img/sprite.svg#social-tw"></use>
                     </svg></a></li>
                 <li><a href="#!" aria-label="Профиль Dialog на GitHub" target="_blank" rel="noopener noreferrer">
                     <svg width="19" height="22" aria-hidden="true">
-                      <use xlink:href="img/sprite.svg#social-gh"></use>
+                      <use xlink:href="../img/sprite.svg#social-gh"></use>
                     </svg></a></li>
               </ul>
             </div>
@@ -453,7 +309,7 @@
       <div class="modal__overlay">
         <div class="modal__content">
           <button class="modal__close" type="button" aria-label="Закрыть"></button>
-          <div class="form form--main form--modal box box--white">
+          <div class="form form--main fomr--career form--modal box box--white">
             <div class="form__wrapper form__wrapper--modal">
               <h2 class="form__title form__title--modal">Получить предложение</h2>
               <div class="form__form">

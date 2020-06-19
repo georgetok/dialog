@@ -1,5 +1,5 @@
 .cta {
-  padding: 70px;
+  padding: 60px;
   @include mobile-md {
     padding-left: 0;
     padding-right: 0;
@@ -32,8 +32,8 @@
     }
   }
 
-  &__subh {
-    @include typography-subhead;
+  &__sub {
+    @include typography-txt-big;
 
     margin-bottom: 30px;
 

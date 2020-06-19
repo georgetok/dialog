@@ -11,108 +11,23 @@ block variables
     const title = "Dialog";
 
 block content
-  -
-    const posts = [
-      {
-        title: "Цифровая гигиена: как уберечь переписку в мессенджерах от кокурентов",
-        text: "Сбербанк объявил о запуске корпоративного мессенджера «Сберчат», созданого на базе платформы dialog.",
-        date: "27 февраля, 2020",
-        time: "1 мин",
-        img: "2-desktop",
-        link: "/blog-page",
-        isWIde: true
-      },
-      {
-        title: "Корпоративный мессенджер — виды, возможности и сферы применения",
-        text: "Ключевые особенности и проблемы применения массовых и коммерческих онлайн и оффлайн средств общения для внутренних коммуникаций",
-        date: "27 февраля, 2020",
-        time: "1 мин",
-        img: "1-desktop",
-        link: "/blog-page"
-      },
-      {
-        title: "Корпоративный мессенджер для локальной сети",
-        text: "Ключевые особенности и проблемы применения массовых и коммерческих онлайн и оффлайн средств общения",
-        date: "27 февраля, 2020",
-        time: "1 мин",
-        img: "4-desktop",
-        link: "/blog-page"
-      },
-      {
-        title: "Чат-боты для бизнеса",
-        text: "Как оптимизировать процессы и повысить продажи, используя чат-боты",
-        date: "27 февраля, 2020",
-        time: "1 мин",
-        img: "3-desktop",
-        link: "/blog-page"
-      },
-      {
-        title: "Чат-боты для бизнеса",
-        text: "Как оптимизировать процессы и повысить продажи, используя чат-боты",
-        date: "27 февраля, 2020",
-        time: "1 мин",
-        img: "5-desktop",
-        link: "/blog-page"
-      },
-      {
-        title: "Корпоративный мессенджер — виды, возможности и сферы применения",
-        text: "Ключевые особенности и проблемы применения массовых и коммерческих онлайн и оффлайн средств общения для внутренних коммуникаций",
-        date: "27 февраля, 2020",
-        time: "1 мин",
-        img: "1-desktop",
-        link: "/blog-page"
-      },
-      {
-        title: "Корпоративный мессенджер для локальной сети",
-        text: "Ключевые особенности и проблемы применения массовых и коммерческих онлайн и оффлайн средств общения",
-        date: "27 февраля, 2020",
-        time: "1 мин",
-        img: "4-desktop",
-        link: "/blog-page"
-      },
-      {
-        title: "Чат-боты для бизнеса",
-        text: "Как оптимизировать процессы и повысить продажи, используя чат-боты",
-        date: "27 февраля, 2020",
-        time: "1 мин",
-        img: "3-desktop",
-        link: "/blog-page"
-      },
-      {
-        title: "Чат-боты для бизнеса",
-        text: "Как оптимизировать процессы и повысить продажи, используя чат-боты",
-        date: "27 февраля, 2020",
-        time: "1 мин",
-        img: "5-desktop",
-        link: "/blog-page"
-      },
-      {
-        title: "Цифровая гигиена: как уберечь переписку в мессенджерах от кокурентов",
-        text: "Сбербанк объявил о запуске корпоративного мессенджера «Сберчат», созданого на базе платформы dialog.",
-        date: "27 февраля, 2020",
-        time: "1 мин",
-        img: "6-desktop",
-        link: "/blog-page"
-      },
-    ];
-
   +page-title('Блог Dialog')
   section.blog.blog--main.box
     .wrapper.wrapper--main
       ul.blog__list
         each post in posts
-          li.blog__item(class=post.isWIde ? 'blog__item--wide' : null)
-            a(href="/post.html").blog__card
+          li.blog__item
+            a(href=`/posts/${post.slug}.html`).blog__card
               .blog__img-box
-                +picture(`img/pages/blog/blog-${post.img}`, 'jpg', post.title, '100%')
+                img(src=post.feature_image alt=post.custom_excerpt)
               .blog__text-box
                 h3(class="blog__card-title")=post.title
-                p(class="blog__text")=post.text
+                p(class="blog__text")=post.custom_excerpt
                 .blog__text-info
-                  p=post.date
+                  p=post.created_at.slice(0, 10)
                   div
                     +svg('icon-watch', 17, 17)
-                    span=post.time
+                    span 1 мин
       .wrap.wrap--c
         +button('Смотреть ещё', {styleType: 'dark', type: 'button'})
 

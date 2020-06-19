@@ -2,9 +2,7 @@
   font-family: $base-font;
   font-size: 16px;
   line-height: 24px;
-
-  color: $color-accent;
-
+  color: $color-base;
   transition: color $transition-props;
 
   &:hover {
@@ -36,15 +34,26 @@
   }
 }
 
+.link--accent {
+  color: $color-accent;
+}
+
+.link--icon-accent {
+  fill: $color-accent;
+}
+
+.link--icon-base {
+  fill: $color-base;
+}
+
 .link--with-icon {
   display: inline-flex;
-  color: $color-base;
-  fill: $color-accent;
+
   font-weight: 500;
+  align-items: center;
 
   svg {
     margin-left: 12px;
-    margin-top: 6px;
 
     @include mobile-md {
       margin-left: 8px;
@@ -55,13 +64,11 @@
 
 .link--with-icon-reverse {
   display: inline-flex;
-  color: $color-base;
-  fill: $color-accent;
   font-weight: 500;
+  align-items: center;
 
   svg {
     margin-right: 12px;
-    margin-top: 6px;
 
     @include mobile-md {
       margin-left: 8px;
@@ -72,7 +79,6 @@
 
 .link--invert {
   position: relative;
-
   color: $color-contrast;
 
   &::before {
@@ -90,8 +96,7 @@
     transition: background-color $transition-props;
   }
 
-  &:hover,
-  &:focus {
+  &:hover, &:focus {
     color: $color-contrast;
 
     &::before {

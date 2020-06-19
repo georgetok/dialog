@@ -18,7 +18,7 @@
   }
 
   &__description {
-    @include typography-subhead;
+    @include typography-txt-big;
     margin-top: 40px;
   }
 
@@ -26,15 +26,14 @@
     width: 40px;
     height: 4px;
     position: relative;
-    top: -10px;
-    background: $color-base;
+    top: -20px;
+    background: $color-accent;
   }
 
   &__count {
     display: flex;
     flex-direction: column;
   }
-
 
   &__right {
     min-width: 200px;
@@ -66,6 +65,7 @@
 
     &--small {
       @include typography-txt-sm;
+      color: $color-gray-dark;
     }
   }
 }

@@ -4,12 +4,12 @@ mixin svg( name, width, height, className)
     height=("" + height | "")
     aria-hidden="true"
     class=(className ? className : null))
-    use( xlink:href=("img/sprite.svg#" + name)
+    use( xlink:href=("../img/sprite.svg#" + name)
   )
 
 mixin svg-no-sizes(name, className)
   svg(
     aria-hidden="true"
     class=(className ? className : null))
-    use( xlink:href=("img/sprite.svg#" + name)
+    use( xlink:href=("../img/sprite.svg#" + name)
   )

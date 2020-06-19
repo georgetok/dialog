@@ -1,9 +1,9 @@
 .select {
+  font-weight: bold;
   &.select--choice {
     min-height: 50px;
     cursor: pointer;
-    //appearance: none;
-    font-weight: bold;
+    font-weight: 500;
 
     &.select--dark {
       .choices__inner {

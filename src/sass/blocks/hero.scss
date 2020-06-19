@@ -20,7 +20,7 @@
   }
 
   &__text {
-    @include typography-txt-blog;
+    @include typography-subhead;
 
     &:not(:last-child) {
       margin-bottom: 30px;

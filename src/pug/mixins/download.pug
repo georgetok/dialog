@@ -14,7 +14,7 @@ mixin col(props)
           each val, index in props.select
             option(name=index)=val
       if !props.isNoInstruction
-        a.card__link(href=props.link) Инструкция по установке
+        a.link.link--accent.card__link(href=props.link) Инструкция по установке
       if props.isButton
         +button(
           'Открыть',
@@ -50,7 +50,7 @@ mixin hero(props)
             'hero__button'
         })
         p.hero__text=props.text
-        a.hero__link(href=props.link) Инструкция по установке
+        a.link.link--accent.hero__link(href=props.link) Инструкция по установке
 
       .hero__right
         .hero__img

@@ -2,7 +2,7 @@ include ./button
 include ./field-textarea
 
 mixin form-feedback (isModal, idNumber, formId)
-  .form.form--main.form--feedback(class=(isModal ? 'form--modal' : null)).box.box--white.form.form--feedback
+  .form.form--main.form--feedback.box.box--white(class=(isModal ? 'form--modal' : null))
     .form__wrapper
       form(action="#" method="POST" autocomplete="on" id!=formId class="form__content")
         .form__input-text-wrap

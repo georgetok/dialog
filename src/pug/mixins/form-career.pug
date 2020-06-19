@@ -1,0 +1,86 @@
+include ./button
+
+mixin form-career (idNumber, formId)
+  .form.form--main.form--career.box.box--white
+    .form__wrapper
+      h2.form__title Отправить резюме
+      p.form__sub Если вы не нашли интересующую вакансию, не отчаивайтесь — заполните форму и отправьте нам.  Мы обязательно рассмотрим ваше резюме.
+      .form__form
+        form(action="#" method="POST" autocomplete="on" id!=formId)
+          .form__input-text-wrap
+            .form__form-field.form__form-field--text.form__form-field--m.form__form-field--1
+              input(
+                type="text"
+                id=`name-${idNumber}`
+                name="name"
+                pattern="([A-Za-zА-ЯЁа-яё-]{2,}\\s?)+"
+                placeholder='Ваше имя'
+                title="Имя может состоять только из букв, пробелов и дефиса"
+                required
+              )
+              label(for=`name-${idNumber}`) Ваше имя
+
+            .form__form-field.form__form-field--text.form__form-field--m.form__form-field--3
+              input(
+                type="email"
+                id=`email-${idNumber}`
+                name="email"
+                pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,}$"
+                placeholder="Эл. почта"
+                title="Email адрес должен быть типа: user@mail.com"
+                required)
+              label(for=`email-${idNumber}`) Эл. почта
+
+            .form__form-field.form__form-field--text.form__form-field--s.form__form-field--2
+              input(
+                type="tel"
+                id=`phone-${idNumber}`
+                name="phone"
+                placeholder="Телефон"
+                title="Номер телефона должен начинаться с символов +7 и содержать 11 цифр"
+                pattern="7\\d{10}"
+                data-mask="+{7}(000)000-00-00" required)
+              label(for=`phone-${idNumber}`) Телефон
+
+            .form__form-field.form__form-field--text.form__form-field--s.form__form-field--4
+              select(
+                id=`city-${idNumber}`
+                name="city-career"
+                required
+              )
+                option(value="") В каком городе хотите работать
+                option(value="Москва") Москва
+                option(value="Питер") Питер
+                option(value="Новосибирск") Новосибирск
+              label(for=`city-${idNumber}`) В каком городе хотите работать
+
+            .form__form-field.form__form-field--textarea.form__form-field--5.form__form-field--fw
+              textarea(
+                id=`message-${idNumber}`
+                name="message"
+                placeholder="О себе"
+                required)
+              label(for=`message-${idNumber}`) О себе
+
+          .form__checkbox-wrap
+            .form__form-field--file
+              .icon
+                +svg('icon-upload', 40, 40)
+              input.visually-hidden(
+                type="file"
+                id=`file-${idNumber}`
+                name="uploaded"
+                checked
+                required
+              )
+              label(for=`file-${idNumber}`) Прикрепить резюме
+            .form__form-field.form__form-field--checkbox
+              input.visually-hidden(
+                type="checkbox"
+                id=`accept-${idNumber}`
+                name="accepted"
+                checked
+                required)
+              label(for=`accept-${idNumber}`) Я согласен на обработку персональных данных
+
+          +button('Отправить заявку', {styleType: 'accent', type: 'submit', additionalClassName: 'button--form'})

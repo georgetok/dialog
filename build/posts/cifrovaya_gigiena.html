@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta name="format-detection" content="telephone=no"/>
+    <title>Dialog</title>
+    <link rel="preload" href="fonts/Euclid-CircularA-Medium.woff2" as="font" crossorigin="anonymous"/>
+    <link rel="preload" href="fonts/Euclid-CircularA-Regular.woff2" as="font" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="../css/style.min.css"/>
+  </head>
+  <body>
+    <div class="page">
+      <header class="header js-header">
+        <div class="header__wrapper"><a class="header__logo" href="/"><img src="../img/library/logo-dialog.svg" alt="Логотип мессенджера Dialog"/></a>
+          <div class="header__content-box">
+            <div class="header__top-panel"><a class="header__nav-logo" href="/"><img src="../img/library/logo-dialog.svg" alt="Логотип мессенджера Dialog"/></a>
+              <button class="header__close-button" aria-label="Закрыть меню" type="button"></button>
+            </div>
+            <nav class="header__nav-container main-nav">
+              <ul class="main-nav__top-links">
+                <li><a class="main-nav__link" href="/security.html">Безопастность</a></li>
+                <li><a class="main-nav__link" href="/integrations.html">Интеграции</a></li>
+                <li><a class="main-nav__link" href="/career.html">Карьера</a></li>
+                <li><a class="main-nav__link" href="/blog.html">Блог</a></li>
+                <li><a class="main-nav__link" href="/help.html">Помощь</a></li>
+              </ul>
+              <div class="main-nav__user-actions">
+                <button class="button button--accent button--small main-nav__action-btn js-open-modal" type="button"><span>Получить предложение</span>
+                </button><a class="main-nav__link main-nav__link--no-padding" href="#!"><span>En</span><span>In English</span></a>
+              </div>
+            </nav>
+          </div>
+          <button class="header__burger-button" aria-label="Открыть меню" type="button"></button>
+        </div>
+      </header>
+      <main class="page__content">
+        <section class="post">
+          <div class="post__wrapper">
+            <div class="post__nav">
+              <div class="wrap wrap--sb wrap--ac"><a class="link link--with-icon-reverse link--accent link--icon-accent" href="/blog.html">
+                  <svg width="16" height="15" aria-hidden="true">
+                    <use xlink:href="../img/sprite.svg#arrow-left"></use>
+                  </svg><span>Назад</span></a>
+                <div class="wrap post__time">
+                  <p>2019-07-15</p>
+                  <div class="wrap wrap--ac">
+                    <svg width="17" height="17" aria-hidden="true">
+                      <use xlink:href="../img/sprite.svg#icon-watch"></use>
+                    </svg><span>1 мин</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="post__header">
+              <h1 class="post__title post__title--h1">Цифровая гигиена: как уберечь переписку в мессенджерах от конкурентов</h1>
+              <h6 class="post__title post__title--sub">Андрей Кузнецов, основатель и исполнительный директор dialog, рассказал изданию &quot;Генеральный директор&quot;, как избежать утечки конфиденциальных данных из WhatsApp, Telegram и других мессенджеров.</h6>
+              <div class="post__image post__image--header"><img src="https://georgetokmakov.ghost.io/content/images/2019/07/gendir-1.jpg" alt="Андрей Кузнецов, основатель и исполнительный директор dialog, рассказал изданию &quot;Генеральный директор&quot;, как избежать утечки конфиденциальных данных из WhatsApp, Telegram и других мессенджеров."></div>
+              <div class="box--pattern"></div>
+            </div>
+            <div class="post__content"><p>У вас тоже есть корпоративный чат в WhatsApp? Конкуренты или любые другие недоброжелатели могут получить доступ к его содержанию. Я расскажу о шести приемах, которые позволят максимально защитить рабочую переписку от взлома.</p><!--kg-card-begin: markdown--><p><img src="https://georgetokmakov.ghost.io/content/images/2019/07/1.jpg" alt=""></p>
+<!--kg-card-end: markdown--><p><strong>1. Подключите двухфакторную аутентификацию. </strong>Уязвимость протокола SS7 — слабое место всех мессенджеров. При помощи специализированного оборудования или просто ноутбука с нужным ПО злоумышленники могут перехватывать SMS с кодом подтверждения мессенджера и вести переписку от вашего лица. При захвате аккаунта Telegram можно получить и доступ к архиву чатов.</p><p>Для защиты от этого вида атак включите второй фактор аутентификации.<br>В популярных мессенджерах это пароль или пин-код. В WhatsApp это выглядит так: «Настройки» → «Аккаунт» → «Двухшаговая проверка» → «Включить». Далее следуйте инструкциям мессенджера.</p><p>В корпоративной системе для аутентификации можно использовать аппаратные токены — небольшие устройства размером с флешку, обеспечивающие дополнительный уровень защиты. В начале 2017 года корпорация Google выдала такие токены всем своим сотрудникам. С тех пор, как утверждают ее представители, ни один аккаунт не был взломан.</p><p>Обычные SMS не считаются доверенным каналом и не используются для передачи конфиденциальных данных. Помимо или вместо SMS такие системы используют для авторизации биометрические данные — удостоверяют личность по голосу и лицу.</p><!--kg-card-begin: markdown--><p style="display: flex; align-items: flex-start; justify-content: space-between;">
+    <img src="https://georgetokmakov.ghost.io/content/images/2019/07/2.png" style="width: 48%;">
+    <img src="https://georgetokmakov.ghost.io/content/images/2019/07/3.png" style="width: 48%;">
+</p><!--kg-card-end: markdown--><p><strong>2. Отключите показ сообщений в уведомлениях. </strong>В течение нескольких лет данные Telegram с айфонов открыто пересылались из-за push-уведомлений. Оказалось, чтобы отобразить уведомление на устройстве, сервер мессенджера отправлял соответствующую команду на сервер Apple. Она содержала незашифрованный текст нового сообщения.</p><p>Сотрудники Apple и связанные с компанией спецслужбы могли без труда читать якобы защищенную переписку мессенджера, но в результате Telegram исправил эту уязвимость.</p><!--kg-card-begin: html--><p style="font-style: italic; border-top: 4px solid #000; padding-top: 10px; border-bottom: 1px solid #000; padding-bottom: 20px;">
+43% хакерских атак направлены на малый бизнес, который уделяет меньше внимания информационной безопасности Источник: Entrepreneur
+</p><!--kg-card-end: html--><p>WhatsApp использует для доставки уведомлений другой способ,<br>не раскрывающий содержимое третьим лицам. Однако отключить<br>их отображение на экране блокировки тоже стоит. Даже если вы уверены, что за спиной никто не наблюдает за устройством, современные камеры видеонаблюдения в помещениях способны уловить все происходящее<br>на телефоне, особенно если он неподвижно лежит на столе.</p><!--kg-card-begin: markdown--><p style="display: flex; align-items: flex-start; justify-content: space-between;">
+    <img src="https://georgetokmakov.ghost.io/content/images/2019/07/4.png" style="width: 48%;">
+    <img src="https://georgetokmakov.ghost.io/content/images/2019/07/5.png" style="width: 48%;">
+</p><!--kg-card-end: markdown--><p><strong>3. Включите в WhatsApp уведомление о смене ключа собеседника. </strong>Сквозное шифрование не всегда обеспечивает надежную защиту переписки. В WhatsApp клиентское приложение может каждый раз уведомлять пользователя о том, что ключ собеседника сменился.</p><p>Так случается по разным причинам: собеседник поменял телефон, авторизовался на другом устройстве, а может быть, вы стали жертвой атаки «человек посередине» — распространенный вид кибератаки, когда злоумышленник тайно получает доступ к каналу связи между двумя абонентами.</p><p>Допустим, некто — хакер, спецслужбы, недобросовестный администратор публичного Wi-Fi или сотрудник WhatsApp — представляется устройством вашего собеседника. В таком случае мессенджер автоматически сгенерирует новый ключ собеседника. Вы получите уведомление об этом.</p><p>По умолчанию функция в мессенджере отключена. Путь для активации: «Настройки» → «Аккаунт» → «Безопасность» → передвинуть ползунок «Показывать уведомления безопасности». Рекомендую периодически проверять, включена ли эта функция. Ее может удаленно отключить сервер WhatsApp, и вы об этом не узнаете. А прежде чем пересылать конфиденциальную информацию, стоит дополнительно проверить личность собеседника, например, с помощью аудио- или видеозвонка. </p><p><strong>4. Предупредите сотрудников, что от вашего имени могут писать злоумышленники. </strong>Атаки методами социальной инженерии выглядят так. Недоброжелатель создает новый аккаунт в мессенджере. Копирует ваш аватар и имя, в результате чего аккаунт выглядит идентично настоящему. Затем он запрашивает у ваших сотрудников или контрагентов конфиденциальную информацию: финансовые отчеты, базу данных клиентов, тексты договоров, платежные данные.</p><p>Обучите коллектив основам информационной безопасности и периодически устраивайте им проверки. Например, поясните, что если вы общались<br>с сотрудником ранее, то в личном чате обязательно должна сохраниться история общения. Если ее нет, то это повод насторожиться, даже если собеседник ссылается на медленный интернет и на то, что история скоро дозагрузится. Для проверки вы можете устроить сотрудникам провокацию. Гарантирую, результат вас неприятно удивит.<br><br><strong>5. Включите на Android шифрование данных на уровне операционной системы. </strong>На Android-телефонах и большинстве настольных компьютеров информация по умолчанию хранится в незашифрованном виде. Злоумышленник может скопировать вашу переписку, подключив телефон к компьютеру и запустив специальную программу.</p><p>Чтобы снизить риск утечки данных, вы можете зашифровать свой телефон средствами самой операционной системы. Путь для активации: «Настройки» → «Расширенные настройки» (не всегда) → «Безопасность» («Конфиденциальность») → «Шифрование» → «Зашифровать устройство».</p><p>После включения шифрования данные на устройстве и на карте памяти будут зашифрованы. Если злоумышленник разблокирует телефон, то он все равно получит доступ к информации. Однако это спасет данные, если кто-то украдет телефон или карту памяти и попытается прочитать ее на другом устройстве.</p><p>Хранилище устройств можно взломать удаленно. При таком виде атаки шифрование операционной системы не спасет.</p><p><strong>6. Контролируйте число участников в групповых чатах. </strong>WhatsApp, например, может добавить нового пользователя в любой групповой чат<br>по своей инициативе. Если в вашем рабочем чате много контактов, то диверсия пройдет незамеченной.</p><p>Способа предотвратить появление нежелательных гостей в чате в этом мессенджере нет. Выхода два: вести рабочую коммуникацию в безопасной корпоративной среде, которая позволяет централизованно предоставлять право доступа к переписке, либо ежедневно проверять количество участников вашей переписки в мессенджере.</p><p>Порой случаются диверсии из-за невнимательности общающихся. Например, вы создали рабочую группу с сотрудниками и клиентом. Проект сдали, прошло несколько месяцев, один из участников чата уволился. И тут клиент высылает техническую документацию или иной конфиденциальный документ. Уволившийся сотрудник незаметно его читает.</p><!--kg-card-begin: html--><p class="video-wrapper--youtube">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/AbgsORgnsRs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</p>
+<style>
+.blog__article .video-wrapper--youtube {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+}
+.blog__article .video-wrapper--youtube > iframe{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+</style><!--kg-card-end: html--></div>
+          </div>
+        </section>
+        <section class="blog box box--gray">
+          <div class="blog__wrapper">
+            <h2 class="blog__title">Блог компании</h2>
+            <ul class="blog__list">
+              <li class="blog__item"><a class="blog__card" href="/blog.html">
+                  <div class="blog__img-box">
+                    <picture>
+                      <source type="image/webp" srcset="../img/pages/blog/blog-1-desktop@1x.webp 1x, ../img/pages/blog/blog-1-desktop@2x.webp 2x"/><img src="../img/pages/blog/blog-1-desktop@1x.jpg" srcset="../img/pages/blog/blog-1-desktop@2x.jpg 2x" alt="Изображение приложения" width="380" loading="lazy"/>
+                    </picture>
+                  </div>
+                  <div class="blog__text-box">
+                    <h3 class="blog__card-title">Корпоративный мессенджер для локальной сети</h3>
+                    <div class="blog__text-info">
+                      <p>27 февраля, 2020</p>
+                      <div>
+                        <svg width="17" height="17" aria-hidden="true">
+                          <use xlink:href="../img/sprite.svg#icon-watch"></use>
+                        </svg><span>1 мин</span>
+                      </div>
+                    </div>
+                  </div></a></li>
+              <li class="blog__item"><a class="blog__card" href="/blog.html">
+                  <div class="blog__img-box">
+                    <picture>
+                      <source type="image/webp" srcset="../img/pages/blog/blog-2-desktop@1x.webp 1x, ../img/pages/blog/blog-2-desktop@2x.webp 2x"/><img src="../img/pages/blog/blog-2-desktop@1x.jpg" srcset="../img/pages/blog/blog-2-desktop@2x.jpg 2x" alt="Изображение приложения" width="380" loading="lazy"/>
+                    </picture>
+                  </div>
+                  <div class="blog__text-box">
+                    <h3 class="blog__card-title">Корпоративный мессенджер&nbsp;&mdash; виды, возможности и&nbsp;сферы применения</h3>
+                    <div class="blog__text-info">
+                      <p>27 февраля, 2020</p>
+                      <div>
+                        <svg width="17" height="17" aria-hidden="true">
+                          <use xlink:href="../img/sprite.svg#icon-watch"></use>
+                        </svg><span>1 мин</span>
+                      </div>
+                    </div>
+                  </div></a></li>
+              <li class="blog__item"><a class="blog__card" href="/blog.html">
+                  <div class="blog__img-box">
+                    <picture>
+                      <source type="image/webp" srcset="../img/pages/blog/blog-3-desktop@1x.webp 1x, ../img/pages/blog/blog-3-desktop@2x.webp 2x"/><img src="../img/pages/blog/blog-3-desktop@1x.jpg" srcset="../img/pages/blog/blog-3-desktop@2x.jpg 2x" alt="Изображение приложения" width="380" loading="lazy"/>
+                    </picture>
+                  </div>
+                  <div class="blog__text-box">
+                    <h3 class="blog__card-title">Цифровая гигиена: как уберечь переписку в&nbsp;мессенджерах от&nbsp;конкурентов</h3>
+                    <div class="blog__text-info">
+                      <p>27 февраля, 2020</p>
+                      <div>
+                        <svg width="17" height="17" aria-hidden="true">
+                          <use xlink:href="../img/sprite.svg#icon-watch"></use>
+                        </svg><span>1 мин</span>
+                      </div>
+                    </div>
+                  </div></a></li>
+            </ul><a class="link link--with-icon link--icon-accent" href="/blog.html">Смотреть все
+              <svg width="16" height="15" aria-hidden="true">
+                <use xlink:href="../img/sprite.svg#arrow-right"></use>
+              </svg></a>
+          </div>
+        </section>
+        <section class="box box--purple">
+          <div class="wrapper wrapper--main">
+            <div class="cta cta--form">
+              <div class="form form--cta">
+                <div class="form__wrapper">
+                  <form class="form__content" action="#" method="POST" autocomplete="on" id="cta-main">
+                    <h3 class="form__title">Подпишитесь на свежие статьи блога!</h3>
+                    <div class="form__row">
+                      <div class="form__input-text-wrap">
+                        <div class="form__field">
+                          <input type="email" id="email-1" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" placeholder="Ваша эл. почта" title="Email адрес должен быть типа: user@mail.com" required="required"/>
+                          <label for="email-1">Ваша эл. почта</label>
+                        </div>
+                      </div>
+                      <button class="button button--light form__button button--form" type="submit"><span>Подписаться</span>
+                      </button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+      <div class="page__footer">
+        <footer class="footer">
+          <div class="footer__wrapper">
+            <div class="footer__logo"><a class="footer__link" href="/"><img src="img/library/logo-dialog-white.svg" alt="Логотип мессенджера Dialog" width="139"/></a></div>
+            <ul class="footer__contacts">
+              <li><a class="footer__link" href="tel:+78007758202">+7 (800) 775-82-02</a></li>
+              <li><a class="footer__link footer__link--underline" href="mailto:info@dlg.im">info@dlg.im</a></li>
+            </ul>
+            <div class="footer__navigation-box">
+              <section class="footer-nav">
+                <h2 class="visually-hidden">Навигация</h2>
+                <div class="footer-nav__container">
+                  <div class="footer-nav__content-box">
+                    <h3>Dialog</h3>
+                    <ul>
+                      <li><a class="link link--invert" href="/security.html">Безопасность</a></li>
+                      <li><a class="link link--invert" href="/integrations.html">Интеграции</a></li>
+                      <li><a class="link link--invert" href="/download.html">Скачать</a></li>
+                      <li><a class="link link--invert" href="/help.html">Помощь</a></li>
+                    </ul>
+                  </div>
+                  <div class="footer-nav__content-box">
+                    <h3><span>О компании</span><span>Компания</span></h3>
+                    <ul>
+                      <li><a class="link link--invert" href="/patents.html">Свидетельства и лицензии</a></li>
+                      <li><a class="link link--invert" href="/blog.html">Блог</a></li>
+                      <li><a class="link link--invert" href="/career.html">Карьера</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </section>
+            </div>
+            <div class="footer__social-box">
+              <ul class="social">
+                <li><a href="#!" aria-label="Страница Dialog в Facebook" target="_blank" rel="noopener noreferrer">
+                    <svg width="11" height="23" aria-hidden="true">
+                      <use xlink:href="../img/sprite.svg#social-fb"></use>
+                    </svg></a></li>
+                <li><a href="#!" aria-label="Страница Dialog в Вконтакте" target="_blank" rel="noopener noreferrer">
+                    <svg width="23" height="13" aria-hidden="true">
+                      <use xlink:href="../img/sprite.svg#social-vk"></use>
+                    </svg></a></li>
+                <li><a href="#!" aria-label="Канал Dialog на Youtube" target="_blank" rel="noopener noreferrer">
+                    <svg width="24" height="18" aria-hidden="true">
+                      <use xlink:href="../img/sprite.svg#social-yt"></use>
+                    </svg></a></li>
+                <li><a href="#!" aria-label="Twitter Dialog" target="_blank" rel="noopener noreferrer">
+                    <svg width="21" height="18" aria-hidden="true">
+                      <use xlink:href="../img/sprite.svg#social-tw"></use>
+                    </svg></a></li>
+                <li><a href="#!" aria-label="Профиль Dialog на GitHub" target="_blank" rel="noopener noreferrer">
+                    <svg width="19" height="22" aria-hidden="true">
+                      <use xlink:href="../img/sprite.svg#social-gh"></use>
+                    </svg></a></li>
+              </ul>
+            </div>
+            <ul class="footer__doc-links">
+              <li><a href="#!" target="_blank" rel="noopener noreferrer">Социальная ответственность</a></li>
+              <li><a href="#!" target="_blank" rel="noopener noreferrer">Правовая информация</a></li>
+              <li><a href="#!" target="_blank" rel="noopener noreferrer">Обработка персональных данных</a></li>
+              <li><a href="#!" target="_blank" rel="noopener noreferrer">Политика по противодействию коррупции</a></li>
+            </ul>
+            <div class="footer__copyright">
+              <p>© 2016—2020 ООО «Диалог»</p>
+              <p>ИНН: 7804568396</p>
+            </div>
+            <div class="footer__promo-link"><a class="footer__link" href="#!" target="_blank" rel="noopener noreferrer" aria-label="Сколково"><img src="img/footer/sk-logo.svg" alt="Надпись: участник Сколково" width="100"/></a></div>
+          </div>
+        </footer>
+      </div>
+    </div>
+    <div class="modal" id="modal-offer">
+      <div class="modal__overlay">
+        <div class="modal__content">
+          <button class="modal__close" type="button" aria-label="Закрыть"></button>
+          <div class="form form--main fomr--career form--modal box box--white">
+            <div class="form__wrapper form__wrapper--modal">
+              <h2 class="form__title form__title--modal">Получить предложение</h2>
+              <div class="form__form">
+                <form action="#" method="POST" autocomplete="on" id="modal-offer-form">
+                  <div class="form__input-text-wrap">
+                    <div class="form__form-field form__form-field--text form__form-field--m form__form-field--1 form__form-field--modal">
+                      <input type="text" id="name-2" name="name" pattern="([A-Za-zА-ЯЁа-яё-]{2,}\s?)+" placeholder="Ваше имя" title="Имя может состоять только из букв, пробелов и дефиса" required="required"/>
+                      <label for="name-2">Ваше имя</label>
+                    </div>
+                    <div class="form__form-field form__form-field--text form__form-field--m form__form-field--3 form__form-field--modal">
+                      <input type="email" id="email-2" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" placeholder="Эл. почта" title="Email адрес должен быть типа: user@mail.com" required="required"/>
+                      <label for="email-2">Эл. почта</label>
+                    </div>
+                    <div class="form__form-field form__form-field--text form__form-field--s form__form-field--2 form__form-field--modal">
+                      <input type="tel" id="phone-2" name="phone" placeholder="Телефон" title="Номер телефона должен начинаться с символов +7 и содержать 11 цифр" pattern="7\d{10}" data-mask="+{7}(000)000-00-00" required="required"/>
+                      <label for="phone-2">Телефон</label>
+                    </div>
+                    <div class="form__form-field form__form-field--text form__form-field--s form__form-field--4 form__form-field--modal">
+                      <input type="text" id="company-2" name="company" placeholder="Название компании" required="required"/>
+                      <label for="company-2">Название компании</label>
+                    </div>
+                    <div class="form__form-field form__form-field--text form__form-field--5 form__form-field--modal">
+                      <select id="quantity-2" name="quantity-users" required="required">
+                        <option value="">Количество пользователей</option>
+                        <option value="1-100">1-100</option>
+                        <option value="101-500">101-500</option>
+                        <option value="501 и больше">501 и больше</option>
+                      </select>
+                      <label for="quantity-2">Количество пользователей</label>
+                    </div>
+                  </div>
+                  <div class="form__checkbox-wrap">
+                    <div class="form__form-field form__form-field--checkbox form__form-field--modal">
+                      <input class="visually-hidden" type="checkbox" id="accept-2" name="accepted" checked="checked" required="required"/>
+                      <label for="accept-2">Я согласен на обработку персональных данных</label>
+                    </div>
+                    <div class="form__form-field form__form-field--checkbox form__form-field--modal">
+                      <input class="visually-hidden" type="checkbox" id="subscribe-2" name="subscribe"/>
+                      <label for="subscribe-2">Подписаться на новостную рассылку</label>
+                    </div>
+                  </div>
+                  <button class="button button--accent button--form" type="submit"><span>Отправить заявку</span>
+                  </button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="js/vendor.min.js"></script>
+    <script src="js/index.min.js"></script>
+  </body>
+</html>

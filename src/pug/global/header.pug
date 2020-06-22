@@ -1,267 +1,55 @@
 include ../mixins/button
 include ../mixins/svg
 
-mixin header
+mixin header(pageName, lang)
   -
-    // const navLinksOld = [
-    //   {
-    //     text: "Сегменты",
-    //     link: null,
-    //     submenu: [
-    //       {
-    //         text: "Промышленность",
-    //         link: "#!",
-    //       },
-    //       {
-    //         text: "Телекоммуникации",
-    //         link: "#!",
-    //       },
-    //       {
-    //         text: "Нефтегаз",
-    //         link: "#!",
-    //       },
-    //       {
-    //         text: "Финансы",
-    //         link: "#!",
-    //       },
-    //       {
-    //         text: "Машиностроение",
-    //         link: "#!",
-    //       },
-    //     ],
-    //   },
-    //   {
-    //     text: "Решения",
-    //     link: null,
-    //     submenu: [
-    //       {
-    //         text: "Отрасли",
-    //         link: null,
-    //         submenu: [
-    //           {
-    //             text: "Промышленность",
-    //             link: "#!",
-    //           },
-    //           {
-    //             text: "Телекоммуникации",
-    //             link: "#!",
-    //           },
-    //           {
-    //             text: "Нефтегаз",
-    //             link: "#!",
-    //           },
-    //           {
-    //             text: "Финансы",
-    //             link: "#!",
-    //           },
-    //           {
-    //             text: "Машиностроение",
-    //             link: "#!",
-    //           },
-    //         ],
-    //       },
-    //       {
-    //         text: "Департаменты",
-    //         link: null,
-    //         submenu: [
-    //           {
-    //             text: "HR",
-    //             link: "#!",
-    //           },
-    //           {
-    //             text: "IT и Разработка",
-    //             link: "#!",
-    //           },
-    //           {
-    //             text: "Коммерческий отдел",
-    //             link: "#!",
-    //           },
-    //           {
-    //             text: "Маркетинг",
-    //             link: "#!",
-    //           },
-    //           {
-    //             text: "Клиентский сервис",
-    //             link: "#!",
-    //           },
-    //         ],
-    //       },
-    //       {
-    //         text: "Техническая поддержка",
-    //         link: "#!",
-    //       },
-    //     ],
-    //   },
-    //   {
-    //     text: "О продукте",
-    //     link: null,
-    //     submenu: [
-    //       {
-    //         text: "Отрасли",
-    //         link: null,
-    //         submenu: [
-    //           {
-    //             text: "Промышленность",
-    //             link: "#!",
-    //           },
-    //           {
-    //             text: "Телекоммуникации",
-    //             link: "#!",
-    //           },
-    //           {
-    //             text: "Нефтегаз",
-    //             link: "#!",
-    //           },
-    //           {
-    //             text: "Финансы",
-    //             link: "#!",
-    //           },
-    //           {
-    //             text: "Машиностроение",
-    //             link: "#!",
-    //           },
-    //         ],
-    //       },
-    //       {
-    //         text: "Техническая поддержка",
-    //         link: "#!",
-    //       },
-    //     ],
-    //   },
-    //   {
-    //     text: "Партнерам",
-    //     link: '#!',
-    //   },
-    //   {
-    //     text: "База знаний",
-    //     link: null,
-    //     submenu: [
-    //       {
-    //         text: "Департаменты",
-    //         link: null,
-    //         submenu: [
-    //           {
-    //             text: "HR",
-    //             link: "#!",
-    //           },
-    //           {
-    //             text: "IT и Разработка",
-    //             link: "#!",
-    //           },
-    //           {
-    //             text: "Коммерческий отдел",
-    //             link: "#!",
-    //           },
-    //           {
-    //             text: "Маркетинг",
-    //             link: "#!",
-    //           },
-    //           {
-    //             text: "Клиентский сервис",
-    //             link: "#!",
-    //           },
-    //         ],
-    //       },
-    //       {
-    //         text: "Отрасли",
-    //         link: null,
-    //         submenu: [
-    //           {
-    //             text: "Промышленность",
-    //             link: "#!",
-    //           },
-    //           {
-    //             text: "Телекоммуникации",
-    //             link: "#!",
-    //           },
-    //           {
-    //             text: "Нефтегаз",
-    //             link: "#!",
-    //           },
-    //           {
-    //             text: "Финансы",
-    //             link: "#!",
-    //           },
-    //           {
-    //             text: "Машиностроение",
-    //             link: "#!",
-    //           },
-    //           {
-    //             text: "Телекоммуникации",
-    //             link: "#!",
-    //           },
-    //           {
-    //             text: "Нефтегаз",
-    //             link: "#!",
-    //           },
-    //           {
-    //             text: "Финансы",
-    //             link: "#!",
-    //           },
-    //           {
-    //             text: "Машиностроение",
-    //             link: "#!",
-    //           },
-    //         ],
-    //       },
-    //       {
-    //         text: "Техническая поддержка",
-    //         link: "#!",
-    //       },
-    //     ],
-    //   },
-    //   {
-    //     text: "Блог",
-    //     link: '#!',
-    //   },
-    //   {
-    //     text: "Помощь",
-    //     link: '#!',
-    //   },
-    // ];
-
     const navLinks = [
       {
-        text: "Безопастность",
-        link: "/security.html",
+        textRu: "Безопастность",
+        textEn: "Security",
+        link: "security",
       },
       {
-        text: "Интеграции",
-        link: "/integrations.html",
+        textRu: "Интеграции",
+        textEn: "Integrations",
+        link: "integrations",
       },
       {
-        text: "Карьера",
-        link: "/career.html",
+        textRu: "Карьера",
+        textEn: "Career",
+        link: "career",
       },
       {
-        text: "Блог",
-        link: "/blog.html",
+        textRu: "Блог",
+        textEn: "Blog",
+        link: "blog",
       },
       {
-        text: "Помощь",
-        link: "/help.html",
+        textRu: "Помощь",
+        textEn: "Help",
+        link: "help",
       }
     ];
 
   header.header.js-header
     .header__wrapper
       a(href="/").header__logo
-        img(src="../img/library/logo-dialog.svg" alt="Логотип мессенджера Dialog")
+        img(src=`/img/library/logo-dialog.svg` alt="Логотип мессенджера Dialog")
       .header__content-box
         .header__top-panel
           a(href="/").header__nav-logo
-            img(src="../img/library/logo-dialog.svg" alt="Логотип мессенджера Dialog")
+            img(src=`/img/library/logo-dialog.svg` alt="Логотип мессенджера Dialog")
           button(aria-label='Закрыть меню' type="button").header__close-button
         nav.header__nav-container.main-nav
           ul.main-nav__top-links
             each topItem, index in navLinks
               if (topItem.link)
                 li
-                  a(href!=topItem.link).main-nav__link=topItem.text
+                  a(href!=`/${lang === "ru" ? "ru" : "en"}/${topItem.link}`).main-nav__link=`${lang === "ru" ? topItem.textRu : topItem.textEn}`
               else
                 li.main-nav__top-block
                   button(type="button").main-nav__button=topItem.text
-                    +svg('tick', 8, 5)
+                  +svg('tick', 8, 5)
                   .main-nav__dropdown
                     ul.main-nav__included-box
                       each middleItem in topItem.submenu
@@ -272,14 +60,18 @@ mixin header
                             .main-nav__middle-block
                               button(type="button").main-nav__included-button
                                 span=middleItem.text
-                                  +svg('tick-right', 7, 11)
+                                +svg('tick-right', 7, 11)
                               ul.main-nav__middle-dropdown
                                 each lowItem in middleItem.submenu
                                   li.main-nav__included-item
                                     a(href!=lowItem.link).main-nav__link.main-nav__link--included=lowItem.text
           .main-nav__user-actions
-            +button('Получить предложение', {styleType: 'accent', additionalClassName: 'button--small main-nav__action-btn js-open-modal'})
-            a(href="#!").main-nav__link.main-nav__link--no-padding
-              span En
+            +button('Получить предложение',
+              {
+                styleType: 'accent',
+                additionalClassName: 'button--small main-nav__action-btn js-open-modal'
+              })
+            a(href=`/${lang === "ru" ? "en" : "ru"}/${pageName}`).main-nav__link.main-nav__link--no-padding
+              span.header__lang=`${lang === "ru" ? "en" : "ru"}`
               span In English
       button(aria-label='Открыть меню' type="button").header__burger-button

@@ -1,5 +1,5 @@
 include ./svg
 
-mixin button-play(additionalClassName)
+mixin button-play(additionalClassName, basedir)
   button.button-play(class=(additionalClassName ? additionalClassName : null) type="button")
-    +svg('icon-play', 20, 22)
+    +svg('icon-play', 20, 22, basedir)

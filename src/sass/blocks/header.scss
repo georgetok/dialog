@@ -19,6 +19,9 @@
   }
 }
 
+.header__lang {
+  text-transform: capitalize;
+}
 .header__wrapper {
   @include make-block-wrapper;
 

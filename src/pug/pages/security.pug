@@ -7,35 +7,35 @@ include ../mixins/form
 
 block variables
   -
-    const lang = "ru";
     const title = "Dialog";
     const routeClass = "js-route-main";
+    const pageName = "security";
+
     const licenseImages = {
     title: 'Лицензии',
     images: [
-    {
-    imgPath: 'img/patents/license-fsb',
-    imgType: 'jpg',
-    imgAlt: 'Фотография лицензии',
-    imgWidth: 80,
-    linkName: 'ФСБ'
-    },
-    {
-    imgPath: 'img/patents/fstek-1',
-    imgType: 'jpg',
-    imgAlt: 'Фотография сертификата',
-    imgWidth: 80,
-    linkName: 'ФСТЭК'
-    },
-    {
-    imgPath: 'img/patents/fstek-2',
-    imgType: 'jpg',
-    imgAlt: 'Фотография сертификата',
-    imgWidth: 80,
-    linkName: 'ФСТЭК'
-    }
-    ]
-    };
+      {
+        imgPath: '/img/patents/license-fsb',
+        imgType: 'jpg',
+        imgAlt: 'Фотография лицензии',
+        imgWidth: 80,
+        linkName: 'ФСБ'
+      },
+      {
+        imgPath: '/img/patents/fstek-1',
+        imgType: 'jpg',
+        imgAlt: 'Фотография сертификата',
+        imgWidth: 80,
+        linkName: 'ФСТЭК'
+      },
+      {
+        imgPath: '/img/patents/fstek-2',
+        imgType: 'jpg',
+        imgAlt: 'Фотография сертификата',
+        imgWidth: 80,
+        linkName: 'ФСТЭК'
+      }
+    ]};
 
 block content
   section.hero.hero--main.hero--security
@@ -45,7 +45,7 @@ block content
       .hero__right
         .hero__img
           +picture(
-            'img/pages/security/hero',
+            '/img/pages/security/hero',
             'jpg',
             'Фото ноутбука и мобильного телефона',
             682
@@ -63,7 +63,7 @@ block content
         .col.col--right
           .protection__img
             +picture(
-              'img/pages/security/protection',
+              '/img/pages/security/protection',
               'png',
               'Фото ноутбука и мобильного телефона',
               500
@@ -83,7 +83,7 @@ block content
             h4 Аудит безопасности
             p Сотрудничество с ведущими экспертами  по безопасности для проведения регулярных аудитов своих продуктов.
             +picture(
-              'img/pages/security/logo-audit',
+              '/img/pages/security/logo-audit',
               'png',
               'Фото ноутбука и мобильного телефона',
               456

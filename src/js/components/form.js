@@ -110,7 +110,7 @@ class Form {
     } else {
       field.isValid = false;
 
-      field.elem.classList.add('error');
+      // field.elem.classList.add('error');
       field.elem.setCustomValidity(field.desc);
     }
   }

@@ -7,35 +7,35 @@ include ../mixins/form
 
 block variables
   -
-    const lang = "ru";
     const title = "Dialog";
     const routeClass = "js-route-main";
+    const pageName = "integrations";
+
     const licenseImages = {
     title: 'Лицензии',
     images: [
-    {
-    imgPath: 'img/patents/license-fsb',
-    imgType: 'jpg',
-    imgAlt: 'Фотография лицензии',
-    imgWidth: 80,
-    linkName: 'ФСБ'
-    },
-    {
-    imgPath: 'img/patents/fstek-1',
-    imgType: 'jpg',
-    imgAlt: 'Фотография сертификата',
-    imgWidth: 80,
-    linkName: 'ФСТЭК'
-    },
-    {
-    imgPath: 'img/patents/fstek-2',
-    imgType: 'jpg',
-    imgAlt: 'Фотография сертификата',
-    imgWidth: 80,
-    linkName: 'ФСТЭК'
-    }
-    ]
-    };
+      {
+        imgPath: '/img/patents/license-fsb',
+        imgType: 'jpg',
+        imgAlt: 'Фотография лицензии',
+        imgWidth: 80,
+        linkName: 'ФСБ'
+      },
+      {
+        imgPath: '/img/patents/fstek-1',
+        imgType: 'jpg',
+        imgAlt: 'Фотография сертификата',
+        imgWidth: 80,
+        linkName: 'ФСТЭК'
+      },
+      {
+        imgPath: '/img/patents/fstek-2',
+        imgType: 'jpg',
+        imgAlt: 'Фотография сертификата',
+        imgWidth: 80,
+        linkName: 'ФСТЭК'
+      }
+    ]};
 
 block content
   section.hero.hero--main.hero--integrations
@@ -45,7 +45,7 @@ block content
       .hero__right
         .hero__img
           +picture(
-            'img/pages/integrations/hero',
+            '/img/pages/integrations/hero',
             'png',
             'Фото ноутбука и мобильного телефона',
             682

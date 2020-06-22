@@ -1,7 +1,7 @@
 include ./picture
 include ./svg
 
-mixin card-blog(props)
+mixin card-blog(props,basedir)
   .card__item(class= props.additionalClassName ? props.additionalClassName : null)
     a(href=props.href).card__card
       .card__img
@@ -12,7 +12,7 @@ mixin card-blog(props)
         .card__info
           b=props.date
           div
-            +svg('icon-watch', 17, 17)
+            +svg('icon-watch', 17, 17,basedir)
             span=props.time
 
 //- argTypes

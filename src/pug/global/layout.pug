@@ -6,20 +6,27 @@ include ../mixins/modal-offer
 doctype html
 block variables
   -
-    const lang = ""
     const title = ""
     const routeClass = ""
+    const pageName = ""
 
 html(lang=lang class=routeClass)
   block head
-    +head(title)
+    meta(charset="utf-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1")
+    meta(name="format-detection" content="telephone=no")
+    title!= title
+    link(rel="preload" href="fonts/Euclid-CircularA-Medium.woff2" as="font" crossorigin="anonymous")
+    link(rel="preload" href="fonts/Euclid-CircularA-Regular.woff2" as="font" crossorigin="anonymous")
+    link(rel="stylesheet" href=`/css/style.min.css`)
   body()
     .page
-      +header
+      +header(pageName, lang)
       main.page__content
         block content
       .page__footer
-        +footer
+        +footer()
     +modal-offer()
-    script(src="js/vendor.min.js")
-    script(src="js/index.min.js")
+    script(src=`/js/vendor.min.js`)
+    script(src=`/js/index.min.js`)
+    script(src=`/js/form-submit.js` data-cfasync="false" type="text/javascript")

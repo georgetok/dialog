@@ -1,33 +1,31 @@
 <!DOCTYPE html>
-<html lang="ru">
-  <head>
-    <meta charset="utf-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1"/>
-    <meta name="format-detection" content="telephone=no"/>
-    <title>Dialog</title>
-    <link rel="preload" href="fonts/Euclid-CircularA-Medium.woff2" as="font" crossorigin="anonymous"/>
-    <link rel="preload" href="fonts/Euclid-CircularA-Regular.woff2" as="font" crossorigin="anonymous"/>
-    <link rel="stylesheet" href="../css/style.min.css"/>
-  </head>
+<html>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="format-detection" content="telephone=no">
+  <title>Dialog</title>
+  <link rel="preload" href="fonts/Euclid-CircularA-Medium.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/Euclid-CircularA-Regular.woff2" as="font" crossorigin="anonymous">
+  <link rel="stylesheet" href="/css/style.min.css">
   <body>
     <div class="page">
       <header class="header js-header">
-        <div class="header__wrapper"><a class="header__logo" href="/"><img src="../img/library/logo-dialog.svg" alt="Логотип мессенджера Dialog"/></a>
+        <div class="header__wrapper"><a class="header__logo" href="/"><img src="/img/library/logo-dialog.svg" alt="Логотип мессенджера Dialog"/></a>
           <div class="header__content-box">
-            <div class="header__top-panel"><a class="header__nav-logo" href="/"><img src="../img/library/logo-dialog.svg" alt="Логотип мессенджера Dialog"/></a>
+            <div class="header__top-panel"><a class="header__nav-logo" href="/"><img src="/img/library/logo-dialog.svg" alt="Логотип мессенджера Dialog"/></a>
               <button class="header__close-button" aria-label="Закрыть меню" type="button"></button>
             </div>
             <nav class="header__nav-container main-nav">
               <ul class="main-nav__top-links">
-                <li><a class="main-nav__link" href="/security.html">Безопастность</a></li>
-                <li><a class="main-nav__link" href="/integrations.html">Интеграции</a></li>
-                <li><a class="main-nav__link" href="/career.html">Карьера</a></li>
-                <li><a class="main-nav__link" href="/blog.html">Блог</a></li>
-                <li><a class="main-nav__link" href="/help.html">Помощь</a></li>
+                <li><a class="main-nav__link" href="/en/security">Security</a></li>
+                <li><a class="main-nav__link" href="/en/integrations">Integrations</a></li>
+                <li><a class="main-nav__link" href="/en/career">Career</a></li>
+                <li><a class="main-nav__link" href="/en/blog">Blog</a></li>
+                <li><a class="main-nav__link" href="/en/help">Help</a></li>
               </ul>
               <div class="main-nav__user-actions">
                 <button class="button button--accent button--small main-nav__action-btn js-open-modal" type="button"><span>Получить предложение</span>
-                </button><a class="main-nav__link main-nav__link--no-padding" href="#!"><span>En</span><span>In English</span></a>
+                </button><a class="main-nav__link main-nav__link--no-padding" href="/ru/post"><span class="header__lang">ru</span><span>In English</span></a>
               </div>
             </nav>
           </div>
@@ -38,15 +36,15 @@
         <section class="post">
           <div class="post__wrapper">
             <div class="post__nav">
-              <div class="wrap wrap--sb wrap--ac"><a class="link link--with-icon-reverse link--accent link--icon-accent" href="/blog.html">
+              <div class="wrap wrap--sb wrap--ac"><a class="link link--with-icon-reverse link--accent link--icon-accent" href="../../ru/blog">
                   <svg width="16" height="15" aria-hidden="true">
-                    <use xlink:href="../img/sprite.svg#arrow-left"></use>
+                    <use xlink:href="/img/sprite.svg#arrow-left"></use>
                   </svg><span>Назад</span></a>
                 <div class="wrap post__time">
                   <p>2019-07-23</p>
                   <div class="wrap wrap--ac">
                     <svg width="17" height="17" aria-hidden="true">
-                      <use xlink:href="../img/sprite.svg#icon-watch"></use>
+                      <use xlink:href="/img/sprite.svg#icon-watch"></use>
                     </svg><span>1 мин</span>
                   </div>
                 </div>
@@ -78,7 +76,7 @@ Cloud hosting option means that software will be located and installed in a clou
               <li class="blog__item"><a class="blog__card" href="/blog.html">
                   <div class="blog__img-box">
                     <picture>
-                      <source type="image/webp" srcset="../img/pages/blog/blog-1-desktop@1x.webp 1x, ../img/pages/blog/blog-1-desktop@2x.webp 2x"/><img src="../img/pages/blog/blog-1-desktop@1x.jpg" srcset="../img/pages/blog/blog-1-desktop@2x.jpg 2x" alt="Изображение приложения" width="380" loading="lazy"/>
+                      <source type="image/webp" srcset="/img/pages/blog/blog-1-desktop@1x.webp 1x, /img/pages/blog/blog-1-desktop@2x.webp 2x"/><img src="/img/pages/blog/blog-1-desktop@1x.jpg" srcset="/img/pages/blog/blog-1-desktop@2x.jpg 2x" alt="Изображение приложения" width="380" loading="lazy"/>
                     </picture>
                   </div>
                   <div class="blog__text-box">
@@ -87,7 +85,7 @@ Cloud hosting option means that software will be located and installed in a clou
                       <p>27 февраля, 2020</p>
                       <div>
                         <svg width="17" height="17" aria-hidden="true">
-                          <use xlink:href="../img/sprite.svg#icon-watch"></use>
+                          <use xlink:href="/img/sprite.svg#icon-watch"></use>
                         </svg><span>1 мин</span>
                       </div>
                     </div>
@@ -95,7 +93,7 @@ Cloud hosting option means that software will be located and installed in a clou
               <li class="blog__item"><a class="blog__card" href="/blog.html">
                   <div class="blog__img-box">
                     <picture>
-                      <source type="image/webp" srcset="../img/pages/blog/blog-2-desktop@1x.webp 1x, ../img/pages/blog/blog-2-desktop@2x.webp 2x"/><img src="../img/pages/blog/blog-2-desktop@1x.jpg" srcset="../img/pages/blog/blog-2-desktop@2x.jpg 2x" alt="Изображение приложения" width="380" loading="lazy"/>
+                      <source type="image/webp" srcset="/img/pages/blog/blog-2-desktop@1x.webp 1x, /img/pages/blog/blog-2-desktop@2x.webp 2x"/><img src="/img/pages/blog/blog-2-desktop@1x.jpg" srcset="/img/pages/blog/blog-2-desktop@2x.jpg 2x" alt="Изображение приложения" width="380" loading="lazy"/>
                     </picture>
                   </div>
                   <div class="blog__text-box">
@@ -104,7 +102,7 @@ Cloud hosting option means that software will be located and installed in a clou
                       <p>27 февраля, 2020</p>
                       <div>
                         <svg width="17" height="17" aria-hidden="true">
-                          <use xlink:href="../img/sprite.svg#icon-watch"></use>
+                          <use xlink:href="/img/sprite.svg#icon-watch"></use>
                         </svg><span>1 мин</span>
                       </div>
                     </div>
@@ -112,7 +110,7 @@ Cloud hosting option means that software will be located and installed in a clou
               <li class="blog__item"><a class="blog__card" href="/blog.html">
                   <div class="blog__img-box">
                     <picture>
-                      <source type="image/webp" srcset="../img/pages/blog/blog-3-desktop@1x.webp 1x, ../img/pages/blog/blog-3-desktop@2x.webp 2x"/><img src="../img/pages/blog/blog-3-desktop@1x.jpg" srcset="../img/pages/blog/blog-3-desktop@2x.jpg 2x" alt="Изображение приложения" width="380" loading="lazy"/>
+                      <source type="image/webp" srcset="/img/pages/blog/blog-3-desktop@1x.webp 1x, /img/pages/blog/blog-3-desktop@2x.webp 2x"/><img src="/img/pages/blog/blog-3-desktop@1x.jpg" srcset="/img/pages/blog/blog-3-desktop@2x.jpg 2x" alt="Изображение приложения" width="380" loading="lazy"/>
                     </picture>
                   </div>
                   <div class="blog__text-box">
@@ -121,14 +119,14 @@ Cloud hosting option means that software will be located and installed in a clou
                       <p>27 февраля, 2020</p>
                       <div>
                         <svg width="17" height="17" aria-hidden="true">
-                          <use xlink:href="../img/sprite.svg#icon-watch"></use>
+                          <use xlink:href="/img/sprite.svg#icon-watch"></use>
                         </svg><span>1 мин</span>
                       </div>
                     </div>
                   </div></a></li>
             </ul><a class="link link--with-icon link--icon-accent" href="/blog.html">Смотреть все
               <svg width="16" height="15" aria-hidden="true">
-                <use xlink:href="../img/sprite.svg#arrow-right"></use>
+                <use xlink:href="/img/sprite.svg#arrow-right"></use>
               </svg></a>
           </div>
         </section>
@@ -159,7 +157,7 @@ Cloud hosting option means that software will be located and installed in a clou
       <div class="page__footer">
         <footer class="footer">
           <div class="footer__wrapper">
-            <div class="footer__logo"><a class="footer__link" href="/"><img src="../img/library/logo-dialog-white.svg" alt="Логотип мессенджера Dialog" width="139"/></a></div>
+            <div class="footer__logo"><a class="footer__link" href="/"><img src="/img/library/logo-dialog-white.svg" alt="Логотип мессенджера Dialog" width="139"/></a></div>
             <ul class="footer__contacts">
               <li><a class="footer__link" href="tel:+78007758202">+7 (800) 775-82-02</a></li>
               <li><a class="footer__link footer__link--underline" href="mailto:info@dlg.im">info@dlg.im</a></li>
@@ -192,15 +190,15 @@ Cloud hosting option means that software will be located and installed in a clou
               <ul class="social">
                 <li><a href="#!" aria-label="Страница Dialog в Facebook" target="_blank" rel="noopener noreferrer">
                     <svg width="11" height="23" aria-hidden="true">
-                      <use xlink:href="../img/sprite.svg#social-fb"></use>
+                      <use xlink:href="/img/sprite.svg#social-fb"></use>
                     </svg></a></li>
                 <li><a href="#!" aria-label="Страница Dialog в Вконтакте" target="_blank" rel="noopener noreferrer">
                     <svg width="23" height="13" aria-hidden="true">
-                      <use xlink:href="../img/sprite.svg#social-vk"></use>
+                      <use xlink:href="/img/sprite.svg#social-vk"></use>
                     </svg></a></li>
                 <li><a href="#!" aria-label="Профиль Dialog на GitHub" target="_blank" rel="noopener noreferrer">
                     <svg width="19" height="22" aria-hidden="true">
-                      <use xlink:href="../img/sprite.svg#social-gh"></use>
+                      <use xlink:href="/img/sprite.svg#social-gh"></use>
                     </svg></a></li>
               </ul>
             </div>
@@ -214,7 +212,7 @@ Cloud hosting option means that software will be located and installed in a clou
               <p>© 2016—2020 ООО «Диалог»</p>
               <p>ИНН: 7804568396</p>
             </div>
-            <div class="footer__promo-link"><a class="footer__link" href="#!" target="_blank" rel="noopener noreferrer" aria-label="Сколково"><img src="img/footer/sk-logo.svg" alt="Надпись: участник Сколково" width="100"/></a></div>
+            <div class="footer__promo-link"><a class="footer__link" href="#!" target="_blank" rel="noopener noreferrer" aria-label="Сколково"><img src="/img/footer/sk-logo.svg" alt="Надпись: участник Сколково" width="100"/></a></div>
           </div>
         </footer>
       </div>
@@ -227,26 +225,27 @@ Cloud hosting option means that software will be located and installed in a clou
             <div class="form__wrapper form__wrapper--modal">
               <h2 class="form__title form__title--modal">Получить предложение</h2>
               <div class="form__form">
-                <form action="#" method="POST" autocomplete="on" id="modal-offer-form">
+                <form class="gform" action="https://script.google.com/macros/s/AKfycbxUEtJZB_316gjG0B8B8kt6B1HNOsiRq-q3Y5rHuY_0RC789AMV/exec" method="POST" autocomplete="on" id="modal-offer-form" onsubmit="this.clear();this.classList.add('submited')">
+                  <input type="text" id="location" name="location" value="form sent from main page" hidden="hidden"/>
                   <div class="form__input-text-wrap">
                     <div class="form__form-field form__form-field--text form__form-field--m form__form-field--1 form__form-field--modal">
-                      <input type="text" id="name-2" name="name" pattern="([A-Za-zА-ЯЁа-яё-]{2,}\s?)+" placeholder="Ваше имя" title="Имя может состоять только из букв, пробелов и дефиса" required="required"/>
+                      <input type="text" id="name-2" name="name" pattern="([A-Za-zА-ЯЁа-яё-]{2,}\s?)+" placeholder="Ваше имя" title="Имя может состоять только из букв, пробелов и дефиса"/>
                       <label for="name-2">Ваше имя</label>
                     </div>
                     <div class="form__form-field form__form-field--text form__form-field--m form__form-field--3 form__form-field--modal">
-                      <input type="email" id="email-2" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" placeholder="Эл. почта" title="Email адрес должен быть типа: user@mail.com" required="required"/>
+                      <input type="email" id="email-2" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" placeholder="Эл. почта" title="Email адрес должен быть типа: user@mail.com"/>
                       <label for="email-2">Эл. почта</label>
                     </div>
                     <div class="form__form-field form__form-field--text form__form-field--s form__form-field--2 form__form-field--modal">
-                      <input type="tel" id="phone-2" name="phone" placeholder="Телефон" title="Номер телефона должен начинаться с символов +7 и содержать 11 цифр" pattern="7\d{10}" data-mask="+{7}(000)000-00-00" required="required"/>
+                      <input type="tel" id="phone-2" name="phone" placeholder="Телефон" title="Номер телефона должен начинаться с символов +7 и содержать 11 цифр" pattern="7\d{10}" data-mask="+{7}(000)000-00-00"/>
                       <label for="phone-2">Телефон</label>
                     </div>
                     <div class="form__form-field form__form-field--text form__form-field--s form__form-field--4 form__form-field--modal">
-                      <input type="text" id="company-2" name="company" placeholder="Название компании" required="required"/>
+                      <input type="text" id="company-2" name="company" placeholder="Название компании"/>
                       <label for="company-2">Название компании</label>
                     </div>
                     <div class="form__form-field form__form-field--text form__form-field--5 form__form-field--modal">
-                      <select id="quantity-2" name="quantity-users" required="required">
+                      <select id="quantity-2" name="quantity-users">
                         <option value="">Количество пользователей</option>
                         <option value="1-100">1-100</option>
                         <option value="101-500">101-500</option>
@@ -257,7 +256,7 @@ Cloud hosting option means that software will be located and installed in a clou
                   </div>
                   <div class="form__checkbox-wrap">
                     <div class="form__form-field form__form-field--checkbox form__form-field--modal">
-                      <input class="visually-hidden" type="checkbox" id="accept-2" name="accepted" checked="checked" required="required"/>
+                      <input class="visually-hidden" type="checkbox" id="accept-2" name="accepted" checked="checked"/>
                       <label for="accept-2">Я согласен на обработку персональных данных</label>
                     </div>
                     <div class="form__form-field form__form-field--checkbox form__form-field--modal">
@@ -267,6 +266,10 @@ Cloud hosting option means that software will be located and installed in a clou
                   </div>
                   <button class="button button--accent button--form" type="submit"><span>Отправить заявку</span>
                   </button>
+                  <div class="thankyou_message" style="display:none">
+                    <!-- You can customize the thankyou message by editing the code below-->
+                    <h2><em>Thanks</em> for contacting us! We will get back to you soon!</h2>
+                  </div>
                 </form>
               </div>
             </div>
@@ -274,7 +277,8 @@ Cloud hosting option means that software will be located and installed in a clou
         </div>
       </div>
     </div>
-    <script src="js/vendor.min.js"></script>
-    <script src="js/index.min.js"></script>
+    <script src="/js/vendor.min.js"></script>
+    <script src="/js/index.min.js"></script>
+    <script src="/js/form-submit.js" data-cfasync="false" type="text/javascript"></script>
   </body>
 </html>

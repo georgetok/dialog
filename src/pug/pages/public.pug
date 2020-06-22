@@ -6,8 +6,8 @@ include ../mixins/picture
 
 block variables
   -
-    const lang = "ru";
     const title = "Dialog";
+    const pageName = "public";
 
 block content
   -
@@ -19,10 +19,10 @@ block content
         p Согласно результатам проведённой специальной оценки условий труда рабочие места подразделений Общества в&nbsp;улучшении условий труда не&nbsp;нуждаются.
         .information-content__link-box
           a(href="img/patents/register.pdf" target="_blank")
-            +svg('icon-pdf',23, 28)
+            +svg('icon-pdf',23, 28, basedir)
             | Сводная ведомость результатов проведения специальной оценки условий труда ООО &laquo;Диалог&raquo;
           a(href="img/patents/list.pdf" target="_blank")
-            +svg('icon-pdf',23, 28)
+            +svg('icon-pdf',23, 28, basedir)
             | Перечень рекомендуемых мероприятий по&nbsp;улучшению условий труда
       .information-content__sidebar
         h2 Библиотека документов:

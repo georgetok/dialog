@@ -32,6 +32,7 @@
 
   @include laptop {
     --indent: 40px;
+    --header-height: 60px;
   }
 
   @include mobile-md {

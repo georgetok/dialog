@@ -7,15 +7,15 @@ include ../mixins/form-cta
 
 block variables
   -
-    const lang = "ru";
     const title = "Dialog";
+    const pageName = "post";
 
 block content
   section.post
     .post__wrapper
       .post__nav
         .wrap.wrap--sb.wrap--ac
-          a(class="link link--with-icon-reverse link--accent link--icon-accent" href="/blog.html")
+          a(class="link link--with-icon-reverse link--accent link--icon-accent" href="../../ru/blog")
             +svg('arrow-left', 16, 15)
             span Назад
           .wrap.post__time
@@ -39,7 +39,7 @@ block content
         li.blog__item
           a(href="/blog.html").blog__card
             .blog__img-box
-              +picture('../img/pages/blog/blog-1-desktop', 'jpg', 'Изображение приложения', 380)
+              +picture('/img/pages/blog/blog-1-desktop', 'jpg', 'Изображение приложения', 380)
             .blog__text-box
               h3.blog__card-title Корпоративный мессенджер для локальной сети
               .blog__text-info
@@ -50,7 +50,7 @@ block content
         li.blog__item
           a(href="/blog.html").blog__card
             .blog__img-box
-              +picture('../img/pages/blog/blog-2-desktop', 'jpg', 'Изображение приложения', 380)
+              +picture('/img/pages/blog/blog-2-desktop', 'jpg', 'Изображение приложения', 380)
             .blog__text-box
               h3.blog__card-title Корпоративный мессенджер&nbsp;&mdash; виды, возможности и&nbsp;сферы применения
               .blog__text-info
@@ -61,7 +61,7 @@ block content
         li.blog__item
           a(href="/blog.html").blog__card
             .blog__img-box
-              +picture('../img/pages/blog/blog-3-desktop', 'jpg', 'Изображение приложения', 380)
+              +picture('/img/pages/blog/blog-3-desktop', 'jpg', 'Изображение приложения', 380)
             .blog__text-box
               h3.blog__card-title Цифровая гигиена: как уберечь переписку в&nbsp;мессенджерах от&nbsp;конкурентов
               .blog__text-info

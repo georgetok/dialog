@@ -55,7 +55,7 @@ mixin hero(props)
       .hero__right
         .hero__img
           +picture(
-            `img/pages/download/hero-${props.id}`,
+            `/img/pages/download/hero-${props.id}`,
             'png',
             'Фото ноутбука и мобильного телефона',
             780
@@ -63,8 +63,8 @@ mixin hero(props)
             source(
               srcset=
               `
-                img/pages/download/hero-${props.id}@1x.webp 1x,
-                img/pages/download/hero-${props.id}@2x.webp 2x
+                /img/pages/download/hero-${props.id}@1x.webp 1x,
+                /img/pages/download/hero-${props.id}@2x.webp 2x
               `
             )
 

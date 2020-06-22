@@ -60,6 +60,7 @@ const Paths = {
   },
   scripts: {
     src: `${SOURCE_PATH}js/**/*.js`,
+    modules: `${SOURCE_PATH}js/modules/*.js`,
     dest: `${BUILD_PATH}js/`,
     inputFile: `${SOURCE_PATH}js/index.js`,
     outputFileName: 'index.min.js',
@@ -72,6 +73,8 @@ const Paths = {
     src: `${SOURCE_PATH}pug/pages/*.pug`,
     srcWatch: `${SOURCE_PATH}pug/**/*.pug`,
     dest: BUILD_PATH,
+    en: `${BUILD_PATH}/en`,
+    ru: `${BUILD_PATH}/ru`,
   },
   images: {
     src: `${SOURCE_PATH}img/**/*.{png,jpg,svg}`,
@@ -92,16 +95,32 @@ const Paths = {
     src: `${SOURCE_PATH}*.webmanifest`,
     output: BUILD_PATH,
   },
+  blog: {
+    src: `${SOURCE_PATH}pug/pages/blog.pug`,
+    output: `${BUILD_PATH}`,
+    ru: `${BUILD_PATH}/ru/blog/`,
+    en: `${BUILD_PATH}/en/blog/`,
+  },
+  post: {
+    src: `${SOURCE_PATH}pug/pages/post.pug`,
+    output: `${BUILD_PATH}/posts/`,
+  },
 };
+
+const pathbuilder = (path) => {
+    if ('index' !== path.basename) {
+        path.dirname = path.basename.split('_').join('/')
+        path.basename = 'index'
+    }
+}
 
 /*
  * TASKS
  */
-gulp.task('blog', async function () {
-
+gulp.task('json', async function () {
   const posts = await api.posts.browse({
     include: "tags,authors",
-    limit: "all"
+    limit: "3"
   }).catch(err => {
     console.error("error getting data");
   });
@@ -109,37 +128,82 @@ gulp.task('blog', async function () {
     path: `data.json`,
     contents: Buffer.from(JSON.stringify(posts))
   });
-  posts.forEach((post, index) => {
-    const {slug} = post;
+  return streamArray([file]).pipe(gulp.dest(`${SOURCE_PATH}json/`));
+});
+
+gulp.task('posts', async function () {
+  const posts = await api.posts.browse({
+    include: "tags,authors",
+    limit: "all"
+  }).catch(err => {
+    console.error("error getting data");
+  }).then((posts) => {
+    posts.forEach((post, index) => {
+      console.log(post);
+      const {slug} = post;
+      return gulp
+        .src(Paths.post.src)
+        .pipe(plumber())
+        .pipe(pug({
+            pretty: true,
+            data: {
+              post: post,
+            }
+          })
+        )
+        .pipe(rename(`${slug}.html`))
+        .pipe(gulp.dest(Paths.post.output));
+    });
+  });
+});
+
+gulp.task('blog:ru', async function () {
+  const posts = await api.posts.browse({
+    include: "tags,authors",
+    limit: "all",
+    filter: "tags.name:#ru"
+  }).catch(err => {
+    console.error("error getting data");
+  }).then((posts) => {
     return gulp
-      .src(`${SOURCE_PATH}pug/pages/post.pug`)
+      .src(`${SOURCE_PATH}pug/pages/blog.pug`)
       .pipe(plumber())
-      // .pipe(gulpData(function (file) {
-      //   return JSON.parse(gulpFS.readFileSync(`${SOURCE_PATH}json/data.json`));
-      // }))
       .pipe(pug({
           pretty: true,
           data: {
-            post: post,
+            "lang": "ru",
+            posts: posts
           }
         })
       )
-      .pipe(rename(`${slug}.html`))
-      .pipe(gulp.dest(`${BUILD_PATH}/posts/`));
+      .pipe(rename(`index.html`))
+      .pipe(gulp.dest(Paths.blog.ru));
   });
 
-  gulp
-    .src(`${SOURCE_PATH}pug/pages/blog.pug`)
-    .pipe(plumber())
-    .pipe(pug({
-        pretty: true,
-        data: {
-          posts: posts,
-        }
-      })
-    )
-    .pipe(gulp.dest(BUILD_PATH));
-  return streamArray([file]).pipe(gulp.dest(`${SOURCE_PATH}json/`));
+});
+
+gulp.task('blog:en', async function () {
+  const posts = await api.posts.browse({
+    include: "tags,authors",
+    limit: "all",
+    filter: "tags.name:#en"
+  }).catch(err => {
+    console.error("error getting data");
+  }).then((posts) => {
+    return gulp
+      .src(Paths.blog.src)
+      .pipe(plumber())
+      .pipe(pug({
+          pretty: true,
+          data: {
+            "lang": "en",
+            posts: posts,
+          }
+        })
+      )
+      .pipe(rename(`index.html`))
+      .pipe(gulp.dest(Paths.blog.en));
+  });
 
 });
 
@@ -213,9 +277,7 @@ gulp.task('images:svg-sprite', function () {
 gulp.task('html', function () {
   return gulp
     .src([
-      'src/pug/pages/*.pug',
-      '!src/pug/pages/post.pug',
-      '!src/pug/pages/blog.pug'
+      'src/pug/pages/index.pug',
     ])
     .pipe(plumber())
     .pipe(pug({
@@ -224,6 +286,44 @@ gulp.task('html', function () {
       })
     )
     .pipe(gulp.dest(BUILD_PATH));
+});
+
+gulp.task('html:en', function () {
+  return gulp
+    .src([
+      'src/pug/pages/*.pug',
+      '!src/pug/pages/post.pug',
+      '!src/pug/pages/blog.pug'
+    ])
+    .pipe(plumber())
+    .pipe(pug({
+        pretty: true,
+        data: {
+          "lang": "en"
+        }
+      })
+    )
+    .pipe( rename((path) => { pathbuilder(path) }) )
+    .pipe(gulp.dest(Paths.html.en));
+});
+
+gulp.task('html:ru', function () {
+  return gulp
+    .src([
+      'src/pug/pages/*.pug',
+      '!src/pug/pages/post.pug',
+      '!src/pug/pages/blog.pug'
+    ])
+    .pipe(plumber())
+    .pipe(pug({
+        pretty: true,
+        data: {
+          "lang": "ru"
+        }
+      })
+    )
+    .pipe( rename((path) => { pathbuilder(path) }) )
+    .pipe(gulp.dest(Paths.html.ru));
 });
 
 gulp.task('js:module', function () {
@@ -300,8 +400,11 @@ gulp.task('server', function () {
 
   gulp.watch(Paths.styles.src, gulp.series('css'));
   gulp.watch(Paths.images.src, gulp.series('graphic', 'refresh'));
-  gulp.watch(Paths.html.srcWatch, gulp.series('html', 'refresh'));
+  gulp.watch(Paths.html.srcWatch, gulp.series('html:ru', 'refresh'));
+  gulp.watch(Paths.html.srcWatch, gulp.series('html:en', 'refresh'));
   gulp.watch(Paths.scripts.src, gulp.series('js', 'refresh'));
+  // gulp.watch(Paths.blog.src, gulp.series('blog', 'refresh'));
+  gulp.watch(Paths.post.src, gulp.series('posts', 'refresh'));
 });
 
 gulp.task('refresh', function (done) {
@@ -328,7 +431,7 @@ gulp.task('copy:manifest', function () {
 gulp.task('graphic', gulp.series('images:minify', 'images:webp', 'images:svg-sprite'));
 gulp.task('js', gulp.series('js:module', 'js:vendor'));
 gulp.task('copy', gulp.series('copy:fonts'));
-gulp.task('build', gulp.series('clean', 'copy', 'html', 'css', 'js', 'blog'));
-gulp.task('blog', gulp.series('blog'));
+gulp.task('build', gulp.series('clean', 'copy', 'html', 'html:en','html:ru', 'css', 'js', 'blog:ru','blog:en', 'posts'));
+// gulp.task('blog', gulp.series('blog', 'posts'));
 gulp.task('start', gulp.series('build', 'server'));
 gulp.task('images', gulp.series('graphic'));

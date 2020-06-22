@@ -10,8 +10,8 @@ include ../mixins/card-blog
 
 block variables
   -
-    const lang = "ru";
     const title = "UI-KIT";
+    const pageName = "ui-kit";
 
 block content
   -
@@ -391,7 +391,7 @@ block content
                 +button('Скачать  для macOS', {styleType: 'dark'})
                   +svg('arrow-bottom', 15, 16)
               li
-                +button-play()
+                +button-play("",basedir)
 
         li.ui-kit__block
           .ui-kit__subtitle
@@ -473,7 +473,7 @@ block content
             .ui-kit__card-wrap
               +card-blog({
                 href: '#!',
-                imgPath: 'img/blog-1-desktop',
+                imgPath: '/img/pages/blog/blog-1-desktop',
                 imgType: 'jpg',
                 imgAlt: 'Изображение приложения',
                 imgWidth: 380,
@@ -481,10 +481,11 @@ block content
                 text: 'Ключевые особенности и проблемы применения массовых и коммерческих онлайн и оффлайн средств общения для внутренних коммуникаций',
                 date: '27 февраля, 2020',
                 time: '1 мин',
+                basedir: basedir
               })
               +card-blog({
                 href: '#!',
-                imgPath: 'img/blog-1-desktop',
+                imgPath: '/img/pages/blog/blog-2-desktop',
                 imgType: 'jpg',
                 imgAlt: 'Изображение приложения',
                 imgWidth: 380,
@@ -492,10 +493,11 @@ block content
                 text: 'Как оптимизировать процессы и повысить продажи, используя чат-боты',
                 date: '27 февраля, 2020',
                 time: '1 мин',
+                basedir: basedir
               })
               +card-blog({
                 href: '#!',
-                imgPath: 'img/blog-1-desktop',
+                imgPath: '/img/pages/blog/blog-3-desktop',
                 imgType: 'jpg',
                 imgAlt: 'Изображение приложения',
                 imgWidth: 380,
@@ -503,6 +505,7 @@ block content
                 text: 'Ключевые особенности и проблемы применения массовых и коммерческих онлайн и оффлайн средств общения для внутренних коммуникаций',
                 date: '27 февраля, 2020',
                 time: '1 мин',
+                basedir: basedir
               })
         li
           ul

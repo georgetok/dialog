@@ -90,18 +90,23 @@
 
   &:after {
     content: "";
-    background: url("/img/pattern.svg") 100% repeat;
+    background: url("/img/pattern.svg") repeat;
     display: block;
     width: 100vw;
     left: 50%;
     transform: translateX(-50%);
-    height: 200px;
+    height: 260px;
     position: absolute;
     bottom: 0;
     z-index: -1;
   }
-  @include tablet{
+
+  @include mobile-xs {
     &:after {
+      background: url("/img/pattern.svg") repeat;
+      background-size: 89%;
+      width: 115%;
+      background-position: 95% 91%;
     }
   }
 }

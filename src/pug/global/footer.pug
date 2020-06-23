@@ -1,43 +1,43 @@
 include ../mixins/svg
 include ../mixins/picture
-mixin footer(basedir)
+mixin footer()
   -
     const navigation = [
       {
         title:'Dialog',
         items: [
-            {text: 'Безопасность', path: '/security.html'},
-            {text: 'Интеграции', path: '/integrations.html'},
-            {text: 'Скачать', path: '/download.html'},
-            {text: 'Помощь', path: '/help.html'},
+            {text: t.nav.security, path: '/security'},
+            {text: t.nav.integrations, path: '/integrations'},
+            {text: t.nav.download, path: '/download'},
+            {text: t.nav.help, path: '/help'},
           ]
         },
       {
-        title:'<span>О компании</span><span>Компания</span>',
+        title:`<span>${t.nav.company_full}</span><span>${t.nav.company_short}</span>`,
         items: [
-          {text:'Свидетельства и лицензии', path: '/patents.html'},
-          {text:'Блог', path: '/blog.html'},
-          {text:'Карьера', path: '/career.html'},
+          {text:t.nav.license, path: '/patents'},
+          {text:t.nav.blog, path: '/blog'},
+          {text:t.nav.career, path: '/career'},
         ],
       }
     ];
     const socials = [
       {
-        label: 'Страница Dialog в Facebook',
+        label: t.nav.fb,
         iconPath: 'social-fb',
         iconWidth: 11,
         iconHeight: 23,
         link: '#!',
       },
       {
-        label: 'Страница Dialog в Вконтакте',
+        label: t.nav.vk,
         iconPath: 'social-vk',
         iconWidth: 23,
         iconHeight: 13,
         link: '#!',
       },
       {
-        label: 'Профиль Dialog на GitHub',
+        label: t.nav.gh,
         iconPath: 'social-gh',
         iconWidth: 19,
         iconHeight: 22,
@@ -45,10 +45,10 @@ mixin footer(basedir)
       }
     ];
     const docsLinks = [
-      {link: '#!', text: 'Социальная ответственность'},
-      {link: '#!', text: 'Правовая информация'},
-      {link: '#!', text: 'Обработка персональных данных'},
-      {link: '#!', text: 'Политика по противодействию коррупции'},
+      {link: '/public', text: t.nav.social},
+      {link: '/legal', text: t.nav.legal},
+      {link: '/data', text: t.nav.data},
+      {link: '/corruption', text: t.nav.corruption},
     ]
 
   footer.footer
@@ -63,7 +63,7 @@ mixin footer(basedir)
           a(href="mailto:info@dlg.im").footer__link.footer__link--underline info@dlg.im
       .footer__navigation-box
         section.footer-nav
-          h2.visually-hidden Навигация
+          h2.visually-hidden=t.hidden.nav
           .footer-nav__container
             each box in navigation
               .footer-nav__content-box
@@ -71,7 +71,7 @@ mixin footer(basedir)
                 ul
                   each link in box.items
                     li
-                      a(href!=link.path).link.link--invert=link.text
+                      a(href!=`/${lang === "ru" ? "ru" : "en"}${link.path}`).link.link--invert=link.text
       .footer__social-box
         ul.social
           each social in socials
@@ -81,7 +81,7 @@ mixin footer(basedir)
       ul.footer__doc-links
         each doc in docsLinks
           li
-            a(href!=doc.link target="_blank" rel="noopener noreferrer")=doc.text
+            a(href!=`/${lang === "ru" ? "ru" : "en"}${doc.link}` target="_blank" rel="noopener noreferrer")=doc.text
       .footer__copyright
         p © 2016—2020 ООО «Диалог»
         p ИНН: 7804568396

@@ -31,7 +31,6 @@
   padding-left: 19px;
   padding-right: 19px;
   color: inherit;
-  //border-bottom: 2.5px solid transparent;
   cursor: pointer;
 
   @include laptop {
@@ -46,7 +45,6 @@
   @include mobile-md {
     width: 100%;
     flex-direction: row;
-    //margin-bottom: 8px;
     margin-right: 0;
     padding-top: 15px;
     padding-bottom: 15px;
@@ -54,8 +52,6 @@
     padding-right: calc(var(--indent) + 20px);
     text-align: left;
     border-bottom: none;
-    //border-top: 1px solid $color-accent-light;
-    //border-bottom: 1px solid $color-accent-light;
     background-color: $color-contrast;
     background-image: url("../img/library/arrow-menu-bottom.svg");
     background-repeat: no-repeat;
@@ -74,7 +70,7 @@
     left: 0;
     width: 100%;
     height: 2.5px;
-    background-color: $color-base;
+    background-color: $color-accent;
     opacity: 0;
     transition: opacity $transition-props;
 
@@ -93,9 +89,7 @@
     margin-bottom: 10px;
     border-radius: 50%;
     background-color: $color-contrast;
-    box-shadow:
-      0 2px 4px rgba(47, 27, 73, 0.08),
-      0 1px 1px rgba(47, 41, 64, 0.1);
+
 
     @include mobile-md {
       width: 40px;
@@ -107,17 +101,13 @@
     &::before {
       content: "";
       position: absolute;
-      top: -5px;
       left: 50%;
       transform: translateX(-50%);
-      width: 61px;
-      height: 61px;
-      background-image: url("../img/ellipse.svg");
-      background-repeat: no-repeat;
-      background-position: center;
-      background-size: 61px;
-      opacity: 0;
+      width: 70px;
+      height: 70px;
       transition: opacity $transition-props;
+      border: 1px solid $color-gray-light-2;
+      border-radius: 50%;
 
       @include mobile-md {
         content: none;
@@ -128,12 +118,13 @@
   svg {
     fill: $color-base;
     transition: fill $transition-props;
+    width: 33px;
+    height: 33px;
   }
 
   b {
     @include typography-txt;
     margin-bottom: 17px;
-    //transition: font-weight $transition-props;
 
     @include laptop {
       font-size: 14px;
@@ -151,7 +142,6 @@
 
   &:hover,
   &:focus {
-    //border-bottom: 2.5px solid $color-base;
     outline: 0;
 
     &::before {
@@ -165,9 +155,6 @@
       }
     }
 
-    svg {
-      fill: $color-accent;
-    }
 
     b {
       text-shadow: 0.6px 0 0 currentColor;
@@ -180,13 +167,11 @@
 }
 
 .tabs__control--active {
-  //border-bottom: 2.5px solid $color-base;
   &::before {
     opacity: 1;
   }
 
   @include mobile-md {
-    //margin-bottom: 0;
     border-bottom: none;
     background-image: url("../img/library/arrow-menu-top.svg");
     background-repeat: no-repeat;
@@ -200,13 +185,9 @@
     }
   }
 
-  svg {
-    fill: $color-accent;
-  }
 
   b {
     text-shadow: 0.6px 0 0 currentColor;
-    //font-weight: 500;
   }
 }
 
@@ -222,10 +203,7 @@
 
 .tabs__wrapper--active {
   display: block;
-
-  // ! Animation
   animation: fadeIn 0.7s $transition-timing-function;
-  // ! Animation
 }
 
 .tabs__control--mobile {
@@ -238,7 +216,6 @@
 
 .tabs__control--expanded {
   @include mobile-md {
-    //margin-bottom: 0;
     border-bottom: none;
     background-image: url("../img/library/arrow-menu-top.svg");
     background-repeat: no-repeat;
@@ -248,7 +225,6 @@
 }
 
 .tabs__content {
-  //display: none;
   display: flex;
   padding-top: 66px;
   padding-left: 40px;
@@ -266,38 +242,33 @@
 
 .tabs__content--hide {
   @include mobile-md {
-    max-height: 0!important;
+    max-height: 0 !important;
   }
 }
 
 .tabs__left {
   display: flex;
   flex-direction: column;
-  //justify-content: center;
   width: 40%;
   margin-top: 128px;
   margin-right: auto;
-  //padding-top: 175px;
   padding-right: 6%;
 
   @include laptop {
     width: 30%;
     margin-top: 60px;
-    //padding-top: 125px;
     margin-right: auto;
     padding-right: 0;
   }
 
   @include mobile-md {
     width: 100%;
-    //margin-bottom: 8px;
     margin-top: 0;
     padding-top: 25px;
     padding-bottom: 25px;
     padding-left: var(--indent);
     padding-right: var(--indent);
     background-color: $color-contrast;
-    //border-bottom: 1px solid $color-accent-light;
   }
 
   h3 {
@@ -325,7 +296,6 @@
   justify-content: flex-end;
   align-items: center;
   width: 60%;
-  background-image: url("../img/bg-square-purple.svg");
   background-repeat: no-repeat;
   background-position: bottom 16px left 116px;
   background-size: 112px 112px;
@@ -334,7 +304,6 @@
     justify-content: center;
     max-width: 670px;
     width: 62.7%;
-    //margin-right: 2.9%;
     padding-bottom: 64px;
     background-position: bottom 4px left 13%;
   }
@@ -345,65 +314,61 @@
     padding-top: 43px;
     padding-bottom: 23px;
     background-color: $color-accent;
-    background-image:
-      url("../img/bg-round-blue.svg"),
-      url("../img/bg-round-peach.svg"),
-      url("../img/bg-polygon-purple.svg");
-    background-repeat: no-repeat;
-    background-position:
-      top 30.3% left -70px,
-      top 12% right 7%,
-      bottom 0 right 2%;
-    background-size:
-      140px auto,
-      54px auto,
-      142px auto;
-
-    // ! Чтобы табы срабатывали, нужно задать минимальную высоту для контейнеров, чья высота не формируется вложенным контентом.
     min-height: 360px;
-    // !
+    background-repeat: no-repeat;
+    background-position: top 30.3% left -70px,
+    top 12% right 7%,
+    bottom 0 right 2%;
+    background-size: 140px auto,
+    54px auto,
+    142px auto;
   }
 
+  @include pseudo-absolute;
+
   &::before {
-    content: "";
-    position: absolute;
-    top: -28px;
-    left: 32px;
-    width: 122px;
-    height: 122px;
-    background-image: url("../img/bg-square-yellow.svg");
-    background-repeat: no-repeat;
-    background-position: 0 0;
-    background-size: 122px 122px;
+    left: 0;
+    bottom: auto;
+    top: 50px;
+    width: 300px;
+    height: 200px;
+    transform: translate(-13%, -40%);
+    background-size: 70%;
+    background-image: url("../img/pattern.svg");
 
-    @include laptop {
-      left: -5.6%;
-    }
-
-    @include mobile-md {
-      content: none;
+    @include tablet {
+      display: none;
     }
   }
 
   &::after {
-    content: "";
-    position: absolute;
-    top: -50px;
-    right: -45px;
-    width: 129px;
-    height: 129px;
-    background-image: url("../img/bg-round-blue.svg");
-    background-repeat: no-repeat;
-    background-position: 0 0;
-    background-size: 129px 129px;
+    right: 0;
+    top: auto;
+    bottom: 0;
+    width: 65%;
+    padding-bottom: 26.5%;
+    transform: translate(50%, 30%);
+    background-size: 50%;
+    background-image: url("../img/pattern.svg");
 
-    @include laptop {
-      top: -43px;
-      right: -9.4%;
+    @include tablet {
+      left: 0;
+      right: auto;
+      transform: translate(-50%, -50%);
     }
+  }
 
-    @include mobile-md {
-      content: none;
+  .wrap {
+    position: relative;
+    @include pseudo-absolute;
+
+    &:before {
+      width: 100%;
+      height: 100%;
+      background: #F6F6F9;
+      border-radius: 4px;
+      bottom: -20px;
+      right: -20px;
     }
   }
 
@@ -414,13 +379,12 @@
     width: 100%;
     max-width: 670px;
     margin-left: auto;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15);
     border-radius: 4px;
 
+
     @include laptop {
-      //width: 91%;
       max-width: unset;
-      //margin-left: 32px;
     }
 
     @include mobile-md {

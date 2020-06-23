@@ -14,11 +14,11 @@ mixin form-feedback (isModal, idNumber, formId)
               id=`name-${idNumber}`
               name="name"
               pattern="([A-Za-zА-ЯЁа-яё-]{2,}\\s?)+"
-              placeholder='Ваше имя'
+              placeholder=t.form.name
               title="Имя может состоять только из букв, пробелов и дефиса"
               required
             )
-            label(for=`name-${idNumber}`) Ваше имя
+            label(for=`name-${idNumber}`)=t.form.name
           .form__form-field.form__form-field--text.form__form-field--s.form__form-field--4(
               class=(isModal ? 'form__form-field--modal' : null
             ))
@@ -26,23 +26,23 @@ mixin form-feedback (isModal, idNumber, formId)
               type="text"
               id=`company-${idNumber}`
               name="company"
-              placeholder="Название компании"
+              placeholder=t.form.company
               required)
-            label(for=`company-${idNumber}`) Названии компании
+            label(for=`company-${idNumber}`)=t.form.company
           .form__form-field.form__form-field--textarea.form__form-field--5(
               class=(isModal ? 'form__form-field--modal' : null
             ))
             textarea(
               id=`message-${idNumber}`
               name="message"
-              placeholder="Чем мы можем вам помочь?"
+              placeholder=t.form.help
               required)
-            label(for=`message-${idNumber}`) Чем мы можем вам помочь?
+            label(for=`message-${idNumber}`)=t.form.help
         .form__checkbox-wrap
           .form__form-field.form__form-field--checkbox(class=(isModal ? 'form__form-field--modal' : null))
             input.visually-hidden(type="checkbox" id=`accept-${idNumber}` name="accepted" checked required)
-            label(for=`accept-${idNumber}`) Я согласен на обработку персональных данных
-        +button('Отправить заявку', {styleType: 'accent', type: 'submit', additionalClassName: 'button--form'})
+            label(for=`accept-${idNumber}`)=t.form.agree
+        +button(t.button.request, {styleType: 'accent', type: 'submit', additionalClassName: 'button--form'})
     //- if isModal
     //-   button(aria-label='Закрыть меню' type="button").form__close-button
 

@@ -8,17 +8,18 @@ include ../mixins/form-cta
 block variables
   -
     const title = "Dialog";
-    const routeClass = "js-route-main";
+    const routeClass = "js-route-blog";
     const pageName = "blog";
 
 block content
-  +page-title('Блог Dialog')
+  +page-title(t.blog.title)
+  div=isPost
   section.blog.blog--main.box
     .wrapper.wrapper--main
       ul.blog__list
         each post in posts
           li.blog__item
-            a(href=`/posts/${post.slug}.html`).blog__card
+            a(href=`./${post.slug}.html`).blog__card
               .blog__img-box
                 img(src=post.feature_image alt=post.custom_excerpt)
               .blog__text-box
@@ -28,9 +29,9 @@ block content
                   p=post.created_at.slice(0, 10)
                   div
                     +svg('icon-watch', 17, 17)
-                    span 1 мин
+                    span 1 !{t.blog.min}
       .wrap.wrap--c
-        +button('Смотреть ещё', {styleType: 'dark', type: 'button'})
+        +button(t.button.view, {styleType: 'dark', type: 'button', additionalClassName: 'show-posts'})
 
   section.box.box--purple
     .wrapper.wrapper--main

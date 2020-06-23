@@ -1,4 +1,5 @@
 import main from './pages/main';
+import blog from './pages/blog';
 import download from './pages/download';
 import header from './modules/header/';
 import setPageHeight from './modules/setPageHeight';
@@ -10,7 +11,8 @@ const global = () => {
 const router = {
   pages: {
     main: main,
-    download: download
+    download: download,
+    blog: blog,
   },
   global: global,
 };

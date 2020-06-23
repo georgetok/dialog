@@ -3,7 +3,7 @@ include ../mixins/svg
 include ../mixins/button
 include ../mixins/button-play
 include ../mixins/picture
-include ../mixins/form
+include ../mixins/form-offer
 
 block variables
   -
@@ -15,25 +15,25 @@ block content
   -
     const advantages = [
     {
-    iconPath: "icon-hands",
-    iconWidth: 35,
-    iconHeight: 31,
-    title: "Эффективная командная работа",
-    text: "Dialog позволяет настроить интеграции с\u00A0сервисами компании и\u00A0оптимизировать бизнес-процессы."
+      iconPath: "icon-hands",
+      iconWidth: 35,
+      iconHeight: 31,
+      title: t.main.adv_title_1,
+      text: t.main.adv_sub_1
     },
     {
-    iconPath: "icon-lock",
-    iconWidth: 30,
-    iconHeight: 30,
-    title: "Безопасное общение",
-    text: "Соответствие отраслевым стандартам безопасности, контроль и\u00A0защита на\u00A0разных уровнях."
+      iconPath: "icon-lock",
+      iconWidth: 30,
+      iconHeight: 30,
+      title: t.main.adv_title_2,
+      text: t.main.adv_sub_2
     },
     {
-    iconPath: "icon-purse",
-    iconWidth: 28,
-    iconHeight: 26,
-    title: "Сокращение затрат на\u00A0коммуникации",
-    text: "Совмещение разрозненных инструментов в\u00A0одной платформе оптимизирует расходы на\u00A0ПО, оборудование, обслуживание и\u00A0поддержку."
+      iconPath: "icon-purse",
+      iconWidth: 28,
+      iconHeight: 26,
+      title: t.main.adv_title_3,
+      text: t.main.adv_sub_3
     }
     ];
     const functions = [
@@ -43,8 +43,8 @@ block content
     iconPath: "icon-chat",
     iconWidth: 27,
     iconHeight: 24,
-    title: "Групповые чаты и\u00A0каналы",
-    text: "Группы\u00A0\u2014 это чаты для общения, создайте их\u00A0для команд и\u00A0проектов, чтобы сфокусировать усилия, сделать работу более прозрачной, а\u00A0информацию доступной для всех",
+    title: t.main.f_title_1,
+    text: t.main.f_text_1,
     picWidth: "141",
     picPathMob: "function-mobile",
     picPathDesk: "function-desktop"
@@ -55,8 +55,8 @@ block content
     iconPath: "icon-logout",
     iconWidth: 22,
     iconHeight: 26,
-    title: "Обмен файлами",
-    text: "Тяжелая презентация не\u00A0отправляется по\u00A0почте? Делитесь файлами, не\u00A0задумываясь о\u00A0лимитах по\u00A0размеру или формату.",
+    title: t.main.f_title_2,
+    text: t.main.f_text_2,
     picWidth: "141",
     picPathMob: "function-mobile",
     picPathDesk: "function-desktop"
@@ -67,8 +67,8 @@ block content
     iconPath: "icon-phone",
     iconWidth: 25,
     iconHeight: 25,
-    title: "Аудио-\u00A0/ видеозвонки",
-    text: "Созванивайтесь с\u00A0коллегам в\u00A0мессенджере или подключайтесь к\u00A0конференциям в\u00A0АКС/ВКС-системе.",
+    title: t.main.f_title_3,
+    text: t.main.f_text_3,
     picWidth: "141",
     picPathMob: "function-mobile",
     picPathDesk: "function-desktop"
@@ -79,8 +79,8 @@ block content
     iconPath: "icon-search",
     iconWidth: 22,
     iconHeight: 22,
-    title: "Поиск",
-    text: "Удобный поиск по\u00A0чату поможет найти презентации, изображения, документы, а\u00A0интеграция с\u00A0адресной книгой\u00A0\u2014 нужного сотрудника по\u00A0имени, должности или отделу.",
+    title: t.main.f_title_4,
+    text: t.main.f_text_4,
     picWidth: "141",
     picPathMob: "function-mobile",
     picPathDesk: "function-desktop"
@@ -91,30 +91,30 @@ block content
     iconPath: "icon-bot",
     iconWidth: 28,
     iconHeight: 27,
-    title: "Чат-боты",
-    text: "Создавайте ботов и\u00A0чат-ботов для автоматизации бизнес-процессов с\u00A0помощью Bot SDK.",
+    title: t.main.f_title_5,
+    text: t.main.f_text_5,
     picWidth: "141",
     picPathMob: "function-mobile",
     picPathDesk: "function-desktop"
     }
     ];
 
-
-  section.hero.hero--main.hero--reverse.box.box--hero.box--purple
+  section.hero.hero--main.hero--reverse.hero--square-both
     .hero__wrapper
       .hero__left
         h1.hero__title Dialog
-        p.hero__text Корпоративный мессенджер для совместной работы и&nbsp;безопасного общения
+        p.hero__text=t.main.subtitle
         +button(
-          'Оставить заявку',
+          t.button.leave,
           {
             type: 'button',
             isLink: false,
-            additionalClassName: 'button--hero js-open-modal-hero'
+            additionalClassName: 'button--hero js-open-modal-hero',
+            styleType: 'accent',
           })
+            +svg('arrow-right', 16, 15)
       .hero__right
         .hero__img
-
           +picture(`/img/hero`, 'png', 'Фото ноутбука и мобильного телефона', 682)
   section.advantages.box.box--white
     .advantages__wrapper
@@ -126,9 +126,9 @@ block content
               +svg(item.iconPath, item.iconWidth, item.iconHeight)
             h2= item.title
             p= item.text
-  section.functions.box.box--lilac
+  section.functions.box
     .functions__wrapper
-      h2.functions__title Функции Dialog
+      h2.functions__title=t.main.f_title
       .functions__tabs.tabs
         .tabs__controls
           each item, index in functions
@@ -151,103 +151,104 @@ block content
                 h3= item.title
                 p= item.text
               .tabs__right
-                +button-play('button-play--tabs')
-                picture
-                  source(
-                    type="image/webp"
-                    media="(min-width: 768px)"
+                .wrap
+                  +button-play('button-play--tabs')
+                  picture
+                    source(
+                      type="image/webp"
+                      media="(min-width: 768px)"
 
-                    srcset=`/img/${item.picPathDesk}@1x.webp 1x, /img/${item.picPathDesk}@2x.webp 2x`
-                  )
-                  source(
-                    type="image/webp"
-                    srcset=`/img/${item.picPathMob}@1x.webp 1x, /img/${item.picPathMob}@2x.webp 2x`
-                  )
-                  source(
-                    media="(min-width: 768px)"
-                    srcset=`/img/${item.picPathDesk}@1x.png 1x, /img/${item.picPathDesk}@2x.png 2x`
-                  )
-                  img(
-                    src=`/img/${item.picPathMob}@1x.png`,
-                    srcset=`/img/${item.picPathMob}@2x.png 2x`,
-                    width=item.picWidth,
-                    alt="Фото приложения Dialog")
+                      srcset=`/img/${item.picPathDesk}@1x.webp 1x, /img/${item.picPathDesk}@2x.webp 2x`
+                    )
+                    source(
+                      type="image/webp"
+                      srcset=`/img/${item.picPathMob}@1x.webp 1x, /img/${item.picPathMob}@2x.webp 2x`
+                    )
+                    source(
+                      media="(min-width: 768px)"
+                      srcset=`/img/${item.picPathDesk}@1x.png 1x, /img/${item.picPathDesk}@2x.png 2x`
+                    )
+                    img(
+                      src=`/img/${item.picPathMob}@1x.png`,
+                      srcset=`/img/${item.picPathMob}@2x.png 2x`,
+                      width=item.picWidth,
+                      alt="Фото приложения Dialog")
   section.safety.box.box--white
     .safety__wrapper
-      h2.safety__title Защищенная коммуникация
+      h2.safety__title=t.main.sec_title
       ul.safety__list
         li.safety__item.safety__item--safe
-          h3 Высокие стандарты безопасности
-          p Интеграция с&nbsp;инфраструктурой информационной безопасности
+          h3=t.main.sec_title_1
+          p=t.main.sec_sub_1
           ul.safety__listbox
             li
-              p Интеграция с&nbsp;Active Directory AD&nbsp;/ LDAP
+              p=t.main.sec_li_1_1
             li
-              p DLP&nbsp;&mdash; предотвращение утечек
+              p=t.main.sec_li_1_2
             li
-              p Интеграция с&nbsp;Антивирусным&nbsp;ПО
+              p=t.main.sec_li_1_3
             li
-              p SIEM&nbsp;&mdash; идентификация угроз
+              p=t.main.sec_li_1_4
             li
-              p Шифрование передачи данных по&nbsp;протоколам TLS, DTLS
+              p=t.main.sec_li_1_5
             li
-              p Независимый аудит безопасности&nbsp;ПО
+              p=t.main.sec_li_1_6
         li.safety__item.safety__item--cloud
-          h3 Данные под вашим контролем
-          p Вы&nbsp;можете выбрать предпочтительные варианты размещения Dialog
+          h3=t.main.sec_title_2
+          p=t.main.sec_sub_2
           ul.safety__listbox
             li
               p
                 b On-premise
-                |  Размещение на&nbsp;серверах вашей компании
+                | !{t.main.sec_li_2_1}
             li
               p
                 b Private cloud
-                |  Размещение на&nbsp;инфраструктуре стороннего провайдера в&nbsp;частном облаке
+                | !{t.main.sec_li_2_2}
                 img(src=`/img/sber-cloud.svg`, width="108" height="22" alt="Логотип SberCloud")
-      a(class="link link--with-icon link--safety" href="#!") Узнать подробнее
+      a(class="link link--with-icon link--safety link--icon-accent" href="#!")=t.link.learn
         +svg('arrow-right', 16, 15)
   section.solutions.box.box--sand
     .solutions__wrapper
-      h2.solutions__title Решения
+      h2.solutions__title=t.main.sol_title
       ul.solutions__list
         li.solutions__item
           .solutions__img.solutions__img--1.solutions__cell-1
             +picture(`/img/solution-1`, 'jpg', 'Изображение с сотрудником компании', 630)
           .solutions__content.solutions__content--1.solutions__cell-2
             .solutions__content-wrap
-              h3 Бизнесу
-              p Ведущие российские компании повысили эффективность совместной работы, объединив тысячи сотрудников и&nbsp;корпоративные системы в&nbsp;Dialog.
-              a(class="link link--with-icon" href="#!") Узнать подробнее
+              h3=t.main.sol_title_1
+              p=t.main.sol_sub_1
+              a(class="link link--with-icon link--icon-accent" href="#!")=t.link.learn
                 +svg('arrow-right', 16, 15)
         li.solutions__item
           .solutions__img.solutions__img--2.solutions__cell-2
             +picture(`/img/solution-2`, 'jpg', 'Изображение с сотрудником компании', 630)
           .solutions__content.solutions__content--2.solutions__cell-1
             .solutions__content-wrap
-              h3 Государственным организациям
-              p Надежная и&nbsp;безопасная коммуникация в&nbsp;государственных компаниях, соответствие требованиям по&nbsp;импортозамещению и&nbsp;государственной программе &laquo;Цифровая экономика&raquo;.
-              a(class="link link--with-icon" href="#!") Узнать подробнее
+              h3=t.main.sol_title_2
+              p=t.main.sol_sub_2
+              a(class="link link--with-icon link--icon-accent" href="#!")=t.link.learn
                 +svg('arrow-right', 16, 15)
   section.features.box.box--white
     .features__wrapper
       .features__header
-        h2 Dialog помогает командам стать эффективнее
-        p Переключение между разными приложениями нарушает концентрацию сотрудников. Используя Bot SDK и&nbsp;Dialog API, вы&nbsp;можете создавать интеграции со&nbsp;сторонними приложениями и&nbsp;автоматизировать рутинные процессы.
+        h2=t.main.feat_title
+        p=t.main.feat_sub
       .features__item.features__item--direct
         .features__img-box.features__img-box--direct
           +button-play('button-play--features')
           .features__img.features__img--direct
             +picture(`/img/features-1-desktop`, 'png', 'Изображение приложения Dialog', 630)
-        .features__desc.features__desc--direct
+        .features__desc .features__desc--direct
           span
             +svg('icon-bot', 20, 19)
-          h3 Bot SDK
-          p Bot SDK позволяет создавать ботов и&nbsp;чат-ботов для Dialog. Боты оптимизируют повторяющиеся рутинные операции и&nbsp;освобождают время для более сложных задач. SDK доступен для JS, Java и&nbsp;Python.
+          h3=t.main.feat_title_1_block_1
+          p=t.main.feat_sub_1_block_1
         .features__example.features__example--direct
-          span Реализовано с&nbsp;помощью Bot SDK
-          h3 Помощник HR&nbsp;bot
-          p Упрощает работу с&nbsp;документами: опрашивает сотрудника по&nbsp;ключевым вопросам и&nbsp;формирует заявление на&nbsp;отпуск.
+          span=t.main.feat_purple_block_1
+          h3=t.main.feat_title_2_block_1
+          p=t.main.feat_sub_2_block_1
       .features__item.features__item--reverse
         .features__img-box.features__img-box--reverse
           +button-play('button-play--features')
@@ -256,27 +257,21 @@ block content
         .features__desc.features__desc--reverse
           span
             +svg('icon-api', 22, 22)
-          h3 Dialog API
-          p API позволяет другим приложениям взаимодействовать и&nbsp;обмениваться данными с&nbsp;Dialog.
+          h3=t.main.feat_title_1_block_2
+          p=t.main.feat_sub_1_block_2
         .features__example.features__example--reverse
-          span Реализовано с&nbsp;помощью Dialog API
-          h3 Совместная работа над документами МойОфис
-          p Возможность автоматически создавать группы для обсуждения, уведомлять о&nbsp;предоставлении доступа и&nbsp;отправлять ссылки на&nbsp;документы в&nbsp;Dialog, не&nbsp;выходя из&nbsp;офисных приложений МойОфис.
+          span=t.main.feat_purple_block_2
+          h3=t.main.feat_title_2_block_2
+          p=t.main.feat_sub_2_block_2
       .features__footer
-        h3 Расширяйте возможности Dialog
-        p С&nbsp;помощью наших партнеров-интеграторов или внутренних разработчиков вашей компании
+        h3=t.main.feat_title_enlarge
+        p=t.main.feat_sub_enlarge
         .features__button-box
-          +button('Технологические партнеры', {
-            styleType: 'dark',
-            isLink: true,
-            additionalClassName: 'button--features-1'
-          })
-            +svg('arrow-right', 16, 15)
-          +button('Разработчикам', {styleType: 'dark', isLink: true, additionalClassName: 'button--features-2'})
+          +button(t.button.dev, {styleType: 'dark', isLink: true, additionalClassName: 'button--features-2'})
             +svg('arrow-right', 16, 15)
   section.install.box.box--lilac
     .install__wrapper
-      h2.install__title Установка Dialog
+      h2.install__title=t.main.inst_title
       ul.install__icon-list
         li
           +svg('icon-chrome', 60, 60)
@@ -301,88 +296,86 @@ block content
           span Sailfish OS
       .install__content
         .install__col.install__col--list
-          h3 Размещение
+          h3=t.main.inst_title_1
           ul
             li
               p
                 b On-premise
-                |  Размещение на&nbsp;серверах вашей компании
+                |  !{t.main.inst_li_1_1}
             li
               p
                 b Private cloud
-                |  Размещение в&nbsp;частном облаке
+                |  !{t.main.inst_li_2_1}
         .install__col.install__col--text
-          h3 White Label версия
-          p Возможность изменить оформление элементов интерфейса Dialog в&nbsp;соответствие с&nbsp;фирменным стилем бренда заказчика.
+          h3=t.main.inst_title_2
+          p=t.main.inst_li_1_2
         .install__col.install__col--text
           h3 Интеграция с&nbsp;Active Directory
-          p Сотрудники вашей компании могут войти в&nbsp;Dialog под своими корпоративными учетными записями.
-      +button('Узнать стоимость лицензии', {
+          p=t.main.inst_li_1_3
+      +button(t.button.license, {
         styleType: 'accent',
         isLink: true,
         href: '#!',
         additionalClassName: 'button--install'
       })
+
         +svg('arrow-right', 16, 15)
   section.quote.box.box--white
     .quote__wrapper
-      h2 Dialog в&nbsp;большом бизнесе
+      h2=t.main.quote_title
       .quote__desc
         .quote__desc-icon
           +svg('icon-chat-sber', 56, 56)
-        p Сбербанк запустил корпоративный мессенджер СберЧат на&nbsp;базе Dialog для более чем 300&nbsp;000&nbsp;сотрудников.
+        p=t.main.quote_sub
       .quote__content
         .quote__content-text
-          p Оперативное взаимодействие и&nbsp;обмен данными важны для компаний любого размера и&nbsp;профиля деятельности. При этом банку и&nbsp;компаниям экосистемы было необходимо собственное масштабируемое решение, обеспечивающее эффективную и&nbsp;защищенную коммуникацию большому количеству сотрудников. Мы&nbsp;реализовали решение, которое позволит нам не&nbsp;только оптимизировать процесс коммуникации, но&nbsp;и&nbsp;повысить эффективность совместной работы за&nbsp;счет создания единого цифрового рабочего пространства.
+          p=t.main.quote_text
         .quote__content-avatar
           .quote__avatar-img
             +picture(`/img/img-avatar-desktop`, 'jpg', 'Фотография Льва Хасиса', 150)
           .quote__avatar-wrapper
             .quote__avatar-name
-              p Лев Хасис
+              p=t.main.quote_name
             .quote__avatar-post
-              p Первый заместитель председателя правления Сбербанка
-      a(class="link link--with-icon link--quote" href="#!") Узнать подробнее
-        +svg('arrow-right', 16, 15)
+              p=t.main.quote_desc
+
   section.blog.box.box--gray
     .blog__wrapper
-      h2.blog__title Блог компании
+      h2.blog__title=t.blog.cards_title
       ul.blog__list
         li.blog__item
-          a(href="/post.html").blog__card
+          a(href="/ru/blog/korporativnyi-miessiendzhier-dlia-lokalnoi-sieti.html").blog__card
             .blog__img-box
               +picture(`/img/pages/blog/blog-1-desktop`, 'jpg', 'Изображение приложения', 380)
             .blog__text-box
-              h3.blog__card-title Корпоративный мессенджер для локальной сети
+              h3.blog__card-title=t.blog.card_desc_1
               .blog__text-info
-                p 27 февраля, 2020
+                p 12 !{t.blog.month}, 2020
                 div
                   +svg('icon-watch', 17, 17)
-                  span 1 мин
+                  span 1 !{t.blog.min}
         li.blog__item
-          a(href="/post.html").blog__card
+          a(href="/ru/blog/korporativnyi-miessiendzhier-vidy-vozmozhnosti-i-sfiery-primienieniia.html").blog__card
             .blog__img-box
               +picture(`/img/pages/blog/blog-2-desktop`, 'jpg', 'Изображение приложения', 380)
             .blog__text-box
-              h3.blog__card-title Корпоративный мессенджер&nbsp;&mdash; виды, возможности и&nbsp;сферы применения
+              h3.blog__card-title=t.blog.card_desc_2
               .blog__text-info
-                p 27 февраля, 2020
+                p 10 !{t.blog.month}, 2019
                 div
                   +svg('icon-watch', 17, 17)
-                  span 1 мин
+                  span 1 !{t.blog.min}
         li.blog__item
-          a(href="/post.html").blog__card
+          a(href="/ru/blog/cifrovaya_gigiena.html").blog__card
             .blog__img-box
               +picture(`/img/pages/blog/blog-3-desktop`, 'jpg', 'Изображение приложения', 380)
             .blog__text-box
-              h3.blog__card-title Цифровая гигиена: как уберечь переписку в&nbsp;мессенджерах от&nbsp;конкурентов
+              h3.blog__card-title=t.blog.card_desc_3
               .blog__text-info
-                p 27 февраля, 2020
+                p 15 !{t.blog.month}, 2019
                 div
                   +svg('icon-watch', 17, 17)
-                  span 1 мин
-      a(class="link link--with-icon" href="/blog") Смотреть все
+                  span 1 !{t.blog.min}
+      a(class="link link--with-icon link--icon-accent" href="/blog")=t.button.view
         +svg('arrow-right', 16, 15)
-  +form(false, 1, 'offer-form')
-
-
+  +form-offer(false, 1, 'offer-form')

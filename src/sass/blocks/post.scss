@@ -81,7 +81,7 @@
 }
 
 .post__time {
-  @include typography-txt-sm;
+  font-size: 14px;
   display: flex;
   justify-content: space-between;
   margin-top: auto;
@@ -89,12 +89,10 @@
   fill: $color-gray-dark;
 
   @include laptop {
-    font-size: 12px;
     line-height: 20px;
   }
 
   @include mobile-md {
-    font-size: 14px;
     line-height: 20px;
   }
 
@@ -132,6 +130,9 @@
 .post__header {
   .box--pattern {
     margin-top: -7vw;
+    @include mobile-sm{
+      margin-top: -50px;
+    }
   }
 }
 

@@ -114,7 +114,6 @@
   @include no-list;
   display: flex;
   flex-wrap: wrap;
-  width: 100%;
   margin-bottom: 8px;
   margin-left: -20px;
   margin-right: -20px;
@@ -133,6 +132,9 @@
   width: calc((100% / 3) - 40px);
   flex-shrink: 0;
   margin: 20px;
+  &.invisible{
+    display: none;
+  }
 
   @include laptop {
     margin: 11px;
@@ -155,6 +157,7 @@
   border: 1px solid $color-accent-light;
   border-radius: 2px;
   transition: box-shadow $transition-props;
+
 
   &:hover,
   &:focus {

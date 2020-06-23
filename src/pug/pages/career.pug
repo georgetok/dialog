@@ -15,10 +15,10 @@ block content
   section.hero.hero--main.hero--career.box.box--carier
     .hero__wrapper
       .hero__left
-        h1.hero__title Хочешь реализовать свои таланты?
-        p.hero__text Присоединяйся к команде Dialog 
+        h1.hero__title=t.career.title
+        p.hero__text=t.career.sub
         +button(
-          'Открытые вакансии',
+          t.button.vacancy_open,
           {
             styleType: 'accent',
             isLink: false,
@@ -33,34 +33,34 @@ block content
     .wrapper.wrapper--main
       .wrap.wrap--mission
         .mission__left
-          h2.mission__title Мы создаем Dialog
-          p.mission__description Компания занимается разработкой корпоративного мессенджера Dialog более 4 лет. Dialog объединяет специалистов в области IT-коммуникаций, безопасности данных, real-time распределенных систем, Big Data и других смежных с месседжингом областей.
-          p.mission__description На данный момент в Dialog работает более 120 человек, которые в разное время занимались разработкой продуктов для крупнейших компаний, лидирующих в области систем безопасности и хранения данных.
+          h2.mission__title=t.career.create_title
+          p.mission__description=t.career.create_sub_1
+          p.mission__description=t.career.create_sub_2
         .mission__right
           .mission__count
             span.mission__text.mission__tick
             span.mission__text.mission__text--big > 120
-            span.mission__text.mission__text--small человек в команде
+            span.mission__text.mission__text--small=t.career.create_text_1
             br
             span.mission__text.mission__text--big 2
-            span.mission__text.mission__text--small города, офис в Москве  и Санкт-Петербурге
+            span.mission__text.mission__text--small=t.career.create_text_2
   section.gallery.box.box--lilac
     .wrap.wrap--images
       each val, index in Array(15)
         .col
           .gallery__img-wrapper
-            +picture(`/img/gallery/gallery${index + 1}`, 'png', 'Фото ноутбука и мобильного телефона', 333)
+            +picture(`/img/gallery/gallery${index + 1}`, 'png', t.alt.pm, 333)
   section.box.box--lilac
     .wrapper.wrapper--main
       .cta.cta--purple
         .wrap.wrap--c.wrap--w
           .wrap.wrap--c.wrap--s
-            h2.cta__title В нашу быстрорастущую команду требуется много талантов 
+            h2.cta__title=t.cta.vacancy_title
           .wrap.wrap--c.wrap--s
-            p.cta__sub Узнайте больше об открытых вакансиях и работе в компании
+            p.cta__sub=t.cta.vacancy_sub
         .wrap.wrap--c
           +button(
-            'Смотреть все вакансии',
+            t.button.vacancy_all,
             {
               styleType: 'accent',
               isLink: false,

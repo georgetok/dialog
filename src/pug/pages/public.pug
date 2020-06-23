@@ -10,32 +10,45 @@ block variables
     const pageName = "public";
 
 block content
-  -
-  +page-title('Социальная ответственность')
+  +page-title(t.resp.title)
   .information-content
     .information-content__wrapper
       .information-content__content
-        h2 Результаты специальной оценки условий труда
-        p Согласно результатам проведённой специальной оценки условий труда рабочие места подразделений Общества в&nbsp;улучшении условий труда не&nbsp;нуждаются.
+        h2=t.resp.sub
+        p=t.resp.text
         .information-content__link-box
           a(href="img/patents/register.pdf" target="_blank")
-            +svg('icon-pdf',23, 28, basedir)
-            | Сводная ведомость результатов проведения специальной оценки условий труда ООО &laquo;Диалог&raquo;
+            +svg('icon-pdf',23, 28)
+            | !{t.resp.file_1}
           a(href="img/patents/list.pdf" target="_blank")
-            +svg('icon-pdf',23, 28, basedir)
-            | Перечень рекомендуемых мероприятий по&nbsp;улучшению условий труда
+            +svg('icon-pdf',23, 28)
+            | !{t.resp.file_2}
       .information-content__sidebar
-        h2 Библиотека документов:
+        h2=t.nav.library
         ul
           li
-            a(class="information-content__link information-content__link--active" href="public.html")
-              span Социальная ответственность
+            a(
+              class="information-content__link information-content__link--active"
+              href=`/${lang === "ru" ? "ru" : "en"}/security`
+            )
+              span=t.nav.social
           li
-            a(class="information-content__link" href="legal.html")
-              span Правовая информация
+            a(
+              class="information-content__link"
+              href=`/${lang === "ru" ? "ru" : "en"}/legal`
+            )
+              span=t.nav.legal
           li
-            a(class="information-content__link information-content__link--doc" href="" target="_blank")
-              span Обработка персональных данных
+            a(
+              class="information-content__link information-content__link--doc"
+              href=`/${lang === "ru" ? "ru" : "en"}/data`
+              target="_blank"
+            )
+              span=t.nav.data
           li
-            a(class="information-content__link information-content__link--doc" href="" target="_blank")
-              span Политика по противодействию коррупции
+            a(
+              class="information-content__link information-content__link--doc"
+              href=`/${lang === "ru" ? "ru" : "en"}/corruption`
+              target="_blank"
+            )
+              span=t.nav.corruption

@@ -5,29 +5,24 @@ mixin header(pageName, lang)
   -
     const navLinks = [
       {
-        textRu: "Безопастность",
-        textEn: "Security",
         link: "security",
+        name: t.nav.security,
       },
       {
-        textRu: "Интеграции",
-        textEn: "Integrations",
         link: "integrations",
+        name: t.nav.integrations,
       },
       {
-        textRu: "Карьера",
-        textEn: "Career",
         link: "career",
+        name: t.nav.career,
       },
       {
-        textRu: "Блог",
-        textEn: "Blog",
         link: "blog",
+        name: t.nav.blog,
       },
       {
-        textRu: "Помощь",
-        textEn: "Help",
         link: "help",
+        name: t.nav.help,
       }
     ];
 
@@ -45,7 +40,9 @@ mixin header(pageName, lang)
             each topItem, index in navLinks
               if (topItem.link)
                 li
-                  a(href!=`/${lang === "ru" ? "ru" : "en"}/${topItem.link}`).main-nav__link=`${lang === "ru" ? topItem.textRu : topItem.textEn}`
+                  a(
+                    href!=`/${lang === "ru" ? "ru" : "en"}/${topItem.link}`).main-nav__link
+                    | !{topItem.name}
               else
                 li.main-nav__top-block
                   button(type="button").main-nav__button=topItem.text
@@ -66,12 +63,12 @@ mixin header(pageName, lang)
                                   li.main-nav__included-item
                                     a(href!=lowItem.link).main-nav__link.main-nav__link--included=lowItem.text
           .main-nav__user-actions
-            +button('Получить предложение',
+            +button(t.button.get,
               {
                 styleType: 'accent',
                 additionalClassName: 'button--small main-nav__action-btn js-open-modal'
               })
-            a(href=`/${lang === "ru" ? "en" : "ru"}/${pageName}`).main-nav__link.main-nav__link--no-padding
+            a(href=`/${lang === "ru" ? "en" : "ru"}/${isPost ? "blog" : pageName}`).main-nav__link.main-nav__link--no-padding
               span.header__lang=`${lang === "ru" ? "en" : "ru"}`
-              span In English
+              span=`${lang === "ru" ? "In English" : "На русском"}`
       button(aria-label='Открыть меню' type="button").header__burger-button

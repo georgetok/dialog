@@ -3,8 +3,8 @@ include ./button
 mixin form-career (idNumber, formId)
   .form.form--main.form--career.box.box--white
     .form__wrapper
-      h2.form__title Отправить резюме
-      p.form__sub Если вы не нашли интересующую вакансию, не отчаивайтесь — заполните форму и отправьте нам.  Мы обязательно рассмотрим ваше резюме.
+      h2.form__title=t.form.career_title
+      p.form__sub=t.form.career_subtitle
       .form__form
         form(action="#" method="POST" autocomplete="on" id!=formId)
           .form__input-text-wrap
@@ -14,11 +14,11 @@ mixin form-career (idNumber, formId)
                 id=`name-${idNumber}`
                 name="name"
                 pattern="([A-Za-zА-ЯЁа-яё-]{2,}\\s?)+"
-                placeholder='Ваше имя'
+                placeholder=t.form.name
                 title="Имя может состоять только из букв, пробелов и дефиса"
                 required
               )
-              label(for=`name-${idNumber}`) Ваше имя
+              label(for=`name-${idNumber}`)=t.form.name
 
             .form__form-field.form__form-field--text.form__form-field--m.form__form-field--3
               input(
@@ -26,21 +26,23 @@ mixin form-career (idNumber, formId)
                 id=`email-${idNumber}`
                 name="email"
                 pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,}$"
-                placeholder="Эл. почта"
+                placeholder=t.form.email
                 title="Email адрес должен быть типа: user@mail.com"
-                required)
-              label(for=`email-${idNumber}`) Эл. почта
+                required
+              )
+
+              label(for=`email-${idNumber}`)=t.form.email
 
             .form__form-field.form__form-field--text.form__form-field--s.form__form-field--2
               input(
                 type="tel"
                 id=`phone-${idNumber}`
                 name="phone"
-                placeholder="Телефон"
+                placeholder=t.form.phone
                 title="Номер телефона должен начинаться с символов +7 и содержать 11 цифр"
                 pattern="7\\d{10}"
                 data-mask="+{7}(000)000-00-00" required)
-              label(for=`phone-${idNumber}`) Телефон
+              label(for=`phone-${idNumber}`)=t.form.phone
 
             .form__form-field.form__form-field--text.form__form-field--s.form__form-field--4
               select(
@@ -48,19 +50,19 @@ mixin form-career (idNumber, formId)
                 name="city-career"
                 required
               )
-                option(value="") В каком городе хотите работать
-                option(value="Москва") Москва
-                option(value="Питер") Питер
-                option(value="Новосибирск") Новосибирск
-              label(for=`city-${idNumber}`) В каком городе хотите работать
+                option(value="")=t.form.select_work
+                option(value="Москва")=t.form.select_work_o_1
+                option(value="Питер")=t.form.select_work_o_2
+                option(value="Новосибирск")=t.form.select_work_o_3
+              label(for=`city-${idNumber}`)=t.form.select_work
 
             .form__form-field.form__form-field--textarea.form__form-field--5.form__form-field--fw
               textarea(
                 id=`message-${idNumber}`
                 name="message"
-                placeholder="О себе"
+                placeholder=t.form.about
                 required)
-              label(for=`message-${idNumber}`) О себе
+              label(for=`message-${idNumber}`)=t.form.about
 
           .form__checkbox-wrap
             .form__form-field--file
@@ -73,14 +75,15 @@ mixin form-career (idNumber, formId)
                 checked
                 required
               )
-              label(for=`file-${idNumber}`) Прикрепить резюме
+              label(for=`file-${idNumber}`)=t.form.cv
             .form__form-field.form__form-field--checkbox
               input.visually-hidden(
                 type="checkbox"
                 id=`accept-${idNumber}`
                 name="accepted"
                 checked
-                required)
-              label(for=`accept-${idNumber}`) Я согласен на обработку персональных данных
+                required
+              )
+              label(for=`accept-${idNumber}`)=t.form.agree
 
-          +button('Отправить заявку', {styleType: 'accent', type: 'submit', additionalClassName: 'button--form'})
+          +button(t.button.request, {styleType: 'accent', type: 'submit', additionalClassName: 'button--form'})

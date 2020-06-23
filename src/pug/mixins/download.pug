@@ -1,48 +1,9 @@
-mixin col(props)
-  .col.is-visible(id=`${props.id}-col`)
-    .card.card--download.wrap.wrap--dc
-      h5.card__title=props.title
-      if props.iconName
-        .card__icon
-          +svg(`icon-${props.iconName}`, '70','70')
-      if props.qrName
-        .card__qr
-          +svg(`qr-${props.qrName}`, '150','150')
-      if props.select
-        select(id=`choice-${props.id}`)
-          option(selected disabled) Скачать
-          each val, index in props.select
-            option(name=index)=val
-      if !props.isNoInstruction
-        a.link.link--accent.card__link(href=props.link) Инструкция по установке
-      if props.isButton
-        +button(
-          'Открыть',
-          {
-            styleType: 'dark',
-            type: 'submit',
-            isLink: true,
-            additionalClassName: 'card__button'
-          }
-        )
-
-//- argTypes
-  props: {
-    title: string,
-    iconName: string,
-    qrName: string,
-    select: array,
-    imgWidth: number,
-    isNoInstruction: boolean,
-    isButton: boolean,
-  }
-
 mixin hero(props)
   div(id=`${props.id}-hero`)
     .hero__wrapper
       .hero__left
         h1.hero__title
-          span Dialog для&nbsp;
+          span Dialog !{t.download.for}&nbsp;
           span=props.title
         button.button.button--dark.hero__button
           if props.icon
@@ -50,14 +11,14 @@ mixin hero(props)
           span= props.buttonText
 
         p.hero__text=props.text
-        a.link.link--accent.hero__link(href=props.link) Инструкция по установке
+        a.link.link--accent.hero__link(href=props.link)=t.download.instruction
 
       .hero__right
         .hero__img
           +picture(
             `/img/pages/download/hero-${props.id}`,
             'png',
-            'Фото ноутбука и мобильного телефона',
+            t.alt.pm,
             780
           )
             source(
@@ -74,6 +35,46 @@ mixin hero(props)
     id: string,
     title: string,
     text: string,
+    select: array,
+    imgWidth: number,
+    isNoInstruction: boolean,
+    isButton: boolean,
+  }
+
+
+mixin col(props)
+  .col.is-visible(id=`${props.id}-col`)
+    .card.card--download.wrap.wrap--dc
+      h5.card__title=props.title
+      if props.iconName
+        .card__icon
+          +svg(`icon-${props.iconName}`, '70','70')
+      if props.qrName
+        .card__qr
+          +svg(`qr-${props.qrName}`, '150','150')
+      if props.select
+        select(id=`choice-${props.id}`)
+          option(selected disabled)=t.download.d
+          each val, index in props.select
+            option(name=index)=val
+      if !props.isNoInstruction
+        a.link.link--accent.card__link(href=props.link)=t.download.instruction
+      if props.isButton
+        +button(
+          t.button.open,
+          {
+            styleType: 'dark',
+            type: 'submit',
+            isLink: true,
+            additionalClassName: 'card__button'
+          }
+        )
+
+//- argTypes
+  props: {
+    title: string,
+    iconName: string,
+    qrName: string,
     select: array,
     imgWidth: number,
     isNoInstruction: boolean,

@@ -31,25 +31,56 @@
     }
   }
 
+  &--square-both {
+    .hero__img {
+      &::before {
+        left: 0;
+        bottom: 0;
+        top: auto;
+        width: 400px;
+        height: 200px;
+        transform: translate(-33%, 33%);
+        background-size: 70%;
+        background-image: url("../img/pattern.svg");
+
+        @include tablet {
+          display: none;
+        }
+      }
+
+      &::after {
+        right: 0;
+        top: 0;
+        bottom: auto;
+        width: 65%;
+        padding-bottom: 26.5%;
+        transform: translate(50%, -50%);
+        background-size: 50%;
+        background-image: url("../img/pattern.svg");
+
+        @include tablet {
+          left: 0;
+          right: auto;
+          transform: translate(-50%, -50%);
+        }
+      }
+    }
+  }
+
   &--main {
     .hero__img {
       width: 100%;
+      position: relative;
+      &:after,
+      &:before{
+        content: "";
+        display: block;
+        position: absolute;
+      }
       @include tablet {
         position: relative;
         max-width: 684px;
         margin: 0 auto;
-        &::before {
-          content: "";
-          position: absolute;
-          top: -25px;
-          left: -40px;
-          width: 109px;
-          height: 109px;
-          background-image: url("../img/bg-hero-square.svg");
-          background-repeat: no-repeat;
-          background-position: 0 0;
-          background-size: 109px 109px;
-        }
       }
 
       @include mobile-md {
@@ -365,24 +396,13 @@
     }
   }
 
-  &--integrations {
-    .hero__img {
-      &::before {
-        left: 0;
-        bottom: 0;
-        top: auto;
-        width: 22%;
-        padding-bottom: 22%;
-        transform: translate(-33%, 33%);
-        background-size: 100%;
-        background-image: url("../img/bg-hero-square-orange.svg");
-        @include tablet {
-          left: auto;
-          right: 0;
-          top: 0;
-          transform: translate(50%, -50%);
-        }
-      }
+  &--404 {
+    .hero__left {
+      padding-right: 0;
+    }
+
+    .hero__right {
+      width: 50%;
     }
   }
 }

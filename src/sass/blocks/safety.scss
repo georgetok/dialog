@@ -55,24 +55,20 @@
 
 .safety__item {
   position: relative;
-  //width: 48.3%;
-  width: calc(100% / 2 - 22px);
+  width: calc(100% / 2 - 12px);
   padding-left: 106px;
+  background: #fff;
+  box-shadow: 0px 2px 20px rgba(152, 136, 196, 0.16);
+  padding: 35px 20px 20px 130px;
 
   @include laptop {
     width: 48%;
-    //max-width: 454px;
-    padding-left: 0;
-    padding-top: 106px;
   }
 
   @include tablet {
     width: 100%;
   }
 
-  @include mobile-md {
-    padding-top: 93px;
-  }
 
   &:nth-child(odd) {
     margin-right: auto;
@@ -85,8 +81,8 @@
   &::before {
     content: "";
     position: absolute;
-    top: 2px;
-    left: 0;
+    top: 35px;
+    left: 20px;
     width: 90px;
     height: 90px;
     border-radius: 50%;

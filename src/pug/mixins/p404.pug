@@ -1,0 +1,25 @@
+mixin p404(text, props)
+  section.hero.hero--main.hero--404
+    .hero__wrapper
+      .hero__left
+        h1.hero__title=t.p404.title
+        p.hero__text=t.p404.sub
+        +button(
+          t.button.home,
+          {
+            styleType: 'accent',
+            type: 'button',
+            isLink: true,
+            href: '/',
+            additionalClassName: 'button--link'
+          })
+          +svg('arrow-right', 16, 15)
+
+      .hero__right
+        .hero__img
+          +picture(
+            '/img/404',
+            'png',
+            t.alt.pm,
+            682
+          )

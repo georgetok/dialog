@@ -17,35 +17,35 @@ block content
         {
           imgPath: `/img/patents/patent-dialog-server`,
           imgType: 'jpg',
-          imgAlt: 'Фотография сертификата',
+          imgAlt: t.alt.cert,
           imgWidth: 380,
           linkName: 'Dialog Server'
         },
         {
           imgPath: `/img/patents/patent-dialog-core`,
           imgType: 'jpg',
-          imgAlt: 'Фотография сертификата',
+          imgAlt: t.alt.cert,
           imgWidth: 380,
           linkName: 'Dialog Core'
         },
         {
           imgPath: `/img/patents/patent-dialog-android-sdk`,
           imgType: 'jpg',
-          imgAlt: 'Фотография сертификата',
+          imgAlt: t.alt.cert,
           imgWidth: 380,
           linkName: 'Dialog Android SDK'
         },
         {
           imgPath: `/img/patents/patent-dialog-ios-sdk`,
           imgType: 'jpg',
-          imgAlt: 'Фотография сертификата',
+          imgAlt: t.alt.cert,
           imgWidth: 380,
           linkName: 'Dialog iOS SDK'
         },
         {
           imgPath: `/img/patents/patent-dialog-web-sdk`,
           imgType: 'jpg',
-          imgAlt: 'Фотография сертификата',
+          imgAlt: t.alt.cert,
           imgWidth: 380,
           linkName: 'Dialog Web SDK'
         }
@@ -57,31 +57,31 @@ block content
         {
           imgPath: `/img/patents/license-fsb`,
           imgType: 'jpg',
-          imgAlt: 'Фотография лицензии',
+          imgAlt: t.alt.license,
           imgWidth: 380,
           linkName: 'ФСБ'
         },
         {
           imgPath: `/img/patents/fstek-1`,
           imgType: 'jpg',
-          imgAlt: 'Фотография сертификата',
+          imgAlt: t.alt.license,
           imgWidth: 380,
           linkName: 'ФСТЭК'
         },
         {
           imgPath: `/img/patents/fstek-2`,
           imgType: 'jpg',
-          imgAlt: 'Фотография сертификата',
+          imgAlt: t.alt.license,
           imgWidth: 380,
           linkName: 'ФСТЭК'
         }
       ]
     };
 
-  +page-title('Лицензии и сертификаты')
+  +page-title(t.patent.title_1)
   .patents-text.box.box--white
     .patents-text__wrapper
-      p Компания является правообладателем 5&nbsp;программных продуктов, которые зарегистрированы в&nbsp;Роспатенте
+      p=t.patent.sub_1
   section.patents-img.box.box--white
     .patents-img__wrapper
       h2.visually-hidden=patentImages.title
@@ -96,7 +96,7 @@ block content
               +svg('arrow-bottom', 16, 17)
   .patents-text.patents-text--second.box.box--white
     .patents-text__wrapper
-      p Компания имеет необходимую квалификацию и&nbsp;лицензии ФСТЭК России и&nbsp;ФСБ России
+      p=t.patent.sub_2
   section.patents-img.box.box--white
     .patents-img__wrapper
       h2.visually-hidden=licenseImages.title
@@ -111,10 +111,11 @@ block content
               +svg('arrow-bottom', 16, 17)
   section.association.box.box--gray
     .association__wrapper
-      h2.association__title Реестры и&nbsp;Ассоциации
+      h2.association__title=t.patent.title_2
       ul.association__list
-        li Мессенджер dialog соответствует требованиям Единого реестра российских программ для электронных вычислительных машин и&nbsp;баз данных и&nbsp;состоит в&nbsp;реестре отечественного&nbsp;ПО.
-        li Компания является членом Ассоциации документальной электросвязи (АДЭ)
-        li ООО &laquo;Диалог&raquo; входит в&nbsp;реестр Организаторов Распространения Информации (ОРИ) Роскомнадзор.
-        li ООО &laquo;Диалог&raquo; является участником&ensp;
-          a(class="link link--simple" href="#!") инновационного центра &laquo;Сколково&raquo;
+        li=t.patent.li_1
+        li=t.patent.li_2
+        li=t.patent.li_3
+        li=t.patent.li_4
+          |&nbsp;
+          a(class="link link--accent link--simple" href="#!")=t.patent.link

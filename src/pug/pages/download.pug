@@ -19,38 +19,38 @@ block content
     +hero({
       id: "macos",
       title: "macOS",
-      text: "Работает на macOS 10.10 (Yosemite) и выше",
+      text: `${t.download.works} macOS 10.10 (Yosemite) ${t.download.more}`,
       link: "/",
-      buttonText:'скачать'
+      buttonText: t.download.d
     })
     +hero({
       id: "windows",
       title: "Windows",
-      text: "Работает на Windows 8 и выше",
+      text: `${t.download.works} Windows 8 ${t.download.more}`,
       link: "/",
-      buttonText:'скачать'
+      buttonText: t.download.d
     })
     +hero({
       id: "linux",
       title: "Linux",
-      text: "Работает на Linux 4.6.x и выше ",
+      text: `${t.download.works} Linux 4.6.x ${t.download.more}`,
       link: "/",
-      buttonText:'скачать'
+      buttonText: t.download.d
     })
     +hero({
       id: "ios",
       title: "iOS",
-      text: "Работает на iOS 8.1 и выше",
+      text: `${t.download.works} iOS 8.1 ${t.download.more}`,
       link: "/",
-      buttonText:'Скачать с App Store',
+      buttonText: `${t.download.dfrom} App Store`,
       icon: 'apple'
     })
     +hero({
       id: "android",
       title: "Android",
-      text: "Работает на Android 8.1 и выше",
+      text: `${t.download.works} iOS 8.1 ${t.download.more}`,
       link: "/",
-      buttonText:'Скачать из Google Play',
+      buttonText: `${t.download.dfrom} Google Play`,
       icon: 'google-play'
     })
 
@@ -59,42 +59,42 @@ block content
       .wrap.wrap--cards
         +col({
           id: 'windows',
-          title: 'Скачать для Windows',
+          title: `${t.download.dfor} Windows`,
           iconName: 'windows',
           link: '/',
           select: ['.exe', '.msi'],
         })
         +col({
           id: 'macos',
-          title: 'Скачать для macOS',
+          title: `${t.download.dfor} macOS`,
           iconName: 'macos',
           select: ['.deb', '.deb x86', '.rpm x86', '.rpm'],
           link: '/',
         })
         +col({
           id: 'linux',
-          title: 'Скачать для Linux',
+          title: `${t.download.dfor} Linux`,
           iconName: 'linux',
           link: '/',
           select: ['.deb', '.deb x86', '.rpm x86', '.rpm'],
         })
         +col({
           id: 'ios',
-          title: 'Скачать для iOS',
+          title: `${t.download.dfor} iOS`,
           iconName: 'ios',
           qrName: 'ios',
           link: '/',
         })
         +col({
           id: 'android',
-          title: 'Скачать для Android',
+          title: `${t.download.dfor} Android`,
           qrName: 'android',
           iconName: 'android',
           link: '/',
         })
         +col({
           id: 'web',
-          title: 'Открыть Web версию',
+          title: t.download.web,
           iconName: 'chrome',
           link: '/',
           isNoInstruction: true,

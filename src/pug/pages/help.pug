@@ -13,7 +13,7 @@ block variables
     const pageName = "help";
 
 block content
-  +page-title('Обратная связь')
+  +page-title(t.help.title)
   .feedback
     .wrapper.wrapper--main
       .wrap.wrap--gap-lg.wrap--as.wrap--sb.wrap--main
@@ -21,18 +21,16 @@ block content
           +form-feedback(false, 1, 'offer-form')
         .col.col--right
           .card.card--dark.card--help
-            h2.card__title Корпоративным клиентам
-            p.card__sub Если вы пользователь dialog enterprise — воспользуйтесь центром поддержки для корпоративных клиентов.  Или запросите доступ у вашего администратора.
+            h2.card__title=t.help.sub
+            p.card__sub=t.help.text
             .wrap.wrap--mt
               a.link.link--accent.link--icon-accent.link--with-icon(href="/" target="_blank")
-                | Центр поддержки клиентов
+                | !{t.help.link}
                 +svg('arrow-right',12, 10)
           .card.card--help
             p.card__sub
               span
-                | Связаться со службой поддержки можно также по &nbsp;
-              span
-                | email:&nbsp;
+                | !{t.help.connect}
               .wrap.wrap--mt
                 a.link.link--accent(href="/" target="_blank")
                   | support@dlg.im

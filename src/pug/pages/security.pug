@@ -3,7 +3,7 @@ include ../mixins/svg
 include ../mixins/button
 include ../mixins/button-play
 include ../mixins/picture
-include ../mixins/form
+include ../mixins/form-offer
 
 block variables
   -
@@ -17,23 +17,23 @@ block variables
       {
         imgPath: '/img/patents/license-fsb',
         imgType: 'jpg',
-        imgAlt: 'Фотография лицензии',
+        imgAlt: t.alt.license,
         imgWidth: 80,
-        linkName: 'ФСБ'
+        linkName: t.security.doc_1
       },
       {
         imgPath: '/img/patents/fstek-1',
         imgType: 'jpg',
-        imgAlt: 'Фотография сертификата',
+        imgAlt: t.alt.cert,
         imgWidth: 80,
-        linkName: 'ФСТЭК'
+        linkName: t.security.doc_2
       },
       {
         imgPath: '/img/patents/fstek-2',
         imgType: 'jpg',
-        imgAlt: 'Фотография сертификата',
+        imgAlt: t.alt.cert,
         imgWidth: 80,
-        linkName: 'ФСТЭК'
+        linkName: t.security.doc_3
       }
     ]};
 
@@ -41,13 +41,13 @@ block content
   section.hero.hero--main.hero--security
     .hero__wrapper
       .hero__left
-        h1.hero__title Безопасность  и соответствие требованиям в Dialog
+        h1.hero__title=t.security.title
       .hero__right
         .hero__img
           +picture(
             '/img/pages/security/hero',
             'jpg',
-            'Фото ноутбука и мобильного телефона',
+            t.alt.pm,
             682
           )
   section.protection.box.box--lilac
@@ -57,59 +57,59 @@ block content
           .wrap.wrap--ac.wrap--icon
             .round-icon
               +svg('icon-security', 90, 45)
-            h2 Защита информации
-          h3 Архитектура
-          p В отличие от облачных решений, Dialog не имеет ключей для расшифровки вашего общения и доступа к инфраструктуре.  Эта архитектура предлагает лучшую защиту от злоумышленника.
+            h2=t.security.safe_title
+          h3=t.security.safe_sub_1
+          p=t.security.safe_text
         .col.col--right
           .protection__img
             +picture(
               '/img/pages/security/protection',
               'png',
-              'Фото ноутбука и мобильного телефона',
+              t.alt.pm,
               500
             )
-      h3 Высокие стандарты безопасности
+      h3=t.security.cards_title
       .wrap.wrap--cards
         .col
           .card.card--white
-            h4 Шифрование передачи данных
-            p Защита соединений «клиент-сервер» по протоколам TLS и DTLS.
+            h4=t.security.card_title_1
+            p=t.security.card_text_1
         .col
           .card.card--white
-            h4 Интеграция с антивирусным ПО
-            p Поддержка интеграций с антивирусами по протоколу ICAP. Мессенджер блокирует вредоносные файлы при отправке.
+            h4=t.security.card_title_2
+            p=t.security.card_text_2
         .col
           .card.card--white
-            h4 Аудит безопасности
-            p Сотрудничество с ведущими экспертами  по безопасности для проведения регулярных аудитов своих продуктов.
+            h4=t.security.card_title_3
+            p=t.security.card_text_3
             +picture(
               '/img/pages/security/logo-audit',
               'png',
-              'Фото ноутбука и мобильного телефона',
+              t.alt.pm,
               456
             )
         .col
           .card.card--white
-            h4 DLP
-            p Интегрируется с системами предотвращения утечки данных по протоколу ICAP. Минимизирован риск умышленной или случайной утечки информации.
+            h4=t.security.card_title_4
+            p=t.security.card_text_4
         .col
           .card.card--white
-            h4 SIEM
-            p Dialog интегрируется с SIEM-системами и позволяет реагировать на события безопасности до наступления ущерба.
+            h4=t.security.card_title_5
+            p=t.security.card_text_5
   section.compliance.box.box--lilac
     .wrapper.wrapper--main
       .wrap.wrap--icon.wrap--as
         .round-icon
           +svg('icon-compliance', 60, 45)
         .wrap.wrap--txt.wrap--w
-          h2.compliance__title Соблюдение нормативных требований
-          p.compliance__subtitle Компания имеет квалификацию, необходимую для соблюдения законодательных норм и стандартов
+          h2.compliance__title=t.security.norms_title
+          p.compliance__subtitle=t.security.norms_sub
       ul.compliance__list
         li.compliance__list-item.compliance__item--safe
           ul.compliance__listbox
             li
-              p ООО «Диалог» имеет лицензии ФСТЭК на разработку и техническую защиту конфиденциальной информации, лицензию ФСБ России на разработку и распространение защищенных информационных систем.
-              p В состав лицензируемого вида деятельности входят работы, предусмотренные пунктами 2, 3, 8, 9, 12, 13, 14, 15, 17, 18, 20, 21, 22, 23, 24, 25, 26 перечня выполняемых работ и оказываемых услуг в отношении шифровальных (криптографических) средств.
+              p=t.security.norms_li_1
+              p=t.security.norms_li_2
               .wrap.wrap--img
                 each it in licenseImages.images
                   .col
@@ -123,10 +123,10 @@ block content
         li.compliance__list-item.compliance__list-item--cloud
           ul.compliance__listbox
             li
-              p Мессенджер Dialog соответствует требованиям Единого реестра российских программ для электронных вычислительных машин и баз данных, состоит в реестре отечественного ПО.
+              p=t.security.norms_li_3
             li
-              p Компания-разработчик ООО «Диалог» состоит в реестре аккредитованных организаций, осуществляющих деятельность в области информационных технологий на территории РФ (No 436 от 07.09.2016).
-      a(class="compliance__link--more link link--icon-accent link--with-icon" href="#!") Узнать подробнее
+              p=t.security.norms_li_4
+      a(class="compliance__link--more link link--icon-accent link--with-icon" href="#!")=t.link.learn
         +svg('arrow-right', 16, 15)
   section
-    +form(false, 1, 'offer-form')
+    +form-offer(false, 1, 'offer-form')

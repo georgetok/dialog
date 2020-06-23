@@ -1,0 +1,934 @@
+{
+  "blog": {
+    "title": {
+      "ru": "Блог",
+      "en": "Blog"
+    },
+    "cards_title": {
+      "ru": "Блог компании",
+      "en": "Blog"
+    },
+    "card_desc_1": {
+      "ru": "Корпоративный мессенджер для локальной сети",
+      "en": "Messengers market. Hot topics and industry trends in 2018"
+    },
+    "card_desc_2": {
+      "ru": "Корпоративный мессенджер - виды, возможности и сферы применения",
+      "en": "Digital hygiene: how to protect correspondence in messengers from competitors"
+    },
+    "card_desc_3": {
+      "ru": "Цифровая гигиена: как уберечь переписку в мессенджерах от конкурентов",
+      "en": "Sberbank launched a corporate messenger"
+    },
+    "month": {
+      "ru": "Февраль",
+      "en": "February"
+    },
+    "min": {
+      "ru": "мин",
+      "en": "min"
+    },
+    "back": {
+      "ru": "Назад",
+      "en": "Back"
+    }
+  },
+
+  "main": {
+    "subtitle": {
+      "ru": "Корпоративный мессенджер для совместной работы и безопасного общения",
+      "en": "Corporate messenger for team work and safe communication"
+    },
+
+
+    "adv_title_1": {
+      "ru": "Эффективная командная работа",
+      "en": "Efficient teamwork"
+    },
+    "adv_title_2": {
+      "ru": "Безопасное общение",
+      "en": "Secure communication"
+    },
+    "adv_title_3": {
+      "ru": "Сокращение затрат на\u00A0коммуникации",
+      "en": "Reduce communication costs"
+    },
+    "adv_sub_1": {
+      "ru": "Dialog позволяет настроить интеграции с\u00A0сервисами компании и\u00A0оптимизировать бизнес-процессы.",
+      "en": "Find colleagues easily, communicate in group chats, share files and make audio and video calls."
+    },
+    "adv_sub_2": {
+      "ru": "Соответствие отраслевым стандартам безопасности, контроль и\u00A0защита на\u00A0разных уровнях.",
+      "en": "Hosting on company servers and integration with corporate security systems."
+    },
+    "adv_sub_3": {
+      "ru": "Совмещение разрозненных инструментов в\u00A0одной платформе оптимизирует расходы на\u00A0ПО, оборудование, обслуживание и\u00A0поддержку.",
+      "en": "Combining various tools in one platform optimizes the cost of software, hardware, maintenance and support."
+    },
+
+    "f_title": {
+      "ru": "Функции Dialog",
+      "en": "Dialog Functions"
+    },
+    "f_title_1": {
+      "ru": "Групповые чаты и\u00A0каналы",
+      "en": "Group chats and channels"
+    },
+    "f_title_2": {
+      "ru": "Обмен файлами",
+      "en": "File sharing"
+    },
+    "f_title_3": {
+      "ru": "Аудио-\u00A0/ видеозвонки",
+      "en": "Audio / Video Calls"
+    },
+    "f_title_4": {
+      "ru": "Поиск",
+      "en": "Search"
+    },
+    "f_title_5": {
+      "ru": "Чат-боты",
+      "en": "Chatbots"
+    },
+
+    "f_text_1": {
+      "ru": "Группы — это чаты для общения, создайте их для команд и проектов, чтобы сфокусировать усилия, сделать работу более прозрачной, а информацию доступной для всех",
+      "en": "Groups are chat rooms for communication; create them for teams and projects in order to concentrate efforts, make work more transparent, and information accessible to everyone."
+    },
+    "f_text_2": {
+      "ru": "Тяжелая презентация не\u00A0отправляется по\u00A0почте? Делитесь файлами, не\u00A0задумываясь о\u00A0лимитах по\u00A0размеру или формату.",
+      "en": "Can’t send a hefty presentation over email? Share files without worrying about size or format limits."
+    },
+    "f_text_3": {
+      "ru": "Созванивайтесь с\u00A0коллегам в\u00A0мессенджере или подключайтесь к\u00A0конференциям в\u00A0АКС/ВКС-системе.",
+      "en": "Call up colleagues in the messenger or connect to conferences in the AKS / VKS system."
+    },
+    "f_text_4": {
+      "ru": "Удобный поиск по\u00A0чату поможет найти презентации, изображения, документы, а\u00A0интеграция с\u00A0адресной книгой\u00A0\u2014 нужного сотрудника по\u00A0имени, должности или отделу.",
+      "en": "A convenient chat search will help you find presentations, images, documents. Integration with the address book will help you find the right person by name, position or department."
+    },
+    "f_text_5": {
+      "ru": "Создавайте ботов и чат-ботов для автоматизации бизнес-процессов с помощью Bot SDK.",
+      "en": "Create bots and chatbots to automate business processes using the Bot SDK."
+    },
+
+
+    "sec_title": {
+      "ru": "Защищенная коммуникация",
+      "en": "Secure communication"
+    },
+    "sec_title_1": {
+      "ru": "Высокие стандарты безопасности",
+      "en": "High safety standards"
+    },
+    "sec_sub_1": {
+      "ru": "Интеграция с инфраструктурой информационной безопасности",
+      "en": "High safety standards"
+    },
+    "sec_li_1_1": {
+      "ru": "Интеграция с Active Directory AD / LDAP",
+      "en": "Integration with Information Security Infrastructure - Active Directory AD / LDAP Integration"
+    },
+    "sec_li_1_2": {
+      "ru": "DLP &mdash; предотвращение утечек",
+      "en": "DLP - Leak Prevention"
+    },
+    "sec_li_1_3": {
+      "ru": "Интеграция с Антивирусным ПО",
+      "en": "Integration with Antivirus Software"
+    },
+    "sec_li_1_4": {
+      "ru": "SIEM &mdash; идентификация угроз",
+      "en": "SIEM &mdash; threat identification"
+    },
+    "sec_li_1_5": {
+      "ru": "Шифрование передачи данных по протоколам TLS, DTLS",
+      "en": "Data encryption with TLS, DTLS protocols"
+    },
+    "sec_li_1_6": {
+      "ru": "Независимый аудит безопасности ПО",
+      "en": "Independent Software Security Audit"
+    },
+
+
+
+
+    "sec_title_2": {
+      "ru": "Данные под вашим контролем",
+      "en": "Data under your control"
+    },
+    "sec_sub_2": {
+      "ru": "Вы можете выбрать предпочтительные варианты размещения Dialog",
+      "en": "Dialog Supply"
+    },
+    "sec_li_2_1": {
+      "ru": "Размещение на серверах вашей компании",
+      "en": "hosting on your company's servers"
+    },
+    "sec_li_2_2": {
+      "ru": "Размещение на инфраструктуре стороннего провайдера в частном облаке",
+      "en": "hosting on a third-party infrastructure in private cloud [SberCloud logo]"
+    },
+
+
+
+    "sol_title": {
+      "ru": "Решения",
+      "en": "Solutions for business and organizations"
+    },
+    "sol_title_1": {
+      "ru": "Бизнесу",
+      "en": "Business"
+    },
+    "sol_sub_1": {
+      "ru": "Ведущие российские компании повысили эффективность совместной работы, объединив тысячи сотрудников и корпоративные системы в Dialog.",
+      "en": "Leading Russian companies have improved collaboration efficiency by integrating thousands of employees and corporate systems over Dialog."
+    },
+
+    "sol_title_2": {
+      "ru": "Государственным организациям",
+      "en": "Government organizations"
+    },
+    "sol_sub_2": {
+      "ru": "Надежная и безопасная коммуникация в государственных компаниях, соответствие требованиям по импортозамещению и государственной программе «Цифровая экономика».",
+      "en": "Dialog provides reliable and secure communication in state-owned companies, meets the requirements for Import Substitution and the state program “Digital Economy”."
+    },
+
+
+    "feat_title": {
+      "ru": "Dialog помогает командам стать эффективнее",
+      "en": "Dialog makes teams more efficient"
+    },
+    "feat_sub": {
+      "ru": "Переключение между разными приложениями нарушает концентрацию сотрудников. Используя Bot SDK и Dialog API, вы можете создавать интеграции со сторонними приложениями и автоматизировать рутинные процессы.",
+      "en": "Integrate with third-party applications and automate routine processes using the Dialog Bot SDK and Dialog API."
+    },
+
+
+
+    "feat_title_1_block_1": {
+      "ru": "Bot SDK",
+      "en": "Bot SDK"
+    },
+    "feat_sub_1_block_1": {
+      "ru": "Bot SDK позволяет создавать ботов и чат-ботов для Dialog. Боты оптимизируют повторяющиеся рутинные операции и освобождают время для более сложных задач. SDK доступен для JS, Java и Python.",
+      "en": "Bot SDK allows you to create bots and chatbots for Dialog. Bots automate repetitive routine operations and free up time for more complex tasks. SDK is available for JS, Java and Python."
+    },
+    "feat_title_2_block_1": {
+      "ru": "Помощник HR bot",
+      "en": "HR bot assistant"
+    },
+    "feat_sub_2_block_1": {
+      "ru": "Упрощает работу с документами: опрашивает сотрудника по ключевым вопросам и формирует заявление на отпуск.",
+      "en": "Interviews the employee on key issues and forms a vacation application."
+    },
+    "feat_purple_block_1": {
+      "ru": "Реализовано с помощью Bot SDK",
+      "en": "Implemented using the Bot SDK"
+    },
+
+
+    "feat_title_1_block_2": {
+      "ru": "Dialog API",
+      "en": "Dialog API"
+    },
+    "feat_sub_1_block_2": {
+      "ru": "API позволяет другим приложениям взаимодействовать и обмениваться данными с Dialog.",
+      "en": "he API allows other applications to interact with Dialog. Use the functions of the corporate messenger and create new services for business needs."
+    },
+    "feat_title_2_block_2": {
+      "ru": "Совместная работа над документами МойОфис",
+      "en": "Collaboration on MyOffice documents"
+    },
+    "feat_sub_2_block_2": {
+      "ru": "Возможность автоматически создавать группы для обсуждения, уведомлять о предоставлении доступа и отправлять ссылки на документы в Dialog, не выходя из офисных приложений МойОфис.",
+      "en": "Due to the integration between Dialog and MyOffice, users can automatically create discussion groups, notify about access and send document links to Dialog without leaving MyOffice applications."
+    },
+    "feat_purple_block_2": {
+      "ru": "Реализовано с помощью Dialog API",
+      "en": "Implemented using the Dialog API"
+    },
+
+
+    "feat_title_enlarge": {
+      "ru": "Расширяйте возможности Dialog",
+      "en": "Extend and automate your workspace"
+    },
+    "feat_sub_enlarge": {
+      "ru": "С помощью наших партнеров-интеграторов или внутренних разработчиков вашей компании",
+      "en": "With our Integrator partners or internal developers of your company"
+    },
+
+
+
+
+    "inst_title": {
+       "ru": "Установка Dialog",
+      "en": "Setting up"
+    },
+    "inst_title_1": {
+      "ru": "Размещение",
+      "en": "Hosting"
+    },
+    "inst_li_1_1": {
+      "ru": "Размещение на серверах вашей компании",
+      "en": "hosting on your company's servers"
+    },
+    "inst_li_2_1": {
+      "ru": "Размещение в частном облаке",
+      "en": "hosting"
+    },
+
+
+    "inst_title_2": {
+      "ru": "White Label версия",
+      "en": "White Label Version"
+    },
+    "inst_li_1_2": {
+      "ru": "Возможность изменить оформление элементов интерфейса Dialog в соответствие с фирменным стилем бренда заказчика.",
+      "en": "The ability to change the design of Dialog interface elements in accordance with the corporate identity of the customer’s brand."
+    },
+
+    "inst_title_3": {
+      "ru": "Интеграция с Active Directory",
+      "en": "Active Directory Integration (AD / LDAP)"
+    },
+    "inst_li_1_3": {
+      "ru": "Сотрудники вашей компании могут войти в Dialog под своими корпоративными учетными записями.",
+      "en": "Employees in your company can log into Dialog with their corporate accounts."
+    },
+
+
+
+    "quote_title": {
+      "ru": "Dialog в большом бизнесе",
+      "en": "Dialog testimonial"
+    },
+    "quote_sub": {
+      "ru": "Сбербанк запустил корпоративный мессенджер СберЧат на базе Dialog для более чем 300 000 сотрудников.",
+      "en": "Sberbank has launched the corporate messenger SberChat based on Dialog for over 300 000 employees."
+    },
+    "quote_text": {
+      "ru": "p Оперативное взаимодействие и обмен данными важны для компаний любого размера и профиля деятельности. При этом банку и компаниям экосистемы было необходимо собственное масштабируемое решение, обеспечивающее эффективную и защищенную коммуникацию большому количеству сотрудников. Мы реализовали решение, которое позволит нам не только оптимизировать процесс коммуникации, но и повысить эффективность совместной работы за счет создания единого цифрового рабочего пространства.",
+      "en": "Operational interaction and data exchange are important for companies of any size and profile. At the same time, the bank and companies-parts of the ecosystem needed their own scalable solution, providing effective and secure communication to a large number of employees. We have implemented a solution that will allow us not only to optimize the communication process, but also to increase the effectiveness of collaboration by creating a single digital workspace"
+    },
+    "quote_name": {
+      "ru": "Лев Хасис",
+      "en": "Lev Khasis"
+    },
+    "quote_desc": {
+      "ru": "Первый заместитель председателя правления Сбербанка",
+      "en": "First Deputy Chairman of Sberbank"
+    }
+  },
+
+  "help": {
+    "title": {
+      "ru": "Обратная связь",
+      "en": "Feedback"
+    },
+    "sub": {
+      "ru": "Корпоративным клиентам",
+      "en": "Contact Technical Support"
+    },
+    "text": {
+      "ru": "Если вы пользователь dialog enterprise — воспользуйтесь центром поддержки для корпоративных клиентов. Или запросите доступ у вашего администратора.",
+      "en": "If you are a user of dialog enterprise — use the support center for corporate clients. Or request access from your administrator."
+    },
+    "link": {
+      "ru": "Центр поддержки клиентов",
+      "en": "Support center "
+    },
+    "connect": {
+      "ru": "Связаться со службой поддержки можно также по  email: ",
+      "en": "You can also contact technical support via"
+    }
+  },
+
+  "form": {
+    "submit_title": {
+      "ru": "Оставить заявку",
+      "en": "Submit a request"
+    },
+    "request_title": {
+      "ru": "Получить предложение",
+      "en": "Submit a request"
+    },
+    "career_title": {
+      "ru": "Отправить резюме",
+      "en": "Submit a resume"
+    },
+    "career_subtitle": {
+      "ru": "Если вы не нашли интересующую вакансию, не отчаивайтесь — заполните форму и отправьте нам. Мы обязательно рассмотрим ваше резюме.",
+      "en": "If you have not found a vacancy you are interested in, do not despair - fill out the form and submit it to us. We will definitely consider your resume."
+    },
+    "name": {
+      "ru": "Ваше имя",
+      "en": "How to address you"
+    },
+    "select_work": {
+      "ru": "В каком городе хотите работать",
+      "en": "How to address you"
+    },
+    "select_work_o_1": {
+      "ru": "Москва",
+      "en": "Moscow"
+    },
+    "select_work_o_2": {
+      "ru": "Питер",
+      "en": "St. Petersburg"
+    },
+    "select_work_o_3": {
+      "ru": "Новосибирск",
+      "en": "Novosibirsk"
+    },
+    "cv": {
+      "ru": "Прикрепить резюме",
+      "en": "Attach cv"
+    },
+    "phone": {
+      "ru": "Телефон",
+      "en": "Phone Number"
+    },
+    "about": {
+      "ru": "О себе",
+      "en": "Phone Number"
+    },
+    "email": {
+      "ru": "Эл.почта",
+      "en": "E-mail"
+    },
+    "company": {
+      "ru": "Название компании",
+      "en": "Company name"
+    },
+    "users": {
+      "ru": "Количество пользователей",
+      "en": "Number of users"
+    },
+    "agree": {
+      "ru": "Я согласен на обработку данных",
+      "en": "I agree with personal data processing"
+    },
+    "news": {
+      "ru": "Подписаться на новостную рассылку",
+      "en": "Subscribe for news"
+    },
+    "more": {
+      "ru": "и больше",
+      "en": "and more"
+    },
+    "help": {
+      "ru": "Чем мы можем вам помочь?",
+      "en": "Describe your issue"
+    }
+  },
+
+  "cta": {
+    "form_title": {
+      "ru": "Подпишитесь на свежие статьи блога!",
+      "en": "Subscribe for a fresh newsletter!"
+    },
+    "connect_title": {
+      "ru": "Появились вопросы?",
+      "en": "Submit a request"
+    },
+    "vacancy_title": {
+      "ru": "В нашу быстрорастущую команду требуется много талантов",
+      "en": "Our fast-growing team requires a lot of talent."
+    },
+    "vacancy_sub": {
+      "ru": "Узнайте больше об открытых вакансиях и работе в компании",
+      "en": "Learn more about open vacancies and work in the company."
+    }
+
+  },
+
+  "p404": {
+    "title": {
+      "ru": "Мы не можемнайти страницу,которую вы ищете",
+      "en": "We can't find a page you are looking for"
+    },
+    "sub": {
+      "ru": "Пожалуйста, проверьте, что адрес страницынаписан правильно, и затем повторитепопытку снова.",
+      "en": "Please check if you entered a valid url, and try again."
+    }
+  },
+
+  "security": {
+    "title": {
+      "ru": "Безопасность и соответствие требованиям в Dialog",
+      "en": "Security and compliance at Dialog"
+    },
+
+
+
+    "safe_title": {
+      "ru": "Защита информации",
+      "en": "Information security"
+    },
+    "safe_sub_1": {
+      "ru": "Архитектура",
+      "en": "Architecture"
+    },
+    "safe_text": {
+      "ru": "В отличие от облачных решений, Dialog не имеет ключей для расшифровки вашего общения и доступа к инфраструктуре. Эта архитектура предлагает лучшую защиту от злоумышленника.",
+      "en": "Dialog is available as On-premise or Private Cloud messenger. Unlike public cloud solutions, Dialog LLC does not have access to the client’s infrastructure. This architecture offers the best protection against intruders."
+    },
+
+
+
+    "cards_title": {
+      "ru": "Высокие стандарты безопасности",
+      "en": "High security standards"
+    },
+    "card_title_1": {
+      "ru": "Шифрование передачи данных",
+      "en": "Data encryption"
+    },
+    "card_text_1": {
+      "ru": "Защита соединений «клиент-сервер» по протоколам TLS и DTLS.",
+      "en": "Protection of client-server connections using TLS and DTLS protocols."
+    },
+    "card_title_2": {
+      "ru": "Интеграция с антивирусным ПО",
+      "en": "Security audit"
+    },
+    "card_text_2": {
+      "ru": "Поддержка интеграций с антивирусами по протоколу ICAP. Мессенджер блокирует вредоносные файлы при отправке.",
+      "en": "Dialog cooperates with leading security experts to conduct regular audits of their products."
+    },
+    "card_title_3": {
+      "ru": "Аудит безопасности",
+      "en": "Integration with antivirus software"
+    },
+    "card_text_3": {
+      "ru": "Сотрудничество с ведущими экспертами по безопасности для проведения регулярных аудитов своих продуктов.",
+      "en": "Support for integration with antiviruses via ICAP. The messenger blocks malicious files when sending."
+    },
+    "card_title_4": {
+      "ru": "DLP",
+      "en": "DLP"
+    },
+    "card_text_4": {
+      "ru": "Интегрируется с системами предотвращения утечки данных по протоколу ICAP. Минимизирован риск умышленной или случайной утечки информации.",
+      "en": "Dialog integrates with SIEM systems and allows you to respond to security events before damage occurs."
+    },
+    "card_title_5": {
+      "ru": "SIEM",
+      "en": "SIEM"
+    },
+    "card_text_5": {
+      "ru": "Dialog интегрируется с SIEM-системами и позволяет реагировать на события безопасности до наступления ущерба.",
+      "en": "Integrates with ICAP data leak prevention systems. The risk of intentional or accidental information leaks is minimized."
+    },
+
+
+    "norms_title": {
+      "ru": "Соблюдение нормативных требований",
+      "en": "Regulatory Compliance"
+    },
+    "norms_sub": {
+      "ru": "Компания имеет квалификацию, необходимую для соблюдения законодательных норм и стандартов",
+      "en": "The company has the qualifications required to comply with legal norms and standards."
+    },
+    "norms_li_1": {
+      "ru": "ООО «Диалог» имеет лицензии ФСТЭК на разработку и техническую защиту конфиденциальной информации, лицензию ФСБ России на разработку и распространение защищенных информационных систем.",
+      "en": "Dialog LLC has Federal Service for Technical and Export Control of Russia licenses for the development and technical protection of confidential information, a license from the Russian Federal Security Service (FSB) for the development and distribution of secure information systems."
+    },
+    "norms_li_2": {
+      "ru": "В состав лицензируемого вида деятельности входят работы, предусмотренные пунктами 2, 3, 8, 9, 12, 13, 14, 15, 17, 18, 20, 21, 22, 23, 24, 25, 26 перечня выполняемых работ и оказываемых услуг в отношении шифровальных (криптографических) средств.",
+      "en": "Licensed type of activity includes works provided for by items 2, 3, 8, 9, 12, 13, 14, 15, 17, 18, 20, 21, 22, 23, 24, 25, 26 of the work and services list regarding encryption (cryptographic) means."
+    },
+    "norms_li_3": {
+      "ru": "Мессенджер Dialog соответствует требованиям Единого реестра российских программ для электронных вычислительных машин и баз данных, состоит в реестре отечественного ПО.",
+      "en": "The Dialog messenger complies with the requirements of the Unified Register of Russian Programs for Electronic Computing Machines and Databases; is in the registry of domestic software."
+    },
+    "norms_li_4": {
+      "ru": "Компания-разработчик ООО «Диалог» состоит в реестре аккредитованных организаций, осуществляющих деятельность в области информационных технологий на территории РФ (No 436 от 07.09.2016).",
+      "en": "The development company Dialog LLC is in the register of accredited organizations operating in the field of information technology in the Russian Federation (№ 436 of 09/07/2016)."
+
+    },
+    "doc_1": {
+      "ru": "ФСБ",
+      "en": "ФСБ"
+    },
+    "doc_2": {
+      "ru": "ФСТЭК",
+      "en": "ФСТЭК"
+    },
+    "doc_3": {
+      "ru": "ФСТЭК",
+      "en": "ФСТЭК"
+    }
+  },
+
+  "integrations": {
+    "title": {
+      "ru": "Интеграции делают Dialog еще лучше",
+      "en": "Integrations make Dialog even better"
+    },
+
+
+
+    "cards_title_1": {
+      "ru": "Интегрируйте свои приложения с Dialog и автоматизируйте рабочие процессы",
+      "en": "Integrate your applications with Dialog and automate workflows"
+    },
+
+    "cards_title_2": {
+      "ru": "Интеграция с минимальным использованием кода",
+      "en": "Development with minimal code use"
+    },
+    "card_title_1": {
+      "ru": "API",
+      "en": "Dialog API"
+    },
+    "card_text_1": {
+      "ru": "API позволяет другим приложениям взаимодействовать с Dialog. Используйте функции корпоративного мессенджера и создавайте новые сервисы для нужд бизнеса.",
+      "en": "The API allows other applications to interact with Dialog. Use the functions of a corporate messenger and create new services for business needs."
+    },
+    "card_link_1": {
+      "ru": "Документация",
+      "en": "Documentation"
+    },
+    "card_title_2": {
+      "ru": "Dialog Bot SDK",
+      "en": "Dialog Bot SDK"
+    },
+    "card_text_2": {
+      "ru": "Bot SDK позволяет создавать ботов и чат-ботов для Dialog. Боты оптимизируют повторяющиеся рутинные операции и освобождают время для более сложных задач.",
+      "en": "Bot SDK allows you to create bots and chat bots for Dialog. Bots optimize repetitive routine operations and free up time for more complex tasks."
+    },
+    "card_link_2_1": {
+      "ru": "Документация",
+      "en": "Documentation"
+    },
+    "card_link_2_2": {
+      "ru": "Python | Java | Javascript",
+      "en": "Python | Java | Javascript"
+    },
+    "card_title_3": {
+      "ru": "GraphQL",
+      "en": "GraphQL"
+    },
+    "card_text_3": {
+      "ru": "Интегрируйте Dialog с внешними системами и управляйте данными через команды GraphQL.",
+      "en": "Integrate Dialog with external systems and manage data through GraphQL commands"
+    },
+    "card_title_4": {
+      "ru": "Zapier",
+      "en": "Zapier"
+    },
+    "card_text_4": {
+      "ru": "Используйте данные и происходящие события в более чем 1000 интеграциях для автоматизации вашего рабочего процесса.",
+      "en": "Use data and events in over 1000 integrations to automate your workflow."
+    },
+    "card_link_4": {
+      "ru": "Настройте интеграцию прямо сейчас",
+      "en": "Set up integration now"
+    },
+    "card_title_5": {
+      "ru": "Webhooks",
+      "en": "SIEM"
+    },
+    "card_text_5": {
+      "ru": "Функции Dialog в WebHooks как простой способ получения автоматических сообщений и обновления данных, отправленных в текстовый канал на вашем сервере/",
+      "en": "Dialog features in WebHooks are an easy way to receive automatic messages and update data sent to a text channel on your server."
+    }
+  },
+
+  "career": {
+    "title": {
+      "ru": "Хочешь реализовать свои таланты?",
+      "en": "Want to fulfill your talents?"
+    },
+    "sub": {
+      "ru": "Присоединяйся к команде Dialog",
+      "en": "Join the Dialog Team"
+    },
+    "create_title": {
+      "ru": "Мы создаем Dialog",
+      "en": "We create Dialog"
+    },
+    "create_sub_1": {
+      "ru": "Компания занимается разработкой корпоративного мессенджера Dialog более 4 лет. Dialog объединяет специалистов в области IT-коммуникаций, безопасности данных, real-time распределенных систем, Big Data и других смежных с месседжингом областей.",
+      "en": "The company has been developing the Dialog corporate messenger for over 4 years. Dialog unites specialists in the field of IT communications, data security, real-time distributed systems, Big Data and other areas related to messaging."
+    },
+    "create_sub_2": {
+      "ru": "На данный момент в Dialog работает более 120 человек, которые в разное время занимались разработкой продуктов для крупнейших компаний, лидирующих в области систем безопасности и хранения данных.",
+      "en": "At the moment, Dialog employs more than 120 specialists who at different times were developing products for the largest companies leading in the field of security and data storage systems."
+    },
+    "create_text_1": {
+      "ru": "человек в команде",
+      "en": "specialists in a team"
+    },
+    "create_text_2": {
+      "ru": "города, офис в Москве и Санкт-Петербурге",
+      "en": "cities, offices in Moscow and St. Petersburg"
+    }
+  },
+
+  "download": {
+    "for": {
+      "ru": "для",
+      "en": "for"
+    },
+    "d": {
+      "ru": "Скачать",
+      "en": "Download"
+    },
+    "instruction": {
+      "ru": "Инструкция по установке",
+      "en": "Installation instruction"
+    },
+    "dfrom": {
+      "ru": "Скачать из",
+      "en": "Download for"
+    },
+    "dfor": {
+      "ru": "Скачать для",
+      "en": "Download for"
+    },
+    "web": {
+      "ru": "Открыть Web версию",
+      "en": "Open Web version"
+    },
+    "macOS": {
+      "ru": "Download for",
+      "en": "Instructions for installation"
+    },
+    "works": {
+      "ru": "Работает на",
+      "en": "Works with"
+    },
+    "more": {
+      "ru": "и выше",
+      "en": "and higher"
+    }
+  },
+  
+  "patent": {
+    "title_1": {
+      "ru": "Лицензии и сертификаты",
+      "en": "Patents and Licenses"
+    },
+    "sub_1": {
+      "ru": "Компания является правообладателем 5 программных продуктов, которые зарегистрированы в Роспатенте",
+      "en": "The company is the copyright holder of 5 software products, registered by RosPatent"
+    },
+    "sub_2": {
+      "ru": "Компания имеет необходимую квалификацию и лицензии ФСТЭК России и ФСБ России",
+      "en": "The company has all needed information and licenses ФСТЭК Russia и ФСБ Russia"
+    },
+    "title_2": {
+      "ru": "Реестры и Ассоциации",
+      "en": "Registries and Associations"
+    },
+    "li_1": {
+      "ru": "Мессенджер dialog соответствует требованиям Единого реестра российских программ для электронных вычислительных машин и баз данных и состоит в реестре отечественного ПО.",
+      "en": "Мессенджер dialog соответствует требованиям Единого реестра российских программ для электронных вычислительных машин и баз данных и состоит в реестре отечественного ПО."
+    },
+    "li_2": {
+      "ru": "Компания является членом Ассоциации документальной электросвязи (АДЭ)",
+      "en": "Компания является членом Ассоциации документальной электросвязи (АДЭ)"
+    },
+    "li_3": {
+      "ru": "ООО «Диалог» входит в реестр Организаторов Распространения Информации (ОРИ) Роскомнадзор.",
+      "en": "ООО «Диалог» входит в реестр Организаторов Распространения Информации (ОРИ) Роскомнадзор."
+    },
+    "li_4": {
+      "ru": "ООО «Диалог» является участником",
+      "en": "ООО «Диалог» является участником"
+    },
+    "link": {
+      "ru": "инновационного центра «Сколково»",
+      "en": "инновационного центра «Сколково»"
+    }
+  },
+
+  "resp": {
+    "title": {
+      "ru": "Социальная ответственность",
+      "en": "Social responsibility "
+    },
+    "sub": {
+      "ru": "Результаты специальной оценки условий труда",
+      "en": "Result of special assessment of working conditions"
+    },
+    "text": {
+      "ru": "Согласно результатам проведённой специальной оценки условий труда рабочие места подразделений Общества в улучшении условий труда не нуждаются.",
+      "en": "According to the results of a special assessment of working conditions, the workplaces of the Company's divisions do not need to improve working conditions"
+    },
+    "file_1": {
+      "ru": "Сводная ведомость результатов проведения специальной оценки условий труда ООО «Диалог»",
+      "en": "A summary sheet of the results of a special assessment of working conditions of OOO Dialog"
+    },
+    "file_2": {
+      "ru": "Перечень рекомендуемых мероприятий по улучшению условий труда",
+      "en": "The list of recommended measures to improve working conditions"
+    }
+  },
+
+  "button": {
+    "leave": {
+      "ru": "Оставить заявку",
+      "en": "Submit a request"
+    },
+    "learn": {
+      "ru": "Оставить заявку",
+      "en": "Submit a request"
+    },
+    "tech": {
+      "ru": "Технологические партнеры",
+      "en": "Technology Partners"
+    },
+    "dev": {
+      "ru": "Разработчикам",
+      "en": "For developers"
+    },
+    "license": {
+      "ru": "Узнать стоимость лицензии",
+      "en": "Get license price"
+    },
+    "view": {
+      "ru": "Смотреть все",
+      "en": "View all"
+    },
+    "request": {
+      "ru": "Отправить заявку",
+      "en": "Send request"
+    },
+    "subscribe": {
+      "ru": "Подписаться",
+      "en": "Subscribe"
+    },
+    "contact": {
+      "ru": "Свяжитесь с нами",
+      "en": "Contact us"
+    },
+    "vacancy_open": {
+      "ru": "Открытые вакансии",
+      "en": "Open vacancies"
+    },
+    "vacancy_all": {
+      "ru": "Смотреть все вакансии",
+      "en": "View all vacant positions"
+    },
+    "open": {
+      "ru": "открыть",
+      "en": "open"
+    },
+    "get": {
+      "ru": "Получить предложение",
+      "en": "Get request"
+    },
+    "home": {
+      "ru": "Перейти на главную",
+      "en": "Go to homepage"
+    }
+  },
+
+  "link": {
+    "learn": {
+      "ru": "Узнать подробнее",
+      "en": "Learn more"
+    }
+  },
+
+  "nav": {
+    "security": {
+      "ru": "Безопасность",
+      "en": "Security"
+    },
+    "integrations": {
+      "ru": "Интеграции",
+      "en": "Integrations"
+    },
+    "download": {
+      "ru": "Скачать",
+      "en": "Download"
+    },
+    "career": {
+      "ru": "Карьера",
+      "en": "Career"
+    },
+    "blog": {
+      "ru": "Блог",
+      "en": "Blog"
+    },
+    "help": {
+      "ru": "Помощь",
+      "en": "Help"
+    },
+    "license": {
+      "ru": "Свидетельства и лицензии",
+      "en": "Patents and Licenses"
+    },
+    "social": {
+      "ru": "Социальная ответственность",
+      "en": "Social responsibility"
+    },
+    "legal": {
+      "ru": "Правовая информация",
+      "en": "Legal Information"
+    },
+    "data": {
+      "ru": "Обработка персональных данных",
+      "en": "Processing personal data"
+    },
+    "corruption": {
+      "ru": "Политика по противодействию коррупции",
+      "en": "Anti-corruption policy"
+    },
+    "company_full": {
+      "ru": "О компании",
+      "en": "About Company"
+    },
+    "company_short": {
+      "ru": "Компания",
+      "en": "Company"
+    },
+    "library": {
+      "ru": "Библиотека документов:",
+      "en": "Document library:"
+    }
+  },
+
+  "hidden": {
+    "nav": {
+      "ru": "Навигация",
+      "en": "Navigation"
+    }
+  },
+
+  "social": {
+    "fb": {
+      "ru": "Навигация",
+      "en": "Navigation"
+    },
+    "vk": {
+      "ru": "Навигация",
+      "en": "Navigation"
+    },
+    "gh": {
+      "ru": "Навигация",
+      "en": "Navigation"
+    }
+  },
+
+  "alt": {
+    "license": {
+      "ru": "Фотография лицензии",
+      "en": "License photo"
+    },
+    "cert": {
+      "ru": "Фотография сертификата",
+      "en": "Certificate photo"
+    },
+    "pm": {
+      "ru": "Фото ноутбука и мобильного телефона",
+      "en": "Notebook or mobile phone photo"
+    }
+  }
+}

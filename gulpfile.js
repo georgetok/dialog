@@ -16,7 +16,7 @@ const api = new GhostContentAPI({
   version: "v3"
 });
 const gulpData = require('gulp-data');
-const gulpFS = require('fs');
+const fs = require('fs');
 const streamArray = require('stream-array');
 const File = require('vinyl');
 
@@ -103,16 +103,40 @@ const Paths = {
   },
   post: {
     src: `${SOURCE_PATH}pug/pages/post.pug`,
-    output: `${BUILD_PATH}/posts/`,
+    ru: `${BUILD_PATH}/ru/blog/`,
+    en: `${BUILD_PATH}/en/blog/`,
   },
 };
 
-const pathbuilder = (path) => {
-    if ('index' !== path.basename) {
-        path.dirname = path.basename.split('_').join('/')
-        path.basename = 'index'
+// methods
+function removeProp(obj, propToDelete, propToFlatten) {
+   for (var property in obj) {
+      if (typeof obj[property] == "object") {
+           if(obj[property][propToFlatten]){
+            obj[property] = obj[property][propToFlatten]
+          }
+         delete obj.property
+         let newJsonData= removeProp(obj[property], propToDelete, propToFlatten);
+
+         obj[property]= newJsonData
+      } else {
+          if (property === propToDelete) {
+            delete obj[property];
+          }
+
+        }
     }
+    return obj
 }
+const pathBuilder = (path) => {
+  if ('index' !== path.basename) {
+    path.dirname = path.basename.split('_').join('/');
+    path.basename = 'index';
+  }
+};
+const requireJSON = (file) =>
+  JSON.parse(fs.readFileSync(file));
+
 
 /*
  * TASKS
@@ -125,21 +149,23 @@ gulp.task('json', async function () {
     console.error("error getting data");
   });
   const file = new File({
-    path: `data.json`,
+    path: `posts.json`,
     contents: Buffer.from(JSON.stringify(posts))
   });
   return streamArray([file]).pipe(gulp.dest(`${SOURCE_PATH}json/`));
 });
 
-gulp.task('posts', async function () {
+gulp.task('posts:ru', async function () {
+  const i18n = requireJSON(`${SOURCE_PATH}/json/i18n.json`);
+  let i18nRu = removeProp(i18n, "en","ru");
   const posts = await api.posts.browse({
     include: "tags,authors",
-    limit: "all"
+    limit: "all",
+    filter: "tags.name:#ru"
   }).catch(err => {
     console.error("error getting data");
   }).then((posts) => {
     posts.forEach((post, index) => {
-      console.log(post);
       const {slug} = post;
       return gulp
         .src(Paths.post.src)
@@ -147,17 +173,53 @@ gulp.task('posts', async function () {
         .pipe(pug({
             pretty: true,
             data: {
+              lang: "en",
               post: post,
+              t: i18nRu,
+              isPost: true
             }
           })
         )
         .pipe(rename(`${slug}.html`))
-        .pipe(gulp.dest(Paths.post.output));
+        .pipe(gulp.dest(Paths.post.ru));
+    });
+  });
+});
+
+gulp.task('posts:en', async function () {
+  const i18n = requireJSON(`${SOURCE_PATH}/json/i18n.json`);
+  let i18nEn = removeProp(i18n, "ru","en");
+  const posts = await api.posts.browse({
+    include: "tags,authors",
+    limit: "all",
+    filter: "tags.name:#en"
+  }).catch(err => {
+    console.error("error getting data");
+  }).then((posts) => {
+    posts.forEach((post, index) => {
+      const {slug} = post;
+      return gulp
+        .src(Paths.post.src)
+        .pipe(plumber())
+        .pipe(pug({
+            pretty: true,
+            data: {
+              lang: "en",
+              post: post,
+              t: i18nEn,
+              isPost: true
+            }
+          })
+        )
+        .pipe(rename(`${slug}.html`))
+        .pipe(gulp.dest(Paths.post.en));
     });
   });
 });
 
 gulp.task('blog:ru', async function () {
+  const i18n = requireJSON(`${SOURCE_PATH}/json/i18n.json`);
+  let i18nRu = removeProp(i18n, "en","ru");
   const posts = await api.posts.browse({
     include: "tags,authors",
     limit: "all",
@@ -172,7 +234,8 @@ gulp.task('blog:ru', async function () {
           pretty: true,
           data: {
             "lang": "ru",
-            posts: posts
+            posts: posts,
+            t: i18nRu
           }
         })
       )
@@ -183,6 +246,8 @@ gulp.task('blog:ru', async function () {
 });
 
 gulp.task('blog:en', async function () {
+  const i18n = requireJSON(`${SOURCE_PATH}/json/i18n.json`);
+  let i18nEn = removeProp(i18n, "ru","en");
   const posts = await api.posts.browse({
     include: "tags,authors",
     limit: "all",
@@ -198,6 +263,7 @@ gulp.task('blog:en', async function () {
           data: {
             "lang": "en",
             posts: posts,
+            t: i18nEn
           }
         })
       )
@@ -274,7 +340,7 @@ gulp.task('images:svg-sprite', function () {
     .pipe(gulp.dest(Paths.images.dest));
 });
 
-gulp.task('html', function () {
+gulp.task('index', function () {
   return gulp
     .src([
       'src/pug/pages/index.pug',
@@ -289,6 +355,8 @@ gulp.task('html', function () {
 });
 
 gulp.task('html:en', function () {
+  const i18n = requireJSON(`${SOURCE_PATH}/json/i18n.json`);
+  let i18nEn = removeProp(i18n, "ru","en");
   return gulp
     .src([
       'src/pug/pages/*.pug',
@@ -299,15 +367,20 @@ gulp.task('html:en', function () {
     .pipe(pug({
         pretty: true,
         data: {
-          "lang": "en"
+          "lang": "en",
+          t: i18nEn
         }
       })
     )
-    .pipe( rename((path) => { pathbuilder(path) }) )
+    .pipe(rename((path) => {
+      pathBuilder(path);
+    }))
     .pipe(gulp.dest(Paths.html.en));
 });
 
 gulp.task('html:ru', function () {
+  const i18n = requireJSON(`${SOURCE_PATH}/json/i18n.json`);
+  let i18nRu = removeProp(i18n, "en","ru");
   return gulp
     .src([
       'src/pug/pages/*.pug',
@@ -318,11 +391,14 @@ gulp.task('html:ru', function () {
     .pipe(pug({
         pretty: true,
         data: {
-          "lang": "ru"
+          "lang": "ru",
+          t: i18nRu
         }
       })
     )
-    .pipe( rename((path) => { pathbuilder(path) }) )
+    .pipe(rename((path) => {
+      pathBuilder(path);
+    }))
     .pipe(gulp.dest(Paths.html.ru));
 });
 
@@ -403,8 +479,10 @@ gulp.task('server', function () {
   gulp.watch(Paths.html.srcWatch, gulp.series('html:ru', 'refresh'));
   gulp.watch(Paths.html.srcWatch, gulp.series('html:en', 'refresh'));
   gulp.watch(Paths.scripts.src, gulp.series('js', 'refresh'));
-  // gulp.watch(Paths.blog.src, gulp.series('blog', 'refresh'));
-  gulp.watch(Paths.post.src, gulp.series('posts', 'refresh'));
+  gulp.watch(Paths.blog.src, gulp.series('blog:ru', 'refresh'));
+  gulp.watch(Paths.blog.src, gulp.series('blog:en', 'refresh'));
+  gulp.watch(Paths.post.src, gulp.series('posts:en', 'refresh'));
+  gulp.watch(Paths.post.src, gulp.series('posts:ru', 'refresh'));
 });
 
 gulp.task('refresh', function (done) {
@@ -431,7 +509,6 @@ gulp.task('copy:manifest', function () {
 gulp.task('graphic', gulp.series('images:minify', 'images:webp', 'images:svg-sprite'));
 gulp.task('js', gulp.series('js:module', 'js:vendor'));
 gulp.task('copy', gulp.series('copy:fonts'));
-gulp.task('build', gulp.series('clean', 'copy', 'html', 'html:en','html:ru', 'css', 'js', 'blog:ru','blog:en', 'posts'));
-// gulp.task('blog', gulp.series('blog', 'posts'));
+gulp.task('build', gulp.series('clean', 'copy', 'index', 'html:en', 'html:ru', 'css', 'js', 'blog:ru', 'blog:en', 'posts:en', 'posts:ru'));
 gulp.task('start', gulp.series('build', 'server'));
 gulp.task('images', gulp.series('graphic'));

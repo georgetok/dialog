@@ -132,7 +132,6 @@
     left: 33px;
     width: 83px;
     height: 83px;
-    background-image: url("../img/bg-square-purple.svg");
     background-repeat: no-repeat;
     background-position-x: 0 0;
     background-size: 83px 83px;
@@ -160,7 +159,6 @@
     right: 29px;
     width: 97px;
     height: 97px;
-    background-image: url("../img/bg-round-blue.svg");
     background-repeat: no-repeat;
     background-position-x: 0 0;
     background-size: 97px 97px;
@@ -209,7 +207,6 @@
     right: -30px;
     width: 114px;
     height: 114px;
-    background-image: url("../img/bg-square-yellow.svg");
     background-repeat: no-repeat;
     background-position-x: 0 0;
     background-size: 114px 114px;
@@ -237,7 +234,6 @@
     left: -30px;
     width: 114px;
     height: 114px;
-    background-image: url("../img/bg-square-yellow.svg");
     background-repeat: no-repeat;
     background-position-x: 0 0;
     background-size: 114px 114px;
@@ -264,6 +260,7 @@
   padding-left: 38px;
   padding-right: 38px;
   background-color: $color-contrast;
+  border-radius: 4px;
 
   @include laptop {
     padding-top: 37px;

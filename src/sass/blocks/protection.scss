@@ -68,7 +68,6 @@
     }
 
     &--cards {
-      @include gap-xs;
       flex-wrap: wrap;
       margin-top: 15px;
 

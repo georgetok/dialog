@@ -92,7 +92,7 @@ block content
               picture
                 source(type="image/webp" srcset=`${it.imgPath}@2x.webp`)
                 img(src=`${it.imgPath}@2x.${it.imgType}` alt=it.imgAlt width=it.imgWidth loading="lazy")
-            a(class="link link--with-icon link--patents" href=`${it.imgPath}@2x.${it.imgType}` download)=it.linkName
+            a(class="link link--with-icon link--icon-accent link--patents" href=`${it.imgPath}@2x.${it.imgType}` download)=it.linkName
               +svg('arrow-bottom', 16, 17)
   .patents-text.patents-text--second.box.box--white
     .patents-text__wrapper
@@ -107,7 +107,7 @@ block content
               picture
                 source(type="image/webp" srcset=`${it.imgPath}@2x.webp`)
                 img(src=`${it.imgPath}@2x.${it.imgType}` alt=it.imgAlt width=it.imgWidth loading="lazy")
-            a(class="link link--with-icon link--patents" href=`${it.imgPath}@2x.${it.imgType}` download)=it.linkName
+            a(class="link link--with-icon link--icon-accent link--patents" href=`${it.imgPath}@2x.${it.imgType}` download)=it.linkName
               +svg('arrow-bottom', 16, 17)
   section.association.box.box--gray
     .association__wrapper

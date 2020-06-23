@@ -89,7 +89,7 @@
 
 .blog__card-title {
   @include typography-h6;
-  margin-bottom: 28px;
+  margin-bottom: 21px;
   letter-spacing: -0.005em;
 
   @include laptop {
@@ -105,7 +105,7 @@
   /* autoprefixer: off */
   -webkit-box-orient: vertical;
   /* autoprefixer: on */
-  -webkit-line-clamp: 2 !important;
+  -webkit-line-clamp: 3 !important;
   overflow: hidden !important;
   min-height: 50px;
 }

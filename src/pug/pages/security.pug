@@ -14,27 +14,27 @@ block variables
     const licenseImages = {
     title: 'Лицензии',
     images: [
-      {
-        imgPath: '/img/patents/license-fsb',
-        imgType: 'jpg',
-        imgAlt: t.alt.license,
-        imgWidth: 80,
-        linkName: t.security.doc_1
-      },
-      {
-        imgPath: '/img/patents/fstek-1',
-        imgType: 'jpg',
-        imgAlt: t.alt.cert,
-        imgWidth: 80,
-        linkName: t.security.doc_2
-      },
-      {
-        imgPath: '/img/patents/fstek-2',
-        imgType: 'jpg',
-        imgAlt: t.alt.cert,
-        imgWidth: 80,
-        linkName: t.security.doc_3
-      }
+    {
+    imgPath: '/img/patents/license-fsb',
+    imgType: 'jpg',
+    imgAlt: t.alt.license,
+    imgWidth: 80,
+    linkName: t.security.doc_1
+    },
+    {
+    imgPath: '/img/patents/fstek-1',
+    imgType: 'jpg',
+    imgAlt: t.alt.cert,
+    imgWidth: 80,
+    linkName: t.security.doc_2
+    },
+    {
+    imgPath: '/img/patents/fstek-2',
+    imgType: 'jpg',
+    imgAlt: t.alt.cert,
+    imgWidth: 80,
+    linkName: t.security.doc_3
+    }
     ]};
 
 block content
@@ -69,17 +69,28 @@ block content
               500
             )
       h3=t.security.cards_title
-      .wrap.wrap--cards
+      .wrap.wrap--cards.wrap--white
         .col
-          .card.card--white
-            h4=t.security.card_title_1
-            p=t.security.card_text_1
+          .card.card--security
+            ul.compliance__listbox
+              li
+                h4=t.security.card_title_1
+              li
+                p=t.security.card_text_1
+            br
+              li
+                h4=t.security.card_title_4
+              li
+                p=t.security.card_text_4
         .col
-          .card.card--white
+          .card.card--security
             h4=t.security.card_title_2
             p=t.security.card_text_2
+            br
+            h4=t.security.card_title_5
+            p=t.security.card_text_5
         .col
-          .card.card--white
+          .card.card--security
             h4=t.security.card_title_3
             p=t.security.card_text_3
             +picture(
@@ -88,22 +99,13 @@ block content
               t.alt.pm,
               456
             )
-        .col
-          .card.card--white
-            h4=t.security.card_title_4
-            p=t.security.card_text_4
-        .col
-          .card.card--white
-            h4=t.security.card_title_5
-            p=t.security.card_text_5
   section.compliance.box.box--lilac
     .wrapper.wrapper--main
-      .wrap.wrap--icon.wrap--as
+      .wrap.wrap--icon.wrap--ac
         .round-icon
           +svg('icon-compliance', 60, 45)
         .wrap.wrap--txt.wrap--w
           h2.compliance__title=t.security.norms_title
-          p.compliance__subtitle=t.security.norms_sub
       ul.compliance__list
         li.compliance__list-item.compliance__item--safe
           ul.compliance__listbox
@@ -119,7 +121,7 @@ block content
                         img(src=`${it.imgPath}@2x.${it.imgType}` alt=it.imgAlt width=it.imgWidth loading="lazy")
                     .wrap.wrap--link.wrap--ac
                       a(class="link link--icon-accent link--with-icon link--patents" href=`${it.imgPath}@2x.${it.imgType}` download)=it.linkName
-                        +svg('arrow-bottom', 20, 16)
+                      +svg('arrow-bottom', 20, 16)
         li.compliance__list-item.compliance__list-item--cloud
           ul.compliance__listbox
             li
@@ -127,6 +129,6 @@ block content
             li
               p=t.security.norms_li_4
       a(class="compliance__link--more link link--icon-accent link--with-icon" href="#!")=t.link.learn
-        +svg('arrow-right', 16, 15)
+      +svg('arrow-right', 16, 15)
   section
     +form-offer(false, 1, 'offer-form')

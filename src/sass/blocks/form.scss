@@ -68,11 +68,10 @@
       letter-spacing: 0.275px;
       border: none;
       border-radius: 0;
-      border-bottom: 1px solid $color-accent-light;
+      border-bottom: 1px solid $color-accent-mid-1;
       background-color: transparent;
       appearance: none;
       transition: border-bottom $transition-props;
-      color: #ffffff;
       width: 100%;
 
       @include mobile-md {
@@ -95,7 +94,7 @@
     input:hover,
     input:focus {
       outline: none;
-      border-bottom: 1px solid #ffffff;
+      border-bottom: 1px solid $color-accent-mid-1;
     }
 
     input:focus + label {
@@ -107,7 +106,7 @@
     }
 
     input::placeholder {
-      color: #ffffff;
+      color: $color-gray-dark;
     }
 
     input:focus::placeholder {
@@ -117,8 +116,7 @@
 
 }
 
-.form--main,
-.form--feedback {
+.form--main, .form--feedback {
   padding-top: 101px;
   padding-bottom: 81px;
 

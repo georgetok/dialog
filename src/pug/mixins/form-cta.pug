@@ -7,7 +7,7 @@ mixin form-cta (idNumber,formId)
         h3.form__title=t.cta.form_title
         .form__row
           .form__input-text-wrap
-            .form__field
+            .form__field.form__field--lilac
               input(
                 type="email"
                 id=`email-${idNumber}`
@@ -19,4 +19,4 @@ mixin form-cta (idNumber,formId)
               )
               label(for=`email-${idNumber}`)=t.form.email
 
-          +button(t.button.subscribe, {styleType: 'light', type: 'submit', additionalClassName: 'form__button button--form'})
+          +button(t.button.subscribe, {styleType: 'accent', type: 'submit', additionalClassName: 'form__button button--form'})

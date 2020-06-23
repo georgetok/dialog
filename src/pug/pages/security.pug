@@ -72,16 +72,11 @@ block content
       .wrap.wrap--cards.wrap--white
         .col
           .card.card--security
-            ul.compliance__listbox
-              li
-                h4=t.security.card_title_1
-              li
-                p=t.security.card_text_1
+            h4=t.security.card_title_1
+            p=t.security.card_text_1
             br
-              li
-                h4=t.security.card_title_4
-              li
-                p=t.security.card_text_4
+            h4=t.security.card_title_4
+            p=t.security.card_text_4
         .col
           .card.card--security
             h4=t.security.card_title_2
@@ -121,14 +116,14 @@ block content
                         img(src=`${it.imgPath}@2x.${it.imgType}` alt=it.imgAlt width=it.imgWidth loading="lazy")
                     .wrap.wrap--link.wrap--ac
                       a(class="link link--icon-accent link--with-icon link--patents" href=`${it.imgPath}@2x.${it.imgType}` download)=it.linkName
-                      +svg('arrow-bottom', 20, 16)
+                        +svg('arrow-bottom', 20, 16)
         li.compliance__list-item.compliance__list-item--cloud
           ul.compliance__listbox
             li
               p=t.security.norms_li_3
             li
               p=t.security.norms_li_4
-      a(class="compliance__link--more link link--icon-accent link--with-icon" href="#!")=t.link.learn
-      +svg('arrow-right', 16, 15)
+      a(class="compliance__link--more link link--icon-accent link--with-icon link--icon-accent" href="#!")=t.link.learn
+        +svg('arrow-right', 16, 15)
   section
     +form-offer(false, 1, 'offer-form')

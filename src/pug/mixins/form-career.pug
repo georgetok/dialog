@@ -1,4 +1,5 @@
 include ./button
+include ../mixins/field-textarea
 
 mixin form-career (idNumber, formId)
   .form.form--main.form--career.box.box--white
@@ -56,13 +57,12 @@ mixin form-career (idNumber, formId)
                 option(value="Новосибирск")=t.form.select_work_o_3
               label(for=`city-${idNumber}`)=t.form.select_work
 
-            .form__form-field.form__form-field--textarea.form__form-field--5.form__form-field--fw
-              textarea(
-                id=`message-${idNumber}`
-                name="message"
-                placeholder=t.form.about
-                required)
-              label(for=`message-${idNumber}`)=t.form.about
+            .form__form-field--5.form__form-field--fw
+              +field-textarea({
+                name: 'message',
+                label: t.form.about,
+                isRequired: true,
+              })
 
           .form__checkbox-wrap
             .form__form-field--file

@@ -122,6 +122,9 @@ block content
       ul.advantages__list
         each item in advantages
           li
+            div.pseudo--1
+            div.pseudo--2
+            div.pseudo--3
             .advantages__icon
               +svg(item.iconPath, item.iconWidth, item.iconHeight)
             h2= item.title

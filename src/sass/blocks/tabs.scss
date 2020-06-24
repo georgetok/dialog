@@ -116,10 +116,9 @@
   }
 
   svg {
-    fill: $color-base;
-    transition: fill $transition-props;
     width: 33px;
     height: 33px;
+    fill: none;
   }
 
   b {
@@ -310,10 +309,12 @@
 
   @include tablet {
     justify-content: center;
-    max-width: 570px;
-    padding-bottom: 64px;
+    max-width: 670px;
     background-position: bottom 4px left 13%;
-    top: 50%;
+    transform: translateY(8%);
+    width: 80%;
+    margin-right: -32%;
+    top: -50%;
   }
 
   @include mobile-md {
@@ -363,9 +364,10 @@
       max-width: 400px;
     }
     @include mobile-sm {
-      transform: translateX(calc(55% + 13vw));
+      background-size: 90%;
+      transform: translateX(calc(55% + -10vw));
       top: 53%;
-      width: 160%;
+      width: 185%;
     }
   }
 
@@ -392,10 +394,10 @@
       top: 0;
       right: auto;
       bottom: auto;
-      transform: translateX(calc(-20% - 3vw));
+      transform: translateX(calc(-20% - 13vw));
     }
     @include mobile-sm {
-      width: 80%;
+      width: 70%;
       top: 10%;
       padding-bottom: 55%;
       transform: translateX(calc(-20% - 13vw));

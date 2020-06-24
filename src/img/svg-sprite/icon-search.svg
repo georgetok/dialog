@@ -1,3 +1,37 @@
-<svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <path fill-rule="evenodd" clip-rule="evenodd" d="M10.2 2C5.6713 2 2 5.6713 2 10.2c0 4.5287 3.6713 8.2 8.2 8.2 4.5287 0 8.2-3.6713 8.2-8.2 0-4.5287-3.6713-8.2-8.2-8.2zM0 10.2C0 4.5667 4.5667 0 10.2 0c5.6333 0 10.2 4.5667 10.2 10.2 0 5.6333-4.5667 10.2-10.2 10.2C4.5667 20.4 0 15.8333 0 10.2zM17.7929 18.4929c.3905-.3905 1.0237-.3905 1.4142 0l3.8 3.8c.3905.3905.3905 1.0237 0 1.4142-.3905.3905-1.0237.3905-1.4142 0l-3.8-3.8c-.3905-.3905-.3905-1.0237 0-1.4142z" fill=""/>
+<svg width="36"
+     height="42"
+     viewBox="0 0 36 42"
+     fill="none"
+     xmlns="http://www.w3.org/2000/svg">
+  <path d="M24.0826 36.968C28.5466 36.968 32.1653 33.3493 32.1653 28.8854C32.1653 24.4215 28.5466 20.8027 24.0826 20.8027C19.6187 20.8027 16 24.4215 16 28.8854C16 33.3493 19.6187 36.968 24.0826 36.968Z"
+        stroke="black"
+        stroke-width="2"
+        stroke-miterlimit="10"
+        stroke-linecap="round"/>
+  <path d="M29.3896 34.9268L34.6964 40.1519"
+        stroke="black"
+        stroke-width="2"
+        stroke-miterlimit="10"
+        stroke-linecap="round"/>
+  <path d="M15.2542 37.4084H6.23037C3.53251 37.4084 1.2998 35.1757 1.2998 32.4778V6.42959C1.2998 3.73173 3.53251 1.49902 6.23037 1.49902H24.6502C25.2084 1.49902 25.7666 1.68508 26.2317 2.15023L31.9995 7.91806C32.3717 8.29018 32.6508 8.84836 32.6508 9.49956V20.1049"
+        stroke="black"
+        stroke-width="2"
+        stroke-miterlimit="10"
+        stroke-linecap="round"
+        stroke-linejoin="round"/>
+  <path d="M32.5576 8.94138H26.6967C25.8595 8.94138 25.1152 8.19715 25.1152 7.35988V1.49902"
+        stroke="black"
+        stroke-width="2"
+        stroke-miterlimit="10"
+        stroke-linecap="round"/>
+  <path d="M7.81152 11.5459H20.6496"
+        stroke="#9888C4"
+        stroke-width="2"
+        stroke-miterlimit="10"
+        stroke-linecap="round"/>
+  <path d="M7.81152 18.0586H14.1375"
+        stroke="#9888C4"
+        stroke-width="2"
+        stroke-miterlimit="10"
+        stroke-linecap="round"/>
 </svg>

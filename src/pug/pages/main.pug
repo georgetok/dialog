@@ -46,7 +46,7 @@ block content
     title: t.main.f_title_1,
     text: t.main.f_text_1,
     picWidth: "141",
-    picPathMob: "function-mobile",
+    picPathMob: "/pages/download/hero-ios",
     picPathDesk: "function-desktop"
     },
     {
@@ -58,7 +58,7 @@ block content
     title: t.main.f_title_2,
     text: t.main.f_text_2,
     picWidth: "141",
-    picPathMob: "function-mobile",
+    picPathMob: "/pages/download/hero-ios",
     picPathDesk: "function-desktop"
     },
     {
@@ -70,7 +70,7 @@ block content
     title: t.main.f_title_3,
     text: t.main.f_text_3,
     picWidth: "141",
-    picPathMob: "function-mobile",
+    picPathMob: "/pages/download/hero-ios",
     picPathDesk: "function-desktop"
     },
     {
@@ -82,7 +82,7 @@ block content
     title: t.main.f_title_4,
     text: t.main.f_text_4,
     picWidth: "141",
-    picPathMob: "function-mobile",
+    picPathMob: "/pages/download/hero-ios",
     picPathDesk: "function-desktop"
     },
     {
@@ -94,7 +94,7 @@ block content
     title: t.main.f_title_5,
     text: t.main.f_text_5,
     picWidth: "141",
-    picPathMob: "function-mobile",
+    picPathMob: "/pages/download/hero-ios",
     picPathDesk: "function-desktop"
     }
     ];
@@ -210,7 +210,7 @@ block content
                 | !{t.main.sec_li_2_2}
                 img(src=`/img/sber-cloud.svg`, width="108" height="22" alt="Логотип SberCloud")
       a(class="link link--with-icon link--safety link--icon-accent" href="#!")=t.link.learn
-      +svg('arrow-right', 16, 15)
+        +svg('arrow-right', 16, 15)
   section.solutions.box.box--sand
     .solutions__wrapper
       h2.solutions__title=t.main.sol_title
@@ -223,7 +223,7 @@ block content
               h3=t.main.sol_title_1
               p=t.main.sol_sub_1
               a(class="link link--with-icon link--icon-accent" href="#!")=t.link.learn
-              +svg('arrow-right', 16, 15)
+                +svg('arrow-right', 16, 15)
         li.solutions__item
           .solutions__img.solutions__img--2.solutions__cell-2
             +picture(`/img/solution-2`, 'jpg', 'Изображение с сотрудником компании', 630)
@@ -232,7 +232,7 @@ block content
               h3=t.main.sol_title_2
               p=t.main.sol_sub_2
               a(class="link link--with-icon link--icon-accent" href="#!")=t.link.learn
-              +svg('arrow-right', 16, 15)
+                +svg('arrow-right', 16, 15)
   section.features.box.box--white
     .features__wrapper
       .features__header
@@ -380,5 +380,5 @@ block content
                   +svg('icon-watch', 17, 17)
                   span 1 !{t.blog.min}
       a(class="link link--with-icon link--icon-accent" href="/blog")=t.button.view
-      +svg('arrow-right', 16, 15)
+        +svg('arrow-right', 16, 15)
   +form-offer(false, 1, 'offer-form')

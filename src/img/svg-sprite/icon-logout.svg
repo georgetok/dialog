@@ -1,5 +1,26 @@
-<svg viewBox="0 0 24 28" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <path fill-rule="evenodd" clip-rule="evenodd" d="M6.6146 2.3999C6.8627 2.1555 7.2152 2 7.5002 2h12.8c.7477 0 1.3.5523 1.3 1.3v7c0 .5523.4477 1 1 1s1-.4477 1-1v-7c0-1.8523-1.4477-3.3-3.3-3.3h-12.8C6.588 0 5.7446.4414 5.1931.9929l-.0084.0084-4.101 4.301C.4745 5.9175.2002 6.7813.2002 7.5v17.2c0 1.8523 1.4477 3.3 3.3 3.3h19.1c.5523 0 1-.4477 1-1s-.4477-1-1-1h-19.1c-.7477 0-1.3-.5523-1.3-1.3V7.5c0-.2777.123-.6087.3071-.7929l.0084-.0084 4.0989-4.2988z" fill=""/>
-  <path fill-rule="evenodd" clip-rule="evenodd" d="M10.9002 18.3c0-.5523.4477-1 1-1h9.9c.5523 0 1 .4477 1 1s-.4477 1-1 1h-9.9c-.5523 0-1-.4477-1-1z" fill=""/>
-  <path fill-rule="evenodd" clip-rule="evenodd" d="M18.0931 13.5929c.3905-.3905 1.0237-.3905 1.4142 0l4 4a1.0001 1.0001 0 010 1.4142l-4 4c-.3905.3905-1.0237.3905-1.4142 0-.3906-.3905-.3906-1.0237 0-1.4142L21.386 18.3l-3.2929-3.2929c-.3906-.3905-.3906-1.0237 0-1.4142z" fill=""/>
+<svg width="42"
+     height="34"
+     viewBox="0 0 42 34"
+     fill="none"
+     xmlns="http://www.w3.org/2000/svg">
+  <path d="M40.2 17.8L33.2 2.6C32.7 1.6 31.8 1 30.7 1H10.7C9.5 1 8.5 1.6 8 2.6L1 17.8"
+        stroke="black"
+        stroke-width="2"
+        stroke-miterlimit="10"
+        stroke-linejoin="round"/>
+  <path d="M28.3 17.7998L25.5 23.1998C25.4 23.3998 25.3 23.4998 25.1 23.4998H16.1C15.9 23.4998 15.8 23.3998 15.7 23.1998L12.9 17.7998H1V29.3998C1 30.9998 2.3 32.1998 3.8 32.1998H37.3C38.9 32.1998 40.1 30.8998 40.1 29.3998V17.7998H28.3Z"
+        stroke="black"
+        stroke-width="2"
+        stroke-miterlimit="10"
+        stroke-linejoin="round"/>
+  <path d="M10.7002 12.2998H30.4002"
+        stroke="#9888C4"
+        stroke-width="2"
+        stroke-miterlimit="10"
+        stroke-linecap="round"/>
+  <path d="M13 6.2998H28.1"
+        stroke="#9888C4"
+        stroke-width="2"
+        stroke-miterlimit="10"
+        stroke-linecap="round"/>
 </svg>

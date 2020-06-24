@@ -13,8 +13,11 @@
     @include gap-sm;
     flex-wrap: wrap;
 
-    @include mobile-sm {
+    @include tablet{
       @include gap-xs;
+    }
+    @include mobile-sm {
+      @include gap-xxs;
     }
   }
 

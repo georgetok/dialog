@@ -250,13 +250,12 @@
   display: flex;
   flex-direction: column;
   width: 40%;
-  margin-top: 128px;
   margin-right: auto;
   padding-right: 6%;
+  justify-content: center;
 
   @include laptop {
-    width: 30%;
-    margin-top: 60px;
+    width: 45%;
     margin-right: auto;
     padding-right: 0;
   }
@@ -303,10 +302,18 @@
 
   @include laptop {
     justify-content: center;
-    max-width: 670px;
-    width: 62.7%;
+    width: 50%;
     padding-bottom: 64px;
     background-position: bottom 4px left 13%;
+    top: 50%;
+  }
+
+  @include tablet {
+    justify-content: center;
+    max-width: 570px;
+    padding-bottom: 64px;
+    background-position: bottom 4px left 13%;
+    top: 50%;
   }
 
   @include mobile-md {
@@ -326,33 +333,51 @@
 
 
   &::before {
-    left: 0;
-    bottom: auto;
-    top: 50px;
-    width: 300px;
-    height: 200px;
-    transform: translate(-13%, -40%);
-    background-size: 70%;
-    background-image: url("../img/pattern.svg");
-    display: none;
+    left: -3.6%;
+    top: 17%;
+    bottom: 0;
+    width: 60%;
+    padding-bottom: 40.5%;
+    background-size: 62%;
+    height: 0;
+    -webkit-transform: translate(-23%, -40%);
+    transform: translate(-4%, -40%);
+    background-size: 60%;
+    background-image: url(../img/pattern.svg);
 
+    @include laptop {
+      width: 80%;
+      left: -8.6%;
+      top: 12%;
+    }
     @include tablet {
       display: none;
     }
     @include mobile-md {
       display: block;
+      right: 0;
+      bottom: 0;
+      top: auto;
+      left: auto;
+      transform: translateX(calc(55% + 3vw));
+      max-width: 400px;
+    }
+    @include mobile-sm {
+      transform: translateX(calc(55% + 13vw));
+      top: 53%;
+      width: 160%;
     }
   }
 
   &::after {
-    right: 0;
+    right: -11.6%;
     top: auto;
     bottom: 0;
-    width: 65%;
-    padding-bottom: 26.5%;
-    background-size: 100%;
-    background-image: url("../img/pattern.svg");
-    display: none;
+    width: 53%;
+    padding-bottom: 31.5%;
+    background-size: 82%;
+    background-image: url(../img/pattern.svg);
+
 
     @include tablet {
       left: 0;
@@ -363,8 +388,17 @@
     }
     @include mobile-md {
       background-size: 100%;
-      bottom: auto;
+      left: 0;
       top: 0;
+      right: auto;
+      bottom: auto;
+      transform: translateX(calc(-20% - 3vw));
+    }
+    @include mobile-sm {
+      width: 80%;
+      top: 10%;
+      padding-bottom: 55%;
+      transform: translateX(calc(-20% - 13vw));
     }
   }
 
@@ -392,7 +426,7 @@
     width: 100%;
     max-width: 670px;
     margin-left: auto;
-    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
     border-radius: 4px;
 
 

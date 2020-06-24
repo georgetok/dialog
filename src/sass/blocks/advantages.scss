@@ -34,44 +34,49 @@
   flex-wrap: wrap;
 
   .pseudo--1 {
-    width: 300px;
-    height: 300px;
+    width: 400px;
+    height: 400px;
     background: #847BB9;
     border-radius: 50%;
     position: absolute;
-    top: -148px;
-    left: -83px;
+    bottom: 50px;
+    right: 40px;
     opacity: 0;
     transition: 1s ease all;
-    transform: translate(-50%, -50%);
+    transform: translate(70%, 70%);
+    will-change: transform;
+
   }
 
   .pseudo--2 {
-    width: 400px;
-    height: 400px;
+    width: 490px;
+    height: 490px;
     background: #8A82BE;
     border-radius: 50%;
     position: absolute;
-    top: -250px;
-    left: -180px;
+    bottom: 90px;
+    right: 90px;
     z-index: 1;
-    transform: translate(-50%, -50%);
+    transform: translate(70%, 70%);
     opacity: 0;
     transition: 1s ease all;
+    will-change: transform;
+
   }
 
   .pseudo--3 {
-    position: absolute;
-    width: 500px;
-    height: 500px;
-    background: #958EC3;
+    width: 600px;
+    height: 600px;
+    background: #958ec3;
+    bottom: 90px;
+    right: 150px;
     border-radius: 50%;
-    top: -196px;
-    left: -180px;
+    position: absolute;
     z-index: 3;
-    transform: translate(-50%, -50%);
     opacity: 0;
+    transform: translate(70%, 70%);
     transition: 1s ease all;
+    will-change: transform;
   }
 
   li {
@@ -81,8 +86,6 @@
     padding: 30px 20px 40px;
     overflow: hidden;
     position: relative;
-    transition: 1s ease transform;
-    will-change: transform;
 
 
     @include laptop {
@@ -98,29 +101,30 @@
       margin: 10px 0;
     }
 
+
     &:hover {
       background: #AEA8D2;
 
       .pseudo--1 {
-        transform: translate(-10%, -10%);
+        transform: translate(60%, 60%);
         opacity: 1;
         z-index: 3;
       }
 
       .pseudo--2 {
         opacity: 0.8;
-        transform: translate(10%, 10%);
+        transform: translate(60%, 60%);
         z-index: 2;
       }
 
       .pseudo--3 {
         opacity: 0.6;
-        transform: translate(1%, 1%);
+        transform: translate(60%, 60%);
         z-index: 1;
       }
 
       p {
-        color: #fff
+        color: #fff;
       }
 
       h2 {
@@ -131,9 +135,11 @@
         background: #fff;
         z-index: 4;
         position: relative;
+        //transition: 1s ease all;
 
         svg {
           fill: $color-accent;
+          //transition: 1s ease all;
         }
       }
     }
@@ -143,6 +149,7 @@
   h2 {
     position: relative;
     z-index: 10;
+    //transition: 1s ease-in-out color;
     @include typography-h6;
     margin-bottom: 18px;
 
@@ -159,6 +166,11 @@
     @include typography-txt;
     z-index: 10;
     position: relative;
+    //transition: .1s ease-in-out color;
+  }
+
+  svg {
+    //transition: 1s ease-in-out all;
   }
 
 }

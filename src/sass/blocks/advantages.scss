@@ -3,12 +3,12 @@
   padding-bottom: 30px;
 
   @include laptop {
-    padding-top: 65px;
+    padding-top: 35px;
     padding-bottom: 52px;
   }
 
   @include mobile-md {
-    padding-top: 50px;
+    padding-top: 10px;
     padding-bottom: 60px;
   }
 }
@@ -23,10 +23,11 @@
     padding-right: calc(var(--indent) - 15px);
   }
 
-  @include mobile-md {
-    padding-left: var(--indent);
-    padding-right: var(--indent);
+  @include mobile-sm{
+    padding: 0
   }
+
+
 }
 
 .advantages__list {
@@ -34,9 +35,6 @@
   display: flex;
   flex-wrap: wrap;
 
-  @include mobile-md {
-    flex-direction: column;
-  }
 
   .pseudo--1 {
     width: 300px;
@@ -80,15 +78,23 @@
   }
 
   li {
-    max-width: 380px;
     width: calc(100% / 3 - 40px);
     margin: 20px;
     box-shadow: 0 2px 20px rgba(152, 136, 196, 0.16);
-    padding: 20px 20px 40px;
+    padding: 30px 20px 40px;
     overflow: hidden;
     position: relative;
-    transition: 1s ease all;
-    will-change: all;
+    transition: 1s ease transform;
+    will-change: transform;
+
+    @include tablet{
+      width: calc(100% / 2 - 40px);
+    }
+
+    @include mobile-sm{
+      width: 100%;
+      margin: 10px 0;
+    }
 
     &:hover {
       background: #AEA8D2;
@@ -136,7 +142,7 @@
     position: relative;
     z-index: 10;
     @include typography-h6;
-    margin-bottom: 8px;
+    margin-bottom: 18px;
 
     @include laptop {
       margin-bottom: 12px;
@@ -159,8 +165,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 50px;
-  height: 50px;
+  width: 70px;
+  height: 70px;
   margin-bottom: 20px;
   border-radius: 50%;
   background-color: $color-accent;

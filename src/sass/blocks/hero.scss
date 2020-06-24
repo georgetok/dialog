@@ -43,9 +43,9 @@
         background-size: 70%;
         background-image: url("../img/pattern.svg");
 
-        @include tablet {
-          display: none;
-        }
+        //@include tablet {
+        //  display: none;
+        //}
       }
 
       &::after {
@@ -59,9 +59,7 @@
         background-image: url("../img/pattern.svg");
 
         @include tablet {
-          left: 0;
-          right: auto;
-          transform: translate(-50%, -50%);
+          background-size: 70%;
         }
       }
     }
@@ -71,19 +69,18 @@
     .hero__img {
       width: 100%;
       position: relative;
+
       &:after,
-      &:before{
+      &:before {
         content: "";
         display: block;
         position: absolute;
       }
-      @include tablet {
+
+      @include mobile-md {
         position: relative;
         max-width: 684px;
         margin: 0 auto;
-      }
-
-      @include mobile-md {
         width: calc(100% - (var(--indent) * 2));
         margin: 0 auto;
       }
@@ -97,7 +94,7 @@
     }
 
     .hero__wrapper {
-      @include tablet {
+      @include mobile-md {
         flex-direction: column-reverse;
         padding-left: 0;
         padding-right: 0;
@@ -113,27 +110,12 @@
         padding-right: 10px;
       }
 
-      @include tablet {
+      @include mobile-md {
         width: calc(100% - (var(--indent) * 2));
         margin-bottom: 60px;
+        margin-top: 100px;
         margin-left: var(--indent);
         margin-right: var(--indent);
-        padding-right: 35%;
-        &::after {
-          content: "";
-          position: absolute;
-          top: 34px;
-          right: -29px;
-          width: 80px;
-          height: 80px;
-          background-image: url("../img/bg-hero-round-s.svg");
-          background-repeat: no-repeat;
-          background-position: 0 0;
-          background-size: 80px 80px;
-        }
-      }
-
-      @include mobile-md {
         padding-right: 0;
       }
     }
@@ -148,7 +130,7 @@
         padding-bottom: 103px;
       }
 
-      @include tablet {
+      @include mobile-md {
         position: relative;
         width: 100%;
         padding-bottom: 25px;

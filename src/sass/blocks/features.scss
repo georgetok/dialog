@@ -64,26 +64,19 @@
 }
 
 .features__item--direct {
-  grid-template:
-    "img desc" minmax(195px, auto)
-    "img example" auto/
+  grid-template: "img desc" minmax(195px, auto) "img example" auto/
     51.6% 48.4%;
   margin-bottom: 131px;
 
   @include laptop {
-    grid-template:
-      "desc desc" auto
-      "img example" auto/
+    grid-template: "desc desc" auto "img example" auto/
       65.25% 34.75%;
     row-gap: 52px;
     margin-bottom: 102px;
   }
 
   @include tablet {
-    grid-template:
-      "desc" auto
-      "img" auto
-      "example" auto/
+    grid-template: "desc" auto "img" auto "example" auto/
       100%;
     row-gap: 0;
     margin-bottom: 43px;
@@ -91,26 +84,19 @@
 }
 
 .features__item--reverse {
-  grid-template:
-    "desc-1 img-1" minmax(155px, auto)
-    "example-1 img-1" auto/
+  grid-template: "desc-1 img-1" minmax(155px, auto) "example-1 img-1" auto/
     48.4% 51.6%;
   margin-bottom: 93px;
 
   @include laptop {
-    grid-template:
-      "desc-1 desc-1" auto
-      "example-1 img-1" auto/
+    grid-template: "desc-1 desc-1" auto "example-1 img-1" auto/
       34.75% 65.25%;
     row-gap: 52px;
     margin-bottom: 70px;
   }
 
   @include tablet {
-    grid-template:
-      "desc-1" auto
-      "img-1" auto
-      "example-1" auto/
+    grid-template: "desc-1" auto "img-1" auto "example-1" auto/
       auto;
     row-gap: 0;
     margin-bottom: 33px;
@@ -148,18 +134,16 @@
     display: block;
     width: 100%;
     border-radius: 0 0 12px 12px;
-    box-shadow:
-      0 4px 12px rgba(47, 27, 73, 0.12),
-      0 1px 1px rgba(47, 41, 64, 0.08);
+    box-shadow: 0 4px 12px rgba(47, 27, 73, 0.12),
+    0 1px 1px rgba(47, 41, 64, 0.08);
 
     @include tablet {
       max-width: 630px;
       width: calc(100% - 60px);
       margin: 0 auto;
       border-radius: 0 0 6px 6px;
-      box-shadow:
-        0 4px 12px rgba(47, 27, 73, 0.12),
-        0 1px 1px rgba(47, 41, 64, 0.08);
+      box-shadow: 0 4px 12px rgba(47, 27, 73, 0.12),
+      0 1px 1px rgba(47, 41, 64, 0.08);
     }
   }
 }
@@ -249,8 +233,8 @@
       left: 20px;
     }
 
-    svg {
-      fill: $color-contrast;
+    svg path {
+      fill: #fff !important;
     }
   }
 
@@ -301,6 +285,9 @@
 .features__desc--reverse {
   grid-area: desc-1;
   padding-left: 40px;
+  svg {
+    fill: #ffffff;
+  }
 
   @include tablet {
     padding-left: var(--indent);

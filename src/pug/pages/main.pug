@@ -88,7 +88,7 @@ block content
     {
     index: "5",
     active: false,
-    iconPath: "icon-bot",
+    iconPath: "icon-bot-dark",
     iconWidth: 28,
     iconHeight: 27,
     title: t.main.f_title_5,
@@ -210,7 +210,7 @@ block content
                 | !{t.main.sec_li_2_2}
                 img(src=`/img/sber-cloud.svg`, width="108" height="22" alt="Логотип SberCloud")
       a(class="link link--with-icon link--safety link--icon-accent" href="#!")=t.link.learn
-        +svg('arrow-right', 16, 15)
+      +svg('arrow-right', 16, 15)
   section.solutions.box.box--sand
     .solutions__wrapper
       h2.solutions__title=t.main.sol_title
@@ -222,8 +222,8 @@ block content
             .solutions__content-wrap
               h3=t.main.sol_title_1
               p=t.main.sol_sub_1
-              a(class="link link--with-icon link--icon-accent" href="#!")=t.link.learn
-                +svg('arrow-right', 16, 15)
+              //a(class="link link--with-icon link--icon-accent" href="#!")=t.link.learn
+              //  +svg('arrow-right', 16, 15)
         li.solutions__item
           .solutions__img.solutions__img--2.solutions__cell-2
             +picture(`/img/solution-2`, 'jpg', 'Изображение с сотрудником компании', 630)
@@ -231,8 +231,8 @@ block content
             .solutions__content-wrap
               h3=t.main.sol_title_2
               p=t.main.sol_sub_2
-              a(class="link link--with-icon link--icon-accent" href="#!")=t.link.learn
-                +svg('arrow-right', 16, 15)
+              //a(class="link link--with-icon link--icon-accent" href="#!")=t.link.learn
+              //  +svg('arrow-right', 16, 15)
   section.features.box.box--white
     .features__wrapper
       .features__header
@@ -245,7 +245,7 @@ block content
             +picture(`/img/features-1-desktop`, 'png', 'Изображение приложения Dialog', 630)
         .features__desc.features__desc--direct
           span
-            +svg('icon-bot', 20, 19)
+            +svg('icon-bot-light', 20, 19)
           h3=t.main.feat_title_1_block_1
           p=t.main.feat_sub_1_block_1
         .features__example.features__example--direct
@@ -347,38 +347,38 @@ block content
       h2.blog__title=t.blog.cards_title
       ul.blog__list
         li.blog__item
-          a(href=`${lang === "ru" ? "/ru/blog/korporativnyi-miessiendzhier-dlia-lokalnoi-sieti.html" : "/en/blog/bp_automation.html"}`).blog__card
+          a(href=`${lang === "ru" ? "/ru/blog/korporativnyi-miessiendzhier-dlia-lokalnoi-sieti.html" : "/en/blog/corporate-messenger-and-byod.html"}`).blog__card
             .blog__img-box
-              +picture(`/img/pages/blog/blog-1-desktop`, 'jpg', 'Изображение приложения', 380)
+              +picture(path=`${lang === 'ru' ? '' : '/img/pages/blog/blog-en-1-desktop@2x.jpg'}`), 'jpg', 'Изображение приложения', 380)
             .blog__text-box
               h3.blog__card-title=t.blog.card_desc_1
-              .blog__text-info
+              //.blog__text-info
                 p 12 !{t.blog.month}, 2020
                 div
                   +svg('icon-watch', 17, 17)
                   span 1 !{t.blog.min}
         li.blog__item
-          a(href=`${lang === "ru" ? "/ru/blog/korporativnyi-miessiendzhier-vidy-vozmozhnosti-i-sfiery-primienieniia.html" : "/en/blog/bp_automation.html"}`).blog__card
+          a(href=`${lang === "ru" ? "/ru/blog/korporativnyi-miessiendzhier-vidy-vozmozhnosti-i-sfiery-primienieniia.html" : "/en/blog/benefits-of-active-directory-compatible-corporate-messengers.html"}`).blog__card
             .blog__img-box
               +picture(`/img/pages/blog/blog-2-desktop`, 'jpg', 'Изображение приложения', 380)
             .blog__text-box
               h3.blog__card-title=t.blog.card_desc_2
-              .blog__text-info
+              //.blog__text-info
                 p 10 !{t.blog.month}, 2019
-                div
-                  +svg('icon-watch', 17, 17)
-                  span 1 !{t.blog.min}
+                //div
+                  //+svg('icon-watch', 17, 17)
+                  //span 1 !{t.blog.min}
         li.blog__item
-          a(href=`${lang === "ru" ? "/ru/blog/cifrovaya_gigiena.html" : "/en/blog/bp_automation.html"}`).blog__card
+          a(href=`${lang === "ru" ? "/ru/blog/cifrovaya_gigiena.html" : "/en/blog/explaining-the-main-hosting-models-on-premise-server-self-hosted-hosted-cloud.html"}`).blog__card
             .blog__img-box
               +picture(`/img/pages/blog/blog-3-desktop`, 'jpg', 'Изображение приложения', 380)
             .blog__text-box
               h3.blog__card-title=t.blog.card_desc_3
-              .blog__text-info
+              //.blog__text-info
                 p 15 !{t.blog.month}, 2019
                 div
                   +svg('icon-watch', 17, 17)
                   span 1 !{t.blog.min}
-      a(class="link link--with-icon link--icon-accent" href="/blog")=t.button.view
+      a(class="link link--with-icon link--icon-accent" href=`${lang === "ru" ? "/ru/blog" : "/en/blog"}` )=t.button.view
         +svg('arrow-right', 16, 15)
   +form-offer(false, 1, 'offer-form')

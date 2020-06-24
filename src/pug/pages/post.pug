@@ -15,14 +15,14 @@ block content
     .post__wrapper
       .post__nav
         .wrap.wrap--sb.wrap--ac
-          a(class="link link--with-icon-reverse link--accent link--icon-accent" href="../../ru/blog")
+          a(class="link link--with-icon-reverse link--accent link--icon-accent" href=`${lang === "ru" ? '/ru/blog' : '/en/blog'}`)
             +svg('arrow-left', 16, 15)
-            span Назад
+            span=t.blog.back
           .wrap.post__time
             p=post.updated_at.slice(0, 10)
-            .wrap.wrap--ac
-              +svg('icon-watch', 17, 17)
-              span 1 мин
+            //.wrap.wrap--ac
+            //  +svg('icon-watch', 17, 17)
+            //  span 1 мин
       .post__header
         h1.post__title.post__title--h1=post.title
         h6.post__title.post__title--sub=post.custom_excerpt

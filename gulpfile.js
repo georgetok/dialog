@@ -106,6 +106,12 @@ const Paths = {
     ru: `${BUILD_PATH}/ru/blog/`,
     en: `${BUILD_PATH}/en/blog/`,
   },
+  index: {
+    src: `${SOURCE_PATH}pug/pages/index.pug`,
+  },
+  home: {
+    src: `${SOURCE_PATH}pug/pages/main.pug`,
+  },
 };
 
 // methods
@@ -382,7 +388,8 @@ gulp.task('home:ru', function () {
         pretty: true,
         data: {
           "lang": "ru",
-          t: i18nRu
+          t: i18nRu,
+          isHome: true
         }
       })
     )
@@ -402,7 +409,8 @@ gulp.task('home:en', function () {
         pretty: true,
         data: {
           "lang": "en",
-          t: i18nEn
+          t: i18nEn,
+          isHome: true
         }
       })
     )
@@ -540,7 +548,10 @@ gulp.task('server', function () {
   gulp.watch(Paths.scripts.src, gulp.series('js', 'refresh'));
   gulp.watch(Paths.blog.src, gulp.series('blog', 'refresh'));
   gulp.watch(Paths.post.src, gulp.series('posts', 'refresh'));
-  gulp.watch(Paths.post.src, gulp.series('index', 'refresh'));
+  gulp.watch(Paths.index.src, gulp.series('index', 'refresh'));
+  gulp.watch(Paths.home.src, gulp.series('home', 'refresh'));
+  gulp.watch(`${SOURCE_PATH}pug/global/*.pug`, gulp.series('html','refresh'));
+  gulp.watch(`${SOURCE_PATH}pug/global/*.pug`, gulp.series('home','refresh'));
 });
 
 gulp.task('refresh', function (done) {

@@ -132,12 +132,14 @@
   width: calc((100% / 3) - 40px);
   flex-shrink: 0;
   margin: 20px;
-  &.invisible{
+
+  &.invisible {
     display: none;
   }
 
   @include laptop {
     margin: 11px;
+    width: calc((100% / 3) - 22px);
   }
 
   @include mobile-md {

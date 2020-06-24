@@ -290,6 +290,7 @@
 }
 
 .tabs__right {
+  @include pseudo-absolute;
   position: relative;
   padding-bottom: 66px;
   display: flex;
@@ -313,7 +314,6 @@
     width: 100%;
     padding-top: 43px;
     padding-bottom: 23px;
-    background-color: $color-accent;
     min-height: 360px;
     background-repeat: no-repeat;
     background-position: top 30.3% left -70px,
@@ -324,7 +324,6 @@
     142px auto;
   }
 
-  @include pseudo-absolute;
 
   &::before {
     left: 0;
@@ -335,9 +334,13 @@
     transform: translate(-13%, -40%);
     background-size: 70%;
     background-image: url("../img/pattern.svg");
+    border: 1px solid red;
 
     @include tablet {
       display: none;
+    }
+    @include mobile-md {
+      display: block;
     }
   }
 
@@ -347,14 +350,21 @@
     bottom: 0;
     width: 65%;
     padding-bottom: 26.5%;
-    transform: translate(50%, 30%);
-    background-size: 50%;
+    background-size: 100%;
     background-image: url("../img/pattern.svg");
+    border: 1px solid blue;
 
     @include tablet {
       left: 0;
       right: auto;
-      transform: translate(-50%, -50%);
+      background-size: 100%;
+      bottom: auto;
+      top: 0;
+    }
+    @include mobile-md {
+      background-size: 100%;
+      bottom: auto;
+      top: 0;
     }
   }
 
@@ -369,6 +379,9 @@
       border-radius: 4px;
       bottom: -20px;
       right: -20px;
+      @include mobile-md {
+        display: none;
+      }
     }
   }
 

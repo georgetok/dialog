@@ -4,26 +4,26 @@ include ../mixins/svg
 mixin header(pageName, lang)
   -
     const navLinks = [
-      {
-        link: "security",
-        name: t.nav.security,
-      },
-      {
-        link: "integrations",
-        name: t.nav.integrations,
-      },
-      {
-        link: "career",
-        name: t.nav.career,
-      },
-      {
-        link: "blog",
-        name: t.nav.blog,
-      },
-      {
-        link: "help",
-        name: t.nav.help,
-      }
+    {
+    link: "security",
+    name: t.nav.security,
+    },
+    {
+    link: "integrations",
+    name: t.nav.integrations,
+    },
+    {
+    link: "career",
+    name: t.nav.career,
+    },
+    {
+    link: "blog",
+    name: t.nav.blog,
+    },
+    {
+    link: "help",
+    name: t.nav.help,
+    }
     ];
 
   header.header.js-header
@@ -68,7 +68,9 @@ mixin header(pageName, lang)
                 styleType: 'accent',
                 additionalClassName: 'button--small main-nav__action-btn js-open-modal'
               })
-            a(href=`/${lang === "ru" ? "en" : "ru"}/${isPost ? "blog" : pageName}`).main-nav__link.main-nav__link--no-padding
+            a(href=`/${lang === "ru" ? "en" : "ru"}/${isPost ? "blog" : (isHome ? '' : pageName)}
+            `
+            ).main-nav__link.main-nav__link--no-padding
               span.header__lang=`${lang === "ru" ? "en" : "ru"}`
               span=`${lang === "ru" ? "In English" : "На русском"}`
       button(aria-label='Открыть меню' type="button").header__burger-button

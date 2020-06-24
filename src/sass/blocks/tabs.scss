@@ -334,7 +334,7 @@
     transform: translate(-13%, -40%);
     background-size: 70%;
     background-image: url("../img/pattern.svg");
-    border: 1px solid red;
+    display: none;
 
     @include tablet {
       display: none;
@@ -352,7 +352,7 @@
     padding-bottom: 26.5%;
     background-size: 100%;
     background-image: url("../img/pattern.svg");
-    border: 1px solid blue;
+    display: none;
 
     @include tablet {
       left: 0;

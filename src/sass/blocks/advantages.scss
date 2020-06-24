@@ -8,7 +8,7 @@
   }
 
   @include mobile-md {
-    padding-top: 10px;
+    padding-top: 50px;
     padding-bottom: 60px;
   }
 }
@@ -23,18 +23,15 @@
     padding-right: calc(var(--indent) - 15px);
   }
 
-  @include mobile-sm{
+  @include mobile-sm {
     padding: 0
   }
-
-
 }
 
 .advantages__list {
   @include no-list;
   display: flex;
   flex-wrap: wrap;
-
 
   .pseudo--1 {
     width: 300px;
@@ -87,11 +84,16 @@
     transition: 1s ease transform;
     will-change: transform;
 
-    @include tablet{
-      width: calc(100% / 2 - 40px);
+
+    @include laptop {
+      width: calc(100% / 3 - 20px);
+      margin: 10px;
+    }
+    @include tablet {
+      width: calc(100% / 2 - 20px);
     }
 
-    @include mobile-sm{
+    @include mobile-sm {
       width: 100%;
       margin: 10px 0;
     }

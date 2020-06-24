@@ -1,0 +1,753 @@
+<!DOCTYPE html>
+<html class="js-route-main" lang="ru">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="format-detection" content="telephone=no">
+  <title>Dialog</title>
+  <link rel="preload" href="fonts/Euclid-CircularA-Medium.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/Euclid-CircularA-Regular.woff2" as="font" crossorigin="anonymous">
+  <link rel="stylesheet" href="/css/style.min.css">
+  <body>
+    <div class="page">
+      <header class="header js-header">
+        <div class="header__wrapper"><a class="header__logo" href="/"><img src="/img/library/logo-dialog.svg" alt="Логотип мессенджера Dialog"/></a>
+          <div class="header__content-box">
+            <div class="header__top-panel"><a class="header__nav-logo" href="/"><img src="/img/library/logo-dialog.svg" alt="Логотип мессенджера Dialog"/></a>
+              <button class="header__close-button" aria-label="Закрыть меню" type="button"></button>
+            </div>
+            <nav class="header__nav-container main-nav">
+              <ul class="main-nav__top-links">
+                <li><a class="main-nav__link" href="/ru/security">Безопасность</a></li>
+                <li><a class="main-nav__link" href="/ru/integrations">Интеграции</a></li>
+                <li><a class="main-nav__link" href="/ru/career">Карьера</a></li>
+                <li><a class="main-nav__link" href="/ru/blog">Блог</a></li>
+                <li><a class="main-nav__link" href="/ru/help">Помощь</a></li>
+              </ul>
+              <div class="main-nav__user-actions">
+                <button class="button button--accent button--small main-nav__action-btn js-open-modal" type="button"><span>Получить предложение</span>
+                </button><a class="main-nav__link main-nav__link--no-padding" href="/en/main"><span class="header__lang">en</span><span>In English</span></a>
+              </div>
+            </nav>
+          </div>
+          <button class="header__burger-button" aria-label="Открыть меню" type="button"></button>
+        </div>
+      </header>
+      <main class="page__content">
+        <section class="hero hero--main hero--reverse hero--square-both">
+          <div class="hero__wrapper">
+            <div class="hero__left">
+              <h1 class="hero__title">Dialog</h1>
+              <p class="hero__text">Корпоративный мессенджер для совместной работы и безопасного общения</p>
+              <button class="button button--accent button--hero js-open-modal-hero" type="button"><span>Оставить заявку</span>
+                <svg width="16" height="15" aria-hidden="true">
+                  <use xlink:href="/img/sprite.svg#arrow-right"></use>
+                </svg>
+              </button>
+            </div>
+            <div class="hero__right">
+              <div class="hero__img">
+                <picture>
+                  <source type="image/webp" srcset="/img/hero@1x.webp 1x, /img/hero@2x.webp 2x"/><img src="/img/hero@1x.png" srcset="/img/hero@2x.png 2x" alt="Фото ноутбука и мобильного телефона" width="682" loading="lazy"/>
+                </picture>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="advantages box box--white">
+          <div class="advantages__wrapper">
+            <h2 class="visually-hidden">Преимущества приложения Dialog</h2>
+            <ul class="advantages__list">
+              <li>
+                <div class="pseudo--1"></div>
+                <div class="pseudo--2"></div>
+                <div class="pseudo--3"></div>
+                <div class="advantages__icon">
+                  <svg width="35" height="31" aria-hidden="true">
+                    <use xlink:href="/img/sprite.svg#icon-hands"></use>
+                  </svg>
+                </div>
+                <h2>Эффективная командная работа</h2>
+                <p>Dialog позволяет настроить интеграции с сервисами компании и оптимизировать бизнес-процессы.</p>
+              </li>
+              <li>
+                <div class="pseudo--1"></div>
+                <div class="pseudo--2"></div>
+                <div class="pseudo--3"></div>
+                <div class="advantages__icon">
+                  <svg width="30" height="30" aria-hidden="true">
+                    <use xlink:href="/img/sprite.svg#icon-lock"></use>
+                  </svg>
+                </div>
+                <h2>Безопасное общение</h2>
+                <p>Соответствие отраслевым стандартам безопасности, контроль и защита на разных уровнях.</p>
+              </li>
+              <li>
+                <div class="pseudo--1"></div>
+                <div class="pseudo--2"></div>
+                <div class="pseudo--3"></div>
+                <div class="advantages__icon">
+                  <svg width="28" height="26" aria-hidden="true">
+                    <use xlink:href="/img/sprite.svg#icon-purse"></use>
+                  </svg>
+                </div>
+                <h2>Сокращение затрат на коммуникации</h2>
+                <p>Совмещение разрозненных инструментов в одной платформе оптимизирует расходы на ПО, оборудование, обслуживание и поддержку.</p>
+              </li>
+            </ul>
+          </div>
+        </section>
+        <section class="functions box">
+          <div class="functions__wrapper">
+            <h2 class="functions__title">Функции Dialog</h2>
+            <div class="functions__tabs tabs">
+              <div class="tabs__controls">
+                <button class="tabs__control" type="button" data-tab-index="0"><span>
+                    <svg width="27" height="24" aria-hidden="true">
+                      <use xlink:href="/img/sprite.svg#icon-chat"></use>
+                    </svg></span><b>Групповые чаты и каналы</b></button>
+                <button class="tabs__control" type="button" data-tab-index="1"><span>
+                    <svg width="22" height="26" aria-hidden="true">
+                      <use xlink:href="/img/sprite.svg#icon-logout"></use>
+                    </svg></span><b>Обмен файлами</b></button>
+                <button class="tabs__control" type="button" data-tab-index="2"><span>
+                    <svg width="25" height="25" aria-hidden="true">
+                      <use xlink:href="/img/sprite.svg#icon-phone"></use>
+                    </svg></span><b>Аудио- / видеозвонки</b></button>
+                <button class="tabs__control" type="button" data-tab-index="3"><span>
+                    <svg width="22" height="22" aria-hidden="true">
+                      <use xlink:href="/img/sprite.svg#icon-search"></use>
+                    </svg></span><b>Поиск</b></button>
+                <button class="tabs__control" type="button" data-tab-index="4"><span>
+                    <svg width="28" height="27" aria-hidden="true">
+                      <use xlink:href="/img/sprite.svg#icon-bot"></use>
+                    </svg></span><b>Чат-боты</b></button>
+              </div>
+              <div class="tabs__wrapper">
+                <button class="tabs__control tabs__control--mobile js-accordion-trigger" type="button" data-tab-index="1"><span>
+                    <svg width="27" height="24" aria-hidden="true">
+                      <use xlink:href="/img/sprite.svg#icon-chat"></use>
+                    </svg></span><b>Групповые чаты и каналы</b></button>
+                <div class="tabs__content js-accordion-details" data-tab-index="1">
+                  <div class="tabs__left">
+                    <h3>Групповые чаты и каналы</h3>
+                    <p>Группы — это чаты для общения, создайте их для команд и проектов, чтобы сфокусировать усилия, сделать работу более прозрачной, а информацию доступной для всех</p>
+                  </div>
+                  <div class="tabs__right">
+                    <div class="wrap">
+                      <button class="button-play button-play--tabs" type="button">
+                        <svg width="20" height="22" aria-hidden="true">
+                          <use xlink:href="/img/sprite.svg#icon-play"></use>
+                        </svg>
+                      </button>
+                      <picture>
+                        <source type="image/webp" media="(min-width: 768px)" srcset="/img/function-desktop@1x.webp 1x, /img/function-desktop@2x.webp 2x">
+                        <source type="image/webp" srcset="/img/function-mobile@1x.webp 1x, /img/function-mobile@2x.webp 2x">
+                        <source media="(min-width: 768px)" srcset="/img/function-desktop@1x.png 1x, /img/function-desktop@2x.png 2x"><img src="/img/function-mobile@1x.png" srcset="/img/function-mobile@2x.png 2x" width="141" alt="Фото приложения Dialog">
+                      </picture>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="tabs__wrapper">
+                <button class="tabs__control tabs__control--mobile js-accordion-trigger" type="button" data-tab-index="2"><span>
+                    <svg width="22" height="26" aria-hidden="true">
+                      <use xlink:href="/img/sprite.svg#icon-logout"></use>
+                    </svg></span><b>Обмен файлами</b></button>
+                <div class="tabs__content js-accordion-details" data-tab-index="2">
+                  <div class="tabs__left">
+                    <h3>Обмен файлами</h3>
+                    <p>Тяжелая презентация не отправляется по почте? Делитесь файлами, не задумываясь о лимитах по размеру или формату.</p>
+                  </div>
+                  <div class="tabs__right">
+                    <div class="wrap">
+                      <button class="button-play button-play--tabs" type="button">
+                        <svg width="20" height="22" aria-hidden="true">
+                          <use xlink:href="/img/sprite.svg#icon-play"></use>
+                        </svg>
+                      </button>
+                      <picture>
+                        <source type="image/webp" media="(min-width: 768px)" srcset="/img/function-desktop@1x.webp 1x, /img/function-desktop@2x.webp 2x">
+                        <source type="image/webp" srcset="/img/function-mobile@1x.webp 1x, /img/function-mobile@2x.webp 2x">
+                        <source media="(min-width: 768px)" srcset="/img/function-desktop@1x.png 1x, /img/function-desktop@2x.png 2x"><img src="/img/function-mobile@1x.png" srcset="/img/function-mobile@2x.png 2x" width="141" alt="Фото приложения Dialog">
+                      </picture>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="tabs__wrapper">
+                <button class="tabs__control tabs__control--mobile js-accordion-trigger" type="button" data-tab-index="3"><span>
+                    <svg width="25" height="25" aria-hidden="true">
+                      <use xlink:href="/img/sprite.svg#icon-phone"></use>
+                    </svg></span><b>Аудио- / видеозвонки</b></button>
+                <div class="tabs__content js-accordion-details" data-tab-index="3">
+                  <div class="tabs__left">
+                    <h3>Аудио- / видеозвонки</h3>
+                    <p>Созванивайтесь с коллегам в мессенджере или подключайтесь к конференциям в АКС/ВКС-системе.</p>
+                  </div>
+                  <div class="tabs__right">
+                    <div class="wrap">
+                      <button class="button-play button-play--tabs" type="button">
+                        <svg width="20" height="22" aria-hidden="true">
+                          <use xlink:href="/img/sprite.svg#icon-play"></use>
+                        </svg>
+                      </button>
+                      <picture>
+                        <source type="image/webp" media="(min-width: 768px)" srcset="/img/function-desktop@1x.webp 1x, /img/function-desktop@2x.webp 2x">
+                        <source type="image/webp" srcset="/img/function-mobile@1x.webp 1x, /img/function-mobile@2x.webp 2x">
+                        <source media="(min-width: 768px)" srcset="/img/function-desktop@1x.png 1x, /img/function-desktop@2x.png 2x"><img src="/img/function-mobile@1x.png" srcset="/img/function-mobile@2x.png 2x" width="141" alt="Фото приложения Dialog">
+                      </picture>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="tabs__wrapper">
+                <button class="tabs__control tabs__control--mobile js-accordion-trigger" type="button" data-tab-index="4"><span>
+                    <svg width="22" height="22" aria-hidden="true">
+                      <use xlink:href="/img/sprite.svg#icon-search"></use>
+                    </svg></span><b>Поиск</b></button>
+                <div class="tabs__content js-accordion-details" data-tab-index="4">
+                  <div class="tabs__left">
+                    <h3>Поиск</h3>
+                    <p>Удобный поиск по чату поможет найти презентации, изображения, документы, а интеграция с адресной книгой — нужного сотрудника по имени, должности или отделу.</p>
+                  </div>
+                  <div class="tabs__right">
+                    <div class="wrap">
+                      <button class="button-play button-play--tabs" type="button">
+                        <svg width="20" height="22" aria-hidden="true">
+                          <use xlink:href="/img/sprite.svg#icon-play"></use>
+                        </svg>
+                      </button>
+                      <picture>
+                        <source type="image/webp" media="(min-width: 768px)" srcset="/img/function-desktop@1x.webp 1x, /img/function-desktop@2x.webp 2x">
+                        <source type="image/webp" srcset="/img/function-mobile@1x.webp 1x, /img/function-mobile@2x.webp 2x">
+                        <source media="(min-width: 768px)" srcset="/img/function-desktop@1x.png 1x, /img/function-desktop@2x.png 2x"><img src="/img/function-mobile@1x.png" srcset="/img/function-mobile@2x.png 2x" width="141" alt="Фото приложения Dialog">
+                      </picture>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="tabs__wrapper">
+                <button class="tabs__control tabs__control--mobile js-accordion-trigger" type="button" data-tab-index="5"><span>
+                    <svg width="28" height="27" aria-hidden="true">
+                      <use xlink:href="/img/sprite.svg#icon-bot"></use>
+                    </svg></span><b>Чат-боты</b></button>
+                <div class="tabs__content js-accordion-details" data-tab-index="5">
+                  <div class="tabs__left">
+                    <h3>Чат-боты</h3>
+                    <p>Создавайте ботов и чат-ботов для автоматизации бизнес-процессов с помощью Bot SDK.</p>
+                  </div>
+                  <div class="tabs__right">
+                    <div class="wrap">
+                      <button class="button-play button-play--tabs" type="button">
+                        <svg width="20" height="22" aria-hidden="true">
+                          <use xlink:href="/img/sprite.svg#icon-play"></use>
+                        </svg>
+                      </button>
+                      <picture>
+                        <source type="image/webp" media="(min-width: 768px)" srcset="/img/function-desktop@1x.webp 1x, /img/function-desktop@2x.webp 2x">
+                        <source type="image/webp" srcset="/img/function-mobile@1x.webp 1x, /img/function-mobile@2x.webp 2x">
+                        <source media="(min-width: 768px)" srcset="/img/function-desktop@1x.png 1x, /img/function-desktop@2x.png 2x"><img src="/img/function-mobile@1x.png" srcset="/img/function-mobile@2x.png 2x" width="141" alt="Фото приложения Dialog">
+                      </picture>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="safety box box--white">
+          <div class="safety__wrapper">
+            <h2 class="safety__title">Защищенная коммуникация</h2>
+            <ul class="safety__list">
+              <li class="safety__item safety__item--safe">
+                <h3>Высокие стандарты безопасности</h3>
+                <p>Интеграция с инфраструктурой информационной безопасности</p>
+                <ul class="safety__listbox">
+                  <li>
+                    <p>Интеграция с Active Directory AD / LDAP</p>
+                  </li>
+                  <li>
+                    <p>DLP &amp;mdash; предотвращение утечек</p>
+                  </li>
+                  <li>
+                    <p>Интеграция с Антивирусным ПО</p>
+                  </li>
+                  <li>
+                    <p>SIEM &amp;mdash; идентификация угроз</p>
+                  </li>
+                  <li>
+                    <p>Шифрование передачи данных по протоколам TLS, DTLS</p>
+                  </li>
+                  <li>
+                    <p>Независимый аудит безопасности ПО</p>
+                  </li>
+                </ul>
+              </li>
+              <li class="safety__item safety__item--cloud">
+                <h3>Данные под вашим контролем</h3>
+                <p>Вы можете выбрать предпочтительные варианты размещения Dialog</p>
+                <ul class="safety__listbox">
+                  <li>
+                    <p><b>On-premise</b>Размещение на серверах вашей компании</p>
+                  </li>
+                  <li>
+                    <p><b>Private cloud</b>Размещение на инфраструктуре стороннего провайдера в частном облаке<img src="/img/sber-cloud.svg" width="108" height="22" alt="Логотип SberCloud"></p>
+                  </li>
+                </ul>
+              </li>
+            </ul><a class="link link--with-icon link--safety link--icon-accent" href="#!">Узнать подробнее
+              <svg width="16" height="15" aria-hidden="true">
+                <use xlink:href="/img/sprite.svg#arrow-right"></use>
+              </svg></a>
+          </div>
+        </section>
+        <section class="solutions box box--sand">
+          <div class="solutions__wrapper">
+            <h2 class="solutions__title">Решения</h2>
+            <ul class="solutions__list">
+              <li class="solutions__item">
+                <div class="solutions__img solutions__img--1 solutions__cell-1">
+                  <picture>
+                    <source type="image/webp" srcset="/img/solution-1@1x.webp 1x, /img/solution-1@2x.webp 2x"/><img src="/img/solution-1@1x.jpg" srcset="/img/solution-1@2x.jpg 2x" alt="Изображение с сотрудником компании" width="630" loading="lazy"/>
+                  </picture>
+                </div>
+                <div class="solutions__content solutions__content--1 solutions__cell-2">
+                  <div class="solutions__content-wrap">
+                    <h3>Бизнесу</h3>
+                    <p>Ведущие российские компании повысили эффективность совместной работы, объединив тысячи сотрудников и корпоративные системы в Dialog.</p><a class="link link--with-icon link--icon-accent" href="#!">Узнать подробнее
+                      <svg width="16" height="15" aria-hidden="true">
+                        <use xlink:href="/img/sprite.svg#arrow-right"></use>
+                      </svg></a>
+                  </div>
+                </div>
+              </li>
+              <li class="solutions__item">
+                <div class="solutions__img solutions__img--2 solutions__cell-2">
+                  <picture>
+                    <source type="image/webp" srcset="/img/solution-2@1x.webp 1x, /img/solution-2@2x.webp 2x"/><img src="/img/solution-2@1x.jpg" srcset="/img/solution-2@2x.jpg 2x" alt="Изображение с сотрудником компании" width="630" loading="lazy"/>
+                  </picture>
+                </div>
+                <div class="solutions__content solutions__content--2 solutions__cell-1">
+                  <div class="solutions__content-wrap">
+                    <h3>Государственным организациям</h3>
+                    <p>Надежная и безопасная коммуникация в государственных компаниях, соответствие требованиям по импортозамещению и государственной программе «Цифровая экономика».</p><a class="link link--with-icon link--icon-accent" href="#!">Узнать подробнее
+                      <svg width="16" height="15" aria-hidden="true">
+                        <use xlink:href="/img/sprite.svg#arrow-right"></use>
+                      </svg></a>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </section>
+        <section class="features box box--white">
+          <div class="features__wrapper">
+            <div class="features__header">
+              <h2>Dialog помогает командам стать эффективнее</h2>
+              <p>Переключение между разными приложениями нарушает концентрацию сотрудников. Используя Bot SDK и Dialog API, вы можете создавать интеграции со сторонними приложениями и автоматизировать рутинные процессы.</p>
+            </div>
+            <div class="features__item features__item--direct">
+              <div class="features__img-box features__img-box--direct">
+                <button class="button-play button-play--features" type="button">
+                  <svg width="20" height="22" aria-hidden="true">
+                    <use xlink:href="/img/sprite.svg#icon-play"></use>
+                  </svg>
+                </button>
+                <div class="features__img features__img--direct">
+                  <picture>
+                    <source type="image/webp" srcset="/img/features-1-desktop@1x.webp 1x, /img/features-1-desktop@2x.webp 2x"/><img src="/img/features-1-desktop@1x.png" srcset="/img/features-1-desktop@2x.png 2x" alt="Изображение приложения Dialog" width="630" loading="lazy"/>
+                  </picture>
+                </div>
+              </div>
+              <div class="features__desc features__desc--direct"><span>
+                  <svg width="20" height="19" aria-hidden="true">
+                    <use xlink:href="/img/sprite.svg#icon-bot"></use>
+                  </svg></span>
+                <h3>Bot SDK</h3>
+                <p>Bot SDK позволяет создавать ботов и чат-ботов для Dialog. Боты оптимизируют повторяющиеся рутинные операции и освобождают время для более сложных задач. SDK доступен для JS, Java и Python.</p>
+              </div>
+              <div class="features__example features__example--direct"><span>Реализовано с помощью Bot SDK</span>
+                <h3>Помощник HR bot</h3>
+                <p>Упрощает работу с документами: опрашивает сотрудника по ключевым вопросам и формирует заявление на отпуск.</p>
+              </div>
+            </div>
+            <div class="features__item features__item--reverse">
+              <div class="features__img-box features__img-box--reverse">
+                <button class="button-play button-play--features" type="button">
+                  <svg width="20" height="22" aria-hidden="true">
+                    <use xlink:href="/img/sprite.svg#icon-play"></use>
+                  </svg>
+                </button>
+                <div class="features__img features__img--reverse">
+                  <picture>
+                    <source type="image/webp" srcset="/img/features-2-desktop@1x.webp 1x, /img/features-2-desktop@2x.webp 2x"/><img src="/img/features-2-desktop@1x.png" srcset="/img/features-2-desktop@2x.png 2x" alt="Изображение приложения Dialog" width="630" loading="lazy"/>
+                  </picture>
+                </div>
+              </div>
+              <div class="features__desc features__desc--reverse"><span>
+                  <svg width="22" height="22" aria-hidden="true">
+                    <use xlink:href="/img/sprite.svg#icon-api"></use>
+                  </svg></span>
+                <h3>Dialog API</h3>
+                <p>API позволяет другим приложениям взаимодействовать и обмениваться данными с Dialog.</p>
+              </div>
+              <div class="features__example features__example--reverse"><span>Реализовано с помощью Dialog API</span>
+                <h3>Совместная работа над документами МойОфис</h3>
+                <p>Возможность автоматически создавать группы для обсуждения, уведомлять о предоставлении доступа и отправлять ссылки на документы в Dialog, не выходя из офисных приложений МойОфис.</p>
+              </div>
+            </div>
+            <div class="features__footer">
+              <h3>Расширяйте возможности Dialog</h3>
+              <p>С помощью наших партнеров-интеграторов или внутренних разработчиков вашей компании</p>
+              <div class="features__button-box"><a class="button button--dark button--features-2" href="#"><span>Разработчикам</span>
+                  <svg width="16" height="15" aria-hidden="true">
+                    <use xlink:href="/img/sprite.svg#arrow-right"></use>
+                  </svg></a>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="install box box--lilac">
+          <div class="install__wrapper">
+            <h2 class="install__title">Установка Dialog</h2>
+            <ul class="install__icon-list">
+              <li>
+                <svg width="60" height="60" aria-hidden="true">
+                  <use xlink:href="/img/sprite.svg#icon-chrome"></use>
+                </svg><span>Web</span>
+              </li>
+              <li>
+                <svg width="60" height="60" aria-hidden="true">
+                  <use xlink:href="/img/sprite.svg#icon-ios"></use>
+                </svg><span>iOS</span>
+              </li>
+              <li>
+                <svg width="60" height="60" aria-hidden="true">
+                  <use xlink:href="/img/sprite.svg#icon-android"></use>
+                </svg><span>Android</span>
+              </li>
+              <li>
+                <svg width="60" height="60" aria-hidden="true">
+                  <use xlink:href="/img/sprite.svg#icon-windows"></use>
+                </svg><span>Windows</span>
+              </li>
+              <li>
+                <svg width="60" height="60" aria-hidden="true">
+                  <use xlink:href="/img/sprite.svg#icon-macos"></use>
+                </svg><span>macOS</span>
+              </li>
+              <li>
+                <svg width="60" height="60" aria-hidden="true">
+                  <use xlink:href="/img/sprite.svg#icon-linux"></use>
+                </svg><span>Linux</span>
+              </li>
+              <li>
+                <svg width="60" height="60" aria-hidden="true">
+                  <use xlink:href="/img/sprite.svg#icon-sailfish"></use>
+                </svg><span>Sailfish OS</span>
+              </li>
+            </ul>
+            <div class="install__content">
+              <div class="install__col install__col--list">
+                <h3>Размещение</h3>
+                <ul>
+                  <li>
+                    <p><b>On-premise</b> Размещение на серверах вашей компании</p>
+                  </li>
+                  <li>
+                    <p><b>Private cloud</b> Размещение в частном облаке</p>
+                  </li>
+                </ul>
+              </div>
+              <div class="install__col install__col--text">
+                <h3>White Label версия</h3>
+                <p>Возможность изменить оформление элементов интерфейса Dialog в соответствие с фирменным стилем бренда заказчика.</p>
+              </div>
+              <div class="install__col install__col--text">
+                <h3>Интеграция с&nbsp;Active Directory</h3>
+                <p>Сотрудники вашей компании могут войти в Dialog под своими корпоративными учетными записями.</p>
+              </div>
+            </div><a class="button button--accent button--install" href="#!"><span>Узнать стоимость лицензии</span>
+              <svg width="16" height="15" aria-hidden="true">
+                <use xlink:href="/img/sprite.svg#arrow-right"></use>
+              </svg></a>
+          </div>
+        </section>
+        <section class="quote box box--white">
+          <div class="quote__wrapper">
+            <h2>Dialog в большом бизнесе</h2>
+            <div class="quote__desc">
+              <div class="quote__desc-icon">
+                <svg width="56" height="56" aria-hidden="true">
+                  <use xlink:href="/img/sprite.svg#icon-chat-sber"></use>
+                </svg>
+              </div>
+              <p>Сбербанк запустил корпоративный мессенджер СберЧат на базе Dialog для более чем 300 000 сотрудников.</p>
+            </div>
+            <div class="quote__content">
+              <div class="quote__content-text">
+                <p>p Оперативное взаимодействие и обмен данными важны для компаний любого размера и профиля деятельности. При этом банку и компаниям экосистемы было необходимо собственное масштабируемое решение, обеспечивающее эффективную и защищенную коммуникацию большому количеству сотрудников. Мы реализовали решение, которое позволит нам не только оптимизировать процесс коммуникации, но и повысить эффективность совместной работы за счет создания единого цифрового рабочего пространства.</p>
+              </div>
+              <div class="quote__content-avatar">
+                <div class="quote__avatar-img">
+                  <picture>
+                    <source type="image/webp" srcset="/img/img-avatar-desktop@1x.webp 1x, /img/img-avatar-desktop@2x.webp 2x"/><img src="/img/img-avatar-desktop@1x.jpg" srcset="/img/img-avatar-desktop@2x.jpg 2x" alt="Фотография Льва Хасиса" width="150" loading="lazy"/>
+                  </picture>
+                </div>
+                <div class="quote__avatar-wrapper">
+                  <div class="quote__avatar-name">
+                    <p>Лев Хасис</p>
+                  </div>
+                  <div class="quote__avatar-post">
+                    <p>Первый заместитель председателя правления Сбербанка</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="blog box box--gray">
+          <div class="blog__wrapper">
+            <h2 class="blog__title">Блог компании</h2>
+            <ul class="blog__list">
+              <li class="blog__item"><a class="blog__card" href="/ru/blog/korporativnyi-miessiendzhier-dlia-lokalnoi-sieti.html">
+                  <div class="blog__img-box">
+                    <picture>
+                      <source type="image/webp" srcset="/img/pages/blog/blog-1-desktop@1x.webp 1x, /img/pages/blog/blog-1-desktop@2x.webp 2x"/><img src="/img/pages/blog/blog-1-desktop@1x.jpg" srcset="/img/pages/blog/blog-1-desktop@2x.jpg 2x" alt="Изображение приложения" width="380" loading="lazy"/>
+                    </picture>
+                  </div>
+                  <div class="blog__text-box">
+                    <h3 class="blog__card-title">Корпоративный мессенджер для локальной сети</h3>
+                    <div class="blog__text-info">
+                      <p>12 Февраль, 2020</p>
+                      <div>
+                        <svg width="17" height="17" aria-hidden="true">
+                          <use xlink:href="/img/sprite.svg#icon-watch"></use>
+                        </svg><span>1 мин</span>
+                      </div>
+                    </div>
+                  </div></a></li>
+              <li class="blog__item"><a class="blog__card" href="/ru/blog/korporativnyi-miessiendzhier-vidy-vozmozhnosti-i-sfiery-primienieniia.html">
+                  <div class="blog__img-box">
+                    <picture>
+                      <source type="image/webp" srcset="/img/pages/blog/blog-2-desktop@1x.webp 1x, /img/pages/blog/blog-2-desktop@2x.webp 2x"/><img src="/img/pages/blog/blog-2-desktop@1x.jpg" srcset="/img/pages/blog/blog-2-desktop@2x.jpg 2x" alt="Изображение приложения" width="380" loading="lazy"/>
+                    </picture>
+                  </div>
+                  <div class="blog__text-box">
+                    <h3 class="blog__card-title">Корпоративный мессенджер - виды, возможности и сферы применения</h3>
+                    <div class="blog__text-info">
+                      <p>10 Февраль, 2019</p>
+                      <div>
+                        <svg width="17" height="17" aria-hidden="true">
+                          <use xlink:href="/img/sprite.svg#icon-watch"></use>
+                        </svg><span>1 мин</span>
+                      </div>
+                    </div>
+                  </div></a></li>
+              <li class="blog__item"><a class="blog__card" href="/ru/blog/cifrovaya_gigiena.html">
+                  <div class="blog__img-box">
+                    <picture>
+                      <source type="image/webp" srcset="/img/pages/blog/blog-3-desktop@1x.webp 1x, /img/pages/blog/blog-3-desktop@2x.webp 2x"/><img src="/img/pages/blog/blog-3-desktop@1x.jpg" srcset="/img/pages/blog/blog-3-desktop@2x.jpg 2x" alt="Изображение приложения" width="380" loading="lazy"/>
+                    </picture>
+                  </div>
+                  <div class="blog__text-box">
+                    <h3 class="blog__card-title">Цифровая гигиена: как уберечь переписку в мессенджерах от конкурентов</h3>
+                    <div class="blog__text-info">
+                      <p>15 Февраль, 2019</p>
+                      <div>
+                        <svg width="17" height="17" aria-hidden="true">
+                          <use xlink:href="/img/sprite.svg#icon-watch"></use>
+                        </svg><span>1 мин</span>
+                      </div>
+                    </div>
+                  </div></a></li>
+            </ul><a class="link link--with-icon link--icon-accent" href="/blog">Смотреть все
+              <svg width="16" height="15" aria-hidden="true">
+                <use xlink:href="/img/sprite.svg#arrow-right"></use>
+              </svg></a>
+          </div>
+        </section>
+        <div class="form form--main fomr--career box box--white">
+          <div class="form__wrapper">
+            <h2 class="form__title">Получить предложение</h2>
+            <div class="form__form">
+              <form class="gform" action="https://script.google.com/macros/s/AKfycbxUEtJZB_316gjG0B8B8kt6B1HNOsiRq-q3Y5rHuY_0RC789AMV/exec" method="POST" autocomplete="on" id="offer-form" onsubmit="this.clear();this.classList.add('submited')">
+                <input type="text" id="location" name="location" value="form sent from main page" hidden="hidden"/>
+                <div class="form__input-text-wrap">
+                  <div class="form__form-field form__form-field--text form__form-field--m form__form-field--1">
+                    <input type="text" id="name-1" name="name" pattern="([A-Za-zА-ЯЁа-яё-]{2,}\s?)+" placeholder="Ваше имя" title="Имя может состоять только из букв, пробелов и дефиса"/>
+                    <label for="name-1">Ваше имя</label>
+                  </div>
+                  <div class="form__form-field form__form-field--text form__form-field--m form__form-field--3">
+                    <input type="email" id="email-1" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" placeholder="Эл.почта" title="Email адрес должен быть типа: user@mail.com"/>
+                    <label for="email-1">Эл.почта</label>
+                  </div>
+                  <div class="form__form-field form__form-field--text form__form-field--s form__form-field--2">
+                    <input type="tel" id="phone-1" name="phone" placeholder="Телефон" title="Номер телефона должен начинаться с символов +7 и содержать 11 цифр" pattern="7\d{10}" data-mask="+{7}(000)000-00-00"/>
+                    <label for="phone-1">Телефон</label>
+                  </div>
+                  <div class="form__form-field form__form-field--text form__form-field--s form__form-field--4">
+                    <input type="text" id="company-1" name="company" placeholder="Название компании"/>
+                    <label for="company-1">Название компании</label>
+                  </div>
+                  <div class="form__form-field form__form-field--text form__form-field--5">
+                    <select id="quantity-1" name="quantity-users">
+                      <option value="1-100">1-100</option>
+                      <option value="101-500">101-500</option>
+                      <option value="501 и больше">501 и больше</option>
+                    </select>
+                    <label for="quantity-1">Количество пользователей</label>
+                  </div>
+                </div>
+                <div class="form__checkbox-wrap">
+                  <div class="form__form-field form__form-field--checkbox">
+                    <input class="visually-hidden" type="checkbox" id="accept-1" name="accepted" checked="checked"/>
+                    <label for="accept-1">Я согласен на обработку данных</label>
+                  </div>
+                  <div class="form__form-field form__form-field--checkbox">
+                    <input class="visually-hidden" type="checkbox" id="subscribe-1" name="subscribe"/>
+                    <label for="subscribe-1">Подписаться на новостную рассылку</label>
+                  </div>
+                </div>
+                <button class="button button--accent button--form" type="submit"><span>Отправить заявку</span>
+                </button>
+                <div class="thankyou_message" style="display:none">
+                  <!-- You can customize the thankyou message by editing the code below-->
+                  <h2><em>Thanks</em> for contacting us! We will get back to you soon!</h2>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </main>
+      <div class="page__footer">
+        <footer class="footer">
+          <div class="footer__wrapper">
+            <div class="footer__logo"><a class="footer__link" href="/"><img src="/img/library/logo-dialog-white.svg" alt="Логотип мессенджера Dialog" width="139"/></a></div>
+            <ul class="footer__contacts">
+              <li><a class="footer__link" href="tel:+78007758202">+7 (800) 775-82-02</a></li>
+              <li><a class="footer__link footer__link--underline" href="mailto:info@dlg.im">info@dlg.im</a></li>
+            </ul>
+            <div class="footer__navigation-box">
+              <section class="footer-nav">
+                <h2 class="visually-hidden">Навигация</h2>
+                <div class="footer-nav__container">
+                  <div class="footer-nav__content-box">
+                    <h3>Dialog</h3>
+                    <ul>
+                      <li><a class="link link--invert" href="/ru/security">Безопасность</a></li>
+                      <li><a class="link link--invert" href="/ru/integrations">Интеграции</a></li>
+                      <li><a class="link link--invert" href="/ru/download">Скачать</a></li>
+                      <li><a class="link link--invert" href="/ru/help">Помощь</a></li>
+                    </ul>
+                  </div>
+                  <div class="footer-nav__content-box">
+                    <h3><span>О компании</span><span>Компания</span></h3>
+                    <ul>
+                      <li><a class="link link--invert" href="/ru/patents">Свидетельства и лицензии</a></li>
+                      <li><a class="link link--invert" href="/ru/blog">Блог</a></li>
+                      <li><a class="link link--invert" href="/ru/career">Карьера</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </section>
+            </div>
+            <div class="footer__social-box">
+              <ul class="social">
+                <li><a href="#!" target="_blank" rel="noopener noreferrer">
+                    <svg width="11" height="23" aria-hidden="true">
+                      <use xlink:href="/img/sprite.svg#social-fb"></use>
+                    </svg></a></li>
+                <li><a href="#!" target="_blank" rel="noopener noreferrer">
+                    <svg width="23" height="13" aria-hidden="true">
+                      <use xlink:href="/img/sprite.svg#social-vk"></use>
+                    </svg></a></li>
+                <li><a href="#!" target="_blank" rel="noopener noreferrer">
+                    <svg width="19" height="22" aria-hidden="true">
+                      <use xlink:href="/img/sprite.svg#social-gh"></use>
+                    </svg></a></li>
+              </ul>
+            </div>
+            <ul class="footer__doc-links">
+              <li><a href="/ru/public" target="_blank" rel="noopener noreferrer">Социальная ответственность</a>
+              </li>
+              <li><a href="/ru/legal" target="_blank" rel="noopener noreferrer">Правовая информация</a>
+              </li>
+              <li><a href="/docs/privacy_policy.pdf" download="privacy policy" target="_blank" rel="noopener noreferrer">Обработка персональных данных</a>
+              </li>
+              <li><a href="/docs/anti_corruption_policy.pdf" download="anti corruption policy" target="_blank" rel="noopener noreferrer">Политика по противодействию коррупции</a>
+              </li>
+            </ul>
+            <div class="footer__copyright">
+              <p>© 2016—2020 ООО «Диалог»</p>
+              <p>ИНН: 7804568396</p>
+            </div>
+            <div class="footer__promo-link"><a class="footer__link" href="#!" target="_blank" rel="noopener noreferrer" aria-label="Сколково"><img src="/img/footer/sk-logo.svg" alt="Надпись: участник Сколково" width="100"/></a></div>
+          </div>
+        </footer>
+      </div>
+    </div>
+    <div class="modal" id="modal-offer">
+      <div class="modal__overlay">
+        <div class="modal__content">
+          <button class="modal__close" type="button" aria-label="Закрыть"></button>
+          <div class="form form--main fomr--career form--modal box box--white">
+            <div class="form__wrapper form__wrapper--modal">
+              <h2 class="form__title form__title--modal">Получить предложение</h2>
+              <div class="form__form">
+                <form class="gform" action="https://script.google.com/macros/s/AKfycbxUEtJZB_316gjG0B8B8kt6B1HNOsiRq-q3Y5rHuY_0RC789AMV/exec" method="POST" autocomplete="on" id="modal-offer-form" onsubmit="this.clear();this.classList.add('submited')">
+                  <input type="text" id="location" name="location" value="form sent from main page" hidden="hidden"/>
+                  <div class="form__input-text-wrap">
+                    <div class="form__form-field form__form-field--text form__form-field--m form__form-field--1 form__form-field--modal">
+                      <input type="text" id="name-2" name="name" pattern="([A-Za-zА-ЯЁа-яё-]{2,}\s?)+" placeholder="Ваше имя" title="Имя может состоять только из букв, пробелов и дефиса"/>
+                      <label for="name-2">Ваше имя</label>
+                    </div>
+                    <div class="form__form-field form__form-field--text form__form-field--m form__form-field--3 form__form-field--modal">
+                      <input type="email" id="email-2" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" placeholder="Эл.почта" title="Email адрес должен быть типа: user@mail.com"/>
+                      <label for="email-2">Эл.почта</label>
+                    </div>
+                    <div class="form__form-field form__form-field--text form__form-field--s form__form-field--2 form__form-field--modal">
+                      <input type="tel" id="phone-2" name="phone" placeholder="Телефон" title="Номер телефона должен начинаться с символов +7 и содержать 11 цифр" pattern="7\d{10}" data-mask="+{7}(000)000-00-00"/>
+                      <label for="phone-2">Телефон</label>
+                    </div>
+                    <div class="form__form-field form__form-field--text form__form-field--s form__form-field--4 form__form-field--modal">
+                      <input type="text" id="company-2" name="company" placeholder="Название компании"/>
+                      <label for="company-2">Название компании</label>
+                    </div>
+                    <div class="form__form-field form__form-field--text form__form-field--5 form__form-field--modal">
+                      <select id="quantity-2" name="quantity-users">
+                        <option value="1-100">1-100</option>
+                        <option value="101-500">101-500</option>
+                        <option value="501 и больше">501 и больше</option>
+                      </select>
+                      <label for="quantity-2">Количество пользователей</label>
+                    </div>
+                  </div>
+                  <div class="form__checkbox-wrap">
+                    <div class="form__form-field form__form-field--checkbox form__form-field--modal">
+                      <input class="visually-hidden" type="checkbox" id="accept-2" name="accepted" checked="checked"/>
+                      <label for="accept-2">Я согласен на обработку данных</label>
+                    </div>
+                    <div class="form__form-field form__form-field--checkbox form__form-field--modal">
+                      <input class="visually-hidden" type="checkbox" id="subscribe-2" name="subscribe"/>
+                      <label for="subscribe-2">Подписаться на новостную рассылку</label>
+                    </div>
+                  </div>
+                  <button class="button button--accent button--form" type="submit"><span>Отправить заявку</span>
+                  </button>
+                  <div class="thankyou_message" style="display:none">
+                    <!-- You can customize the thankyou message by editing the code below-->
+                    <h2><em>Thanks</em> for contacting us! We will get back to you soon!</h2>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="/js/vendor.min.js"></script>
+    <script src="/js/index.min.js"></script>
+    <script src="/js/form-submit.js" data-cfasync="false" type="text/javascript"></script>
+  </body>
+</html>

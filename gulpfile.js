@@ -419,6 +419,7 @@ gulp.task('html:ru', function () {
       '!src/pug/pages/post.pug',
       '!src/pug/pages/blog.pug',
       '!src/pug/pages/main.pug',
+      '!src/pug/pages/index.pug',
     ])
     .pipe(plumber())
     .pipe(pug({
@@ -444,6 +445,7 @@ gulp.task('html:en', function () {
       '!src/pug/pages/post.pug',
       '!src/pug/pages/blog.pug',
       '!src/pug/pages/main.pug',
+      '!src/pug/pages/index.pug',
     ])
     .pipe(plumber())
     .pipe(pug({
@@ -538,6 +540,7 @@ gulp.task('server', function () {
   gulp.watch(Paths.scripts.src, gulp.series('js', 'refresh'));
   gulp.watch(Paths.blog.src, gulp.series('blog', 'refresh'));
   gulp.watch(Paths.post.src, gulp.series('posts', 'refresh'));
+  gulp.watch(Paths.post.src, gulp.series('index', 'refresh'));
 });
 
 gulp.task('refresh', function (done) {

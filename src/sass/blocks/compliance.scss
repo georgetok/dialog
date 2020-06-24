@@ -97,14 +97,6 @@
   &__title {
     @include typography-h2;
     letter-spacing: -0.005em;
-
-    @include laptop {
-      margin-bottom: 53px;
-    }
-
-    @include tablet {
-      margin-bottom: 35px;
-    }
   }
 
   &__link {

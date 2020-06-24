@@ -35,6 +35,11 @@
     --header-height: 60px;
   }
 
+  @include tablet {
+    --h1-size: 44px;
+    --h2-size: 34px;
+  }
+
   @include mobile-md {
     --indent: 20px;
 
@@ -55,4 +60,10 @@
     --txt-blog-size: 18px;
     --txt-blog-lh: 27px;
   }
+
+  @include mobile-sm {
+    --h2-size: 24px;
+  }
 }
+
+

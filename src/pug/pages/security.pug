@@ -12,30 +12,31 @@ block variables
     const pageName = "security";
 
     const licenseImages = {
-    title: 'Лицензии',
-    images: [
-    {
-    imgPath: '/img/patents/license-fsb',
-    imgType: 'jpg',
-    imgAlt: t.alt.license,
-    imgWidth: 80,
-    linkName: t.security.doc_1
-    },
-    {
-    imgPath: '/img/patents/fstek-1',
-    imgType: 'jpg',
-    imgAlt: t.alt.cert,
-    imgWidth: 80,
-    linkName: t.security.doc_2
-    },
-    {
-    imgPath: '/img/patents/fstek-2',
-    imgType: 'jpg',
-    imgAlt: t.alt.cert,
-    imgWidth: 80,
-    linkName: t.security.doc_3
-    }
-    ]};
+      title: 'Лицензии',
+      images: [
+        {
+          imgPath: '/img/patents/license-fsb',
+          imgType: 'jpg',
+          imgAlt: t.alt.license,
+          imgWidth: 80,
+          linkName: t.security.doc_1
+        },
+        {
+          imgPath: '/img/patents/fstek-1',
+          imgType: 'jpg',
+          imgAlt: t.alt.cert,
+          imgWidth: 80,
+          linkName: t.security.doc_2
+        },
+        {
+          imgPath: '/img/patents/fstek-2',
+          imgType: 'jpg',
+          imgAlt: t.alt.cert,
+          imgWidth: 80,
+          linkName: t.security.doc_3
+        }
+      ]
+    };
 
 block content
   section.hero.hero--main.hero--security
@@ -99,7 +100,7 @@ block content
       .wrap.wrap--icon.wrap--ac
         .round-icon
           +svg('icon-compliance', 60, 45)
-        .wrap.wrap--txt.wrap--w
+        .wrap.wrap--txt.wrap--w.wrap--ac
           h2.compliance__title=t.security.norms_title
       ul.compliance__list
         li.compliance__list-item.compliance__item--safe

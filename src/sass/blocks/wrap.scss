@@ -72,11 +72,13 @@
     }
   }
 
-  &--white{
+  &--white {
     @include gap-xs;
     background: #FFFFFF;
     border-radius: 4px;
     padding: 10px 30px 20px 35px;
-
+    @include mobile-sm{
+      padding-bottom: 50px;
+    }
   }
 }

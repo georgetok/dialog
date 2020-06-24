@@ -184,10 +184,8 @@
 
 .main-nav__user-actions {
   align-self: flex-start;
-
   display: flex;
   align-items: center;
-
   padding-left: 7px;
 
   @include laptop {
@@ -213,10 +211,13 @@
     max-width: 400px;
     min-height: 50px;
     margin: 0 0 10px;
-
-
     font-size: 16px;
     line-height: 20px;
+
+  }
+  @include mobile-xs {
+    width: 100%;
+    max-width: none;
   }
 }
 

@@ -63,29 +63,21 @@
         @include mobile-sm {
           @include col-12;
           margin-bottom: 25px;
+          padding-right: 0;
         }
       }
     }
 
     &--cards {
       flex-wrap: wrap;
-      margin-top: 15px;
-
-      @include mobile-sm {
-        margin-top: 25px;
-      }
+      margin-top: 25px;
 
       .col {
         @include col-4;
 
         @include tablet {
-          @include col-6;
-        }
-
-        @include mobile-sm {
           @include col-12;
         }
-
       }
     }
   }

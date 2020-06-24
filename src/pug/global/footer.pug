@@ -47,8 +47,8 @@ mixin footer()
     const docsLinks = [
       {link: '/public', text: t.nav.social},
       {link: '/legal', text: t.nav.legal},
-      {link: '/data', text: t.nav.data},
-      {link: '/corruption', text: t.nav.corruption},
+      {link: '/docs/privacy_policy.pdf', text: t.nav.data, isDoc: true, dname: "privacy policy"},
+      {link: '/docs/anti_corruption_policy.pdf', text: t.nav.corruption, isDoc: true, dname: "anti corruption policy"},
     ]
 
   footer.footer
@@ -81,7 +81,11 @@ mixin footer()
       ul.footer__doc-links
         each doc in docsLinks
           li
-            a(href!=`/${lang === "ru" ? "ru" : "en"}${doc.link}` target="_blank" rel="noopener noreferrer")=doc.text
+            if doc.isDoc
+              a(href!=`${doc.link}` download=doc.dname target="_blank" rel="noopener noreferrer")=doc.text
+            else
+              a(href!=`/${lang === "ru" ? "ru" : "en"}${doc.link}` target="_blank" rel="noopener noreferrer")=doc.text
+
       .footer__copyright
         p © 2016—2020 ООО «Диалог»
         p ИНН: 7804568396

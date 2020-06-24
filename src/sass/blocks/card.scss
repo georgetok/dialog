@@ -81,7 +81,7 @@
 
     .card__sub {
       @include typography-txt;
-      margin-top: 0px;
+      margin-top: 0;
     }
 
     .card__title {
@@ -144,7 +144,6 @@
     .card__title {
       @include typography-txt;
       font-weight: bold;
-      margin-top: 0;
       text-align: center;
       white-space: nowrap;
       margin-top: 20px;

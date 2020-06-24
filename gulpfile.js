@@ -110,24 +110,25 @@ const Paths = {
 
 // methods
 function removeProp(obj, propToDelete, propToFlatten) {
-   for (var property in obj) {
-      if (typeof obj[property] == "object") {
-           if(obj[property][propToFlatten]){
-            obj[property] = obj[property][propToFlatten]
-          }
-         delete obj.property
-         let newJsonData= removeProp(obj[property], propToDelete, propToFlatten);
+  for (var property in obj) {
+    if (typeof obj[property] == "object") {
+      if (obj[property][propToFlatten]) {
+        obj[property] = obj[property][propToFlatten];
+      }
+      delete obj.property;
+      let newJsonData = removeProp(obj[property], propToDelete, propToFlatten);
 
-         obj[property]= newJsonData
-      } else {
-          if (property === propToDelete) {
-            delete obj[property];
-          }
+      obj[property] = newJsonData;
+    } else {
+      if (property === propToDelete) {
+        delete obj[property];
+      }
 
-        }
     }
-    return obj
+  }
+  return obj;
 }
+
 const pathBuilder = (path) => {
   if ('index' !== path.basename) {
     path.dirname = path.basename.split('_').join('/');
@@ -157,7 +158,7 @@ gulp.task('json', async function () {
 
 gulp.task('posts:ru', async function () {
   const i18n = requireJSON(`${SOURCE_PATH}/json/i18n.json`);
-  let i18nRu = removeProp(i18n, "en","ru");
+  let i18nRu = removeProp(i18n, "en", "ru");
   const posts = await api.posts.browse({
     include: "tags,authors",
     limit: "all",
@@ -188,7 +189,7 @@ gulp.task('posts:ru', async function () {
 
 gulp.task('posts:en', async function () {
   const i18n = requireJSON(`${SOURCE_PATH}/json/i18n.json`);
-  let i18nEn = removeProp(i18n, "ru","en");
+  let i18nEn = removeProp(i18n, "ru", "en");
   const posts = await api.posts.browse({
     include: "tags,authors",
     limit: "all",
@@ -219,7 +220,7 @@ gulp.task('posts:en', async function () {
 
 gulp.task('blog:ru', async function () {
   const i18n = requireJSON(`${SOURCE_PATH}/json/i18n.json`);
-  let i18nRu = removeProp(i18n, "en","ru");
+  let i18nRu = removeProp(i18n, "en", "ru");
   const posts = await api.posts.browse({
     include: "tags,authors",
     limit: "all",
@@ -247,7 +248,7 @@ gulp.task('blog:ru', async function () {
 
 gulp.task('blog:en', async function () {
   const i18n = requireJSON(`${SOURCE_PATH}/json/i18n.json`);
-  let i18nEn = removeProp(i18n, "ru","en");
+  let i18nEn = removeProp(i18n, "ru", "en");
   const posts = await api.posts.browse({
     include: "tags,authors",
     limit: "all",
@@ -340,10 +341,10 @@ gulp.task('images:svg-sprite', function () {
     .pipe(gulp.dest(Paths.images.dest));
 });
 
-gulp.task('index', function () {
+gulp.task('index:redirect', function () {
   return gulp
     .src([
-      'src/pug/pages/index.pug',
+      'src/pug/pages/index.pug'
     ])
     .pipe(plumber())
     .pipe(pug({
@@ -354,14 +355,47 @@ gulp.task('index', function () {
     .pipe(gulp.dest(BUILD_PATH));
 });
 
-gulp.task('html:en', function () {
-  const i18n = requireJSON(`${SOURCE_PATH}/json/i18n.json`);
-  let i18nEn = removeProp(i18n, "ru","en");
+gulp.task('index:404', function () {
   return gulp
     .src([
-      'src/pug/pages/*.pug',
-      '!src/pug/pages/post.pug',
-      '!src/pug/pages/blog.pug'
+      'src/pug/pages/index404.pug',
+    ])
+    .pipe(plumber())
+    .pipe(pug({
+        pretty: true,
+        data: {}
+      })
+    )
+    .pipe(rename('404.html'))
+    .pipe(gulp.dest(BUILD_PATH));
+});
+
+gulp.task('home:ru', function () {
+  const i18n = requireJSON(`${SOURCE_PATH}/json/i18n.json`);
+  let i18nRu = removeProp(i18n, "en", "ru");
+  return gulp
+    .src([
+      'src/pug/pages/main.pug'
+    ])
+    .pipe(plumber())
+    .pipe(pug({
+        pretty: true,
+        data: {
+          "lang": "ru",
+          t: i18nRu
+        }
+      })
+    )
+    .pipe(rename('index.html'))
+    .pipe(gulp.dest(`${BUILD_PATH}/ru`));
+});
+
+gulp.task('home:en', function () {
+  const i18n = requireJSON(`${SOURCE_PATH}/json/i18n.json`);
+  let i18nEn = removeProp(i18n, "ru", "en");
+  return gulp
+    .src([
+      'src/pug/pages/main.pug'
     ])
     .pipe(plumber())
     .pipe(pug({
@@ -372,20 +406,19 @@ gulp.task('html:en', function () {
         }
       })
     )
-    .pipe(rename((path) => {
-      pathBuilder(path);
-    }))
-    .pipe(gulp.dest(Paths.html.en));
+    .pipe(rename('index.html'))
+    .pipe(gulp.dest(`${BUILD_PATH}/en`));
 });
 
 gulp.task('html:ru', function () {
   const i18n = requireJSON(`${SOURCE_PATH}/json/i18n.json`);
-  let i18nRu = removeProp(i18n, "en","ru");
+  let i18nRu = removeProp(i18n, "en", "ru");
   return gulp
     .src([
       'src/pug/pages/*.pug',
       '!src/pug/pages/post.pug',
-      '!src/pug/pages/blog.pug'
+      '!src/pug/pages/blog.pug',
+      '!src/pug/pages/main.pug',
     ])
     .pipe(plumber())
     .pipe(pug({
@@ -400,6 +433,31 @@ gulp.task('html:ru', function () {
       pathBuilder(path);
     }))
     .pipe(gulp.dest(Paths.html.ru));
+});
+
+gulp.task('html:en', function () {
+  const i18n = requireJSON(`${SOURCE_PATH}/json/i18n.json`);
+  let i18nEn = removeProp(i18n, "ru", "en");
+  return gulp
+    .src([
+      'src/pug/pages/*.pug',
+      '!src/pug/pages/post.pug',
+      '!src/pug/pages/blog.pug',
+      '!src/pug/pages/main.pug',
+    ])
+    .pipe(plumber())
+    .pipe(pug({
+        pretty: true,
+        data: {
+          "lang": "en",
+          t: i18nEn
+        }
+      })
+    )
+    .pipe(rename((path) => {
+      pathBuilder(path);
+    }))
+    .pipe(gulp.dest(Paths.html.en));
 });
 
 gulp.task('js:module', function () {
@@ -476,13 +534,10 @@ gulp.task('server', function () {
 
   gulp.watch(Paths.styles.src, gulp.series('css'));
   gulp.watch(Paths.images.src, gulp.series('graphic', 'refresh'));
-  gulp.watch(Paths.html.srcWatch, gulp.series('html:ru', 'refresh'));
-  gulp.watch(Paths.html.srcWatch, gulp.series('html:en', 'refresh'));
+  gulp.watch(Paths.html.srcWatch, gulp.series('html', 'refresh'));
   gulp.watch(Paths.scripts.src, gulp.series('js', 'refresh'));
-  gulp.watch(Paths.blog.src, gulp.series('blog:ru', 'refresh'));
-  gulp.watch(Paths.blog.src, gulp.series('blog:en', 'refresh'));
-  gulp.watch(Paths.post.src, gulp.series('posts:en', 'refresh'));
-  gulp.watch(Paths.post.src, gulp.series('posts:ru', 'refresh'));
+  gulp.watch(Paths.blog.src, gulp.series('blog', 'refresh'));
+  gulp.watch(Paths.post.src, gulp.series('posts', 'refresh'));
 });
 
 gulp.task('refresh', function (done) {
@@ -491,7 +546,7 @@ gulp.task('refresh', function (done) {
 });
 
 gulp.task('clean', function () {
-  return del(['/build', '!/build/img/*.*']);
+  return del(['/build', '!/build/img/*.*', '!/build/docs/*.*']);
 });
 
 gulp.task('copy:fonts', function () {
@@ -508,7 +563,12 @@ gulp.task('copy:manifest', function () {
 
 gulp.task('graphic', gulp.series('images:minify', 'images:webp', 'images:svg-sprite'));
 gulp.task('js', gulp.series('js:module', 'js:vendor'));
+gulp.task('html', gulp.series('html:ru', 'html:en'));
+gulp.task('blog', gulp.series('blog:ru', 'blog:en'));
+gulp.task('posts', gulp.series('posts:ru', 'posts:en'));
+gulp.task('home', gulp.series('home:ru', 'home:en'));
+gulp.task('index', gulp.series('index:redirect', 'index:404'));
 gulp.task('copy', gulp.series('copy:fonts'));
-gulp.task('build', gulp.series('clean', 'copy', 'index', 'html:en', 'html:ru', 'css', 'js', 'blog:ru', 'blog:en', 'posts:en', 'posts:ru'));
+gulp.task('build', gulp.series('clean', 'copy', 'index', 'html', 'css', 'js','blog', 'posts', 'home'));
 gulp.task('start', gulp.series('build', 'server'));
 gulp.task('images', gulp.series('graphic'));

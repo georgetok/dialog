@@ -1,0 +1,11 @@
+extends ../global/layout
+include ../mixins/p404
+
+block variables
+  -
+    const title = "404";
+    const routeClass = "js-route-blog";
+    const pageName = "404";
+
+block content
+  +p404()

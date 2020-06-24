@@ -3,7 +3,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="format-detection" content="telephone=no">
-  <title>Dialog</title>
+  <title>404</title>
   <link rel="preload" href="fonts/Euclid-CircularA-Medium.woff2" as="font" crossorigin="anonymous">
   <link rel="preload" href="fonts/Euclid-CircularA-Regular.woff2" as="font" crossorigin="anonymous">
   <link rel="stylesheet" href="/css/style.min.css">
@@ -25,7 +25,7 @@
               </ul>
               <div class="main-nav__user-actions">
                 <button class="button button--accent button--small main-nav__action-btn js-open-modal" type="button"><span>Получить предложение</span>
-                </button><a class="main-nav__link main-nav__link--no-padding" href="/en/blog"><span class="header__lang">en</span><span>In English</span></a>
+                </button><a class="main-nav__link main-nav__link--no-padding" href="/en/404"><span class="header__lang">en</span><span>In English</span></a>
               </div>
             </nav>
           </div>
@@ -33,7 +33,24 @@
         </div>
       </header>
       <main class="page__content">
-        <div>123123123123123130000</div>
+        <section class="hero hero--main hero--404">
+          <div class="hero__wrapper">
+            <div class="hero__left">
+              <h1 class="hero__title">Мы не можемнайти страницу,которую вы ищете</h1>
+              <p class="hero__text">Пожалуйста, проверьте, что адрес страницынаписан правильно, и затем повторитепопытку снова.</p><a class="button button--accent button--link" href="/"><span>Перейти на главную</span>
+                <svg width="16" height="15" aria-hidden="true">
+                  <use xlink:href="/img/sprite.svg#arrow-right"></use>
+                </svg></a>
+            </div>
+            <div class="hero__right">
+              <div class="hero__img">
+                <picture>
+                  <source type="image/webp" srcset="/img/404@1x.webp 1x, /img/404@2x.webp 2x"/><img src="/img/404@1x.png" srcset="/img/404@2x.png 2x" alt="Фото ноутбука и мобильного телефона" width="682" loading="lazy"/>
+                </picture>
+              </div>
+            </div>
+          </div>
+        </section>
       </main>
       <div class="page__footer">
         <footer class="footer">
@@ -84,17 +101,13 @@
               </ul>
             </div>
             <ul class="footer__doc-links">
-              <li><a href="/" target="_blank" rel="noopener noreferrer">Социальная ответственность</a>
-                <!--a(href!=`/${lang === "ru" ? "ru" : "en"}${doc.link}` target="_blank" rel="noopener noreferrer")=doc.text-->
+              <li><a href="/ru/public" target="_blank" rel="noopener noreferrer">Социальная ответственность</a>
               </li>
-              <li><a href="/" target="_blank" rel="noopener noreferrer">Правовая информация</a>
-                <!--a(href!=`/${lang === "ru" ? "ru" : "en"}${doc.link}` target="_blank" rel="noopener noreferrer")=doc.text-->
+              <li><a href="/ru/legal" target="_blank" rel="noopener noreferrer">Правовая информация</a>
               </li>
-              <li><a href="/" target="_blank" rel="noopener noreferrer">Обработка персональных данных</a>
-                <!--a(href!=`/${lang === "ru" ? "ru" : "en"}${doc.link}` target="_blank" rel="noopener noreferrer")=doc.text-->
+              <li><a href="/docs/privacy_policy.pdf" download="privacy policy" target="_blank" rel="noopener noreferrer">Обработка персональных данных</a>
               </li>
-              <li><a href="/" target="_blank" rel="noopener noreferrer">Политика по противодействию коррупции</a>
-                <!--a(href!=`/${lang === "ru" ? "ru" : "en"}${doc.link}` target="_blank" rel="noopener noreferrer")=doc.text-->
+              <li><a href="/docs/anti_corruption_policy.pdf" download="anti corruption policy" target="_blank" rel="noopener noreferrer">Политика по противодействию коррупции</a>
               </li>
             </ul>
             <div class="footer__copyright">
@@ -118,8 +131,8 @@
                   <input type="text" id="location" name="location" value="form sent from main page" hidden="hidden"/>
                   <div class="form__input-text-wrap">
                     <div class="form__form-field form__form-field--text form__form-field--m form__form-field--1 form__form-field--modal">
-                      <input type="text" id="name-2" name="name" pattern="([A-Za-zА-ЯЁа-яё-]{2,}\s?)+" placeholder="Ваше Имя" title="Имя может состоять только из букв, пробелов и дефиса"/>
-                      <label for="name-2">Ваше Имя</label>
+                      <input type="text" id="name-2" name="name" pattern="([A-Za-zА-ЯЁа-яё-]{2,}\s?)+" placeholder="Ваше имя" title="Имя может состоять только из букв, пробелов и дефиса"/>
+                      <label for="name-2">Ваше имя</label>
                     </div>
                     <div class="form__form-field form__form-field--text form__form-field--m form__form-field--3 form__form-field--modal">
                       <input type="email" id="email-2" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" placeholder="Эл.почта" title="Email адрес должен быть типа: user@mail.com"/>

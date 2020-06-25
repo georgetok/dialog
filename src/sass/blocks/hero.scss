@@ -45,15 +45,14 @@
     .hero__wrapper {
       @include mobile-md {
         flex-direction: column-reverse;
-        padding-left: 0;
-        padding-right: 0;
       }
     }
   }
 
   &--homepage {
     @include mobile-md {
-      max-width: 684px;
+      max-width: 580px;
+      margin: auto;
     }
 
     .hero__img {
@@ -149,9 +148,7 @@
       }
 
       @include mobile-md {
-        width: calc(100% - (var(--indent) * 2));
-        margin-left: var(--indent);
-        margin-right: var(--indent);
+        width: 100%;
         padding-right: 0;
       }
     }

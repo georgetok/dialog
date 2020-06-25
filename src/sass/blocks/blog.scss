@@ -58,14 +58,6 @@
       }
     }
 
-    .blog__title {
-      @include typography-h3;
-
-      &:not(#_) {
-        margin-bottom: 35px;
-      }
-    }
-
     .blog__card {
       flex-direction: row;
       @include mobile-md {
@@ -82,6 +74,10 @@
     .blog__card-title {
       font-size: 24px;
       line-height: 1.2;
+      @include mobile-md {
+        @include typography-h6;
+        margin-bottom: 13px;
+      }
     }
   }
 
@@ -116,6 +112,7 @@
   color: $color-gray-dark;
   margin-top: auto;
   font-size: 14px;
+  margin-bottom: 0;
 }
 
 .blog__title {
@@ -133,7 +130,7 @@
   }
 
   @include mobile-md {
-    margin-bottom: 23px;
+    margin-bottom: 13px;
   }
 
   color: $color-base;
@@ -237,7 +234,7 @@
 
   @include mobile-md {
     min-height: 160px;
-    padding-top: 23px;
+    padding-top: 17px;
     padding-bottom: 21px;
     padding-right: 18px;
     padding-left: 18px;

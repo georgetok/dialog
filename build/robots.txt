@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+Disallow: /@joinchat
+Disallow: /@/joinchat
+Disallow: /joinchat
+Sitemap: https://dlg.im/sitemap.xml
+Host: https://dlg.ime

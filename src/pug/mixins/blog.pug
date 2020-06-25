@@ -2,15 +2,15 @@ mixin blog(title)
   -
     const blogData = [
       {
-        linkRu: '/ru/blog/korporativnyi-miessiendzhier-vidy-vozmozhnosti-i-sfiery-primienieniia.html',
+        linkRu: '/ru/blog/korporativnyi-miessiendzhier-dlia-lokalnoi-sieti.html',
         linkEn: '/en/blog/corporate-messenger-and-byod.html',
         img: `${lang === "ru" ? '/img/pages/blog/blog-1-desktop' : '/img/pages/blog/blog-en-1-desktop'}`,
         text: t.blog.card_desc_1,
-        dateDayRu: "25",
-        dateMonRu: t.blog.jun,
-        dateYearRu: "2020",
-        dateDayEn: "23",
-        dateMonEn: t.blog.jul,
+        dateDayRu: "02",
+        dateMonRu: t.blog.feb,
+        dateYearRu: "2019",
+        dateDayEn: "17",
+        dateMonEn: t.blog.apr,
         dateYearEn: "2019",
       },
       {
@@ -18,11 +18,11 @@ mixin blog(title)
         linkEn: '/en/blog/benefits-of-active-directory-compatible-corporate-messengers.html',
         img: `${lang === "ru" ? '/img/pages/blog/blog-2-desktop' : '/img/pages/blog/blog-en-2-desktop'}`,
         text: t.blog.card_desc_2,
-        dateDayRu: "25",
-        dateMonRu: t.blog.jun,
-        dateYearRu: "2020",
-        dateDayEn: "23",
-        dateMonEn: t.blog.jul,
+        dateDayRu: "02",
+        dateMonRu: t.blog.feb,
+        dateYearRu: "2019",
+        dateDayEn: "17",
+        dateMonEn: t.blog.apr,
         dateYearEn: "2019",
       },
       {
@@ -33,8 +33,8 @@ mixin blog(title)
         dateDayRu: "15",
         dateMonRu: t.blog.jul,
         dateYearRu: "2020",
-        dateDayEn: "23",
-        dateMonEn: t.blog.jul,
+        dateDayEn: "17",
+        dateMonEn: t.blog.apr,
         dateYearEn: "2019",
       },
     ]
@@ -54,7 +54,7 @@ mixin blog(title)
                   | &nbsp;&nbsp;
                   span=`${lang === "ru" ? post.dateMonRu : post.dateMonEn}`
                   span
-                    | &nbsp;, &nbsp;
+                    | , &nbsp;
                   span=`${lang === "ru" ? post.dateYearRu : post.dateYearEn}`
 
       a(class="link link--with-icon link--icon-accent" href=`${lang === "ru" ? "/ru/blog" : "/en/blog"}` )=t.button.view

@@ -8,29 +8,30 @@ include ../mixins/page-title
 
 block variables
   -
-    const title = "Dialog";
+    const title = t.meta.support_title;
+    const desc = t.meta.main_desc;
     const routeClass = "js-route-main";
-    const pageName = "help";
+    const pageName = "support";
 
 block content
-  +page-title(t.help.title)
+  +page-title(t.support.title)
   .feedback
     .wrapper.wrapper--main
       .wrap.wrap--gap-lg.wrap--as.wrap--sb.wrap--main
         .col.col--left
           +form-feedback(false, 1, 'offer-form')
         .col.col--right
-          .card.card--dark.card--help
-            h2.card__title=t.help.sub
-            p.card__sub=t.help.text
+          .card.card--dark.card--support
+            h2.card__title=t.support.sub
+            p.card__sub=t.support.text
             .wrap.wrap--mt
               a.link.link--accent.link--icon-accent.link--with-icon(href="https://support.dlg.im/" target="_blank")
-                | !{t.help.link}
+                | !{t.support.link}
                 +svg('arrow-right',12, 10)
-          .card.card--help
+          .card.card--support
             p.card__sub
               span
-                | !{t.help.connect}
+                | !{t.support.connect}
               .wrap.wrap--mt
                 a.link.link--accent(href="mailto:support@dlg.im" target="_blank")
                   | support@dlg.im

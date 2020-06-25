@@ -39,8 +39,8 @@
     background: #847BB9;
     border-radius: 50%;
     position: absolute;
-    bottom: 50px;
-    right: 40px;
+    bottom: 20px;
+    right: -10px;
     opacity: 0;
     transition: .1s ease-in all;
     transform: translate(70%, 70%);
@@ -54,8 +54,8 @@
     background: #8A82BE;
     border-radius: 50%;
     position: absolute;
-    bottom: 90px;
-    right: 90px;
+    bottom: 75px;
+    right: 65px;
     z-index: 1;
     transform: translate(70%, 70%);
     opacity: 0;
@@ -92,6 +92,7 @@
       width: calc(100% / 3 - 20px);
       margin: 10px;
     }
+
     @include tablet {
       width: calc(100% / 2 - 20px);
     }

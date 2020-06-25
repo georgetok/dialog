@@ -7,7 +7,8 @@ include ../mixins/form-cta
 
 block variables
   -
-    const title = "Dialog";
+    const title = t.meta.blog_title;
+    const desc = t.meta.main_desc;
     const routeClass = "js-route-blog";
     const pageName = "blog";
 
@@ -25,11 +26,9 @@ block content
               .blog__text-box
                 h3(class="blog__card-title")=post.title
                 p(class="blog__text")=post.custom_excerpt
-                //.blog__text-info
-                  p=post.created_at.slice(0, 10)
-                  //div
-                    +svg('icon-watch', 17, 17)
-                    span 1 !{t.blog.min}
+                .blog__text-info
+                  p=post.created_at.slice(0, 10).split("-").join(".")
+
       .wrap.wrap--c
         +button(t.button.view, {styleType: 'dark', type: 'button', additionalClassName: 'show-posts'})
 

@@ -36,6 +36,10 @@
       "ru": "Июля",
       "en": "July"
     },
+    "apr": {
+      "ru": "Апреля",
+      "en": "April"
+    },
     "min": {
       "ru": "мин",
       "en": "min"
@@ -51,7 +55,6 @@
       "ru": "Корпоративный мессенджер для совместной работы и безопасного общения",
       "en": "Corporate messenger for team work and safe communication"
     },
-
 
     "adv_title_1": {
       "ru": "Эффективная командная работа",
@@ -334,7 +337,7 @@
     }
   },
 
-  "help": {
+  "support": {
     "title": {
       "ru": "Обратная связь",
       "en": "Feedback"
@@ -708,7 +711,7 @@
       "en": "and higher"
     }
   },
-  
+
   "legal": {
     "title": {
       "ru": "Правовая информация",
@@ -945,6 +948,53 @@
     "blog_card": {
       "ru": "Карточка блога",
       "en": "Blog card>"
+    }
+  },
+
+  "meta": {
+    "main_title": {
+      "ru": "dialog | Платформа для простых и эффективных коммуникаций",
+      "en": "dialog | A platform for simple and efficient communications"
+    },
+    "main_desc": {
+      "ru": "это корпоративный мессенджер с возможностью установки на внутренний сервер организации",
+      "en": "handy and feature-rich enterprise multi-device messenger available for server or cloud – Slack-like, but not Slack-limited"
+    },
+    "patents_title": {
+      "ru": "Патенты | dialog",
+      "en": "Patents | dialog"
+    },
+    "blog_title": {
+      "ru": "Блог | dialog",
+      "en": "Blog | dialog"
+    },
+    "security_title": {
+      "ru": "Безопасность | dialog",
+      "en": "Security | dialog"
+    },
+    "post_title": {
+      "ru": "Статья | dialog",
+      "en": "Post | dialog"
+    },
+    "career_title": {
+      "ru": "Карьера | dialog",
+      "en": "Career | dialog"
+    },
+    "public_title": {
+      "ru": "Социальная ответственность | dialog",
+      "en": "Social respoinsibility | dialog"
+    },
+    "legal_title": {
+      "ru": "Правовая информация | dialog",
+      "en": "Legal Information | dialog"
+    },
+    "int_title": {
+      "ru": "Интеграции | dialog",
+      "en": "Integrations | dialog"
+    },
+    "support_title": {
+      "ru": "Поддержка | dialog",
+      "en": "Support | dialog"
     }
   }
 }

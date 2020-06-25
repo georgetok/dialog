@@ -7,6 +7,7 @@ doctype html
 block variables
   -
     const title = ""
+    const desc = ""
     const routeClass = ""
     const pageName = ""
 
@@ -15,7 +16,8 @@ html(lang=lang class=routeClass)
     meta(charset="utf-8")
     meta(name="viewport" content="width=device-width, initial-scale=1")
     meta(name="format-detection" content="telephone=no")
-    title!= title
+    title!=title
+    meta(name="description" content=desc)
     link(rel="preload" href="/fonts/Euclid-CircularA-Medium.woff2" as="font" crossorigin="anonymous")
     link(rel="preload" href="/fonts/Euclid-CircularA-Regular.woff2" as="font" crossorigin="anonymous")
     link(rel="stylesheet" href=`/css/style.min.css`)

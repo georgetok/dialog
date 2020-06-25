@@ -29,15 +29,12 @@ mixin form-feedback (isModal, idNumber, formId)
               placeholder=t.form.company
               required)
             label(for=`company-${idNumber}`)=t.form.company
-          .form__form-field.form__form-field--textarea.form__form-field--5(
-              class=(isModal ? 'form__form-field--modal' : null
-            ))
-            textarea(
-              id=`message-${idNumber}`
-              name="message"
-              placeholder=t.form.help
-              required)
-            label(for=`message-${idNumber}`)=t.form.help
+          .form__form-field.form__form-field--fw
+              +field-textarea({
+                name: 'message',
+                label: t.form.help,
+                isRequired: true,
+              })
         .form__checkbox-wrap
           .form__form-field.form__form-field--checkbox(class=(isModal ? 'form__form-field--modal' : null))
             input.visually-hidden(type="checkbox" id=`accept-${idNumber}` name="accepted" checked required)

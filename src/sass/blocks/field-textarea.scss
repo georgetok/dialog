@@ -1,4 +1,5 @@
 .field-textarea {
+  width: 100%;
   color: $color-gray-dark;
 
   label {
@@ -9,8 +10,8 @@
   textarea {
     width: 100%;
     min-height: 180px;
+    font-size: 21px;
     padding: 12px 14px;
-    font-size: 16px;
     line-height: 24px;
     appearance: none;
     color: inherit;
@@ -27,7 +28,7 @@
 
   span {
     margin-bottom: 15px;
-    font-size: 18px;
+    font-size: 21px;
     line-height: 23px;
     letter-spacing: 0.275px;
     color: inherit;

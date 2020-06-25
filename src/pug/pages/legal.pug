@@ -6,7 +6,8 @@ include ../mixins/picture
 
 block variables
   -
-    const title = "Dialog";
+    const title = t.meta.legal_title;
+    const desc = t.meta.main_desc;
     const routeClass = "js-route-main";
     const pageName = "legal";
 

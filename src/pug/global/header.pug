@@ -21,8 +21,8 @@ mixin header(pageName, lang)
     name: t.nav.blog,
     },
     {
-    link: "help",
-    name: t.nav.help,
+    link: "support",
+    name: t.nav.support,
     }
     ];
 
@@ -68,7 +68,7 @@ mixin header(pageName, lang)
                 styleType: 'accent',
                 additionalClassName: 'button--small main-nav__action-btn js-open-modal'
               })
-            a(href=`/${lang === "ru" ? "en" : "ru"}/${isPost ? "blog" : (isHome ? '' : pageName)}
+            a(href=`/${lang === "ru" ? "en" : "ru"}/${isPost ? "blog" : (isHome ? '' : pageName !== "public" ? pageName : "")}
             `
             ).main-nav__link.main-nav__link--no-padding
               span.header__lang=`${lang === "ru" ? "en" : "ru"}`

@@ -51,6 +51,9 @@
       margin-left: -10vw;
       margin-right: -10vw;
     }
+    @include mobile-xxs{
+      font-size: 21px;
+    }
   }
 
   &__sub {

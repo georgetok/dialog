@@ -33,3 +33,9 @@
     @content;
   }
 }
+
+@mixin mobile-xxs {
+  @media (max-width: $width-mobile - 1) {
+    @content;
+  }
+}

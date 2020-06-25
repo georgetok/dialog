@@ -8,7 +8,8 @@ include ../mixins/blog
 
 block variables
   -
-    const title = "Dialog";
+    const title = t.meta.post_title;
+    const desc = t.meta.main_desc;
     const pageName = "post";
 
 block content
@@ -20,7 +21,7 @@ block content
             +svg('arrow-left', 16, 15)
             span=t.blog.back
           .wrap.post__time
-            p=post.updated_at.slice(0, 10)
+            p=post.created_at.slice(0, 10).split("-").join(".")
       .post__header
         h1.post__title.post__title--h1=post.title
         h6.post__title.post__title--sub=post.custom_excerpt

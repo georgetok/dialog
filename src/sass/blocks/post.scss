@@ -3,10 +3,9 @@
   padding-bottom: 86px;
   overflow: hidden;
 
-
   @include mobile-md {
-    padding-top: 50px;
-    padding-bottom: 55px;
+    padding-top: 20px;
+    padding-bottom: 35px;
   }
 
   .post__content, .post__header {
@@ -17,7 +16,8 @@
       margin-top: 30px;
       margin-bottom: 35px;
     }
-    img{
+
+    img {
       width: 100%;
     }
 
@@ -34,6 +34,9 @@
       @include typography-h2;
       margin-top: 40px;
       margin-bottom: 40px;
+      @include mobile-md {
+        margin-top: 20px;
+      }
     }
 
     h2 {
@@ -78,6 +81,9 @@
 
 .post__nav {
   border-bottom: 1px dashed $color-accent-light;
+  @include mobile-md {
+    border-bottom: none;
+  }
 }
 
 .post__time {
@@ -130,7 +136,7 @@
 .post__header {
   .box--pattern {
     margin-top: -7vw;
-    @include mobile-sm{
+    @include mobile-sm {
       margin-top: -50px;
     }
   }

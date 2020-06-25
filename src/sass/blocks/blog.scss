@@ -146,38 +146,31 @@
   @include no-list;
   display: flex;
   flex-wrap: wrap;
-  margin-bottom: 22px;
-  margin-left: -20px;
-  margin-right: -20px;
-  width: calc(100% + 40px);
+  margin-bottom: 10px;
+  justify-content: space-between;
 
-  @include laptop {
-    margin-bottom: 31px;
-    margin-left: -11px;
-    margin-right: -11px;
-    width: calc(100% + 22px);
-  }
 }
 
 .blog__item {
   display: flex;
-  width: calc((100% / 3) - 40px);
-  flex-shrink: 0;
-  margin: 20px;
+  width: calc((100% / 3) - 20px);
+  margin-bottom: 20px;
   box-shadow: 0 4px 12px rgba(47, 27, 73, 0.12), 0 1px 1px rgba(47, 41, 64, 0.08);
 
   &.invisible {
     display: none;
   }
 
-  @include laptop {
-    margin: 11px;
-    width: calc((100% / 3) - 22px);
+  @include tablet {
+    width: calc((100% / 3) - 10px);
+  }
+
+  @include mobile-md {
+    width: calc((100% / 2) - 10px);
   }
 
   @include mobile-sm {
     width: 100%;
-    margin: 10px 0;
   }
 }
 

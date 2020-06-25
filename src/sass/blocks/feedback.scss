@@ -19,6 +19,9 @@
       @include tablet {
         width: 100%;
       }
+      @include mobile-md {
+        margin-top: 30px;
+      }
     }
 
     &--right:not(#_) {

@@ -5,6 +5,10 @@
     padding-right: 0;
   }
 
+  @include mobile-sm {
+    padding-top: 45px;
+  }
+
   .button{
     @include mobile-sm{
       width: 100%;

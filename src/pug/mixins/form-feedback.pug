@@ -10,25 +10,25 @@ mixin form-feedback (isModal, idNumber, formId)
               class=(isModal ? 'form__form-field--modal' : null
             ))
             input(
-              type="text"
-              id=`name-${idNumber}`
-              name="name"
-              pattern="([A-Za-zА-ЯЁа-яё-]{2,}\\s?)+"
-              placeholder=t.form.name
-              title="Имя может состоять только из букв, пробелов и дефиса"
+              type="email"
+              id=`email-${idNumber}`
+              name="email"
+              pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,}$"
+              placeholder=t.form.email
+              title="Email адрес должен быть типа: user@mail.com"
               required
             )
-            label(for=`name-${idNumber}`)=t.form.name
+            label(for=`email-${idNumber}`)=t.form.email
           .form__form-field.form__form-field--text.form__form-field--s.form__form-field--4(
               class=(isModal ? 'form__form-field--modal' : null
             ))
             input(
               type="text"
-              id=`company-${idNumber}`
-              name="company"
-              placeholder=t.form.company
+              id=`theme-${idNumber}`
+              name="theme"
+              placeholder=t.form.theme
               required)
-            label(for=`company-${idNumber}`)=t.form.company
+            label(for=`theme-${idNumber}`)=t.form.theme
           .form__form-field.form__form-field--fw
               +field-textarea({
                 name: 'message',

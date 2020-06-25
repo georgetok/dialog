@@ -62,11 +62,11 @@
         bottom: -15%;
         width: 55%;
         height: 55%;
-        background-size: 90%;
+        background-size: 80%;
         background-image: url("../img/pattern.svg");
         @include laptop {
           width: 60%;
-          height: 75%;
+          height: 65%;
           max-width: 400px;
           max-height: 200px;
         }
@@ -82,9 +82,9 @@
         right: -10%;
         top: -10%;
         bottom: auto;
-        width: 55%;
+        width: 43%;
         height: 55%;
-        background-size: 80%;
+        background-size: 75%;
         background-image: url("../img/pattern.svg");
         @include laptop {
           width: 55%;
@@ -309,7 +309,7 @@
 
     .hero__right {
       width: 50%;
-       @include laptop {
+      @include laptop {
         padding-top: 50px;
       }
       @include mobile-md {

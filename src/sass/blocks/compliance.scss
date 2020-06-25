@@ -110,6 +110,9 @@
       padding-left: 28px;
       @include gap-xxs;
 
+      @include tablet {
+        @include gap-sm;
+      }
       @include mobile-sm {
         flex-wrap: wrap;
       }

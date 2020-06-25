@@ -107,7 +107,7 @@
     },
 
     "f_text_1": {
-      "ru": "Группы — это чаты для общения, создайте их для команд и проектов, чтобы сфокусировать усилия, сделать работу более прозрачной, а информацию доступной для всех",
+      "ru": "Создавайте чаты для команд и проектов – фокусируйте усилия, делайте работу более прозрачной, а информацию — доступной. Используйте каналы для централизованного информирования сотрудников.",
       "en": "Groups are chat rooms for communication; create them for teams and projects in order to concentrate efforts, make work more transparent, and information accessible to everyone."
     },
     "f_text_2": {
@@ -410,7 +410,7 @@
       "en": "About you"
     },
     "email": {
-      "ru": "Эл.почта",
+      "ru": "Ваша эл.почта",
       "en": "E-mail"
     },
     "company": {
@@ -432,6 +432,10 @@
     "help": {
       "ru": "Чем мы можем вам помочь?",
       "en": "Describe your issue"
+    },
+    "theme": {
+      "ru": "Тема",
+      "en": "Theme"
     }
   },
 

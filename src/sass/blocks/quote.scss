@@ -32,7 +32,8 @@
     }
 
     @include mobile-md {
-      margin-bottom: 33px;
+      margin-bottom: 23px;
+      line-height: 1.3;
       padding-left: var(--indent);
       padding-right: var(--indent);
     }

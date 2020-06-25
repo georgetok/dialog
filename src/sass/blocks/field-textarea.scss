@@ -20,6 +20,9 @@
     background-color: inherit;
     transition: border $transition-props;
     resize: none;
+    @include mobile-xs {
+      min-height: 310px;
+    }
   }
 
   textarea::placeholder {

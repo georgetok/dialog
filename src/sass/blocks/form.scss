@@ -294,6 +294,9 @@
       width: 100%;
       max-width: 100%;
       padding: 20px;
+      @include mobile-xs {
+        min-height: 400px;
+      }
     }
 
     textarea:hover,
@@ -642,6 +645,9 @@
     margin-right: 0;
     width: 100%;
     max-width: 100%;
+    @include mobile-md {
+      order: 1
+    }
   }
 
   .form__wrapper {
@@ -655,6 +661,9 @@
     margin-top: 20px;
     @include laptop {
       max-width: 100%;
+    }
+    @include mobile-md {
+      order: 2;
     }
   }
 }

@@ -50,9 +50,15 @@
   }
 
   &--homepage {
-    @include mobile-md {
-      max-width: 580px;
-      margin: auto;
+    .hero__left {
+      @include mobile-md {
+        width: calc(50% - 10px) !important;
+        margin-top: 80px;
+      }
+      @include mobile-sm {
+        width: calc(100% - 10px) !important;
+        margin-top: 50px;
+      }
     }
 
     .hero__img {
@@ -106,12 +112,12 @@
       }
     }
 
-    .hero__title{
+    .hero__title {
       font-size: 64px;
-      @include tablet{
+      @include tablet {
         @include typography-h1;
       }
-      @include mobile-md{
+      @include mobile-md {
         @include typography-h1;
         margin-bottom: 10px;
       }

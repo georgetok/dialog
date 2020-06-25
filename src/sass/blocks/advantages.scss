@@ -19,8 +19,8 @@
   padding-right: calc(var(--indent) - 20px);
 
   @include laptop {
-    padding-left: calc(var(--indent) - 15px);
-    padding-right: calc(var(--indent) - 15px);
+    padding-left: calc(var(--indent) - 10px);
+    padding-right: calc(var(--indent) - 10px);
   }
 
   @include mobile-sm {

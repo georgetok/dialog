@@ -39,7 +39,7 @@
     background: #847BB9;
     border-radius: 50%;
     position: absolute;
-    bottom: 20px;
+    bottom: 0px;
     right: -10px;
     opacity: 0;
     transition: .1s ease-in all;
@@ -49,13 +49,13 @@
   }
 
   .pseudo--2 {
-    width: 490px;
-    height: 490px;
+    width: 510px;
+    height: 510px;
     background: #8A82BE;
     border-radius: 50%;
     position: absolute;
-    bottom: 75px;
-    right: 65px;
+    bottom: 55px;
+    right: 75px;
     z-index: 1;
     transform: translate(70%, 70%);
     opacity: 0;
@@ -65,11 +65,11 @@
   }
 
   .pseudo--3 {
-    width: 600px;
-    height: 600px;
+    width: 670px;
+    height: 670px;
     background: #958ec3;
     bottom: 90px;
-    right: 150px;
+    right: 130px;
     border-radius: 50%;
     position: absolute;
     z-index: 3;
@@ -105,6 +105,13 @@
 
     &:hover {
       background: #AEA8D2;
+      .advantages__icon--accent{
+        display: flex;
+        background: #fff;
+      }
+      .advantages__icon--white{
+        display: none;
+      }
 
       .pseudo--1 {
         transform: translate(60%, 60%);
@@ -139,11 +146,9 @@
         background: #fff;
         z-index: 4;
         position: relative;
-        //transition: 1s ease all;
 
-        svg {
+        svg path{
           fill: $color-accent;
-          //transition: 1s ease all;
         }
       }
     }
@@ -153,7 +158,6 @@
   h2 {
     position: relative;
     z-index: 10;
-    //transition: 1s ease-in-out color;
     @include typography-h6;
     margin-bottom: 18px;
 
@@ -170,13 +174,7 @@
     @include typography-txt;
     z-index: 10;
     position: relative;
-    //transition: .1s ease-in-out color;
   }
-
-  svg {
-    //transition: 1s ease-in-out all;
-  }
-
 }
 
 .advantages__icon {
@@ -188,6 +186,9 @@
   margin-bottom: 20px;
   border-radius: 50%;
   background-color: $color-accent;
+  &--accent{
+    display: none;
+  }
 
   @include laptop {
     margin-bottom: 21px;
@@ -198,6 +199,8 @@
   }
 
   svg {
-    fill: $color-contrast;
+    fill: none;
+    width: 45px;
+    height: 45px;
   }
 }

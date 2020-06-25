@@ -17,23 +17,26 @@ block content
   -
     const advantages = [
     {
-    iconPath: "icon-hands",
+    iconPathWhite: "icon-hands-white",
+    iconPathAccent: "icon-hands-accent",
     iconWidth: 35,
     iconHeight: 31,
     title: t.main.adv_title_1,
     text: t.main.adv_sub_1
     },
     {
-    iconPath: "icon-lock",
-    iconWidth: 30,
-    iconHeight: 30,
+    iconPathWhite: "icon-purse-white",
+    iconPathAccent: "icon-purse-accent",
+    iconWidth: 28,
+    iconHeight: 26,
     title: t.main.adv_title_2,
     text: t.main.adv_sub_2
     },
     {
-    iconPath: "icon-purse",
-    iconWidth: 28,
-    iconHeight: 26,
+    iconPathWhite: "icon-lock-white",
+    iconPathAccent: "icon-lock-accent",
+    iconWidth: 30,
+    iconHeight: 30,
     title: t.main.adv_title_3,
     text: t.main.adv_sub_3
     }
@@ -128,8 +131,10 @@ block content
             div.pseudo--1
             div.pseudo--2
             div.pseudo--3
-            .advantages__icon
-              +svg(item.iconPath, item.iconWidth, item.iconHeight)
+            .advantages__icon.advantages__icon--white
+              +svg(item.iconPathWhite, item.iconWidth, item.iconHeight)
+            .advantages__icon.advantages__icon--accent
+              +svg(item.iconPathAccent, item.iconWidth, item.iconHeight)
             h2= item.title
             p= item.text
   section.functions.box
@@ -215,7 +220,7 @@ block content
 
 
       a(class="link link--with-icon link--safety link--icon-accent" href=`${lang === "ru" ? '/ru/security' : '/en/security'}`)=t.link.learn
-        +svg('arrow-right', 16, 15)
+      +svg('arrow-right', 16, 15)
   section.solutions.box.box--sand
     .solutions__wrapper
       h2.solutions__title=t.main.sol_title
@@ -278,7 +283,7 @@ block content
           +button(t.button.dev, {
             styleType: 'dark',
             isLink: true,
-            href:`${lang === "ru" ? '/ru/integrations' : '/en/integrations'}`,
+            href: `${lang === "ru" ? '/ru/integrations' : '/en/integrations'}`,
             additionalClassName: 'button--features-2'
           })
             +svg('arrow-right', 16, 15)

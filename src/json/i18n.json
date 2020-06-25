@@ -57,27 +57,27 @@
     },
 
     "adv_title_1": {
-      "ru": "Эффективная командная работа",
+      "ru": "Единая среда коммуникации",
       "en": "Efficient teamwork"
     },
     "adv_title_2": {
+      "ru": "Сокращение расходов на коммуникации",
+      "en": "Reduce communication costs"
+    },
+    "adv_title_3": {
       "ru": "Защищенная коммуникация",
       "en": "Secure communication"
     },
-    "adv_title_3": {
-      "ru": "Единая среда коммуникации",
-      "en": "Reduce communication costs"
-    },
     "adv_sub_1": {
-      "ru": "Dialog позволяет настроить интеграции с\u00A0сервисами компании и\u00A0оптимизировать бизнес-процессы.",
+      "ru": "Легко находите коллег, общайтесь в групповых чатах, обменивайтесь файлами и совершайте аудио- и видеозвонки",
       "en": "Find colleagues easily, communicate in group chats, share files and make audio and video calls."
     },
     "adv_sub_2": {
-      "ru": "Архитектура enterprise уровня, интеграия с системами корпоративной безопасности.",
+      "ru": "Объединение разрозненных инструментов в одном решении позволяет сократить расходы на ПО, оборудование, обслуживание и поддержку",
       "en": "Hosting on company servers and integration with corporate security systems."
     },
     "adv_sub_3": {
-      "ru": "Совмещение разрозненных инструментов в\u00A0одной платформе оптимизирует расходы на\u00A0ПО, оборудование, обслуживание и\u00A0поддержку.",
+      "ru": "Совмещение разрозненных инструментов в одной платформе оптимизирует расходы на ПО, оборудование, обслуживание и поддержку.",
       "en": "Combining various tools in one platform optimizes the cost of software, hardware, maintenance and support."
     },
 
@@ -86,7 +86,7 @@
       "en": "Dialog Functions"
     },
     "f_title_1": {
-      "ru": "Групповые чаты и\u00A0каналы",
+      "ru": "Групповые чаты и каналы",
       "en": "Group chats and channels"
     },
     "f_title_2": {
@@ -94,7 +94,7 @@
       "en": "File sharing"
     },
     "f_title_3": {
-      "ru": "Аудио-\u00A0/ видеозвонки",
+      "ru": "Аудио- / видеозвонки",
       "en": "Audio / Video Calls"
     },
     "f_title_4": {
@@ -111,15 +111,15 @@
       "en": "Groups are chat rooms for communication; create them for teams and projects in order to concentrate efforts, make work more transparent, and information accessible to everyone."
     },
     "f_text_2": {
-      "ru": "Тяжелая презентация не\u00A0отправляется по\u00A0почте? Делитесь файлами, не\u00A0задумываясь о\u00A0лимитах по\u00A0размеру или формату.",
+      "ru": "Тяжелая презентация не отправляется по почте? Делитесь файлами, не задумываясь о лимитах по размеру или формату.",
       "en": "Can’t send a hefty presentation over email? Share files without worrying about size or format limits."
     },
     "f_text_3": {
-      "ru": "Созванивайтесь с\u00A0коллегам в\u00A0мессенджере или подключайтесь к\u00A0конференциям в\u00A0АКС/ВКС-системе.",
+      "ru": "Созванивайтесь с коллегам в мессенджере или подключайтесь к конференциям в АКС/ВКС-системе.",
       "en": "Call up colleagues in the messenger or connect to conferences in the AKS / VKS system."
     },
     "f_text_4": {
-      "ru": "Удобный поиск по\u00A0чату поможет найти презентации, изображения, документы, а\u00A0интеграция с\u00A0адресной книгой\u00A0\u2014 нужного сотрудника по\u00A0имени, должности или отделу.",
+      "ru": "Удобный поиск по чату поможет найти презентации, изображения, документы, а интеграция с адресной книгой \u2014 нужного сотрудника по имени, должности или отделу.",
       "en": "A convenient chat search will help you find presentations, images, documents. Integration with the address book will help you find the right person by name, position or department."
     },
     "f_text_5": {

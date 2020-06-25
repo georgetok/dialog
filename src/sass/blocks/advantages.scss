@@ -190,14 +190,6 @@
     display: none;
   }
 
-  @include laptop {
-    margin-bottom: 21px;
-  }
-
-  @include mobile-md {
-    margin-bottom: 10px;
-  }
-
   svg {
     fill: none;
     width: 45px;

@@ -406,12 +406,82 @@
   }
 
   &--404 {
+    height: 100%;
+
+    .button {
+      @include mobile-sm {
+        width: 100%;
+      }
+    }
+
+    .hero__wrapper {
+      height: 100%;
+      @include mobile-sm {
+        flex-wrap: wrap;
+      }
+    }
+
     .hero__left {
       padding-right: 0;
+
+      @include mobile-sm {
+        margin-top: 50px;
+      }
+
+      h1 {
+        @include tablet {
+          font-size: 3.65vw;
+          line-height: 1.1;
+        }
+        @include mobile-sm {
+          font-size: 36px;
+          padding-right: 33vw;
+        }
+        @include mobile-xs {
+          padding-right: 0;
+        }
+      }
+
+      p {
+        @include tablet {
+          font-size: 2.1vw;
+          line-height: 1.5;
+        }
+        @include mobile-sm {
+          padding-right: 33vw;
+          font-size: 16px;
+          margin-bottom: 52px;
+          margin-top: 30px;
+        }
+        @include mobile-xs {
+          padding-right: 0;
+        }
+      }
+    }
+
+    .hero__img {
+      @include mobile-sm {
+        width: 100%;
+      }
     }
 
     .hero__right {
       width: 50%;
+      min-width: 600px;
+      @include tablet {
+        margin-right: -200px;
+      }
+      @include mobile-md {
+        margin-top: -50px;
+        margin-right: -170px;
+        min-width: 80vw;
+      }
+      @include mobile-sm {
+        width: 131%;
+        position: relative;
+        left: 50%;
+        transform: translateX(-52%);
+      }
     }
   }
 }

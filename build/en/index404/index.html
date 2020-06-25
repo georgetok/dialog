@@ -4,7 +4,13 @@
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <meta name="format-detection" content="telephone=no"/>
-    <meta http-equiv="refresh" content="0;url=/ru/404"/>
     <title>redirect to 404...</title>
+    <script>
+      let lang = navigator.language || navigator.userLanguage;
+        if (lang.indexOf('en') === 0)
+          window.location = '/en/404'
+        else
+          window.location = '/ru/404'
+    </script>
   </head>
 </html>

@@ -1,5 +1,5 @@
 .cta {
-  padding: 60px;
+  padding: 80px;
   @include mobile-md {
     padding-left: 0;
     padding-right: 0;
@@ -7,10 +7,11 @@
 
   @include mobile-sm {
     padding-top: 45px;
+    padding-bottom: 50px;
   }
 
-  .button{
-    @include mobile-sm{
+  .button {
+    @include mobile-sm {
       width: 100%;
     }
   }
@@ -30,8 +31,12 @@
   }
 
   &--form {
-    padding-top: 60px;
-    padding-bottom: 80px;
+    padding-top: 90px;
+    padding-bottom: 95px;
+    @include mobile-sm{
+      padding-bottom: 60px;
+      padding-top: 60px;
+    }
   }
 
   &__title {
@@ -42,6 +47,7 @@
 
     &--sm {
       @include typography-h3;
+      font-size: 32px;
       margin-bottom: 20px;
     }
 
@@ -55,7 +61,7 @@
       margin-left: -10vw;
       margin-right: -10vw;
     }
-    @include mobile-xxs{
+    @include mobile-xxs {
       font-size: 21px;
     }
   }

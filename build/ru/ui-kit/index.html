@@ -899,8 +899,9 @@
             <div class="form__wrapper form__wrapper--modal">
               <h2 class="form__title form__title--modal">Отправить заявку</h2>
               <div class="form__form">
-                <form class="gform" action="https://script.google.com/macros/s/AKfycbxUEtJZB_316gjG0B8B8kt6B1HNOsiRq-q3Y5rHuY_0RC789AMV/exec" method="POST" autocomplete="on" id="modal-offer-form" onsubmit="this.clear();this.classList.add('submited')">
+                <form class="gform" method="POST" action="" autocomplete="on" id="modal-offer-form" onsubmit="this.clear();this.alert">
                   <input type="text" id="location" name="location" value="form sent from main page" hidden="hidden"/>
+                  <input type="text" id="language" name="language" value="ru" hidden="hidden"/>
                   <div class="form__input-text-wrap">
                     <div class="form__form-field form__form-field--text form__form-field--m form__form-field--1 form__form-field--modal">
                       <input type="text" id="name-2" name="name" pattern="([A-Za-zА-ЯЁа-яё-]{2,}\s?)+" placeholder="Ваше имя" title="Имя может состоять только из букв, пробелов и дефиса"/>
@@ -938,10 +939,8 @@
                       <label for="subscribe-2">Подписаться на новостную рассылку</label>
                     </div>
                   </div>
-                  <button class="button button--accent button--form" type="submit"><span>Отправить заявку</span>
-                  </button>
+                  <button class="button--accent button button--form" type="submit" onclick="emailSendOffer('ru')"><span>Отправить заявку</span></button>
                   <div class="thankyou_message" style="display:none">
-                    <!-- You can customize the thankyou message by editing the code below-->
                     <h2><em>Thanks</em> for contacting us! We will get back to you soon!</h2>
                   </div>
                 </form>
@@ -953,6 +952,7 @@
     </div>
     <script src="/js/vendor.min.js"></script>
     <script src="/js/index.min.js"></script>
-    <script src="/js/form-submit.js" data-cfasync="false" type="text/javascript"></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script src="/js/script.js"></script>
   </body>
 </html>

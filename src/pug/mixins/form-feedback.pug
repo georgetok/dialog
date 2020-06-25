@@ -4,7 +4,12 @@ include ./field-textarea
 mixin form-feedback (isModal, idNumber, formId)
   .form.form--main.form--feedback.box.box--white(class=(isModal ? 'form--modal' : null))
     .form__wrapper
-      form(action="#" method="POST" autocomplete="on" id!=formId class="form__content")
+      form(
+          method="POST"
+          action=""
+          autocomplete="on"
+          id!=formId
+        )
         .form__input-text-wrap
           .form__form-field.form__form-field--text.form__form-field--m.form__form-field--1(
               class=(isModal ? 'form__form-field--modal' : null
@@ -39,7 +44,5 @@ mixin form-feedback (isModal, idNumber, formId)
           .form__form-field.form__form-field--checkbox(class=(isModal ? 'form__form-field--modal' : null))
             input.visually-hidden(type="checkbox" id=`accept-${idNumber}` name="accepted" checked required)
             label(for=`accept-${idNumber}`)=t.form.agree
-        +button(t.button.request, {styleType: 'accent', type: 'submit', additionalClassName: 'button--form'})
-    //- if isModal
-    //-   button(aria-label='Закрыть меню' type="button").form__close-button
-
+      button(class="button--accent button button--form" type="submit" onclick=`emailSendFeedback('${lang}')`)
+        span= t.button.request

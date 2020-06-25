@@ -4,7 +4,15 @@
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <meta name="format-detection" content="telephone=no"/>
-    <meta http-equiv="refresh" content="0;url=/ru"/>
     <title>redirect to main...</title>
   </head>
+  <body>
+    <script>
+      let lang = navigator.language || navigator.userLanguage;
+      if (lang.indexOf('en') === 0)
+        window.location = '/en/'
+      else
+        window.location = '/ru/'
+    </script>
+  </body>
 </html>

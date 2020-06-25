@@ -90,7 +90,6 @@
     border-radius: 50%;
     background-color: $color-contrast;
 
-
     @include mobile-md {
       width: 40px;
       height: 40px;
@@ -108,34 +107,42 @@
       transition: opacity $transition-props;
       border: 1px solid $color-gray-light-2;
       border-radius: 50%;
+      box-shadow: 0px 2px 4px rgba(47, 27, 73, 0.08), 0px 1px 1px rgba(47, 41, 64, 0.1);
 
       @include mobile-md {
-        content: none;
+        width: 40px;
+        height: 40px;
       }
     }
   }
 
   svg {
-    width: 33px;
-    height: 33px;
+    width: 39px;
+    height: 39px;
     fill: none;
+    @include mobile-md {
+      width: 22px;
+      height: 22px;
+    }
   }
 
   b {
     @include typography-txt;
+    margin-top: 10px;
     margin-bottom: 17px;
 
     @include laptop {
       font-size: 14px;
       line-height: 21px;
     }
-
     @include mobile-md {
       margin-bottom: 0;
       font-weight: 500;
       font-size: 18px;
       line-height: 25px;
       text-align: left;
+      margin-top: 0;
+      margin-left: 5px;
     }
   }
 
@@ -228,7 +235,7 @@
   padding-top: 99px;
   padding-left: 40px;
   padding-right: 40px;
-
+  max-height: none !important;
 
   @include tablet {
     padding-top: 76px;
@@ -254,8 +261,8 @@
   justify-content: center;
   padding-bottom: 66px;
 
-  @include laptop {
-    width: 288px;
+  @include tablet {
+    width: 29vw;
     margin-right: auto;
     padding-right: 0;
   }
@@ -277,7 +284,10 @@
     @include laptop {
       margin-bottom: 25px;
     }
-
+    @include tablet {
+      font-size: 3.5vw;
+      line-height: 1.2;
+    }
     @include mobile-md {
       display: none;
     }
@@ -285,6 +295,13 @@
 
   p {
     @include typography-txt-big;
+    @include tablet {
+      font-size: 1.8vw;
+      line-height: 1.4;
+    }
+    @include mobile-md {
+      @include typography-txt-big;
+    }
   }
 }
 
@@ -299,6 +316,9 @@
   background-repeat: no-repeat;
   background-position: bottom 16px left 116px;
   background-size: 112px 112px;
+  display: flex;
+  align-items: flex-end;
+
 
   @include laptop {
     justify-content: center;
@@ -308,27 +328,22 @@
 
   @include tablet {
     justify-content: center;
-    max-width: 670px;
+    max-width: 57vw;
     background-position: bottom 4px left 13%;
     width: 80%;
-    margin-right: -32%;
+    margin-right: -0%;
   }
 
   @include mobile-md {
     max-width: 100%;
     width: 100%;
     padding-top: 43px;
-    padding-bottom: 23px;
+    padding-bottom: 0;
     min-height: 360px;
     background-repeat: no-repeat;
-    background-position: top 30.3% left -70px,
-    top 12% right 7%,
-    bottom 0 right 2%;
-    background-size: 140px auto,
-    54px auto,
-    142px auto;
+    overflow: hidden;
+    border: 1px solid $color-accent-light;
   }
-
 
   &::before {
     left: -8%;
@@ -341,25 +356,20 @@
     background-image: url(../img/pattern.svg);
 
     @include laptop {
-      width: 80%;
-    }
-    @include tablet {
-      display: none;
+      width: 70%;
     }
     @include mobile-md {
-      display: block;
+      width: 40%;
       right: auto;
+      padding-bottom: 30.5%;
       bottom: 0;
       top: auto;
       left: 0;
-      max-width: 400px;
-      background-size: 77%;
-      left: -290px;
+      background-size: 65%;
     }
     @include mobile-sm {
-      background-size: 80%;
-      top: 53%;
-      width: 185%;
+      max-width: 300px;
+      background-size: 77%;
     }
   }
 
@@ -372,26 +382,17 @@
     background-size: 82%;
     background-image: url(../img/pattern.svg);
 
-
-    @include tablet {
+    @include mobile-md {
+      width: 39%;
       right: 0;
       left: auto;
-      background-size: 100%;
-      bottom: auto;
       top: 0;
-    }
-    @include mobile-md {
-      right: -200px;
+      bottom: auto;
     }
     @include mobile-sm {
-      width: 50%;
-      top: 10%;
-      padding-bottom: 55%;
-      background-size: 300px;
-      right: -30%;
-      left: auto;
-      transform: none;
+      padding-bottom: 40.5%;
     }
+
   }
 
   .wrap {

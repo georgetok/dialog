@@ -4,6 +4,7 @@ include ../mixins/button
 include ../mixins/button-play
 include ../mixins/picture
 include ../mixins/form-offer
+include ../mixins/blog
 
 block variables
   -
@@ -36,6 +37,7 @@ block content
     text: t.main.adv_sub_3
     }
     ];
+
     const functions = [
     {
     index: "1",
@@ -342,43 +344,6 @@ block content
             .quote__avatar-post
               p=t.main.quote_desc
 
-  section.blog.box.box--gray
-    .blog__wrapper
-      h2.blog__title=t.blog.cards_title
-      ul.blog__list
-        li.blog__item
-          a(href=`${lang === "ru" ? "/ru/blog/korporativnyi-miessiendzhier-dlia-lokalnoi-sieti.html" : "/en/blog/corporate-messenger-and-byod.html"}`).blog__card
-            .blog__img-box
-              +picture(path=`${lang === 'ru' ? '' : '/img/pages/blog/blog-en-1-desktop@2x.jpg'}`), 'jpg', 'Изображение приложения', 380)
-            .blog__text-box
-              h3.blog__card-title=t.blog.card_desc_1
-              //.blog__text-info
-                p 12 !{t.blog.month}, 2020
-                div
-                  +svg('icon-watch', 17, 17)
-                  span 1 !{t.blog.min}
-        li.blog__item
-          a(href=`${lang === "ru" ? "/ru/blog/korporativnyi-miessiendzhier-vidy-vozmozhnosti-i-sfiery-primienieniia.html" : "/en/blog/benefits-of-active-directory-compatible-corporate-messengers.html"}`).blog__card
-            .blog__img-box
-              +picture(`/img/pages/blog/blog-2-desktop`, 'jpg', 'Изображение приложения', 380)
-            .blog__text-box
-              h3.blog__card-title=t.blog.card_desc_2
-              //.blog__text-info
-                p 10 !{t.blog.month}, 2019
-                //div
-                  //+svg('icon-watch', 17, 17)
-                  //span 1 !{t.blog.min}
-        li.blog__item
-          a(href=`${lang === "ru" ? "/ru/blog/cifrovaya_gigiena.html" : "/en/blog/explaining-the-main-hosting-models-on-premise-server-self-hosted-hosted-cloud.html"}`).blog__card
-            .blog__img-box
-              +picture(`/img/pages/blog/blog-3-desktop`, 'jpg', 'Изображение приложения', 380)
-            .blog__text-box
-              h3.blog__card-title=t.blog.card_desc_3
-              //.blog__text-info
-                p 15 !{t.blog.month}, 2019
-                div
-                  +svg('icon-watch', 17, 17)
-                  span 1 !{t.blog.min}
-      a(class="link link--with-icon link--icon-accent" href=`${lang === "ru" ? "/ru/blog" : "/en/blog"}` )=t.button.view
-        +svg('arrow-right', 16, 15)
+  section.box.box--gray
+    +blog
   +form-offer(false, 1, 'offer-form')

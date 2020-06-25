@@ -4,6 +4,7 @@ include ../mixins/svg
 include ../mixins/button
 include ../mixins/picture
 include ../mixins/form-cta
+include ../mixins/blog
 
 block variables
   -
@@ -33,44 +34,7 @@ block content
         | !{post.html}
 
   section.blog.box.box--gray
-    .blog__wrapper
-      h2.blog__title Блог компании
-      ul.blog__list
-        li.blog__item
-          a(href="/blog.html").blog__card
-            .blog__img-box
-              +picture('/img/pages/blog/blog-1-desktop', 'jpg', 'Изображение приложения', 380)
-            .blog__text-box
-              h3.blog__card-title Корпоративный мессенджер для локальной сети
-              .blog__text-info
-                p 27 февраля, 2020
-                div
-                  +svg('icon-watch', 17, 17)
-                  span 1 мин
-        li.blog__item
-          a(href="/blog.html").blog__card
-            .blog__img-box
-              +picture('/img/pages/blog/blog-2-desktop', 'jpg', 'Изображение приложения', 380)
-            .blog__text-box
-              h3.blog__card-title Корпоративный мессенджер&nbsp;&mdash; виды, возможности и&nbsp;сферы применения
-              .blog__text-info
-                p 27 февраля, 2020
-                div
-                  +svg('icon-watch', 17, 17)
-                  span 1 мин
-        li.blog__item
-          a(href="/blog.html").blog__card
-            .blog__img-box
-              +picture('/img/pages/blog/blog-3-desktop', 'jpg', 'Изображение приложения', 380)
-            .blog__text-box
-              h3.blog__card-title Цифровая гигиена: как уберечь переписку в&nbsp;мессенджерах от&nbsp;конкурентов
-              .blog__text-info
-                p 27 февраля, 2020
-                div
-                  +svg('icon-watch', 17, 17)
-                  span 1 мин
-      a(class="link link--with-icon link--icon-accent" href="/blog.html") Смотреть все
-        +svg('arrow-right', 16, 15)
+    +blog
 
   section.box
     .wrapper.wrapper--main

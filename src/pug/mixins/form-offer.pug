@@ -67,7 +67,8 @@ mixin form-offer (isModal, idNumber, formId)
               )
                 option(value="1-100") 1-100
                 option(value="101-500") 101-500
-                option(value="501 и больше") 501 !{t.form.more}
+                option(value="501-1000") 501-1000
+                option(value="1000+") 1000+
               label(for=`quantity-${idNumber}`)=t.form.users
           .form__checkbox-wrap
             .form__form-field.form__form-field--checkbox(class=(isModal ? 'form__form-field--modal' : null))

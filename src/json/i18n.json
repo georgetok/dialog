@@ -10,15 +10,15 @@
     },
     "card_desc_1": {
       "ru": "Корпоративный мессенджер для локальной сети",
-      "en": "Messengers market. Hot topics and industry trends in 2018"
+      "en": "Corporate messenger and BYOD"
     },
     "card_desc_2": {
       "ru": "Корпоративный мессенджер - виды, возможности и сферы применения",
-      "en": "Digital hygiene: how to protect correspondence in messengers from competitors"
+      "en": "Benefits of Active Directory-compatible corporate messengers"
     },
     "card_desc_3": {
       "ru": "Цифровая гигиена: как уберечь переписку в мессенджерах от конкурентов",
-      "en": "Sberbank launched a corporate messenger"
+      "en": "Explaining the main hosting models: On-premise (Server, Self-hosted), Hosted, Cloud"
     },
     "month": {
       "ru": "Февраль",
@@ -46,11 +46,11 @@
       "en": "Efficient teamwork"
     },
     "adv_title_2": {
-      "ru": "Безопасное общение",
+      "ru": "Защищенная коммуникация",
       "en": "Secure communication"
     },
     "adv_title_3": {
-      "ru": "Сокращение затрат на\u00A0коммуникации",
+      "ru": "Единая среда коммуникации",
       "en": "Reduce communication costs"
     },
     "adv_sub_1": {
@@ -58,7 +58,7 @@
       "en": "Find colleagues easily, communicate in group chats, share files and make audio and video calls."
     },
     "adv_sub_2": {
-      "ru": "Соответствие отраслевым стандартам безопасности, контроль и\u00A0защита на\u00A0разных уровнях.",
+      "ru": "Архитектура enterprise уровня, интеграия с системами корпоративной безопасности.",
       "en": "Hosting on company servers and integration with corporate security systems."
     },
     "adv_sub_3": {
@@ -332,7 +332,7 @@
       "en": "Contact Technical Support"
     },
     "text": {
-      "ru": "Если вы пользователь dialog enterprise — воспользуйтесь центром поддержки для корпоративных клиентов. Или запросите доступ у вашего администратора.",
+      "ru": "Если вы пользователь Dialog enterprise — воспользуйтесь центром поддержки для корпоративных клиентов. В случае отсутствия доступа — свяжитесь с вашим администратором.",
       "en": "If you are a user of dialog enterprise — use the support center for corporate clients. Or request access from your administrator."
     },
     "link": {
@@ -414,10 +414,6 @@
       "ru": "Подписаться на новостную рассылку",
       "en": "Subscribe for news"
     },
-    "more": {
-      "ru": "и больше",
-      "en": "and more"
-    },
     "help": {
       "ru": "Чем мы можем вам помочь?",
       "en": "Describe your issue"
@@ -435,7 +431,7 @@
     },
     "vacancy_title": {
       "ru": "В нашу быстрорастущую команду требуется много талантов",
-      "en": "Our fast-growing team requires a lot of talent."
+      "en": "We are hiring"
     },
     "vacancy_sub": {
       "ru": "Узнайте больше об открытых вакансиях и работе в компании",
@@ -718,8 +714,7 @@
       "en": "<h2><span>Privacy Policy</span></h2><p><span>This privacy policy is based on the principles of brevity and clarity.</span></p><p><span>Our company intends to meet the highest requirements in the field of security and processing of personal data of users. Dialog uses various security measures and precautions that protect user's personal data provided to the Dialog</span></p><p><span>User's personal data processing is carried out in accordance with the current legislation of the Russian Federation and only for the purposes of using our software. User data can be used to improve the client service, and also to improve the performance of the application. Your e-mail address is used to receive information from Dialog: you can receive important notifications from us on it, and we are committed to responding to your inquiries about our product.</span></p><p><span>If you use or register in Dialog, Dialog may have access to information about your name, mobile phone number, e-mail address, IP address (personal data). Please note that all the above personal data are indicated by the user on their own.</span></p><p><span>Upon registration of the user, the latter agrees that Dialog collect, process, store and use the above personal data in accordance with Federal Law No. 152-FZ of the Russian Federation of July 27, 2006 \"On Personal Data\".</span></p><p><span>Upon registration, the User expresses his consent to the transfer of the above personal data to third parties for the purposes of providing services to Dialog and / or to third parties. At the same time, data transmission should be carried out using automation tools that provide the necessary protection of user rights.</span></p><p><span>“Dialog” is required to provide personal data to a third party in cases specifically provided by Russian law, for example, based on a court decision.</span></p><p><span>In the event that for any reason Dialog becomes aware of the unauthorised disclosure of the user's personal data that Dialog has received, Dialog undertakes to notify the user as soon as possible. This notification is sent to the user's email or mobile phone.</span></p><h2><span>Dialog uses cookies</span></h2><p><span>Cookies are files that describe your preferences to the application. This is a small piece of data that is created and sent to the website. It is stored on the user's computer and used by the web browser if the user allows it.</span></p><p><span>Cookies contain information about the interaction and traffic of the user in the application. We use this data to improve the usability of the application. We can also share some of this data with third-party services that help us better understand the needs of our users. These services can not use your cookie in any other way, except to assist dialog in the development of the business.</span></p><p><span>We do not sell information and do not exchange information that can be used to identify our users. But we share some personal data with our trusted third-party service providers who are required to keep this information in secret and use it only to support our business. We can also disclose our user's personal information when required to comply with Russian laws. We can also share this data in cases where a person violates someone's rights, threatens property or human security. However, other information that we collect and that can not be used to identify our client can be transferred to third parties for use in marketing, advertising or other purposes.</span></p><p><span>When registering, you agree to the Dialog use of cookies for the above purposes.</span></p><h2><span>Additional User Rights</span></h2><p><span>The user is entitled to:</span></p><ul>  <li><span>request the removal or correction of personal data;</span></li>  <li><span>access the user data that is available from Dialog;</span></li>  <li><span>request information about the transfer of their data to third parties;</span></li>  <li><span>withdraw consent to the processing of personal data and / or the use of cookies.</span></li></ul><p><span>The rights granted to the user are realised by sending a scanned document containing the above user right and his signature. This document should be sent to Dialog through this software. Dialog undertakes to facilitate the implementation of user rights within 10 business days from the receipt of a properly issued and directed document from the user.</span></p><p><span>Dialog software is not intended for use by people under 13 years old. If you are under 13, and this server is in the US, then do not use this software. (According to the requirements of COPPA - the Law on the Protection of Children's Privacy on the Internet).</span></p><p><span>If you are an EU resident under the age of 16, you are not entitled to use the Dialog software. In some cases, the legal representative (guardian) of the minor has the right to apply to Dialog with the consent (approval) on the processing of the minor's personal data in the form provided for the realisation of the rights granted to the user, on the basis of this treatment a minor may have the right to use the Dialog software.</span></p>"
     }
   },
-  
-  
+
   "patent": {
     "title_1": {
       "ru": "Лицензии и сертификаты",
@@ -739,23 +734,19 @@
     },
     "li_1": {
       "ru": "Мессенджер dialog соответствует требованиям Единого реестра российских программ для электронных вычислительных машин и баз данных и состоит в реестре отечественного ПО.",
-      "en": "Мессенджер dialog соответствует требованиям Единого реестра российских программ для электронных вычислительных машин и баз данных и состоит в реестре отечественного ПО."
+      "en": "The Dialog messenger complies with the requirements of the Unified Register of Russian Programs for Electronic Computing Machines and Databases; is in the registry of domestic software."
     },
     "li_2": {
       "ru": "Компания является членом Ассоциации документальной электросвязи (АДЭ)",
-      "en": "Компания является членом Ассоциации документальной электросвязи (АДЭ)"
+      "en": " Dialog is a member of Domestic software Association ARPP."
     },
     "li_3": {
-      "ru": "ООО «Диалог» входит в реестр Организаторов Распространения Информации (ОРИ) Роскомнадзор.",
-      "en": "ООО «Диалог» входит в реестр Организаторов Распространения Информации (ОРИ) Роскомнадзор."
-    },
-    "li_4": {
       "ru": "ООО «Диалог» является участником",
-      "en": "ООО «Диалог» является участником"
+      "en": " Dialog is a participant of the "
     },
     "link": {
       "ru": "инновационного центра «Сколково»",
-      "en": "инновационного центра «Сколково»"
+      "en": "Skolkovo Innovation Center."
     }
   },
 
@@ -833,7 +824,7 @@
     },
     "get": {
       "ru": "Получить предложение",
-      "en": "Get request"
+      "en": "Get offer"
     },
     "home": {
       "ru": "Перейти на главную",
@@ -941,6 +932,14 @@
     "pm": {
       "ru": "Фото ноутбука и мобильного телефона",
       "en": "Notebook or mobile phone photo"
+    },
+    "app": {
+      "ru": "Изображение приложения",
+      "en": "Picture of application"
+    },
+    "blog_card": {
+      "ru": "Карточка блога",
+      "en": "Blog card>"
     }
   }
 }

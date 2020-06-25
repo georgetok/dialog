@@ -1,29 +1,20 @@
 .button {
   @include reset-button;
-
   display: flex;
   justify-content: center;
   align-items: center;
-
   width: auto;
   max-width: 100%;
   min-width: 230px;
   min-height: 50px;
   padding: 0;
-
   font-weight: 500;
   font-size: 16px;
   line-height: 20px;
-
   border-radius: 4px;
-
   cursor: pointer;
-
   fill: $color-contrast;
-
-  transition:
-    color $transition-props,
-    background-color $transition-props;
+  transition: color $transition-props, background-color $transition-props;
 
   span {
     padding: 12px 20px;
@@ -148,4 +139,8 @@
   @include mobile-sm{
     width: 100%;
   }
+}
+
+.button--md{
+  min-width: 280px;
 }

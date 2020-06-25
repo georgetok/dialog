@@ -1,0 +1,37 @@
+mixin blog(title)
+  -
+    const blogData = [
+      {
+        linkRu: '/ru/blog/korporativnyi-miessiendzhier-vidy-vozmozhnosti-i-sfiery-primienieniia.html',
+        linkEn: '/en/blog/corporate-messenger-and-byod.html',
+        img: `${lang === "ru" ? '/img/pages/blog/blog-1-desktop' : '/img/pages/blog/blog-en-1-desktop'}`,
+        text: t.blog.card_desc_1
+      },
+      {
+        linkRu: '/ru/blog/korporativnyi-miessiendzhier-vidy-vozmozhnosti-i-sfiery-primienieniia.html',
+        linkEn: '/en/blog/benefits-of-active-directory-compatible-corporate-messengers.html',
+        img: `${lang === "ru" ? '/img/pages/blog/blog-2-desktop' : '/img/pages/blog/blog-en-2-desktop'}`,
+        text: t.blog.card_desc_2
+      },
+      {
+        linkRu: '/ru/blog/cifrovaya_gigiena.html',
+        linkEn: '/en/blog/explaining-the-main-hosting-models-on-premise-server-self-hosted-hosted-cloud.html',
+        img: `${lang === "ru" ? '/img/pages/blog/blog-3-desktop' : '/img/pages/blog/blog-en-3-desktop'}`,
+        text: t.blog.card_desc_3
+      },
+    ]
+  .blog
+    .blog__wrapper
+      h2.blog__title=t.blog.cards_title
+      ul.blog__list
+        each post in blogData
+          li.blog__item
+            a(href=`${lang === "ru" ? post.linkRu : post.linkEn}`).blog__card
+              .blog__img-box
+                +picture(post.img, 'jpg', t.alt.blog_card, 380)
+
+              .blog__text-box
+                h3.blog__card-title=post.text
+
+      a(class="link link--with-icon link--icon-accent" href=`${lang === "ru" ? "/ru/blog" : "/en/blog"}` )=t.button.view
+        +svg('arrow-right', 16, 15)

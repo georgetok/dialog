@@ -3,11 +3,16 @@ import offerModal from '../modules/offer-modal';
 import form from '../components/form';
 
 const main = () => {
-  const openModalButton = document.querySelector('.js-open-modal-hero');
+  const openModalButton1 = document.querySelector('.js-open-modal-hero');
+  const openModalButton2 = document.querySelector('.js-open-modal-install');
   const formElem = document.querySelector('#offer-form');
 
-  if (openModalButton) {
-    offerModal({ openButton: openModalButton });
+  if (openModalButton1) {
+    offerModal({ openButton: openModalButton1 });
+  }
+
+  if (openModalButton2) {
+    offerModal({ openButton: openModalButton2 });
   }
 
   if (formElem) {

@@ -110,7 +110,7 @@
       padding-left: 28px;
       @include gap-xxs;
 
-      @include mobile-xs {
+      @include mobile-sm {
         flex-wrap: wrap;
       }
 
@@ -127,9 +127,6 @@
         flex-direction: column;
         justify-content: space-between;
         @include mobile-sm {
-          @include col-4;
-        }
-        @include mobile-xs {
           @include col-6;
         }
       }

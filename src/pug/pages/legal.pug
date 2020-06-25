@@ -20,12 +20,10 @@ block content
       .information-content__sidebar
         h2=t.nav.library
         ul
-          li
-            a(
-              class="information-content__link"
-              href=`/${lang === "ru" ? "ru" : "en"}/public`
-            )
-              span=t.nav.social
+          if (lang === "ru")
+            li
+              a(class="information-content__link" href=`/ru/public`)
+                span=t.nav.social
           li
             a(
               class="information-content__link information-content__link--active"

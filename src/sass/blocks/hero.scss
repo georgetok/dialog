@@ -309,6 +309,9 @@
 
     .hero__right {
       width: 50%;
+       @include laptop {
+        padding-top: 50px;
+      }
       @include mobile-md {
         width: 100%;
         padding-bottom: 100px;
@@ -383,7 +386,6 @@
       }
     }
   }
-
 
   &--404 {
     .hero__left {

@@ -211,8 +211,10 @@ block content
                 b Private cloud
                 | !{t.main.sec_li_2_2}
                 img(src=`/img/sber-cloud.svg`, width="108" height="22" alt="Логотип SberCloud")
-      a(class="link link--with-icon link--safety link--icon-accent" href="#!")=t.link.learn
-      +svg('arrow-right', 16, 15)
+
+
+      a(class="link link--with-icon link--safety link--icon-accent" href=`${lang === "ru" ? '/ru/security' : '/en/security'}`)=t.link.learn
+        +svg('arrow-right', 16, 15)
   section.solutions.box.box--sand
     .solutions__wrapper
       h2.solutions__title=t.main.sol_title
@@ -272,7 +274,12 @@ block content
         h3=t.main.feat_title_enlarge
         p=t.main.feat_sub_enlarge
         .features__button-box
-          +button(t.button.dev, {styleType: 'dark', isLink: true, additionalClassName: 'button--features-2'})
+          +button(t.button.dev, {
+            styleType: 'dark',
+            isLink: true,
+            href:`${lang === "ru" ? '/ru/integrations' : '/en/integrations'}`,
+            additionalClassName: 'button--features-2'
+          })
             +svg('arrow-right', 16, 15)
   section.install.box.box--lilac
     .install__wrapper
@@ -319,9 +326,8 @@ block content
           p=t.main.inst_li_1_3
       +button(t.button.license, {
         styleType: 'accent',
-        isLink: true,
-        href: '#!',
-        additionalClassName: 'button--install'
+        isLink: false,
+        additionalClassName: 'button--install js-open-modal-install'
       })
 
         +svg('arrow-right', 16, 15)
@@ -345,5 +351,5 @@ block content
               p=t.main.quote_desc
 
   section.box.box--gray
-    +blog
+    +blog(t.blog.cards)
   +form-offer(false, 1, 'offer-form')

@@ -12,11 +12,11 @@ mixin button(text, props)
         -className = 'button button--light'
     -className = props.additionalClassName ? className + ' ' + props.additionalClassName : className;
     if (props.isLink)
-      a(class!= className href!= props.href ? props.href : '#')
+      a(class!= className href!= props.href ? props.href : '#' target=`${props.blank ? '_blank' : '_self'}`)
         span= text
         block
     else
-      button(class!= className type!= props.type ? props.type : 'button')
+      button(class!= className type!= props.type ? props.type : 'button' )
         span= text
         block
 //- argTypes

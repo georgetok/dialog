@@ -21,9 +21,6 @@ block content
             span=t.blog.back
           .wrap.post__time
             p=post.updated_at.slice(0, 10)
-            //.wrap.wrap--ac
-            //  +svg('icon-watch', 17, 17)
-            //  span 1 мин
       .post__header
         h1.post__title.post__title--h1=post.title
         h6.post__title.post__title--sub=post.custom_excerpt
@@ -34,7 +31,7 @@ block content
         | !{post.html}
 
   section.blog.box.box--gray
-    +blog
+    +blog(t.blog.recommended)
 
   section.box
     .wrapper.wrapper--main

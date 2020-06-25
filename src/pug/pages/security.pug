@@ -124,7 +124,7 @@ block content
               p=t.security.norms_li_3
             li
               p=t.security.norms_li_4
-      a(class="compliance__link--more link link--icon-accent link--with-icon link--icon-accent" href="#!")=t.link.learn
+      a(class="compliance__link--more link link--icon-accent link--with-icon link--icon-accent" href=`/${lang === "ru" ? "ru" : "en"}/patents`)=t.link.learn
         +svg('arrow-right', 16, 15)
   section
     +form-offer(false, 1, 'offer-form')

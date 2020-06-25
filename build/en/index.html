@@ -11,7 +11,7 @@
   <body>
     <div class="page">
       <header class="header js-header">
-        <div class="header__wrapper"><a class="header__logo" href="/"><img src="/img/library/logo-dialog.svg" alt="Логотип мессенджера Dialog"/></a>
+        <div class="header__wrapper"><a class="header__logo" href="/en"><img src="/img/library/logo-dialog.svg" alt="Логотип мессенджера Dialog"/></a>
           <div class="header__content-box">
             <div class="header__top-panel"><a class="header__nav-logo" href="/"><img src="/img/library/logo-dialog.svg" alt="Логотип мессенджера Dialog"/></a>
               <button class="header__close-button" aria-label="Закрыть меню" type="button"></button>
@@ -297,10 +297,10 @@
                   </li>
                 </ul>
               </li>
-            </ul><a class="link link--with-icon link--safety link--icon-accent" href="#!">Learn more</a>
-            <svg width="16" height="15" aria-hidden="true">
-              <use xlink:href="/img/sprite.svg#arrow-right"></use>
-            </svg>
+            </ul><a class="link link--with-icon link--safety link--icon-accent" href="/en/security">Learn more
+              <svg width="16" height="15" aria-hidden="true">
+                <use xlink:href="/img/sprite.svg#arrow-right"></use>
+              </svg></a>
           </div>
         </section>
         <section class="solutions box box--sand">
@@ -399,7 +399,7 @@
             <div class="features__footer">
               <h3>Extend and automate your workspace</h3>
               <p>With our Integrator partners or internal developers of your company</p>
-              <div class="features__button-box"><a class="button button--dark button--features-2" href="#"><span>For developers</span>
+              <div class="features__button-box"><a class="button button--dark button--features-2" href="/en/integrations" target="_self"><span>For developers</span>
                   <svg width="16" height="15" aria-hidden="true">
                     <use xlink:href="/img/sprite.svg#arrow-right"></use>
                   </svg></a>
@@ -467,10 +467,12 @@
                 <h3>Интеграция с&nbsp;Active Directory</h3>
                 <p>Employees in your company can log into Dialog with their corporate accounts.</p>
               </div>
-            </div><a class="button button--accent button--install" href="#!"><span>Get license price</span>
+            </div>
+            <button class="button button--accent button--install js-open-modal-install" type="button"><span>Get license price</span>
               <svg width="16" height="15" aria-hidden="true">
                 <use xlink:href="/img/sprite.svg#arrow-right"></use>
-              </svg></a>
+              </svg>
+            </button>
           </div>
         </section>
         <section class="quote box box--white">
@@ -519,6 +521,7 @@
                     </div>
                     <div class="blog__text-box">
                       <h3 class="blog__card-title">Corporate messenger and BYOD</h3>
+                      <p class="blog__date"><span>23</span>&nbsp;&nbsp;<span>July</span><span>&nbsp;, &nbsp;</span><span>2019</span></p>
                     </div></a></li>
                 <li class="blog__item"><a class="blog__card" href="/en/blog/benefits-of-active-directory-compatible-corporate-messengers.html">
                     <div class="blog__img-box">
@@ -528,6 +531,7 @@
                     </div>
                     <div class="blog__text-box">
                       <h3 class="blog__card-title">Benefits of Active Directory-compatible corporate messengers</h3>
+                      <p class="blog__date"><span>23</span>&nbsp;&nbsp;<span>July</span><span>&nbsp;, &nbsp;</span><span>2019</span></p>
                     </div></a></li>
                 <li class="blog__item"><a class="blog__card" href="/en/blog/explaining-the-main-hosting-models-on-premise-server-self-hosted-hosted-cloud.html">
                     <div class="blog__img-box">
@@ -537,6 +541,7 @@
                     </div>
                     <div class="blog__text-box">
                       <h3 class="blog__card-title">Explaining the main hosting models: On-premise (Server, Self-hosted), Hosted, Cloud</h3>
+                      <p class="blog__date"><span>23</span>&nbsp;&nbsp;<span>July</span><span>&nbsp;, &nbsp;</span><span>2019</span></p>
                     </div></a></li>
               </ul><a class="link link--with-icon link--icon-accent" href="/en/blog">View all
                 <svg width="16" height="15" aria-hidden="true">
@@ -545,7 +550,7 @@
             </div>
           </div>
         </section>
-        <div class="form form--main fomr--career box box--white">
+        <div class="form form--main box box--white">
           <div class="form__wrapper">
             <h2 class="form__title">Submit a request</h2>
             <div class="form__form">
@@ -647,14 +652,9 @@
               </ul>
             </div>
             <ul class="footer__doc-links">
-              <li><a href="/en/public" target="_blank" rel="noopener noreferrer">Social responsibility</a>
-              </li>
-              <li><a href="/en/legal" target="_blank" rel="noopener noreferrer">Legal Information</a>
-              </li>
-              <li><a href="/docs/privacy_policy.pdf" download="privacy policy" target="_blank" rel="noopener noreferrer">Processing personal data</a>
-              </li>
-              <li><a href="/docs/anti_corruption_policy.pdf" download="anti corruption policy" target="_blank" rel="noopener noreferrer">Anti-corruption policy</a>
-              </li>
+              <li><a href="/en/legal" target="_blank" rel="noopener noreferrer">Legal Information</a></li>
+              <li><a href="/docs/privacy_policy.pdf" download="privacy policy" target="_blank" rel="noopener noreferrer">Processing personal data</a></li>
+              <li><a href="/docs/anti_corruption_policy.pdf" download="anti corruption policy" target="_blank" rel="noopener noreferrer">Anti-corruption policy</a></li>
             </ul>
             <div class="footer__copyright">
               <p>© 2016—2020 ООО «Диалог»</p>
@@ -669,7 +669,7 @@
       <div class="modal__overlay">
         <div class="modal__content">
           <button class="modal__close" type="button" aria-label="Закрыть"></button>
-          <div class="form form--main fomr--career form--modal box box--white">
+          <div class="form form--main form--modal box box--white">
             <div class="form__wrapper form__wrapper--modal">
               <h2 class="form__title form__title--modal">Submit a request</h2>
               <div class="form__form">

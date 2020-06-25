@@ -17,21 +17,19 @@ block content
         h2=t.resp.sub
         p=t.resp.text
         .information-content__link-box
-          a(href="img/patents/register.pdf" target="_blank")
+          a(href="/docs/register.pdf" target="_blank")
             +svg('icon-pdf',23, 28)
             | !{t.resp.file_1}
-          a(href="img/patents/list.pdf" target="_blank")
+          a(href="/docs/list.pdf" target="_blank")
             +svg('icon-pdf',23, 28)
             | !{t.resp.file_2}
       .information-content__sidebar
         h2=t.nav.library
         ul
-          li
-            a(
-              class="information-content__link information-content__link--active"
-              href=`/${lang === "ru" ? "ru" : "en"}/security`
-            )
-              span=t.nav.social
+          if (lang === "ru")
+            li
+              a(class="information-content__link information-content__link--active" href=`/ru/public`)
+                span=t.nav.social
           li
             a(
               class="information-content__link"

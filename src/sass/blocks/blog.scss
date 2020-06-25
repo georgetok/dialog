@@ -82,6 +82,11 @@
   }
 }
 
+.blog__date{
+  color: $color-gray-dark;
+  margin-top: auto;
+}
+
 .blog__title {
   @include typography-h2;
   margin-bottom: 30px;

@@ -24,6 +24,7 @@ block content
             t.alt.pm,
             682
           )
+
   section.integrations
     .wrapper.wrapper--main
       h2=t.integrations.cards_title_1
@@ -37,7 +38,7 @@ block content
               h4=t.integrations.card_title_1
               p=t.integrations.card_text_1
             .wrap.wrap--bot.wrap--sb.wrap--w
-              a.link.link--accent(href="/")=t.integrations.card_link_1
+              a.link.link--accent(href="https://dialogs.github.io/api-schema/" target="_blank")=t.integrations.card_link_1
 
         .col
           .card.card--outline
@@ -46,9 +47,14 @@ block content
             .wrap.wrap--c.wrap--dc.wrap--mid
               h4=t.integrations.card_title_2
               p=t.integrations.card_text_2
-            .wrap.wrap--bot.wrap--sb.wrap--w
-              a.link.link--accent(href="/")=t.integrations.card_link_2_1
-              a.link.link--accent(href="/")=t.integrations.card_link_2_2
+            .wrap.wrap--bot.wrap--sb.wrap--w.wrap--ac
+              a.link.link--accent(href="https://dialogs.github.io/bots-docs/#/" target="_blank")=t.integrations.card_link_doc
+              .wrap.wrap--ac
+                a.link.link--accent(href="https://github.com/dialogs/python-bot-sdk" target="_blank") Python
+                span &nbsp;|&nbsp;
+                a.link.link--accent(href="https://github.com/dialogs/java-bot-sdk" target="_blank") Java
+                span &nbsp;|&nbsp;
+                a.link.link--accent(href="https://github.com/dialogs/js-bot-sdk" target="_blank") Javascript
 
         .col
           .card.card--outline
@@ -71,7 +77,7 @@ block content
               h4=t.integrations.card_title_4
               p=t.integrations.card_text_4
             .wrap.wrap--bot.wrap--sb.wrap--w
-              a.link.link--accent(href="/")=t.integrations.card_link_4
+              a.link.link--accent(href="https://zapier.com/app/editor/61180830/nodes/61180830/app" target="_blank")=t.integrations.card_link_set
         .col
           .card.card--outline
             .wrap.wrap--c.wrap--up

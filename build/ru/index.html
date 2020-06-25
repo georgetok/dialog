@@ -11,7 +11,7 @@
   <body>
     <div class="page">
       <header class="header js-header">
-        <div class="header__wrapper"><a class="header__logo" href="/"><img src="/img/library/logo-dialog.svg" alt="Логотип мессенджера Dialog"/></a>
+        <div class="header__wrapper"><a class="header__logo" href="/ru"><img src="/img/library/logo-dialog.svg" alt="Логотип мессенджера Dialog"/></a>
           <div class="header__content-box">
             <div class="header__top-panel"><a class="header__nav-logo" href="/"><img src="/img/library/logo-dialog.svg" alt="Логотип мессенджера Dialog"/></a>
               <button class="header__close-button" aria-label="Закрыть меню" type="button"></button>
@@ -297,10 +297,10 @@
                   </li>
                 </ul>
               </li>
-            </ul><a class="link link--with-icon link--safety link--icon-accent" href="#!">Узнать подробнее</a>
-            <svg width="16" height="15" aria-hidden="true">
-              <use xlink:href="/img/sprite.svg#arrow-right"></use>
-            </svg>
+            </ul><a class="link link--with-icon link--safety link--icon-accent" href="/ru/security">Узнать подробнее
+              <svg width="16" height="15" aria-hidden="true">
+                <use xlink:href="/img/sprite.svg#arrow-right"></use>
+              </svg></a>
           </div>
         </section>
         <section class="solutions box box--sand">
@@ -399,7 +399,7 @@
             <div class="features__footer">
               <h3>Расширяйте возможности Dialog</h3>
               <p>С помощью наших партнеров-интеграторов или внутренних разработчиков вашей компании</p>
-              <div class="features__button-box"><a class="button button--dark button--features-2" href="#"><span>Разработчикам</span>
+              <div class="features__button-box"><a class="button button--dark button--features-2" href="/ru/integrations" target="_self"><span>Разработчикам</span>
                   <svg width="16" height="15" aria-hidden="true">
                     <use xlink:href="/img/sprite.svg#arrow-right"></use>
                   </svg></a>
@@ -467,10 +467,12 @@
                 <h3>Интеграция с&nbsp;Active Directory</h3>
                 <p>Сотрудники вашей компании могут войти в Dialog под своими корпоративными учетными записями.</p>
               </div>
-            </div><a class="button button--accent button--install" href="#!"><span>Узнать стоимость лицензии</span>
+            </div>
+            <button class="button button--accent button--install js-open-modal-install" type="button"><span>Узнать стоимость лицензии</span>
               <svg width="16" height="15" aria-hidden="true">
                 <use xlink:href="/img/sprite.svg#arrow-right"></use>
-              </svg></a>
+              </svg>
+            </button>
           </div>
         </section>
         <section class="quote box box--white">
@@ -519,6 +521,7 @@
                     </div>
                     <div class="blog__text-box">
                       <h3 class="blog__card-title">Корпоративный мессенджер для локальной сети</h3>
+                      <p class="blog__date"><span>25</span>&nbsp;&nbsp;<span>Июня</span><span>&nbsp;, &nbsp;</span><span>2020</span></p>
                     </div></a></li>
                 <li class="blog__item"><a class="blog__card" href="/ru/blog/korporativnyi-miessiendzhier-vidy-vozmozhnosti-i-sfiery-primienieniia.html">
                     <div class="blog__img-box">
@@ -528,6 +531,7 @@
                     </div>
                     <div class="blog__text-box">
                       <h3 class="blog__card-title">Корпоративный мессенджер - виды, возможности и сферы применения</h3>
+                      <p class="blog__date"><span>25</span>&nbsp;&nbsp;<span>Июня</span><span>&nbsp;, &nbsp;</span><span>2020</span></p>
                     </div></a></li>
                 <li class="blog__item"><a class="blog__card" href="/ru/blog/cifrovaya_gigiena.html">
                     <div class="blog__img-box">
@@ -537,6 +541,7 @@
                     </div>
                     <div class="blog__text-box">
                       <h3 class="blog__card-title">Цифровая гигиена: как уберечь переписку в мессенджерах от конкурентов</h3>
+                      <p class="blog__date"><span>15</span>&nbsp;&nbsp;<span>Июля</span><span>&nbsp;, &nbsp;</span><span>2020</span></p>
                     </div></a></li>
               </ul><a class="link link--with-icon link--icon-accent" href="/ru/blog">Смотреть все
                 <svg width="16" height="15" aria-hidden="true">
@@ -545,9 +550,9 @@
             </div>
           </div>
         </section>
-        <div class="form form--main fomr--career box box--white">
+        <div class="form form--main box box--white">
           <div class="form__wrapper">
-            <h2 class="form__title">Получить предложение</h2>
+            <h2 class="form__title">Отправить заявку</h2>
             <div class="form__form">
               <form class="gform" action="https://script.google.com/macros/s/AKfycbxUEtJZB_316gjG0B8B8kt6B1HNOsiRq-q3Y5rHuY_0RC789AMV/exec" method="POST" autocomplete="on" id="offer-form" onsubmit="this.clear();this.classList.add('submited')">
                 <input type="text" id="location" name="location" value="form sent from main page" hidden="hidden"/>
@@ -647,14 +652,10 @@
               </ul>
             </div>
             <ul class="footer__doc-links">
-              <li><a href="/ru/public" target="_blank" rel="noopener noreferrer">Социальная ответственность</a>
-              </li>
-              <li><a href="/ru/legal" target="_blank" rel="noopener noreferrer">Правовая информация</a>
-              </li>
-              <li><a href="/docs/privacy_policy.pdf" download="privacy policy" target="_blank" rel="noopener noreferrer">Обработка персональных данных</a>
-              </li>
-              <li><a href="/docs/anti_corruption_policy.pdf" download="anti corruption policy" target="_blank" rel="noopener noreferrer">Политика по противодействию коррупции</a>
-              </li>
+              <li><a href="/ru/public" target="_blank" rel="noopener noreferrer">Социальная ответственность</a></li>
+              <li><a href="/ru/legal" target="_blank" rel="noopener noreferrer">Правовая информация</a></li>
+              <li><a href="/docs/privacy_policy.pdf" download="privacy policy" target="_blank" rel="noopener noreferrer">Обработка персональных данных</a></li>
+              <li><a href="/docs/anti_corruption_policy.pdf" download="anti corruption policy" target="_blank" rel="noopener noreferrer">Политика по противодействию коррупции</a></li>
             </ul>
             <div class="footer__copyright">
               <p>© 2016—2020 ООО «Диалог»</p>
@@ -669,9 +670,9 @@
       <div class="modal__overlay">
         <div class="modal__content">
           <button class="modal__close" type="button" aria-label="Закрыть"></button>
-          <div class="form form--main fomr--career form--modal box box--white">
+          <div class="form form--main form--modal box box--white">
             <div class="form__wrapper form__wrapper--modal">
-              <h2 class="form__title form__title--modal">Получить предложение</h2>
+              <h2 class="form__title form__title--modal">Отправить заявку</h2>
               <div class="form__form">
                 <form class="gform" action="https://script.google.com/macros/s/AKfycbxUEtJZB_316gjG0B8B8kt6B1HNOsiRq-q3Y5rHuY_0RC789AMV/exec" method="POST" autocomplete="on" id="modal-offer-form" onsubmit="this.clear();this.classList.add('submited')">
                   <input type="text" id="location" name="location" value="form sent from main page" hidden="hidden"/>

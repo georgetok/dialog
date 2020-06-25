@@ -1,9 +1,9 @@
 include ./button
 
 mixin form-offer (isModal, idNumber, formId)
-  .form.form--main.fomr--career(class=(isModal ? 'form--modal' : null)).box.box--white
+  .form.form--main(class=(isModal ? 'form--modal' : null)).box.box--white
     .form__wrapper(class=(isModal ? 'form__wrapper--modal' : null))
-      h2.form__title(class=(isModal ? 'form__title--modal' : null))=t.form.request_title
+      h2.form__title(class=(isModal ? 'form__title--modal' : null))=t.form.submit_title
       .form__form
         form(
           action="https://script.google.com/macros/s/AKfycbxUEtJZB_316gjG0B8B8kt6B1HNOsiRq-q3Y5rHuY_0RC789AMV/exec"

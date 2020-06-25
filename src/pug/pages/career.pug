@@ -21,8 +21,10 @@ block content
           t.button.vacancy_open,
           {
             styleType: 'accent',
-            isLink: false,
-            additionalClassName: 'button--hero js-open-modal-carier'
+            isLink: true,
+            href:"https://hh.ru/search/vacancy?st=searchVacancy&from=employerPage&employer_id=2487053",
+            blank: true,
+            additionalClassName: 'button--hero button--link'
           })
           +svg('arrow-right', 16, 15)
 
@@ -63,8 +65,10 @@ block content
             t.button.vacancy_all,
             {
               styleType: 'accent',
-              isLink: false,
-              additionalClassName: 'js-open-modal-carier'
+              isLink: true,
+              href: "https://hh.ru/search/vacancy?st=searchVacancy&from=employerPage&employer_id=2487053",
+              blank: true,
+              additionalClassName: 'button--link'
             })
             +svg('arrow-right', 16, 15)
 

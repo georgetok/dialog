@@ -4,7 +4,11 @@
       "ru": "Блог",
       "en": "Blog"
     },
-    "cards_title": {
+    "recommended": {
+      "ru": "Рекомендованные статьи",
+      "en": "Recommended posts"
+    },
+    "cards": {
       "ru": "Блог компании",
       "en": "Blog"
     },
@@ -20,9 +24,17 @@
       "ru": "Цифровая гигиена: как уберечь переписку в мессенджерах от конкурентов",
       "en": "Explaining the main hosting models: On-premise (Server, Self-hosted), Hosted, Cloud"
     },
-    "month": {
-      "ru": "Февраль",
+    "feb": {
+      "ru": "Февраля",
       "en": "February"
+    },
+    "jun": {
+      "ru": "Июня",
+      "en": "June"
+    },
+    "jul": {
+      "ru": "Июля",
+      "en": "July"
     },
     "min": {
       "ru": "мин",
@@ -347,12 +359,12 @@
 
   "form": {
     "submit_title": {
-      "ru": "Оставить заявку",
+      "ru": "Отправить заявку",
       "en": "Submit a request"
     },
     "request_title": {
       "ru": "Получить предложение",
-      "en": "Submit a request"
+      "en": "Get a request"
     },
     "career_title": {
       "ru": "Отправить резюме",
@@ -565,13 +577,10 @@
       "en": "Integrations make Dialog even better"
     },
 
-
-
     "cards_title_1": {
       "ru": "Интегрируйте свои приложения с Dialog и автоматизируйте рабочие процессы",
       "en": "Integrate your applications with Dialog and automate workflows"
     },
-
     "cards_title_2": {
       "ru": "Интеграция с минимальным использованием кода",
       "en": "Development with minimal code use"
@@ -596,13 +605,9 @@
       "ru": "Bot SDK позволяет создавать ботов и чат-ботов для Dialog. Боты оптимизируют повторяющиеся рутинные операции и освобождают время для более сложных задач.",
       "en": "Bot SDK allows you to create bots and chat bots for Dialog. Bots optimize repetitive routine operations and free up time for more complex tasks."
     },
-    "card_link_2_1": {
+    "card_link_doc": {
       "ru": "Документация",
       "en": "Documentation"
-    },
-    "card_link_2_2": {
-      "ru": "Python | Java | Javascript",
-      "en": "Python | Java | Javascript"
     },
     "card_title_3": {
       "ru": "GraphQL",
@@ -620,7 +625,7 @@
       "ru": "Используйте данные и происходящие события в более чем 1000 интеграциях для автоматизации вашего рабочего процесса.",
       "en": "Use data and events in over 1000 integrations to automate your workflow."
     },
-    "card_link_4": {
+    "card_link_set": {
       "ru": "Настройте интеграцию прямо сейчас",
       "en": "Set up integration now"
     },

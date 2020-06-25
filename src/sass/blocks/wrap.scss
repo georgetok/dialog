@@ -77,8 +77,14 @@
     background: #FFFFFF;
     border-radius: 4px;
     padding: 10px 30px 20px 35px;
-    @include mobile-sm{
+
+    @include tablet {
       padding-bottom: 50px;
+
+    }
+    @include mobile-md {
+      margin: 0;
+      width: 100%;
     }
   }
 }

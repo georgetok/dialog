@@ -180,7 +180,7 @@ gulp.task('posts:ru', async function () {
         .pipe(pug({
             pretty: true,
             data: {
-              lang: "en",
+              lang: "ru",
               post: post,
               t: i18nRu,
               isPost: true
@@ -423,7 +423,7 @@ gulp.task('html:ru', function () {
   let i18nRu = removeProp(i18n, "en", "ru");
   return gulp
     .src([
-      'src/pug/pages/*.pug',
+      'src/pug/pages/*/.pug',
       '!src/pug/pages/post.pug',
       '!src/pug/pages/blog.pug',
       '!src/pug/pages/main.pug',
@@ -542,16 +542,21 @@ gulp.task('server', function () {
     ui: false,
   });
 
-  gulp.watch(Paths.styles.src, gulp.series('css'));
-  gulp.watch(Paths.images.src, gulp.series('graphic', 'refresh'));
-  gulp.watch(Paths.html.srcWatch, gulp.series('html', 'refresh'));
-  gulp.watch(Paths.scripts.src, gulp.series('js', 'refresh'));
-  gulp.watch(Paths.blog.src, gulp.series('blog', 'refresh'));
-  gulp.watch(Paths.post.src, gulp.series('posts', 'refresh'));
-  gulp.watch(Paths.index.src, gulp.series('index', 'refresh'));
-  gulp.watch(Paths.home.src, gulp.series('home', 'refresh'));
-  gulp.watch(`${SOURCE_PATH}pug/global/*.pug`, gulp.series('html','refresh'));
-  gulp.watch(`${SOURCE_PATH}pug/global/*.pug`, gulp.series('home','refresh'));
+  // gulp.watch(Paths.styles.src, gulp.series('css'));
+  // gulp.watch(Paths.images.src, gulp.series('graphic', 'refresh'));
+  // gulp.watch(Paths.html.srcWatch, gulp.series('html', 'refresh'));
+  // gulp.watch(Paths.scripts.src, gulp.series('js', 'refresh'));
+  // gulp.watch(Paths.blog.src, gulp.series('blog', 'refresh'));
+  // gulp.watch(Paths.index.src, gulp.series('index', 'refresh'));
+  // gulp.watch(Paths.post.src, gulp.series('posts', 'refresh'));
+  gulp.watch(Paths.html.srcWatch, gulp.series('build', 'refresh'));
+
+
+  ;
+  // gulp.watch(`${SOURCE_PATH}pug/global/*.pug`, gulp.series('html','refresh'));
+  // gulp.watch(`${SOURCE_PATH}pug/global/*.pug`, gulp.series('home','refresh'));
+  // gulp.watch(`${SOURCE_PATH}pug/global/*.pug`, gulp.series('blog','refresh'));
+  // gulp.watch(`${SOURCE_PATH}pug/global/*.pug`, gulp.series('posts','refresh'));
 });
 
 gulp.task('refresh', function (done) {
@@ -583,6 +588,6 @@ gulp.task('posts', gulp.series('posts:ru', 'posts:en'));
 gulp.task('home', gulp.series('home:ru', 'home:en'));
 gulp.task('index', gulp.series('index:redirect', 'index:404'));
 gulp.task('copy', gulp.series('copy:fonts'));
-gulp.task('build', gulp.series('clean', 'copy', 'index', 'html', 'css', 'js','blog', 'posts', 'home'));
+gulp.task('build', gulp.series('clean', 'copy', 'index', 'html', 'css', 'js', 'blog', 'posts', 'home'));
 gulp.task('start', gulp.series('build', 'server'));
 gulp.task('images', gulp.series('graphic'));

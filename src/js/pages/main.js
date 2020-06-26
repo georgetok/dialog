@@ -20,22 +20,18 @@ const main = () => {
   }
 
   functionsSwitch();
-  let videos = document.getElementsByTagName("video");
-  let tabs = document.querySelectorAll(".tabs__control");
 
-  console.log(videos);
 
   function checkScroll() {
+    console.log(1);
+    let videos = document.getElementsByTagName("video");
+    let tabs = document.querySelectorAll(".tabs__control");
     let fraction = 1; // Play when 80% of the player is visible.
 
     for (let i = 0; i < videos.length; i++) {
 
       tabs[i].addEventListener('click', function () {
-        if (videos[i].paused == true) {
-          videos[i].play();
-        } else {
-          videos[i].pause();
-        }
+        videos[i].play();
       });
       videos[i].addEventListener('click', function () {
         if (this.paused == true) {
@@ -60,9 +56,9 @@ const main = () => {
 
       visible = visibleX * visibleY / (w * h);
 
-      // console.log('video:', i);
-      // console.log(visibleY);
-      // console.log('______________');
+      console.log('video:', i);
+      console.log(visibleY);
+      console.log('______________');
       if (0 < visible < 100) {
         videos[i].play();
       }
@@ -70,6 +66,6 @@ const main = () => {
   }
 
   window.addEventListener('scroll', checkScroll, false);
-  window.addEventListener('resize', checkScroll, false);
+  checkScroll();
 };
 export default main;

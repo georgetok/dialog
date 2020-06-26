@@ -53,7 +53,7 @@
   "main": {
     "subtitle": {
       "ru": "Корпоративный мессенджер для совместной работы и безопасного общения",
-      "en": "Corporate messenger for team work and safe communication"
+      "en": "Corporate messenger for teamwork and secure communication"
     },
 
     "adv_title_1": {
@@ -363,7 +363,7 @@
   "form": {
     "submit_title": {
       "ru": "Отправить заявку",
-      "en": "Submit a request"
+      "en": "Submit request"
     },
     "request_title": {
       "ru": "Получить предложение",

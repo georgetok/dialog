@@ -62,9 +62,6 @@
         @include col-6;
         z-index: 1;
 
-        h3 {
-          margin-top: 50px;
-        }
 
         @include tablet {
           @include col-8;
@@ -73,9 +70,17 @@
 
         @include mobile-sm {
           @include col-12;
-          margin-bottom: 25px;
+          margin-bottom: 35px;
           padding-right: 0;
         }
+
+        h3 {
+          margin-top: 50px;
+          @include tablet {
+            margin-top: 30px;
+          }
+        }
+
       }
     }
 
@@ -92,7 +97,7 @@
 
       }
       @include mobile-md {
-        margin: 0;
+        margin: 25px 0 0;
         width: 100%;
       }
 

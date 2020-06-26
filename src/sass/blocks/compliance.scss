@@ -1,5 +1,5 @@
 .compliance {
-  padding-bottom: 85px;
+  padding-bottom: 75px;
 
   &__list {
     @include no-list;
@@ -110,14 +110,13 @@
     &--img {
       padding-left: 28px;
       @include gap-xxs;
-
       @include tablet {
         @include gap-sm;
       }
       @include mobile-sm {
         flex-wrap: wrap;
+        @include gap-xxs;
       }
-
 
       img {
         width: 100%;
@@ -150,7 +149,7 @@
     }
 
     &--link {
-      margin: 10px 0 10px;
+      margin: 5px 0 10px;
     }
   }
 }

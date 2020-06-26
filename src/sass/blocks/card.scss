@@ -34,6 +34,11 @@
     transition: box-shadow $transition-props;
     background: $color-contrast;
 
+    h4 {
+      @include typography-subhead;
+      margin-bottom: 15px;
+    }
+
     &:hover,
     &:focus {
       box-shadow: $shadow-card;
@@ -50,12 +55,14 @@
 
       p {
         margin-top: 0;
+        margin-bottom: 0;
       }
     }
 
     .wrap--bot {
       padding: 0 20px 20px;
       margin-top: auto;
+      color: $color-accent;
 
       a {
         font-size: var(--txt-sm-size);
@@ -98,6 +105,7 @@
 
   &--security {
     padding: 0 20px 0 10px;
+
     img {
       width: 70px;
       display: block;
@@ -107,7 +115,7 @@
     p {
       min-height: 72px;
       margin-top: 0;
-      @include tablet{
+      @include tablet {
         min-height: auto;
       }
     }

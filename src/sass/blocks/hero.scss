@@ -72,7 +72,7 @@
 
     .hero__left {
       margin-top: -20px;
-      max-width: 350px;
+      max-width: 400px;
 
       @include mobile-md {
         width: calc(50% - 10px) !important;

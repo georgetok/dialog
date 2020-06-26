@@ -67,7 +67,8 @@
   }
 
   &__sub {
-    @include typography-txt-big;
+    @include typography-subhead;
+    font-weight: 400;
 
     margin-bottom: 30px;
 

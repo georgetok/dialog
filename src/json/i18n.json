@@ -324,8 +324,8 @@
       "en": "Sberbank has launched the corporate messenger SberChat based on Dialog for over 300 000 employees."
     },
     "quote_text": {
-      "ru": "p Оперативное взаимодействие и обмен данными важны для компаний любого размера и профиля деятельности. При этом банку и компаниям экосистемы было необходимо собственное масштабируемое решение, обеспечивающее эффективную и защищенную коммуникацию большому количеству сотрудников. Мы реализовали решение, которое позволит нам не только оптимизировать процесс коммуникации, но и повысить эффективность совместной работы за счет создания единого цифрового рабочего пространства.",
-      "en": "Operational interaction and data exchange are important for companies of any size and profile. At the same time, the bank and companies-parts of the ecosystem needed their own scalable solution, providing effective and secure communication to a large number of employees. We have implemented a solution that will allow us not only to optimize the communication process, but also to increase the effectiveness of collaboration by creating a single digital workspace"
+      "ru": "Оперативное взаимодействие и обмен данными важны для компаний любого размера и профиля деятельности. При этом банку и компаниям экосистемы было необходимо собственное масштабируемое решение, обеспечивающее эффективную и защищенную коммуникацию большому количеству сотрудников. Мы реализовали решение, которое позволит нам не только оптимизировать процесс коммуникации, но и повысить эффективность совместной работы за счет создания единого цифрового рабочего пространства.",
+      "en": "Operational interaction and data exchange are important for companies of any size and profile. At the same time, the bank and companies-parts of the ecosystem needed their own scalable solution, providing effective and secure communication to a large number of employees. We have implemented a solution that will allow us not only to optimize the communication process, but also to increase the effectiveness of collaboration by creating a single digital workspace."
     },
     "quote_name": {
       "ru": "Лев Хасис",
@@ -476,8 +476,6 @@
       "en": "Security and compliance at Dialog"
     },
 
-
-
     "safe_title": {
       "ru": "Защита информации",
       "en": "Information security"
@@ -490,8 +488,6 @@
       "ru": "В отличие от облачных решений, Dialog не имеет ключей для расшифровки вашего общения и доступа к инфраструктуре. Эта архитектура предлагает лучшую защиту от злоумышленника.",
       "en": "Dialog is available as On-premise or Private Cloud messenger. Unlike public cloud solutions, Dialog LLC does not have access to the client’s infrastructure. This architecture offers the best protection against intruders."
     },
-
-
 
     "cards_title": {
       "ru": "Высокие стандарты безопасности",
@@ -537,7 +533,6 @@
       "ru": "Dialog интегрируется с SIEM-системами и позволяет реагировать на события безопасности до наступления ущерба.",
       "en": "Integrates with ICAP data leak prevention systems. The risk of intentional or accidental information leaks is minimized."
     },
-
 
     "norms_title": {
       "ru": "Соблюдение нормативных требований",

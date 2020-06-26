@@ -25,7 +25,7 @@
 
 .solutions__title {
   @include typography-h2;
-  margin-bottom: 60px;
+  margin-bottom: 50px;
   letter-spacing: -0.005em;
 
   @include laptop {
@@ -203,13 +203,14 @@
   &::before {
     content: "";
     position: absolute;
-    top: -25px;
-    right: -30px;
-    width: 114px;
-    height: 114px;
+    top: -55px;
+    right: -55px;
+    width: 145px;
+    height: 145px;
     background-repeat: no-repeat;
-    background-position-x: 0 0;
-    background-size: 114px 114px;
+    background-size: 210px;
+    background-image: url("../img/pattern.svg");
+
 
     @include laptop {
       top: -40px;
@@ -230,13 +231,14 @@
   &::before {
     content: "";
     position: absolute;
-    bottom: -25px;
-    left: -30px;
-    width: 114px;
-    height: 114px;
+    top: -55px;
+    left: -55px;
+    width: 145px;
+    height: 145px;
     background-repeat: no-repeat;
-    background-position-x: 0 0;
-    background-size: 114px 114px;
+    background-size: 210px;
+    background-image: url("../img/pattern.svg");
+
 
     @include laptop {
       bottom: -40px;

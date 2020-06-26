@@ -1,11 +1,14 @@
 .mission {
   .wrapper {
-    padding: var(--indent);
+    padding: 85px;
+    @include laptop{
+      padding: var(--indent);
+    }
   }
 
   .wrap--mission {
     align-items: flex-end;
-    @include tablet {
+    @include laptop {
       align-items: center;
     }
     @include mobile-md {
@@ -14,15 +17,19 @@
   }
 
   &__title {
-    @include typography-h1;
-    margin-top: 30px;
+    @include typography-h2;
+    margin-top: 0px;
+    @include laptop {
+      margin-top: 30px;
+    }
     @include mobile-xs {
       font-size: 32px;
     }
   }
 
   &__description {
-    @include typography-txt-big;
+    @include typography-subhead;
+    font-weight: 400;
     margin-top: 40px;
   }
 
@@ -40,7 +47,7 @@
   }
 
   &__right {
-    min-width: 200px;
+    min-width: 300px;
 
     @include mobile-md {
       margin-top: 60px;
@@ -50,7 +57,7 @@
 
   &__left {
     flex-grow: 1;
-    padding-right: 250px;
+    padding-right: 150px;
 
     @include laptop {
       padding-right: 15vw;
@@ -64,11 +71,12 @@
 
   &__text {
     &--big {
-      @include typography-h1;
+      @include typography-h2;
     }
 
     &--small {
       @include typography-txt-sm;
+      font-size: 16px;
       color: $color-gray-dark;
     }
   }

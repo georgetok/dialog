@@ -21,7 +21,7 @@
 
 .safety__title {
   @include typography-h2;
-  margin-bottom: 70px;
+  margin-bottom: 40px;
   letter-spacing: -0.005em;
 
   @include laptop {
@@ -116,7 +116,6 @@
     }
   }
 }
-
 
 .safety__icon {
   display: flex;

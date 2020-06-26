@@ -26,7 +26,7 @@
 
 .features__header {
   max-width: 900px;
-  margin-bottom: 112px;
+  margin-bottom: 105px;
 
   @include laptop {
     max-width: 830px;
@@ -247,6 +247,7 @@
 
   h3 {
     @include typography-h3;
+    font-size: 32px;
     position: relative;
     margin-bottom: 17px;
 

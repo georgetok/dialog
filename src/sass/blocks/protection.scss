@@ -1,10 +1,12 @@
 .protection {
-  padding-top: 105px;
-  padding-bottom: 105px;
+  padding-top: 55px;
+  padding-bottom: 95px;
 
   @include tablet {
-    padding-top: 55px;
     padding-bottom: 55px;
+  }
+  @include mobile-md {
+    padding-top: 35px;
   }
 
   h3 {
@@ -13,8 +15,17 @@
 
   h2 {
     @include typography-h2;
-    margin-left: 20px;
+    margin-left: 15px;
     letter-spacing: -0.005em;
+  }
+
+  p {
+    margin-bottom: 0;
+  }
+
+  img {
+    display: block;
+    margin-bottom: -10px;
   }
 
   .wrap {
@@ -69,8 +80,21 @@
     }
 
     &--cards {
+      @include gap-sm;
       flex-wrap: wrap;
       margin-top: 25px;
+      background: #FFFFFF;
+      border-radius: 4px;
+      padding: 10px 10px 20px 25px;
+
+      @include tablet {
+        padding-bottom: 50px;
+
+      }
+      @include mobile-md {
+        margin: 0;
+        width: 100%;
+      }
 
       .col {
         @include col-4;

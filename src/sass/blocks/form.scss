@@ -4,10 +4,6 @@
     margin-bottom: 40px;
     letter-spacing: -0.005em;
 
-    @include laptop {
-      margin-bottom: 59px;
-    }
-
     @include mobile-md {
       margin-bottom: 31px;
     }
@@ -206,11 +202,7 @@
   .form__input-text-wrap {
     display: flex;
     flex-wrap: wrap;
-    margin-bottom: 45px;
-
-    @include laptop {
-      margin-bottom: 58px;
-    }
+    margin-bottom: 30px;
 
     @include mobile-md {
       flex-direction: column;
@@ -670,8 +662,12 @@
 
 .form--career {
   .form__sub {
+    @include typography-subhead;
+    font-weight: 400;
     max-width: 900px;
     color: $color-gray-dark;
+    margin-bottom: 20px;
+    margin-top: -15px;
   }
 
   .form__checkbox-wrap {

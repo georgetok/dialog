@@ -11,25 +11,14 @@
 
   &__title {
     @include typography-h1;
-    margin-bottom: 35px;
     letter-spacing: -0.01em;
-
-    @include mobile-md {
-      margin-bottom: 10px;
-    }
   }
 
   &__text {
     @include typography-subhead;
     line-height: 1.4;
-
-    &:not(:last-child) {
-      margin-bottom: 25px;
-
-      @include mobile-md {
-        margin-bottom: 20px;
-      }
-    }
+    margin-top: 30px;
+    margin-bottom: 30px;
   }
 
   &--main {
@@ -37,11 +26,7 @@
       @include pseudo-absolute;
       width: 100%;
       position: relative;
-
-      @include mobile-md {
-        position: relative;
-        margin: 0 auto;
-      }
+      margin: 0 auto;
 
       img {
         position: relative;
@@ -52,27 +37,11 @@
     }
 
     .hero__left {
-      width: 40%;
       margin-right: auto;
-      padding-right: 90px;
-
-      @include laptop {
-        padding-right: 10px;
-      }
-
-      @include mobile-md {
-        width: 100%;
-        padding-right: 0;
-      }
     }
 
     .hero__right {
-      width: 56%;
-
-      @include mobile-md {
-        position: relative;
-        width: 100%;
-      }
+      position: relative;
     }
   }
 
@@ -104,6 +73,8 @@
 
     .hero__left {
       margin-top: -20px;
+      max-width: 350px;
+
       @include mobile-md {
         width: calc(50% - 10px) !important;
         margin-top: 0px;
@@ -318,34 +289,53 @@
   &--career,
   &--integrations {
     overflow: hidden;
+    padding-top: 75px;
+    padding-bottom: 135px;
+
+    @include laptop {
+      padding-top: 90px;
+    }
+
+    @include mobile-md {
+      padding-top: 90px;
+      padding-bottom: 50px;
+    }
+    @include mobile-sm {
+      padding-top: 50px;
+      padding-bottom: 0px;
+    }
+
+    .hero__title {
+      margin-bottom: 0;
+      line-height: 1.2;
+    }
+
 
     .hero__left {
-      width: 45%;
+      width: 44%;
       padding-right: 0;
 
+      @include tablet {
+        width: 45%;
+      }
       @include mobile-md {
         width: 70%;
-        padding-top: 100px;
         margin: 0;
       }
       @include mobile-sm {
         width: 100%;
-        padding-top: 55px;
       }
     }
 
     .hero__right {
-      width: 50%;
-      @include laptop {
-        padding-top: 50px;
-      }
+      width: 49%;
       @include mobile-md {
         width: 100%;
         padding-bottom: 100px;
       }
       @include mobile-sm {
         width: 100%;
-        padding-bottom: 80px;
+        padding-bottom: 30px;
       }
     }
 
@@ -363,17 +353,14 @@
         width: 100%;
         max-width: 600px;
       }
-      @include mobile-sm {
-        margin-top: 10px;
-      }
 
       &::before {
-        left: -15%;
-        bottom: -15%;
-        width: 55%;
+        left: -10%;
+        bottom: -25%;
+        width: 75%;
         height: 55%;
-        background-size: 90%;
-        background-image: url("../img/pattern.svg");
+        background-size: 110%;
+        background-image: url("../img/pattern-2.svg");
         @include laptop {
           width: 60%;
           height: 75%;
@@ -381,20 +368,23 @@
           max-height: 200px;
         }
         @include mobile-sm {
-          background-size: 110%;
+          background-image: url("../img/pattern-1.svg");
+          background-size: 130%;
           bottom: -20%;
           width: 70%;
+          left: -30%;
           height: 75%;
         }
       }
 
       &::after {
-        right: -10%;
+        right: -20%;
         top: -10%;
-        width: 55%;
-        height: 55%;
-        background-size: 80%;
-        background-image: url("../img/pattern.svg");
+        width: 50%;
+        height: 50%;
+        background-size: 100%;
+        background-image: url("../img/pattern-1.svg");
+        background-repeat: no-repeat;
         @include laptop {
           width: 55%;
           height: 55%;
@@ -412,6 +402,7 @@
           width: 70%;
           height: 75%;
           top: 10%;
+          right: -5%;
         }
       }
     }

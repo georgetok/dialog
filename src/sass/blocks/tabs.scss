@@ -337,9 +337,8 @@
   @include mobile-md {
     max-width: 100%;
     width: 100%;
-    padding-top: 43px;
+    padding-top: 0;
     padding-bottom: 0;
-    min-height: 360px;
     background-repeat: no-repeat;
     overflow: hidden;
     border-bottom: 1px solid $color-accent-light;
@@ -385,6 +384,7 @@
     background-image: url(../img/pattern-2.svg);
 
     @include mobile-md {
+      display: none;
       width: 39%;
       right: 0;
       left: auto;
@@ -434,7 +434,9 @@
       margin: 0 auto;
       box-shadow: none;
       border-radius: 0;
-      border: none;
+      border-left: none;
+      border-right: none;
+      border-bottom: none;
     }
   }
 }

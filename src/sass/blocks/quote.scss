@@ -144,8 +144,8 @@
   @include mobile-md {
     position: relative;
     flex-direction: column;
-    margin-bottom: 22px;
-    padding-bottom: 18px;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
     background-position: -32px 17px;
     border-top: 0;
     border-bottom: 0;
@@ -168,6 +168,9 @@
       width: calc(100% - (var(--indent) * 2));
       height: 1px;
       background-color: $color-accent-light;
+      @include mobile-md{
+        display: none;
+      }
     }
   }
 }
@@ -228,7 +231,7 @@
   margin-bottom: 13px;
 
   @include mobile-md {
-    max-width: 150px;
+    max-width: 130px;
     width: 41%;
     margin-right: 23px;
     margin-bottom: 0;

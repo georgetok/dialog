@@ -15,7 +15,7 @@
   display: flex;
   align-items: center;
   flex-wrap: wrap;
-  margin-right: 80px;
+  margin-right: 100px;
 
   @include laptop {
     flex-direction: column;
@@ -26,32 +26,23 @@
   }
 }
 
-.main-nav__link,
-.main-nav__button {
+.main-nav__link, .main-nav__button {
   @include reset-button;
 
   position: relative;
   z-index: 3;
   display: block;
-
-  font-size: 14px;
-  font-weight: 500;
+  font-size: 16px;
   line-height: 19px;
   color: $color-base;
-
   fill: $color-base;
-
   cursor: pointer;
-
   transition: color $transition-props, fill $transition-props;
 
   @include laptop {
     display: flex;
     padding: 10px 40px 14px;
-
-    font-size: 16px;
     line-height: 25px;
-
     border-bottom: 1px solid $color-accent-light;
   }
 
@@ -63,9 +54,7 @@
   &:focus,
   &--expanded {
     outline: none;
-
     color: $color-accent;
-
     fill: $color-accent;
 
     @include laptop {
@@ -75,7 +64,7 @@
 }
 
 .main-nav__link {
-  padding-right: 30px;
+  padding-right: 40px;
 
   &--no-padding {
     padding-right: 0;
@@ -479,16 +468,12 @@
 
 .main-nav__middle-dropdown {
   @include no-list;
-
   position: absolute;
   top: 0;
   right: 0;
   z-index: 1;
-
   display: none;
-
   width: 240px;
-
   padding: 19px 10px 11px 10px;
 
   &--expanded {
@@ -498,13 +483,10 @@
   @include laptop {
     position: static;
     z-index: auto;
-
     display: block;
     width: 100%;
     padding: 0;
-
     overflow: hidden;
-
     transition: max-height $transition-props;
 
     &.is-hide {
@@ -517,7 +499,6 @@
   & .main-nav__link--included {
     @include laptop {
       padding-left: 85px;
-
       font-weight: 400;
       color: $color-gray-dark;
     }

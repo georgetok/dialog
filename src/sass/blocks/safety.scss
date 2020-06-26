@@ -1,6 +1,6 @@
 .safety {
-  padding-top: 105px;
-  padding-bottom: 105px;
+  padding-top: 35px;
+  padding-bottom: 95px;
 
   @include laptop {
     padding-top: 25px;
@@ -35,7 +35,6 @@
 
 .safety__list {
   @include no-list;
-
   display: flex;
   flex-wrap: wrap;
   margin-bottom: 36px;
@@ -62,11 +61,11 @@
   padding: 35px 20px 20px 130px;
 
   @include laptop {
-    width: 48%;
+    padding-left: 30px;
   }
-
   @include tablet {
     width: 100%;
+    padding-left: 30px;
   }
 
   @include mobile-md {
@@ -89,40 +88,22 @@
     }
   }
 
-  &::before {
-    content: "";
-    position: absolute;
-    top: 35px;
-    left: 20px;
-    width: 90px;
-    height: 90px;
-    border-radius: 50%;
-    background-color: $color-accent;
-
-    @include mobile-md {
-      width: 75px;
-      height: 75px;
-      position: static;
-      top: 0;
-      left: 0;
-      display: block;
-      margin-bottom: 10px;
-    }
-  }
 
   h3 {
     @include typography-h5;
-    margin-bottom: 14px;
 
     @include laptop {
-      margin-bottom: 17px;
+      margin-left: 20px;
     }
 
     @include tablet {
-      margin-bottom: 15px;
       font-size: 24px;
       line-height: 31px;
     }
+  }
+
+  .wrap {
+    margin-bottom: 15px;
   }
 
   p {
@@ -136,29 +117,21 @@
   }
 }
 
-.safety__item--safe {
-  &::before {
-    background-image: url("../img/library/icon-safe.svg");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 52px 47px;
 
-    @include mobile-md {
-      background-size: 42px 37px;
-    }
-  }
-}
-
-.safety__item--cloud {
-  &::before {
-    background-image: url("../img/library/icon-cloud.svg");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 49px 52px;
-
-    @include mobile-md {
-      background-size: 39px 42px;
-    }
+.safety__icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 90px;
+  min-height: 90px;
+  border-radius: 50%;
+  background-color: $color-accent;
+  position: absolute;
+  top: 0;
+  left: 20px;
+  top: 40px;
+  @include laptop {
+    position: static;
   }
 }
 
@@ -167,6 +140,9 @@
   padding-left: 13px;
 
   @include tablet {
+    padding-left: 30px;
+  }
+  @include mobile-sm {
     padding-left: 0;
   }
 

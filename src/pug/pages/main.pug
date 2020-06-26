@@ -17,31 +17,27 @@ block content
   -
     const advantages = [
     {
-    iconPathWhite: "icon-hands-white",
-    iconPathAccent: "icon-hands-accent",
+    iconPath: "icon-hands",
     iconWidth: 35,
     iconHeight: 31,
     title: t.main.adv_title_1,
     text: t.main.adv_sub_1
     },
     {
-    iconPathWhite: "icon-purse-white",
-    iconPathAccent: "icon-purse-accent",
+    iconPath: "icon-purse",
     iconWidth: 28,
     iconHeight: 26,
     title: t.main.adv_title_2,
     text: t.main.adv_sub_2
     },
     {
-    iconPathWhite: "icon-lock-white",
-    iconPathAccent: "icon-lock-accent",
+    iconPath: "icon-lock",
     iconWidth: 30,
     iconHeight: 30,
     title: t.main.adv_title_3,
     text: t.main.adv_sub_3
     }
     ];
-
     const functions = [
     {
     index: "1",
@@ -97,6 +93,7 @@ block content
     iconPath: "icon-bot-dark",
     iconWidth: 28,
     iconHeight: 27,
+
     title: t.main.f_title_5,
     text: t.main.f_text_5,
     picWidth: "141",
@@ -131,10 +128,8 @@ block content
             div.pseudo--1
             div.pseudo--2
             div.pseudo--3
-            .advantages__icon.advantages__icon--white
-              +svg(item.iconPathWhite, item.iconWidth, item.iconHeight)
-            .advantages__icon.advantages__icon--accent
-              +svg(item.iconPathAccent, item.iconWidth, item.iconHeight)
+            .advantages__icon
+              +svg(item.iconPath, item.iconWidth, item.iconHeight)
             h2= item.title
             p= item.text
   section.functions.box
@@ -189,7 +184,10 @@ block content
       h2.safety__title=t.main.sec_title
       ul.safety__list
         li.safety__item.safety__item--safe
-          h3=t.main.sec_title_1
+          .wrap.wrap--ac.wrap--icon
+            .safety__icon
+              +svg('icon-safe', 50, 50)
+            h3=t.main.sec_title_1
           p=t.main.sec_sub_1
           ul.safety__listbox
             li
@@ -205,16 +203,19 @@ block content
             li
               p=t.main.sec_li_1_6
         li.safety__item.safety__item--cloud
-          h3=t.main.sec_title_2
+          .wrap.wrap--ac.wrap--icon
+            .safety__icon
+              +svg('icon-cloud', 50, 50)
+            h3=t.main.sec_title_2
           p=t.main.sec_sub_2
           ul.safety__listbox
             li
               p
-                b On-premise
+                b On-premise&nbsp;
                 | !{t.main.sec_li_2_1}
             li
               p
-                b Private cloud
+                b Private cloud&nbsp;
                 | !{t.main.sec_li_2_2}
                 img(src=`/img/sber-cloud.svg`, width="108" height="22" alt="Логотип SberCloud")
 

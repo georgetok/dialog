@@ -1,13 +1,16 @@
 .blog {
-  padding-top: 45px;
+  padding-top: 80px;
   padding-bottom: 80px;
 
   @include mobile-md {
     padding-bottom: 55px;
+    padding-top: 50px;
   }
 }
 
 .blog--main {
+  padding-top: 20px;
+
   .blog__item {
     width: calc(100% / 3 - 40px);
     margin: 20px;
@@ -27,20 +30,20 @@
       width: calc(100% - 20px);
     }
 
-    .blog__img-box, .blog__text-box {
-      @include col-6;
-    }
-
     .blog__img-box {
-      height: 100%;
+      @include col-7;
       min-height: 400px;
       padding-bottom: 0;
-      @include tablet {
-        @include col-7;
-        min-height: 320px;
-        height: 100%;
-        padding-bottom: 0;
+
+      @include laptop {
+        min-height: 34vw;
       }
+
+      @include tablet {
+        padding-bottom: 0;
+        min-height: 320px;
+      }
+
       @include mobile-md {
         @include col-12;
         min-height: auto;
@@ -50,9 +53,16 @@
     }
 
     .blog__text-box {
-      @include tablet {
-        @include col-5;
+      @include col-5;
+      padding: 40px 40px 20px;
+
+      @include laptop {
+        padding: 30px 30px 20px;
       }
+      @include tablet {
+        padding: 20px;
+      }
+
       @include mobile-md {
         @include col-12;
       }
@@ -109,7 +119,7 @@
 }
 
 .blog__date {
-  color: $color-gray-dark;
+  color: $color-gray-light;
   margin-top: auto;
   font-size: 14px;
   margin-bottom: 0;

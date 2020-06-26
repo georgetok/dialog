@@ -20,7 +20,7 @@ block content
       ul.blog__list
         each post in posts
           li.blog__item
-            a(href=`./${post.slug}.html`).blog__card
+            a(href=`./${post.slug}/`).blog__card
               .blog__img-box
                 img(src=post.feature_image alt=post.custom_excerpt)
               .blog__text-box

@@ -56,6 +56,7 @@
 
   p {
     @include typography-txt-blog;
+    font-weight: 500;
   }
 }
 
@@ -439,6 +440,9 @@
 
   p {
     @include typography-txt;
+    font-size: 18px;
+    max-width: 720px;
+    text-align: center;
 
     &:not(:last-child) {
       margin-bottom: 25px;
@@ -447,16 +451,5 @@
     @include tablet {
       text-align: center;
     }
-  }
-}
-
-.features__button-box {
-  display: flex;
-
-  @include tablet {
-    flex-direction: column;
-    width: 100%;
-    max-width: 360px;
-    margin: 0 auto;
   }
 }

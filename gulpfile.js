@@ -187,8 +187,8 @@ gulp.task('posts:ru', async function () {
             }
           })
         )
-        .pipe(rename(`${slug}.html`))
-        .pipe(gulp.dest(Paths.post.ru));
+        .pipe(rename(`index.html`))
+        .pipe(gulp.dest(`${BUILD_PATH}/ru/blog/${slug}/`));
     });
   });
 });
@@ -218,8 +218,8 @@ gulp.task('posts:en', async function () {
             }
           })
         )
-        .pipe(rename(`${slug}.html`))
-        .pipe(gulp.dest(Paths.post.en));
+        .pipe(rename(`index.html`))
+        .pipe(gulp.dest(`${BUILD_PATH}/en/blog/${slug}/`));
     });
   });
 });

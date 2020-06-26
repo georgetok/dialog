@@ -5,7 +5,7 @@
   align-items: center;
   width: auto;
   max-width: 100%;
-  min-width: 230px;
+  min-width: 250px;
   min-height: 50px;
   padding: 0;
   font-weight: 500;
@@ -84,29 +84,7 @@
   }
 }
 
-.button--features-1 {
-  flex-shrink: 0;
-  margin-right: 50px;
 
-  span {
-    padding-right: 30px;
-  }
-
-  @include tablet {
-    max-width: 360px;
-    margin-right: 0;
-    margin-bottom: 18px;
-  }
-}
-
-.button--features-2 {
-  width: 235px;
-
-  @include tablet {
-    max-width: 360px;
-    width: 100%;
-  }
-}
 
 .button--install {
   display: inline-flex;

@@ -8,8 +8,8 @@ include ../mixins/blog
 
 block variables
   -
-    const title = t.meta.post_title;
-    const desc = t.meta.main_desc;
+    const title = post.meta_title ? post.meta_title : t.meta.post_title;
+    const desc = post.meta_description ? post.meta_description : t.meta.main_desc;
     const pageName = "post";
 
 block content

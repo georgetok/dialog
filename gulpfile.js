@@ -116,15 +116,14 @@ const Paths = {
 
 // methods
 function removeProp(obj, propToDelete, propToFlatten) {
-  for (var property in obj) {
+  for (let property in obj) {
     if (typeof obj[property] == "object") {
       if (obj[property][propToFlatten]) {
         obj[property] = obj[property][propToFlatten];
       }
       delete obj.property;
-      let newJsonData = removeProp(obj[property], propToDelete, propToFlatten);
 
-      obj[property] = newJsonData;
+      obj[property] = removeProp(obj[property], propToDelete, propToFlatten);
     } else {
       if (property === propToDelete) {
         delete obj[property];
@@ -151,7 +150,7 @@ const requireJSON = (file) =>
 gulp.task('json', async function () {
   const posts = await api.posts.browse({
     include: "tags,authors",
-    limit: "3"
+    limit: "all"
   }).catch(err => {
     console.error("error getting data");
   });
@@ -159,6 +158,7 @@ gulp.task('json', async function () {
     path: `posts.json`,
     contents: Buffer.from(JSON.stringify(posts))
   });
+  // noinspection JSUnresolvedFunction
   return streamArray([file]).pipe(gulp.dest(`${SOURCE_PATH}json/`));
 });
 
@@ -579,4 +579,4 @@ gulp.task('copy', gulp.series('copy:fonts'));
 gulp.task('build', gulp.series('clean', 'copy', 'index', 'html', 'css', 'js', 'home'));
 gulp.task('start', gulp.series('build', 'server'));
 gulp.task('images', gulp.series('graphic'));
-gulp.task('blog', gulp.series('blog:ru', 'blog:en', 'posts:ru', 'posts:en'));
+gulp.task('blog', gulp.series('blog:ru', 'blog:en', 'posts:ru', 'posts:en', 'json'));

@@ -37,7 +37,6 @@ a {
 
 .js-accordion-details {
   overflow: hidden;
-
   transition: max-height $transition-props;
 
   &.is-hide {

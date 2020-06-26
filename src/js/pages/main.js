@@ -20,7 +20,6 @@ const main = () => {
   }
 
   functionsSwitch();
-
   let videos = document.getElementsByTagName("video");
   let tabs = document.querySelectorAll(".tabs__control");
 

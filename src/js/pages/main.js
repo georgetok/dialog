@@ -26,7 +26,7 @@ const main = () => {
     console.log(1);
     let videos = document.getElementsByTagName("video");
     let tabs = document.querySelectorAll(".tabs__control");
-    let fraction = 1; // Play when 80% of the player is visible.
+    let page = document.querySelector(".page");
 
     for (let i = 0; i < videos.length; i++) {
 
@@ -37,7 +37,7 @@ const main = () => {
         if (this.paused == true) {
           videos[i].play();
         } else {
-          this.pause();
+          videos[i].pause();
         }
       });
       let
@@ -45,8 +45,8 @@ const main = () => {
         y = videos[i].offsetTop,
         w = videos[i].offsetWidth,
         h = videos[i].offsetHeight,
-        r = x + w, //right
-        b = y + h, //bottom
+        r = x + w,
+        b = y + h,
         visibleX,
         visibleY,
         visible;
@@ -56,16 +56,17 @@ const main = () => {
 
       visible = visibleX * visibleY / (w * h);
 
-      console.log('video:', i);
-      console.log(visibleY);
-      console.log('______________');
+      // console.log('video:', i);
+      // console.log(visibleY);
+      // console.log('______________');
       if (0 < visible < 100) {
         videos[i].play();
       }
     }
   }
 
-  window.addEventListener('scroll', checkScroll, false);
+  document.addEventListener('scroll', checkScroll, false);
+  page.addEventListener('scroll', checkScroll, false);
   checkScroll();
 };
 export default main;

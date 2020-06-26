@@ -543,7 +543,7 @@ gulp.task('server', function () {
     ui: false,
   });
   gulp.watch(Paths.styles.src, gulp.series('css'));
-  gulp.watch(Paths.styles.src, gulp.series('js'));
+  gulp.watch(Paths.scripts.src, gulp.series('js'));
   gulp.watch(Paths.html.srcWatch, gulp.series('build', 'refresh'));
   gulp.watch(Paths.images.src, gulp.series('graphic', 'refresh'));
   gulp.watch(Paths.html.srcWatch, gulp.series('blog', 'refresh'));

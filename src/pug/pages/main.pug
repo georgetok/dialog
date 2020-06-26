@@ -5,6 +5,7 @@ include ../mixins/button-play
 include ../mixins/picture
 include ../mixins/form-offer
 include ../mixins/blog
+include ../mixins/video
 
 block variables
   -
@@ -146,7 +147,7 @@ block content
               span
                 +svg(item.iconPath, item.iconWidth, item.iconHeight)
               b= item.title
-        each item in functions
+        each item, index in functions
           .tabs__wrapper(class=(item.active ? "tabs__wrapper--active" : null))
             button.tabs__control.tabs__control--mobile.js-accordion-trigger(class=(item.active ? "tabs__control--active" : null) type="button" data-tab-index=item.index)
               span
@@ -159,26 +160,27 @@ block content
               .tabs__right
                 .wrap
                   +button-play('button-play--tabs')
-                  picture
-                    source(
-                      type="image/webp"
-                      media="(min-width: 768px)"
-
-                      srcset=`/img/${item.picPathDesk}@1x.webp 1x, /img/${item.picPathDesk}@2x.webp 2x`
-                    )
-                    source(
-                      type="image/webp"
-                      srcset=`/img/${item.picPathMob}@1x.webp 1x, /img/${item.picPathMob}@2x.webp 2x`
-                    )
-                    source(
-                      media="(min-width: 768px)"
-                      srcset=`/img/${item.picPathDesk}@1x.png 1x, /img/${item.picPathDesk}@2x.png 2x`
-                    )
-                    img(
-                      src=`/img/${item.picPathMob}@1x.png`,
-                      srcset=`/img/${item.picPathMob}@2x.png 2x`,
-                      width=item.picWidth,
-                      alt="Фото приложения Dialog")
+                  +video(index+1)
+                  //picture
+                  //  source(
+                  //    type="image/webp"
+                  //    media="(min-width: 768px)"
+                  //
+                  //    srcset=`/img/${item.picPathDesk}@1x.webp 1x, /img/${item.picPathDesk}@2x.webp 2x`
+                  //  )
+                  //  source(
+                  //    type="image/webp"
+                  //    srcset=`/img/${item.picPathMob}@1x.webp 1x, /img/${item.picPathMob}@2x.webp 2x`
+                  //  )
+                  //  source(
+                  //    media="(min-width: 768px)"
+                  //    srcset=`/img/${item.picPathDesk}@1x.png 1x, /img/${item.picPathDesk}@2x.png 2x`
+                  //  )
+                  //  img(
+                  //    src=`/img/${item.picPathMob}@1x.png`,
+                  //    srcset=`/img/${item.picPathMob}@2x.png 2x`,
+                  //    width=item.picWidth,
+                  //    alt="Фото приложения Dialog")
   section.safety.box.box--white
     .safety__wrapper
       h2.safety__title=t.main.sec_title
@@ -253,7 +255,8 @@ block content
         .features__img-box.features__img-box--direct
           +button-play('button-play--features')
           .features__img.features__img--direct
-            +picture(`/img/features-1-desktop`, 'png', 'Изображение приложения Dialog', 630)
+            +video(6)
+            //+picture(`/img/features-1-desktop`, 'png', 'Изображение приложения Dialog', 630)
         .features__desc.features__desc--direct
           span
             +svg('icon-bot-light', 33, 33)
@@ -267,7 +270,8 @@ block content
         .features__img-box.features__img-box--reverse
           +button-play('button-play--features')
           .features__img.features__img--reverse
-            +picture(`/img/features-2-desktop`, 'png', 'Изображение приложения Dialog', 630)
+            +video(7)
+            //+picture(`/img/features-2-desktop`, 'png', 'Изображение приложения Dialog', 630)
         .features__desc.features__desc--reverse
           span
             +svg('icon-api', 22, 22)
@@ -349,13 +353,13 @@ block content
         .quote__content-text
           p=t.main.quote_text
         .quote__content-avatar
-          .quote__avatar-img
-            +picture(`/img/img-avatar-desktop`, 'jpg', 'Фотография Льва Хасиса', 150)
           .quote__avatar-wrapper
             .quote__avatar-name
               p=t.main.quote_name
             .quote__avatar-post
               p=t.main.quote_desc
+          .quote__avatar-img
+            +svg('sber-logo-big', 200, 50)
 
   section.box.box--gray
     +blog(t.blog.cards)

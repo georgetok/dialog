@@ -947,6 +947,10 @@
     "blog_card": {
       "ru": "Карточка блога",
       "en": "Blog card>"
+    },
+    "sberlogo": {
+      "ru": "Лого Сбербанка",
+      "en": "Sberbank logo"
     }
   },
 

@@ -23,10 +23,9 @@ const main = () => {
 
 
   function checkScroll() {
-    console.log(1);
+    // console.log(1);
     let videos = document.getElementsByTagName("video");
     let tabs = document.querySelectorAll(".tabs__control");
-    let page = document.querySelector(".page");
 
     for (let i = 0; i < videos.length; i++) {
 
@@ -66,7 +65,6 @@ const main = () => {
   }
 
   document.addEventListener('scroll', checkScroll, false);
-  page.addEventListener('scroll', checkScroll, false);
   checkScroll();
 };
 export default main;

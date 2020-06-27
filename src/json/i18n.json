@@ -560,18 +560,6 @@
       "ru": "Компания-разработчик ООО «Диалог» состоит в реестре аккредитованных организаций, осуществляющих деятельность в области информационных технологий на территории РФ (No 436 от 07.09.2016).",
       "en": "The development company Dialog LLC is in the register of accredited organizations operating in the field of information technology in the Russian Federation (№ 436 of 09/07/2016)."
 
-    },
-    "doc_1": {
-      "ru": "ФСБ",
-      "en": "FSB"
-    },
-    "doc_2": {
-      "ru": "ФСТЭК",
-      "en": "FSTEK"
-    },
-    "doc_3": {
-      "ru": "ФСТЭК",
-      "en": "FSTEK"
     }
   },
 
@@ -1000,6 +988,21 @@
     "support_title": {
       "ru": "Поддержка | dialog",
       "en": "Support | dialog"
+    }
+  },
+
+  "abb": {
+    "doc_1": {
+      "ru": "ФСБ",
+      "en": "FSB"
+    },
+    "doc_2": {
+      "ru": "ФСТЭК",
+      "en": "FSTEK"
+    },
+    "doc_3": {
+      "ru": "ФСТЭК",
+      "en": "FSTEK"
     }
   }
 }

@@ -543,9 +543,10 @@ gulp.task('server', function () {
     ui: false,
   });
   gulp.watch(Paths.styles.src, gulp.series('css'));
-  // gulp.watch(Paths.html.srcWatch, gulp.series('build', 'refresh'));
+  gulp.watch(Paths.html.srcWatch, gulp.series('html', 'refresh'));
+  gulp.watch(Paths.home.src, gulp.series('home', 'refresh'));
   gulp.watch(Paths.images.src, gulp.series('graphic', 'refresh'));
-  gulp.watch(Paths.html.srcWatch, gulp.series('blog', 'refresh'));
+  gulp.watch(Paths.blog.src, gulp.series('blog', 'refresh'));
   gulp.watch(Paths.scripts.src, gulp.series('js'));
 
 });

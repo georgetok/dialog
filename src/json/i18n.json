@@ -74,16 +74,16 @@
     },
     "adv_sub_2": {
       "ru": "Объединение разрозненных инструментов в одном решении позволяет сократить расходы на ПО, оборудование, обслуживание и поддержку",
-      "en": "Hosting on company servers and integration with corporate security systems."
+      "en": "Combining various tools in one platform optimizes the cost of software, hardware, maintenance and support."
     },
     "adv_sub_3": {
       "ru": "Совмещение разрозненных инструментов в одной платформе оптимизирует расходы на ПО, оборудование, обслуживание и поддержку.",
-      "en": "Combining various tools in one platform optimizes the cost of software, hardware, maintenance and support."
+      "en": "Hosting on company servers and integration with corporate security systems."
     },
 
     "f_title": {
       "ru": "Функции Dialog",
-      "en": "Dialog Functions"
+      "en": "Dialog Features"
     },
     "f_title_1": {
       "ru": "Групповые чаты и каналы",
@@ -108,7 +108,7 @@
 
     "f_text_1": {
       "ru": "Создавайте чаты для команд и проектов – фокусируйте усилия, делайте работу более прозрачной, а информацию — доступной. Используйте каналы для централизованного информирования сотрудников.",
-      "en": "Groups are chat rooms for communication; create them for teams and projects in order to concentrate efforts, make work more transparent, and information accessible to everyone."
+      "en": "Groups are chat rooms for communication. Create them for teams and projects in order to concentrate efforts, make work more transparent, and information accessible to everyone."
     },
     "f_text_2": {
       "ru": "Тяжелая презентация не отправляется по почте? Делитесь файлами, не задумываясь о лимитах по размеру или формату.",
@@ -116,7 +116,7 @@
     },
     "f_text_3": {
       "ru": "Созванивайтесь с коллегам в мессенджере или подключайтесь к конференциям в АКС/ВКС-системе.",
-      "en": "Call up colleagues in the messenger or connect to conferences in the AKS / VKS system."
+      "en": "Call up colleagues in the messenger or audio/video conferencing system."
     },
     "f_text_4": {
       "ru": "Удобный поиск по чату поможет найти презентации, изображения, документы, а интеграция с адресной книгой \u2014 нужного сотрудника по имени, должности или отделу.",
@@ -134,15 +134,15 @@
     },
     "sec_title_1": {
       "ru": "Высокие стандарты безопасности",
-      "en": "High safety standards"
+      "en": "High security standards"
     },
     "sec_sub_1": {
       "ru": "Интеграция с инфраструктурой информационной безопасности",
-      "en": "High safety standards"
+      "en": "Integration with Information Security Infrastructure"
     },
     "sec_li_1_1": {
       "ru": "Интеграция с Active Directory AD / LDAP",
-      "en": "Integration with Information Security Infrastructure - Active Directory AD / LDAP Integration"
+      "en": "Active Directory AD / LDAP Integration"
     },
     "sec_li_1_2": {
       "ru": "DLP — предотвращение утечек",
@@ -166,15 +166,13 @@
     },
 
 
-
-
     "sec_title_2": {
       "ru": "Данные под вашим контролем",
       "en": "Data under your control"
     },
     "sec_sub_2": {
       "ru": "Вы можете выбрать предпочтительные варианты размещения Dialog",
-      "en": "Dialog Supply"
+      "en": "Dialog hosting"
     },
     "sec_li_2_1": {
       "ru": "Размещение на серверах вашей компании",
@@ -182,14 +180,14 @@
     },
     "sec_li_2_2": {
       "ru": "Размещение на инфраструктуре стороннего провайдера в частном облаке",
-      "en": "hosting on a third-party infrastructure in private cloud [SberCloud logo]"
+      "en": "hosting on a third-party infrastructure in private cloud"
     },
 
 
 
     "sol_title": {
       "ru": "Решения",
-      "en": "Solutions for business and organizations"
+      "en": "Solutions for business and government organizations"
     },
     "sol_title_1": {
       "ru": "Бизнесу",
@@ -222,8 +220,8 @@
 
 
     "feat_title_1_block_1": {
-      "ru": "Bot SDK",
-      "en": "Bot SDK"
+      "ru": "Dialog Bot SDK",
+      "en": "Dialog Bot SDK"
     },
     "feat_sub_1_block_1": {
       "ru": "Bot SDK позволяет создавать ботов и чат-ботов для Dialog. Боты оптимизируют повторяющиеся рутинные операции и освобождают время для более сложных задач. SDK доступен для JS, Java и Python.",
@@ -249,7 +247,7 @@
     },
     "feat_sub_1_block_2": {
       "ru": "API позволяет другим приложениям взаимодействовать и обмениваться данными с Dialog.",
-      "en": "he API allows other applications to interact with Dialog. Use the functions of the corporate messenger and create new services for business needs."
+      "en": "The API allows other applications to interact with Dialog. Use the functions of the corporate messenger and create new services for business needs."
     },
     "feat_title_2_block_2": {
       "ru": "Совместная работа над документами МойОфис",
@@ -263,6 +261,10 @@
       "ru": "Реализовано с помощью Dialog API",
       "en": "Implemented using the Dialog API"
     },
+    "feat_purple_block_2": {
+      "ru": "Реализовано с помощью Dialog API",
+      "en": "Implemented using the Dialog API"
+    },
 
 
     "feat_title_enlarge": {
@@ -271,7 +273,7 @@
     },
     "feat_sub_enlarge": {
       "ru": "С помощью наших партнеров-интеграторов или внутренних разработчиков вашей компании",
-      "en": "With our Integrator partners or internal developers of your company"
+      "en": "With our VAR partners or internal developers of your company"
     },
 
 
@@ -301,7 +303,7 @@
     },
     "inst_li_1_2": {
       "ru": "Возможность изменить оформление элементов интерфейса Dialog в соответствие с фирменным стилем бренда заказчика.",
-      "en": "The ability to change the design of Dialog interface elements in accordance with the corporate identity of the customer’s brand."
+      "en": "The ability to change the Dialog interface elements according to the customer's brand identity."
     },
 
     "inst_title_3": {
@@ -317,7 +319,7 @@
 
     "quote_title": {
       "ru": "Dialog в большом бизнесе",
-      "en": "Dialog testimonial"
+      "en": "Dialog in Sberbank"
     },
     "quote_sub": {
       "ru": "Сбербанк запустил корпоративный мессенджер СберЧат на базе Dialog для более чем 300 000 сотрудников.",
@@ -348,7 +350,7 @@
     },
     "text": {
       "ru": "Если вы пользователь Dialog enterprise — воспользуйтесь центром поддержки для корпоративных клиентов. В случае отсутствия доступа — свяжитесь с вашим администратором.",
-      "en": "If you are a user of dialog enterprise — use the support center for corporate clients. Or request access from your administrator."
+      "en": "If you are a user of dialog enterprise — use the support center for corporate clients. If you don't have access – contact your system administrator."
     },
     "link": {
       "ru": "Центр поддержки клиентов",
@@ -411,7 +413,7 @@
     },
     "email": {
       "ru": "Ваша эл.почта",
-      "en": "E-mail"
+      "en": "Work e-mail"
     },
     "company": {
       "ru": "Название компании",
@@ -507,7 +509,7 @@
     },
     "card_text_2": {
       "ru": "Поддержка интеграций с антивирусами по протоколу ICAP. Мессенджер блокирует вредоносные файлы при отправке.",
-      "en": "Dialog cooperates with leading security experts to conduct regular audits of their products."
+      "en": "Dialog cooperates with leading security experts to conduct regular audits of its products."
     },
     "card_title_3": {
       "ru": "Аудит безопасности",
@@ -531,7 +533,7 @@
     },
     "card_text_5": {
       "ru": "Dialog интегрируется с SIEM-системами и позволяет реагировать на события безопасности до наступления ущерба.",
-      "en": "Integrates with ICAP data leak prevention systems. The risk of intentional or accidental information leaks is minimized."
+      "en": "Integrates with data leak prevention systems via ICAP. The risk of intentional or accidental information leaks is minimized."
     },
 
     "norms_title": {
@@ -561,15 +563,15 @@
     },
     "doc_1": {
       "ru": "ФСБ",
-      "en": "ФСБ"
+      "en": "FSB"
     },
     "doc_2": {
       "ru": "ФСТЭК",
-      "en": "ФСТЭК"
+      "en": "FSTEK"
     },
     "doc_3": {
       "ru": "ФСТЭК",
-      "en": "ФСТЭК"
+      "en": "FSTEK"
     }
   },
 
@@ -873,7 +875,7 @@
     },
     "license": {
       "ru": "Свидетельства и лицензии",
-      "en": "Patents and Licenses"
+      "en": "Certificates and Licenses"
     },
     "social": {
       "ru": "Социальная ответственность",

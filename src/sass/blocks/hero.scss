@@ -14,6 +14,10 @@
     letter-spacing: -0.01em;
   }
 
+  &__button{
+    margin-top: 30px;
+  }
+
   &__text {
     @include typography-subhead;
     line-height: 1.4;

@@ -1,31 +1,32 @@
 .hero {
-  overflow: hidden;
-
-  &__wrapper {
-    @include make-block-wrapper;
-    display: flex;
-    align-items: center;
-    padding-left: var(--indent);
-    padding-right: var(--indent);
-  }
-
-  &__title {
-    @include typography-h1;
-    letter-spacing: -0.01em;
-  }
-
-  &__button{
-    margin-top: 30px;
-  }
-
-  &__text {
-    @include typography-subhead;
-    line-height: 1.4;
-    margin-top: 30px;
-    margin-bottom: 30px;
-  }
-
   &--main {
+    overflow: hidden;
+
+    .hero__wrapper {
+      @include make-block-wrapper;
+      display: flex;
+      padding-left: var(--indent);
+      padding-right: var(--indent);
+      align-items: center;
+    }
+
+    .hero__title {
+      @include typography-h1;
+      letter-spacing: -0.01em;
+      margin-top: -5px;
+    }
+
+    .hero__button {
+      margin-top: 30px;
+    }
+
+    .hero__text {
+      @include typography-subhead;
+      line-height: 1.4;
+      margin-top: 35px;
+      margin-bottom: 25px;
+    }
+
     .hero__img {
       @include pseudo-absolute;
       width: 100%;
@@ -49,10 +50,6 @@
     }
   }
 
-  &--square-both {
-
-  }
-
   &--reverse {
     .hero__left {
       @include mobile-md {
@@ -69,7 +66,7 @@
 
   &--homepage {
     padding-bottom: 50px;
-    padding-top: 110px;
+    padding-top: 115px;
     @include mobile-sm {
       padding-top: 90px;
     }
@@ -88,7 +85,7 @@
     }
 
     .hero__right {
-      width: 62%;
+      width: 60.5%;
       @include mobile-md {
         width: 100%;
         margin-bottom: 50px;

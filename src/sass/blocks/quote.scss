@@ -46,7 +46,7 @@
   margin-bottom: 36px;
 
   @include laptop {
-    margin-bottom: 50px;
+    margin-bottom: 40px;
   }
 
   @include mobile-md {
@@ -135,12 +135,11 @@
   @include laptop {
     margin-bottom: 26px;
     padding-bottom: 37px;
+    padding-top: 0;
     background-position: 0 36px;
     background-size: 120px 92px;
   }
-  @include tablet {
-    padding-top: 0;
-  }
+
   @include mobile-md {
     position: relative;
     flex-direction: column;
@@ -176,7 +175,6 @@
     margin-right: 4px;
     padding-top: 40px;
     padding-bottom: 30px;
-    padding-left: 79px;
   }
 
   @include tablet {
@@ -267,7 +265,7 @@
   flex-direction: column;
   width: 100%;
   width: 189px;
-  @include mobile-md{
+  @include mobile-md {
     width: 339px;
   }
 }

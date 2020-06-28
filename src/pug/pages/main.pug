@@ -144,13 +144,13 @@ block content
               type="button"
               data-tab-index=index
             )
-              span
+              i.icon.icon--round.icon--outline.icon--md
                 +svg(item.iconPath, item.iconWidth, item.iconHeight)
               b= item.title
         each item, index in functions
           .tabs__wrapper(class=(item.active ? "tabs__wrapper--active" : null))
             button.tabs__control.tabs__control--mobile.js-accordion-trigger(class=(item.active ? "tabs__control--active" : null) type="button" data-tab-index=item.index)
-              span
+              i.icon.icon--round.icon--outline.icon--sm
                 +svg(item.iconPath, item.iconWidth, item.iconHeight)
               b= item.title
             .tabs__content.js-accordion-details(data-tab-index=item.index class=(item.active ? "tabs__content--active" : null))

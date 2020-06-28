@@ -11,11 +11,10 @@
 
 .main-nav__top-links {
   @include no-list;
-
   display: flex;
   align-items: center;
   flex-wrap: wrap;
-  margin-right: 100px;
+  margin-right: 110px;
 
   @include laptop {
     flex-direction: column;
@@ -29,7 +28,6 @@
 
 .main-nav__link, .main-nav__button {
   @include reset-button;
-
   position: relative;
   z-index: 3;
   display: block;

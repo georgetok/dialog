@@ -400,10 +400,10 @@ block content
           .ui-kit__content.ui-kit__content--item-indent
             ul
               li
-                .round-icon
-                  +svg('icon-bubble-lock', 52, 47)
+                .icon.icon--accent.icon--round.icon--lg
+                  +svg('icon-safe', 52, 47)
               li
-                .round-icon.round-icon--small
+                .icon.icon--accent.icon--round.icon--sm
                   +svg('icon-hands', 35, 30)
         li.ui-kit__block
           .ui-kit__subtitle
@@ -554,4 +554,3 @@ block content
                       each col in item.cols
                         -const colClassName = `ui-kit__col ui-kit__col${col.classNameColMod}`;
                         div(class!=colClassName)
-

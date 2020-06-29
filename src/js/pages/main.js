@@ -36,7 +36,7 @@ const main = () => {
       videos[j].play();
     });
   }
-  function checkScroll() {
+  // function checkScroll() {
     // for (let i = 0; i < videos.length; i++) {
     //   if (i === 0 || i === 5 || i === 6) {
     //     let
@@ -63,9 +63,9 @@ const main = () => {
     //     }
     //   }
     // }
-  }
+  // }
 
-  document.addEventListener('scroll', checkScroll, false);
-  checkScroll();
+  // document.addEventListener('scroll', checkScroll, false);
+  // checkScroll();
 };
 export default main;

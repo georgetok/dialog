@@ -8,7 +8,7 @@
 
   @include mobile-md {
     padding-top: 50px;
-    padding-bottom: 53px;
+    padding-bottom: 33px;
   }
 }
 
@@ -207,6 +207,7 @@
     width: calc(100% - (var(--indent) * 2));
     margin-left: var(--indent);
     margin-right: var(--indent);
+    padding-top: 30px;
   }
 
   &:before {

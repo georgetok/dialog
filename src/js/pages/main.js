@@ -28,15 +28,12 @@ const main = () => {
   // console.log(videos);
 
   function checkScroll() {
-    // console.log(1);
-
     for (let y = 0; y < 5; y++) {
       tabsDesktop[y].addEventListener('click', function () {
-        videos[y].play();
       });
     }
     for (let j = 0; j < 5; j++) {
-      tabsMobile[0].addEventListener('click', function () {
+      tabsMobile[j].addEventListener('click', function () {
         videos[j].play();
       });
     }

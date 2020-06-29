@@ -5,14 +5,13 @@ mixin form-feedback (isModal, idNumber, formId)
   .form.form--main.form--feedback.box.box--white(class=(isModal ? 'form--modal' : null))
     .form__wrapper
       form(
-          method="POST"
-          action=""
-          autocomplete="on"
-          id!=formId
-        )
+        autocomplete="on"
+        id!=formId
+        onsubmit=`event.preventDefault();emailSendFeedback('${lang}');`
+      )
         .form__input-text-wrap
           .form__form-field.form__form-field--text.form__form-field--m.form__form-field--1(
-              class=(isModal ? 'form__form-field--modal' : null
+            class=(isModal ? 'form__form-field--modal' : null
             ))
             input(
               type="email"
@@ -25,24 +24,41 @@ mixin form-feedback (isModal, idNumber, formId)
             )
             label(for=`email-${idNumber}`)=t.form.email
           .form__form-field.form__form-field--text.form__form-field--s.form__form-field--4(
-              class=(isModal ? 'form__form-field--modal' : null
+            class=(isModal ? 'form__form-field--modal' : null
             ))
             input(
               type="text"
               id=`theme-${idNumber}`
               name="theme"
               placeholder=t.form.theme
-              required)
+              required
+            )
             label(for=`theme-${idNumber}`)=t.form.theme
           .form__form-field.form__form-field--fw
-              +field-textarea({
-                name: 'message',
-                label: t.form.help,
-                isRequired: true,
-              })
+            +field-textarea({
+              name: 'message',
+              label: t.form.help,
+              isRequired: true,
+            })
         .form__checkbox-wrap
-          .form__form-field.form__form-field--checkbox(class=(isModal ? 'form__form-field--modal' : null))
-            input.visually-hidden(type="checkbox" id=`accept-${idNumber}` name="accepted" checked required)
+          .form__form-field.form__form-field--checkbox(
+            class=(isModal ? 'form__form-field--modal' : null))
+            input.visually-hidden(
+              type="checkbox"
+              id=`accept-${idNumber}`
+              name="accepted"
+              checked
+              required
+            )
             label(for=`accept-${idNumber}`)=t.form.agree
-      button(class="button--accent button button--form" type="submit" onclick=`emailSendFeedback('${lang}')`)
-        span= t.button.request
+        .wrap.wrap--ac
+          button(
+            class="button--accent button button--form"
+            type="submit"
+          )
+            span= t.button.request
+
+          img.submit__icon(src="/img/loader.gif")
+          .submit__message
+            span
+              | Заявка успешно отправлена

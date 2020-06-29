@@ -17,7 +17,7 @@ class OfferModal {
 
   setModal() {
     const offerModal = document.querySelector('#modal-offer');
-    const formElem = offerModal.querySelector('#modal-offer-form');
+    const formElem = offerModal.querySelector('#form-offer-modal');
     const modalProps = {
       modal: offerModal,
       overlay: offerModal.querySelector('.modal__overlay'),

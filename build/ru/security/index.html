@@ -181,28 +181,28 @@
             <div class="form__wrapper">
               <h2 class="form__title">Получить предложение</h2>
               <div class="form__form">
-                <form class="gform" method="POST" action="" autocomplete="on" id="offer-form" onsubmit="this.clear();this.alert">
+                <form autocomplete="on" id="form-offer" onsubmit="event.preventDefault();emailSendOffer('ru',false);">
                   <input type="text" id="location" name="location" value="form sent from main page" hidden="hidden"/>
                   <input type="text" id="language" name="language" value="ru" hidden="hidden"/>
                   <div class="form__input-text-wrap">
                     <div class="form__form-field form__form-field--text form__form-field--m form__form-field--1">
-                      <input type="text" id="name-1" name="name" pattern="([A-Za-zА-ЯЁа-яё-]{2,}\s?)+" placeholder="Ваше имя" title="Имя может состоять только из букв, пробелов и дефиса"/>
+                      <input type="text" id="name-1" name="name" pattern="([A-Za-zА-ЯЁа-яё-]{2,}\s?)+" placeholder="Ваше имя" title="Имя может состоять только из букв, пробелов и дефиса" required="required"/>
                       <label for="name-1">Ваше имя</label>
                     </div>
                     <div class="form__form-field form__form-field--text form__form-field--m form__form-field--3">
-                      <input type="email" id="email-1" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" placeholder="Ваша эл.почта" title="Email адрес должен быть типа: user@mail.com"/>
+                      <input type="email" id="email-1" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" placeholder="Ваша эл.почта" title="Email адрес должен быть типа: user@mail.com" required="required"/>
                       <label for="email-1">Ваша эл.почта</label>
                     </div>
                     <div class="form__form-field form__form-field--text form__form-field--s form__form-field--2">
-                      <input type="tel" id="phone-1" name="phone" placeholder="Телефон" title="Номер телефона должен начинаться с символов +7 и содержать 11 цифр" pattern="7\d{10}" data-mask="+{7}(000)000-00-00"/>
+                      <input type="tel" id="phone-1" name="phone" placeholder="Телефон" title="Номер телефона должен начинаться с символов +7 и содержать 11 цифр" pattern="\+7[0-9]{10}" required="required"/>
                       <label for="phone-1">Телефон</label>
                     </div>
                     <div class="form__form-field form__form-field--text form__form-field--s form__form-field--4">
-                      <input type="text" id="company-1" name="company" placeholder="Название компании"/>
+                      <input type="text" id="company-1" name="company" placeholder="Название компании" required="required"/>
                       <label for="company-1">Название компании</label>
                     </div>
                     <div class="form__form-field form__form-field--text form__form-field--5">
-                      <select id="quantity-1" name="quantity-users">
+                      <select id="quantity-1" name="quantity-users" required="required">
                         <option value="1-100">1-100</option>
                         <option value="101-500">101-500</option>
                         <option value="501-1000">501-1000</option>
@@ -213,7 +213,7 @@
                   </div>
                   <div class="form__checkbox-wrap">
                     <div class="form__form-field form__form-field--checkbox">
-                      <input class="visually-hidden" type="checkbox" id="accept-1" name="accepted" checked="checked"/>
+                      <input class="visually-hidden" type="checkbox" id="accept-1" name="terms" required="required" checked="checked"/>
                       <label for="accept-1">Я согласен на обработку данных</label>
                     </div>
                     <div class="form__form-field form__form-field--checkbox">
@@ -221,9 +221,9 @@
                       <label for="subscribe-1">Подписаться на новостную рассылку</label>
                     </div>
                   </div>
-                  <button class="button--accent button button--form" type="submit" onclick="emailSendOffer('ru')"><span>Отправить заявку</span></button>
-                  <div class="thankyou_message" style="display:none">
-                    <h2><em>Thanks</em> for contacting us! We will get back to you soon!</h2>
+                  <div class="wrap wrap--ac">
+                    <button class="button--accent button button--form" type="submit"><span>Отправить заявку</span></button><img class="submit__icon" src="/img/loader.gif"/>
+                    <div class="submit__message"><span>Спасибо за заявку</span></div>
                   </div>
                 </form>
               </div>
@@ -301,28 +301,28 @@
             <div class="form__wrapper form__wrapper--modal">
               <h2 class="form__title form__title--modal">Получить предложение</h2>
               <div class="form__form">
-                <form class="gform" method="POST" action="" autocomplete="on" id="modal-offer-form" onsubmit="this.clear();this.alert">
+                <form autocomplete="on" id="form-offer-modal" onsubmit="event.preventDefault();emailSendOffer('ru',true);">
                   <input type="text" id="location" name="location" value="form sent from main page" hidden="hidden"/>
                   <input type="text" id="language" name="language" value="ru" hidden="hidden"/>
                   <div class="form__input-text-wrap">
                     <div class="form__form-field form__form-field--text form__form-field--m form__form-field--1 form__form-field--modal">
-                      <input type="text" id="name-2" name="name" pattern="([A-Za-zА-ЯЁа-яё-]{2,}\s?)+" placeholder="Ваше имя" title="Имя может состоять только из букв, пробелов и дефиса"/>
+                      <input type="text" id="name-2" name="name" pattern="([A-Za-zА-ЯЁа-яё-]{2,}\s?)+" placeholder="Ваше имя" title="Имя может состоять только из букв, пробелов и дефиса" required="required"/>
                       <label for="name-2">Ваше имя</label>
                     </div>
                     <div class="form__form-field form__form-field--text form__form-field--m form__form-field--3 form__form-field--modal">
-                      <input type="email" id="email-2" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" placeholder="Ваша эл.почта" title="Email адрес должен быть типа: user@mail.com"/>
+                      <input type="email" id="email-2" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" placeholder="Ваша эл.почта" title="Email адрес должен быть типа: user@mail.com" required="required"/>
                       <label for="email-2">Ваша эл.почта</label>
                     </div>
                     <div class="form__form-field form__form-field--text form__form-field--s form__form-field--2 form__form-field--modal">
-                      <input type="tel" id="phone-2" name="phone" placeholder="Телефон" title="Номер телефона должен начинаться с символов +7 и содержать 11 цифр" pattern="7\d{10}" data-mask="+{7}(000)000-00-00"/>
+                      <input type="tel" id="phone-2" name="phone" placeholder="Телефон" title="Номер телефона должен начинаться с символов +7 и содержать 11 цифр" pattern="\+7[0-9]{10}" required="required"/>
                       <label for="phone-2">Телефон</label>
                     </div>
                     <div class="form__form-field form__form-field--text form__form-field--s form__form-field--4 form__form-field--modal">
-                      <input type="text" id="company-2" name="company" placeholder="Название компании"/>
+                      <input type="text" id="company-2" name="company" placeholder="Название компании" required="required"/>
                       <label for="company-2">Название компании</label>
                     </div>
                     <div class="form__form-field form__form-field--text form__form-field--5 form__form-field--modal">
-                      <select id="quantity-2" name="quantity-users">
+                      <select id="quantity-2" name="quantity-users" required="required">
                         <option value="1-100">1-100</option>
                         <option value="101-500">101-500</option>
                         <option value="501-1000">501-1000</option>
@@ -333,7 +333,7 @@
                   </div>
                   <div class="form__checkbox-wrap">
                     <div class="form__form-field form__form-field--checkbox form__form-field--modal">
-                      <input class="visually-hidden" type="checkbox" id="accept-2" name="accepted" checked="checked"/>
+                      <input class="visually-hidden" type="checkbox" id="accept-2" name="terms" required="required" checked="checked"/>
                       <label for="accept-2">Я согласен на обработку данных</label>
                     </div>
                     <div class="form__form-field form__form-field--checkbox form__form-field--modal">
@@ -341,9 +341,9 @@
                       <label for="subscribe-2">Подписаться на новостную рассылку</label>
                     </div>
                   </div>
-                  <button class="button--accent button button--form" type="submit" onclick="emailSendOffer('ru')"><span>Отправить заявку</span></button>
-                  <div class="thankyou_message" style="display:none">
-                    <h2><em>Thanks</em> for contacting us! We will get back to you soon!</h2>
+                  <div class="wrap wrap--ac">
+                    <button class="button--accent button button--form" type="submit"><span>Отправить заявку</span></button><img class="submit__icon" src="/img/loader.gif"/>
+                    <div class="submit__message"><span>Спасибо за заявку</span></div>
                   </div>
                 </form>
               </div>
@@ -354,7 +354,6 @@
     </div>
     <script src="/js/vendor.min.js"></script>
     <script src="/js/index.min.js"></script>
-    <script src="https://smtpjs.com/v3/smtp.js"></script>
-    <script src="/js/script.js"></script>
+    <script src="/js/email.js"></script>
   </body>
 </html>

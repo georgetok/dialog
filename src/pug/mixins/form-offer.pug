@@ -6,12 +6,9 @@ mixin form-offer (isModal, idNumber, formId)
       h2.form__title(class=(isModal ? 'form__title--modal' : null))=t.form.request_title
       .form__form
         form(
-          class="gform"
-          method="POST"
-          action=""
           autocomplete="on"
           id!=formId
-          onsubmit="this.clear();this.alert"
+          onsubmit=`event.preventDefault();emailSendOffer('${lang}',${isModal});`
         )
           input(
             type="text"
@@ -36,6 +33,7 @@ mixin form-offer (isModal, idNumber, formId)
                 pattern="([A-Za-zА-ЯЁа-яё-]{2,}\\s?)+"
                 placeholder=t.form.name
                 title="Имя может состоять только из букв, пробелов и дефиса"
+                required
               )
               label(for=`name-${idNumber}`)=t.form.name
             .form__form-field.form__form-field--text.form__form-field--m.form__form-field--3(class=(isModal ? 'form__form-field--modal' : null))
@@ -46,6 +44,7 @@ mixin form-offer (isModal, idNumber, formId)
                 pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,}$"
                 placeholder=t.form.email
                 title="Email адрес должен быть типа: user@mail.com"
+                required
               )
               label(for=`email-${idNumber}`)=t.form.email
             .form__form-field.form__form-field--text.form__form-field--s.form__form-field--2(class=(isModal ? 'form__form-field--modal' : null))
@@ -55,8 +54,8 @@ mixin form-offer (isModal, idNumber, formId)
                 name="phone"
                 placeholder=t.form.phone
                 title="Номер телефона должен начинаться с символов +7 и содержать 11 цифр"
-                pattern="7\\d{10}"
-                data-mask="+{7}(000)000-00-00"
+                pattern="\\+7[0-9]{10}"
+                required
               )
               label(for=`phone-${idNumber}`)=t.form.phone
             .form__form-field.form__form-field--text.form__form-field--s.form__form-field--4(class=(isModal ? 'form__form-field--modal' : null))
@@ -65,12 +64,14 @@ mixin form-offer (isModal, idNumber, formId)
                 id=`company-${idNumber}`
                 name="company"
                 placeholder=t.form.company
+                required
               )
               label(for=`company-${idNumber}`)=t.form.company
             .form__form-field.form__form-field--text.form__form-field--5(class=(isModal ? 'form__form-field--modal' : null))
               select(
                 id=`quantity-${idNumber}`
                 name="quantity-users"
+                required
               )
                 option(value="1-100") 1-100
                 option(value="101-500") 101-500
@@ -82,7 +83,8 @@ mixin form-offer (isModal, idNumber, formId)
               input.visually-hidden(
                 type="checkbox"
                 id=`accept-${idNumber}`
-                name="accepted"
+                name="terms"
+                required
                 checked
               )
               label(for=`accept-${idNumber}`)=t.form.agree
@@ -93,9 +95,12 @@ mixin form-offer (isModal, idNumber, formId)
                 name="subscribe"
               )
               label(for=`subscribe-${idNumber}`)=t.form.news
-          button(class="button--accent button button--form" type="submit" onclick=`emailSendOffer('${lang}')`)
-            span= t.button.request
-          .thankyou_message(style='display:none')
-            h2
-              em Thanks
-              |  for contacting us! We will get back to you soon!
+          .wrap.wrap--ac
+            button(
+              class="button--accent button button--form"
+              type="submit"
+            )
+              span= t.button.request
+            img.submit__icon(src="/img/loader.gif")
+            .submit__message
+              span Спасибо за заявку

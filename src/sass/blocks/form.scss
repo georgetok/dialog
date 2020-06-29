@@ -8,6 +8,39 @@
       margin-bottom: 31px;
     }
   }
+
+  .submit__icon {
+    display: none;
+    width: 35px;
+    height: 35px;
+    margin-left: 30px;
+  }
+
+  .submit__message {
+    @include typography-txt-sm;
+    display: none;
+    color: $color-gray-light-1;
+    margin-left: 30px;
+  }
+
+  .submit-started {
+    .submit__icon {
+      display: block;
+    }
+    .button{
+      cursor: not-allowed;
+    }
+  }
+
+  .submit-over {
+    .submit__message {
+      display: block;
+    }
+
+    .submit__icon {
+      display: none;
+    }
+  }
 }
 
 .form--cta {

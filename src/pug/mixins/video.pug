@@ -1,4 +1,4 @@
 mixin video(name)
-  video(loop muted)
-    source(src=`/video/${name}.webm`)
+  video(loop muted playsinline)
     source(src=`/video/${name}.mp4`)
+    source(src=`/video/${name}.webm`)

@@ -20,46 +20,54 @@ const main = () => {
   }
 
   functionsSwitch();
-
+  let videos = document.getElementsByTagName("video");
+  let tabsDesktop = document.querySelectorAll(".tabs__controls .tabs__control");
+  let tabsMobile = document.querySelectorAll(".tabs__controls--mobile .tabs__wrapper .tabs__control");
+  // console.log(tabsDesktop);
+  // console.log(tabsMobile);
+  // console.log(videos);
 
   function checkScroll() {
     // console.log(1);
-    let videos = document.getElementsByTagName("video");
-    let tabs = document.querySelectorAll(".tabs__control");
+
+    for (let y = 0; y < 5; y++) {
+      tabsDesktop[y].addEventListener('click', function () {
+        videos[y].play();
+      });
+    }
+    for (let j = 0; j < 5; j++) {
+      tabsMobile[0].addEventListener('click', function () {
+        videos[j].play();
+      });
+    }
 
     for (let i = 0; i < videos.length; i++) {
+      if (i === 0 || i === 5 || i === 6) {
+        // videos[i].addEventListener('click', function () {
+        //   videos[i].play();
+        // });
+        let
+          x = videos[i].offsetLeft,
+          y = videos[i].offsetTop,
+          w = videos[i].offsetWidth,
+          h = videos[i].offsetHeight,
+          r = x + w,
+          b = y + h,
+          visibleX,
+          visibleY,
+          visible;
 
-      tabs[i].addEventListener('click', function () {
-        videos[i].play();
-      });
-      videos[i].addEventListener('click', function () {
-        if (this.paused == true) {
+        visibleX = Math.max(0, Math.min(w, window.pageXOffset + window.innerWidth - x, r - window.pageXOffset));
+        visibleY = Math.max(0, Math.min(h, window.pageYOffset + window.innerHeight - y, b - window.pageYOffset));
+
+        visible = visibleX * visibleY / (w * h);
+
+        // console.log('video:', i);
+        // console.log(visibleY);
+        // console.log('______________');
+        if (0 < visible < 100) {
           videos[i].play();
-        } else {
-          videos[i].pause();
         }
-      });
-      let
-        x = videos[i].offsetLeft,
-        y = videos[i].offsetTop,
-        w = videos[i].offsetWidth,
-        h = videos[i].offsetHeight,
-        r = x + w,
-        b = y + h,
-        visibleX,
-        visibleY,
-        visible;
-
-      visibleX = Math.max(0, Math.min(w, window.pageXOffset + window.innerWidth - x, r - window.pageXOffset));
-      visibleY = Math.max(0, Math.min(h, window.pageYOffset + window.innerHeight - y, b - window.pageYOffset));
-
-      visible = visibleX * visibleY / (w * h);
-
-      // console.log('video:', i);
-      // console.log(visibleY);
-      // console.log('______________');
-      if (0 < visible < 100) {
-        videos[i].play();
       }
     }
   }

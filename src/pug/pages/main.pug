@@ -147,40 +147,41 @@ block content
               i.icon.icon--round.icon--outline.icon--md
                 +svg(item.iconPath, item.iconWidth, item.iconHeight)
               b= item.title
-        each item, index in functions
-          .tabs__wrapper(class=(item.active ? "tabs__wrapper--active" : null))
-            button.tabs__control.tabs__control--mobile.js-accordion-trigger(class=(item.active ? "tabs__control--active" : null) type="button" data-tab-index=item.index)
-              i.icon.icon--round.icon--outline.icon--sm
-                +svg(item.iconPath, item.iconWidth, item.iconHeight)
-              b= item.title
-            .tabs__content.js-accordion-details(data-tab-index=item.index class=(item.active ? "tabs__content--active" : null))
-              .tabs__left
-                h3= item.title
-                p= item.text
-              .tabs__right
-                .wrap
-                  //-button-play('button-play--tabs')
-                  +video(index+1)
-                  //-picture
-                    source(
-                      type="image/webp"
-                      media="(min-width: 768px)"
+        .tabs__controls--mobile
+          each item, index in functions
+            .tabs__wrapper(class=(item.active ? "tabs__wrapper--active" : null))
+              button.tabs__control.tabs__control--mobile.js-accordion-trigger(class=(item.active ? "tabs__control--active" : null) type="button" data-tab-index=item.index)
+                i.icon.icon--round.icon--outline.icon--sm
+                  +svg(item.iconPath, item.iconWidth, item.iconHeight)
+                b= item.title
+              .tabs__content.js-accordion-details(data-tab-index=item.index class=(item.active ? "tabs__content--active" : null))
+                .tabs__left
+                  h3= item.title
+                  p= item.text
+                .tabs__right
+                  .wrap
+                    //+button-play('button-play--tabs')
+                    +video(index+1)
+                    //-picture
+                      source(
+                        type="image/webp"
+                        media="(min-width: 768px)"
 
-                      srcset=`/img/${item.picPathDesk}@1x.webp 1x, /img/${item.picPathDesk}@2x.webp 2x`
-                    )
-                    source(
-                      type="image/webp"
-                      srcset=`/img/${item.picPathMob}@1x.webp 1x, /img/${item.picPathMob}@2x.webp 2x`
-                    )
-                    source(
-                      media="(min-width: 768px)"
-                      srcset=`/img/${item.picPathDesk}@1x.png 1x, /img/${item.picPathDesk}@2x.png 2x`
-                    )
-                    img(
-                      src=`/img/${item.picPathMob}@1x.png`,
-                      srcset=`/img/${item.picPathMob}@2x.png 2x`,
-                      width=item.picWidth,
-                      alt="Фото приложения Dialog")
+                        srcset=`/img/${item.picPathDesk}@1x.webp 1x, /img/${item.picPathDesk}@2x.webp 2x`
+                      )
+                      source(
+                        type="image/webp"
+                        srcset=`/img/${item.picPathMob}@1x.webp 1x, /img/${item.picPathMob}@2x.webp 2x`
+                      )
+                      source(
+                        media="(min-width: 768px)"
+                        srcset=`/img/${item.picPathDesk}@1x.png 1x, /img/${item.picPathDesk}@2x.png 2x`
+                      )
+                      img(
+                        src=`/img/${item.picPathMob}@1x.png`,
+                        srcset=`/img/${item.picPathMob}@2x.png 2x`,
+                        width=item.picWidth,
+                        alt="Фото приложения Dialog")
   section.safety.box.box--white
     .safety__wrapper
       h2.safety__title=t.main.sec_title

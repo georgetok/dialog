@@ -86,7 +86,7 @@ class Accordion {
   }
 
   handlerClick(evt) {
-    evt.preventDefault();
+    // evt.preventDefault();
 
     const isExpanded = this.trigger.getAttribute('aria-expanded') === 'true';
 

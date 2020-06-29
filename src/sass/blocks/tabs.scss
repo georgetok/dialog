@@ -281,7 +281,7 @@
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  width: 60%;
+  width: 55%;
   background-repeat: no-repeat;
   background-position: bottom 16px left 116px;
   background-size: 112px 112px;
@@ -314,7 +314,7 @@
   }
 
   &::before {
-    left: -2%;
+    left: -14%;
     top: -9%;
     bottom: auto;
     width: 65%;
@@ -367,12 +367,13 @@
   }
 
   .wrap {
-    position: relative;
     @include pseudo-absolute;
+    position: relative;
     width: 100%;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
     border: 1px solid $color-gray-light-1;
     border-radius: 4px;
+    overflow: hidden;
 
     @include mobile-md {
       border: none;

@@ -48,7 +48,7 @@
   display: grid;
   grid-template-columns: 48.35% 40px 48.35%;
   grid-template-rows: auto;
-  align-items: flex-start;
+  align-items: flex-end;
   width: 100%;
 
   @include laptop {
@@ -182,7 +182,7 @@
 
 .solutions__content {
   position: relative;
-  margin-top: 120px;
+  margin-bottom: 40px;
 
   @include laptop {
     margin-top: 67px;

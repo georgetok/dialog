@@ -123,8 +123,8 @@
       "en": "A convenient chat search will help you find presentations, images, documents. Integration with the address book will help you find the right person by name, position or department."
     },
     "f_text_5": {
-      "ru": "Создавайте ботов и чат-ботов для автоматизации бизнес-процессов с помощью Bot SDK.",
-      "en": "Create bots and chatbots to automate business processes using the Bot SDK."
+      "ru": "Создавайте ботов и чат-ботов для автоматизации бизнес-процессов с помощью Dialog Bot SDK.",
+      "en": "Create bots and chatbots to automate business processes using the Dialog Bot SDK."
     },
 
 
@@ -322,8 +322,8 @@
       "en": "Sberbank has launched the corporate messenger SberChat based on Dialog for over 300 000 employees."
     },
     "quote_text": {
-      "ru": "Оперативное взаимодействие и обмен данными важны для компаний любого размера и профиля деятельности. При этом банку и компаниям экосистемы было необходимо собственное масштабируемое решение, обеспечивающее эффективную и защищенную коммуникацию большому количеству сотрудников. Мы реализовали решение, которое позволит нам не только оптимизировать процесс коммуникации, но и повысить эффективность совместной работы за счет создания единого цифрового рабочего пространства.",
-      "en": "Operational interaction and data exchange are important for companies of any size and profile. At the same time, the bank and companies-parts of the ecosystem needed their own scalable solution, providing effective and secure communication to a large number of employees. We have implemented a solution that will allow us not only to optimize the communication process, but also to increase the effectiveness of collaboration by creating a single digital workspace."
+      "ru": "Оперативное взаимодействие и обмен данными важны для компаний любого размера и профиля деятельности. При этом банку и компаниям экосистемы было необходимо собственное масштабируемое решение, обеспечивающее эффективную и защищенную коммуникацию большому количеству сотрудников. Dialog реализовал решение, которое позволит не только оптимизировать процесс коммуникации, но и повысить эффективность совместной работы за счет создания единого цифрового рабочего пространства.",
+      "en": "Operational interaction and data exchange are important for companies of any size and profile. At the same time, the bank and companies-parts of the ecosystem needed their own scalable solution, providing effective and secure communication to a large number of employees. Dialog has implemented a solution that will allow Sberbank not only to optimize the communication process but also to increase the effectiveness of collaboration by creating a single digital workspace."
     },
     "quote_name": {
       "ru": "Лев Хасис",
@@ -726,7 +726,7 @@
       "en": "Registries and Associations"
     },
     "li_1": {
-      "ru": "Мессенджер dialog соответствует требованиям Единого реестра российских программ для электронных вычислительных машин и баз данных и состоит в реестре отечественного ПО.",
+      "ru": "Мессенджер Dialog соответствует требованиям Единого реестра российских программ для электронных вычислительных машин и баз данных и состоит в реестре отечественного ПО.",
       "en": "The Dialog messenger complies with the requirements of the Unified Register of Russian Programs for Electronic Computing Machines and Databases; is in the registry of domestic software."
     },
     "li_2": {
@@ -942,48 +942,48 @@
 
   "meta": {
     "main_title": {
-      "ru": "dialog | Платформа для простых и эффективных коммуникаций",
-      "en": "dialog | A platform for simple and efficient communications"
+      "ru": "Dialog | Корпоративный мессенджер для совместной работы и безопасного общения",
+      "en": "Dialog | Corporate messenger for teamwork and secure communication"
     },
     "main_desc": {
-      "ru": "это корпоративный мессенджер с возможностью установки на внутренний сервер организации",
-      "en": "handy and feature-rich enterprise multi-device messenger available for server or cloud – Slack-like, but not Slack-limited"
+      "ru": "Это корпоративный мессенджер с возможностью установки на внутренний сервер организации",
+      "en": "Handy and feature-rich enterprise multi-device messenger available for server or cloud – Slack-like, but not Slack-limited"
     },
     "patents_title": {
-      "ru": "Патенты | dialog",
-      "en": "Patents | dialog"
+      "ru": "Патенты | Dialog",
+      "en": "Patents | Dialog"
     },
     "blog_title": {
-      "ru": "Блог | dialog",
-      "en": "Blog | dialog"
+      "ru": "Блог | Dialog",
+      "en": "Blog | Dialog"
     },
     "security_title": {
-      "ru": "Безопасность | dialog",
-      "en": "Security | dialog"
+      "ru": "Безопасность | Dialog",
+      "en": "Security | Dialog"
     },
     "post_title": {
-      "ru": "Статья | dialog",
-      "en": "Post | dialog"
+      "ru": "Статья | Dialog",
+      "en": "Post | Dialog"
     },
     "career_title": {
-      "ru": "Карьера | dialog",
-      "en": "Career | dialog"
+      "ru": "Карьера | Dialog",
+      "en": "Career | Dialog"
     },
     "public_title": {
-      "ru": "Социальная ответственность | dialog",
-      "en": "Social respoinsibility | dialog"
+      "ru": "Социальная ответственность | Dialog",
+      "en": "Social respoinsibility | Dialog"
     },
     "legal_title": {
-      "ru": "Правовая информация | dialog",
-      "en": "Legal Information | dialog"
+      "ru": "Правовая информация | Dialog",
+      "en": "Legal Information | Dialog"
     },
     "int_title": {
-      "ru": "Интеграции | dialog",
-      "en": "Integrations | dialog"
+      "ru": "Интеграции | Dialog",
+      "en": "Integrations | Dialog"
     },
     "support_title": {
-      "ru": "Поддержка | dialog",
-      "en": "Support | dialog"
+      "ru": "Поддержка | Dialog",
+      "en": "Support | Dialog"
     }
   },
 

@@ -85,7 +85,11 @@
     }
 
     .hero__right {
-      width: 60.5%;
+      max-width: 740px;
+      width: 62.5%;
+      @include laptop {
+        max-width: 740px;
+      }
       @include mobile-md {
         width: 100%;
         margin-bottom: 50px;

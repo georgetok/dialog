@@ -192,7 +192,6 @@
     border-bottom: none;
     background-image: url("../img/library/arrow-menu-top.svg");
     background-repeat: no-repeat;
-    background-position: top 28px right 19px;
     background-size: 14px 12px;
   }
 }
@@ -252,7 +251,6 @@
     font-size: 36px;
 
     @include laptop {
-      @include typography-h3;
       margin-bottom: 25px;
     }
     @include tablet {
@@ -312,6 +310,7 @@
     background-repeat: no-repeat;
     overflow: hidden;
     border-bottom: 1px solid $color-accent-light;
+    border-top: 1px solid $color-accent-light;
   }
 
   &::before {
@@ -370,6 +369,13 @@
   .wrap {
     position: relative;
     @include pseudo-absolute;
+    width: 100%;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    border: 1px solid $color-gray-light-1;
+    @include mobile-md {
+      border: none;
+    }
+
 
     &:before {
       width: 100%;
@@ -378,6 +384,7 @@
       border-radius: 4px;
       bottom: -20px;
       right: -20px;
+      z-index: -1;
       @include mobile-md {
         display: none;
       }
@@ -387,13 +394,11 @@
   video {
     position: relative;
     z-index: 2;
-    display: block;
     width: 100%;
-    max-width: 670px;
+    display: block;
     margin-left: auto;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    height: 100%;
     border-radius: 4px;
-    border: 1px solid $color-gray-light-1;
 
     @include laptop {
       max-width: unset;

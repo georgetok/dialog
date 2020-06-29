@@ -29,7 +29,7 @@
   letter-spacing: -0.005em;
 
   @include laptop {
-    margin-bottom: 76px;
+    margin-bottom: 56px;
   }
 
   @include mobile-md {
@@ -69,7 +69,7 @@
     }
 
     @include mobile-md {
-      margin-bottom: 86px;
+      margin-bottom: 55px;
     }
   }
 }
@@ -133,7 +133,6 @@
     width: 83px;
     height: 83px;
     background-repeat: no-repeat;
-    background-position-x: 0 0;
     background-size: 83px 83px;
 
     @include laptop {
@@ -160,7 +159,6 @@
     width: 97px;
     height: 97px;
     background-repeat: no-repeat;
-    background-position-x: 0 0;
     background-size: 97px 97px;
 
     @include laptop {
@@ -184,16 +182,11 @@
   position: relative;
   margin-bottom: 40px;
 
-  @include laptop {
-    margin-top: 67px;
-  }
-
   @include mobile-md {
     grid-column-start: 1;
     grid-column-end: 2;
     grid-row-start: 2;
     grid-row-end: 4;
-    margin-top: 0;
     padding-left: var(--indent);
     padding-right: var(--indent);
   }

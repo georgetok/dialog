@@ -7,7 +7,7 @@ html(lang=lang)
   body
     script.
       let lang = navigator.language || navigator.userLanguage;
-      if (lang.indexOf('en') === 0)
-        window.location = '/en/'
-      else
+      if (lang.indexOf('ru') === 0)
         window.location = '/ru/'
+      else
+        window.location = '/en/'

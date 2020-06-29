@@ -428,6 +428,7 @@ gulp.task('html:ru', function () {
       '!src/pug/pages/blog.pug',
       '!src/pug/pages/main.pug',
       '!src/pug/pages/index.pug',
+      '!src/pug/pages/index404.pug',
     ])
     .pipe(plumber())
     .pipe(pug({
@@ -454,6 +455,7 @@ gulp.task('html:en', function () {
       '!src/pug/pages/blog.pug',
       '!src/pug/pages/main.pug',
       '!src/pug/pages/index.pug',
+      '!src/pug/pages/index404.pug',
       '!src/pug/pages/public.pug'
     ])
     .pipe(plumber())

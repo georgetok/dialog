@@ -30,6 +30,7 @@ const main = () => {
   function checkScroll() {
     for (let y = 0; y < 5; y++) {
       tabsDesktop[y].addEventListener('click', function () {
+        videos[y].play();
       });
     }
     for (let j = 0; j < 5; j++) {
@@ -40,9 +41,6 @@ const main = () => {
 
     for (let i = 0; i < videos.length; i++) {
       if (i === 0 || i === 5 || i === 6) {
-        // videos[i].addEventListener('click', function () {
-        //   videos[i].play();
-        // });
         let
           x = videos[i].offsetLeft,
           y = videos[i].offsetTop,

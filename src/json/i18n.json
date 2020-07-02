@@ -915,20 +915,20 @@
 
   "alt": {
     "license": {
-      "ru": "Фотография лицензии",
-      "en": "License photo"
+      "ru": "Изображение лицензии",
+      "en": "License image"
     },
     "cert": {
-      "ru": "Фотография сертификата",
-      "en": "Certificate photo"
+      "ru": "Изображение сертификата",
+      "en": "Certificate image"
     },
     "pm": {
-      "ru": "Фото ноутбука и мобильного телефона",
-      "en": "Notebook or mobile phone photo"
+      "ru": "Изображение ноутбука или мобильного телефона",
+      "en": "Notebook or mobile phone image"
     },
     "app": {
       "ru": "Изображение приложения",
-      "en": "Picture of application"
+      "en": "Image of application"
     },
     "blog_card": {
       "ru": "Карточка блога",
@@ -937,6 +937,18 @@
     "sberlogo": {
       "ru": "Лого Сбербанка",
       "en": "Sberbank logo"
+    },
+    "sbercloud": {
+      "ru": "Лого Sbercloud",
+      "en": "Sbercloud logo"
+    },
+    "employee": {
+      "ru": "Изображение с сотрудником компании",
+      "en": "Image with company employee"
+    },
+    "people": {
+      "ru": "Изображение людей",
+      "en": "Image with peoole on it"
     }
   },
 

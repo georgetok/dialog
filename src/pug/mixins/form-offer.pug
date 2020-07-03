@@ -1,6 +1,6 @@
 include ./button
 
-mixin form-offer (isModal, idNumber, formId)
+mixin form-offer (isModal, idNumber, formId, pageName)
   .form.form--main(class=(isModal ? 'form--modal' : null)).box.box--white
     .form__wrapper(class=(isModal ? 'form__wrapper--modal' : null))
       h2.form__title(class=(isModal ? 'form__title--modal' : null))=t.form.request_title
@@ -8,7 +8,7 @@ mixin form-offer (isModal, idNumber, formId)
         form(
           autocomplete="on"
           id!=formId
-          onsubmit=`event.preventDefault();emailSendOffer('${lang}',${isModal});`
+          onsubmit=`event.preventDefault();emailSendOffer('${lang}',${isModal},'${pageName}');`
         )
           input(
             type="text"
@@ -55,7 +55,6 @@ mixin form-offer (isModal, idNumber, formId)
                 placeholder=t.form.phone
                 title="Номер телефона должен начинаться с символов +7 и содержать 11 цифр"
                 pattern="\\+7[0-9]{10}"
-                required
               )
               label(for=`phone-${idNumber}`)=t.form.phone
             .form__form-field.form__form-field--text.form__form-field--s.form__form-field--4(class=(isModal ? 'form__form-field--modal' : null))
@@ -71,7 +70,6 @@ mixin form-offer (isModal, idNumber, formId)
               select(
                 id=`quantity-${idNumber}`
                 name="quantity-users"
-                required
               )
                 option(value="1-100") 1-100
                 option(value="101-500") 101-500
@@ -103,4 +101,4 @@ mixin form-offer (isModal, idNumber, formId)
               span= t.button.request
             img.submit__icon(src="/img/loader.gif")
             .submit__message
-              span Спасибо за заявку
+              span=t.form.sent

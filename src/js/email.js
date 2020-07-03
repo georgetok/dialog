@@ -36,9 +36,7 @@ let emailSendFeedback = function (lang) {
 
 
   Email.send({
-    Host: "smtp.elasticemail.com",
-    Username: "artiomponomariovcode@gmail.com",
-    Password: "BAC831B10D49BE46182B997BAFD1DBB29B81",
+    SecureToken: "b3a99cc5-8f76-43d4-a172-ec4049527c2a",
     To: 'thecho3en@yandex.ru',
     From: "artiomponomariovcode@gmail.com",
     Subject: 'Заявка со страницы “Помощь"',
@@ -79,9 +77,7 @@ let emailSendOffer = function (lang, isModal) {
 
 
   Email.send({
-    Host: "smtp.elasticemail.com",
-    Username: "artiomponomariovcode@gmail.com",
-    Password: "BAC831B10D49BE46182B997BAFD1DBB29B81",
+    SecureToken: "b3a99cc5-8f76-43d4-a172-ec4049527c2a",
     To: 'thecho3en@yandex.ru',
     From: "artiomponomariovcode@gmail.com",
     Subject: isModal ? 'Заявка из модального окна' : 'Заявка c главной страницы',

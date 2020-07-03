@@ -381,7 +381,7 @@
     },
     "select_work": {
       "ru": "В каком городе хотите работать",
-      "en": "How to address you"
+      "en": "What city would you like to work"
     },
     "select_work_o_1": {
       "ru": "Москва",
@@ -434,6 +434,10 @@
     "theme": {
       "ru": "Тема",
       "en": "Theme"
+    },
+    "sent": {
+      "ru": "Спасибо за заявку",
+      "en": "Thanks for request"
     }
   },
 

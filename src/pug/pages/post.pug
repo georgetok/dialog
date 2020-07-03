@@ -3,7 +3,7 @@ include ../mixins/page-title
 include ../mixins/svg
 include ../mixins/button
 include ../mixins/picture
-include ../mixins/form-cta
+include ../mixins/form-blog
 include ../mixins/blog
 
 block variables
@@ -37,4 +37,4 @@ block content
   section.box
     .wrapper.wrapper--main
       .cta.cta--form
-        +form-cta(1,'cta-main')
+        +form-blog(1,'form-blog', post.slug)

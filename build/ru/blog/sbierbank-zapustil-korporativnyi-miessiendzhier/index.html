@@ -104,7 +104,7 @@
             <div class="cta cta--form">
               <div class="form form--cta">
                 <div class="form__wrapper">
-                  <form class="form__content" action="#" method="POST" autocomplete="on" id="cta-main">
+                  <form class="form__content" autocomplete="on" id="form-blog" onsubmit="event.preventDefault();emailSendBlog('ru','sbierbank-zapustil-korporativnyi-miessiendzhier');">
                     <h3 class="form__title">Подпишитесь на свежие статьи блога!</h3>
                     <div class="form__row">
                       <div class="form__input-text-wrap">
@@ -113,8 +113,10 @@
                           <label for="email-1">Ваша эл.почта</label>
                         </div>
                       </div>
-                      <button class="button button--accent form__button button--form" type="submit"><span>Подписаться</span>
-                      </button>
+                      <div class="wrap wrap--ac wrap--message">
+                        <button class="button--accent button button--form" type="submit"><span>Подписаться</span></button><img class="submit__icon submit__icon--light submit__icon--absolute" src="/img/loader.gif"/>
+                        <div class="submit__message submit__message--absolute"><span>Спасибо за заявку</span></div>
+                      </div>
                     </div>
                   </form>
                 </div>
@@ -193,28 +195,28 @@
             <div class="form__wrapper form__wrapper--modal">
               <h2 class="form__title form__title--modal">Получить предложение</h2>
               <div class="form__form">
-                <form autocomplete="on" id="form-offer-modal" onsubmit="event.preventDefault();emailSendOffer('ru',true);">
+                <form autocomplete="on" id="form-offer-modal" onsubmit="event.preventDefault();emailSendOffer('ru',true,'post');">
                   <input type="text" id="location" name="location" value="form sent from main page" hidden="hidden"/>
                   <input type="text" id="language" name="language" value="ru" hidden="hidden"/>
                   <div class="form__input-text-wrap">
                     <div class="form__form-field form__form-field--text form__form-field--m form__form-field--1 form__form-field--modal">
-                      <input type="text" id="name-2" name="name" pattern="([A-Za-zА-ЯЁа-яё-]{2,}\s?)+" placeholder="Ваше имя" title="Имя может состоять только из букв, пробелов и дефиса" required="required"/>
+                      <input type="text" id="name-2" name="name" pattern="([A-Za-zА-ЯЁа-яё-]{2,}\s?)+" placeholder="Ваше имя" title="Имя может состоять только из букв, пробелов и дефиса"/>
                       <label for="name-2">Ваше имя</label>
                     </div>
                     <div class="form__form-field form__form-field--text form__form-field--m form__form-field--3 form__form-field--modal">
-                      <input type="email" id="email-2" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" placeholder="Ваша эл.почта" title="Email адрес должен быть типа: user@mail.com" required="required"/>
+                      <input type="email" id="email-2" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" placeholder="Ваша эл.почта" title="Email адрес должен быть типа: user@mail.com"/>
                       <label for="email-2">Ваша эл.почта</label>
                     </div>
                     <div class="form__form-field form__form-field--text form__form-field--s form__form-field--2 form__form-field--modal">
-                      <input type="tel" id="phone-2" name="phone" placeholder="Телефон" title="Номер телефона должен начинаться с символов +7 и содержать 11 цифр" pattern="\+7[0-9]{10}" required="required"/>
+                      <input type="tel" id="phone-2" name="phone" placeholder="Телефон" title="Номер телефона должен начинаться с символов +7 и содержать 11 цифр" pattern="\+7[0-9]{10}"/>
                       <label for="phone-2">Телефон</label>
                     </div>
                     <div class="form__form-field form__form-field--text form__form-field--s form__form-field--4 form__form-field--modal">
-                      <input type="text" id="company-2" name="company" placeholder="Название компании" required="required"/>
+                      <input type="text" id="company-2" name="company" placeholder="Название компании"/>
                       <label for="company-2">Название компании</label>
                     </div>
                     <div class="form__form-field form__form-field--text form__form-field--5 form__form-field--modal">
-                      <select id="quantity-2" name="quantity-users" required="required">
+                      <select id="quantity-2" name="quantity-users">
                         <option value="1-100">1-100</option>
                         <option value="101-500">101-500</option>
                         <option value="501-1000">501-1000</option>
@@ -225,7 +227,7 @@
                   </div>
                   <div class="form__checkbox-wrap">
                     <div class="form__form-field form__form-field--checkbox form__form-field--modal">
-                      <input class="visually-hidden" type="checkbox" id="accept-2" name="terms" required="required" checked="checked"/>
+                      <input class="visually-hidden" type="checkbox" id="accept-2" name="terms" checked="checked"/>
                       <label for="accept-2">Я согласен на обработку данных</label>
                     </div>
                     <div class="form__form-field form__form-field--checkbox form__form-field--modal">

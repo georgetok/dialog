@@ -181,7 +181,7 @@
             <div class="form__wrapper">
               <h2 class="form__title">Получить предложение</h2>
               <div class="form__form">
-                <form autocomplete="on" id="form-offer" onsubmit="event.preventDefault();emailSendOffer('ru',false);">
+                <form autocomplete="on" id="form-offer" onsubmit="event.preventDefault();emailSendOffer('ru',false,'undefined');">
                   <input type="text" id="location" name="location" value="form sent from main page" hidden="hidden"/>
                   <input type="text" id="language" name="language" value="ru" hidden="hidden"/>
                   <div class="form__input-text-wrap">
@@ -194,7 +194,7 @@
                       <label for="email-1">Ваша эл.почта</label>
                     </div>
                     <div class="form__form-field form__form-field--text form__form-field--s form__form-field--2">
-                      <input type="tel" id="phone-1" name="phone" placeholder="Телефон" title="Номер телефона должен начинаться с символов +7 и содержать 11 цифр" pattern="\+7[0-9]{10}" required="required"/>
+                      <input type="tel" id="phone-1" name="phone" placeholder="Телефон" title="Номер телефона должен начинаться с символов +7 и содержать 11 цифр" pattern="\+7[0-9]{10}"/>
                       <label for="phone-1">Телефон</label>
                     </div>
                     <div class="form__form-field form__form-field--text form__form-field--s form__form-field--4">
@@ -202,7 +202,7 @@
                       <label for="company-1">Название компании</label>
                     </div>
                     <div class="form__form-field form__form-field--text form__form-field--5">
-                      <select id="quantity-1" name="quantity-users" required="required">
+                      <select id="quantity-1" name="quantity-users">
                         <option value="1-100">1-100</option>
                         <option value="101-500">101-500</option>
                         <option value="501-1000">501-1000</option>
@@ -301,7 +301,7 @@
             <div class="form__wrapper form__wrapper--modal">
               <h2 class="form__title form__title--modal">Получить предложение</h2>
               <div class="form__form">
-                <form autocomplete="on" id="form-offer-modal" onsubmit="event.preventDefault();emailSendOffer('ru',true);">
+                <form autocomplete="on" id="form-offer-modal" onsubmit="event.preventDefault();emailSendOffer('ru',true,'security');">
                   <input type="text" id="location" name="location" value="form sent from main page" hidden="hidden"/>
                   <input type="text" id="language" name="language" value="ru" hidden="hidden"/>
                   <div class="form__input-text-wrap">
@@ -314,7 +314,7 @@
                       <label for="email-2">Ваша эл.почта</label>
                     </div>
                     <div class="form__form-field form__form-field--text form__form-field--s form__form-field--2 form__form-field--modal">
-                      <input type="tel" id="phone-2" name="phone" placeholder="Телефон" title="Номер телефона должен начинаться с символов +7 и содержать 11 цифр" pattern="\+7[0-9]{10}" required="required"/>
+                      <input type="tel" id="phone-2" name="phone" placeholder="Телефон" title="Номер телефона должен начинаться с символов +7 и содержать 11 цифр" pattern="\+7[0-9]{10}"/>
                       <label for="phone-2">Телефон</label>
                     </div>
                     <div class="form__form-field form__form-field--text form__form-field--s form__form-field--4 form__form-field--modal">
@@ -322,7 +322,7 @@
                       <label for="company-2">Название компании</label>
                     </div>
                     <div class="form__form-field form__form-field--text form__form-field--5 form__form-field--modal">
-                      <select id="quantity-2" name="quantity-users" required="required">
+                      <select id="quantity-2" name="quantity-users">
                         <option value="1-100">1-100</option>
                         <option value="101-500">101-500</option>
                         <option value="501-1000">501-1000</option>

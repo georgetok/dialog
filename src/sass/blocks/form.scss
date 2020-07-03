@@ -11,9 +11,25 @@
 
   .submit__icon {
     display: none;
-    width: 35px;
-    height: 35px;
-    margin-left: 30px;
+    width: 25px;
+    height: 25px;
+    margin-left: 15px;
+
+    &--absolute {
+      position: absolute;
+      bottom: 50%;
+      right: 0;
+      transform: translateX(-20px) translateY(50%);
+      margin-left: 0;
+    }
+
+    &--light {
+      filter: invert(1) contrast(1.5) grayscale(1) brightness(1.5);
+    }
+  }
+
+  .wrap--message {
+    position: relative;
   }
 
   .submit__message {
@@ -21,13 +37,24 @@
     display: none;
     color: $color-gray-light-1;
     margin-left: 30px;
+
+    &--absolute {
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%) translateY(calc(100% + 10px));
+      text-align: center;
+      width: 100%;
+      margin-left: 0;
+    }
   }
 
   .submit-started {
     .submit__icon {
       display: block;
     }
-    .button{
+
+    .button {
       cursor: not-allowed;
     }
   }
@@ -115,7 +142,7 @@
       font-size: 14px;
       line-height: 18px;
       letter-spacing: 0.01em;
-      color: $color-accent-light;
+      color: $color-accent;
       opacity: 0;
       transition: opacity $transition-props;
     }
@@ -142,7 +169,6 @@
       color: transparent;
     }
   }
-
 }
 
 .form--main, .form--feedback {
@@ -235,7 +261,7 @@
   .form__input-text-wrap {
     display: flex;
     flex-wrap: wrap;
-    margin-bottom: 30px;
+    margin-bottom: 40px;
 
     @include mobile-md {
       flex-direction: column;
@@ -713,6 +739,37 @@
   }
 
   .form__form-field--file {
+    svg:nth-child(2),
+    svg:nth-child(3) {
+      display: none;
+    }
+
+    label {
+      display: flex;
+      align-items: center;
+      font-weight: 500;
+
+      &.is-file {
+        svg:nth-child(1) {
+          display: none;
+        }
+
+        svg:nth-child(2) {
+          display: block;
+        }
+
+        &:hover {
+          svg:nth-child(3) {
+            display: block;
+          }
+
+          svg:nth-child(2) {
+            display: none;
+          }
+        }
+      }
+    }
+
     @include mobile-md {
       margin-bottom: 30px;
       padding-bottom: 20px;

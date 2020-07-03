@@ -149,7 +149,7 @@ Slack only allows you to build chatbots with limited access to your own data.
             <div class="cta cta--form">
               <div class="form form--cta">
                 <div class="form__wrapper">
-                  <form class="form__content" action="#" method="POST" autocomplete="on" id="cta-main">
+                  <form class="form__content" autocomplete="on" id="form-blog" onsubmit="event.preventDefault();emailSendBlog('en','dialog-slack-alternative');">
                     <h3 class="form__title">Subscribe for a fresh newsletter!</h3>
                     <div class="form__row">
                       <div class="form__input-text-wrap">
@@ -158,8 +158,10 @@ Slack only allows you to build chatbots with limited access to your own data.
                           <label for="email-1">Work e-mail</label>
                         </div>
                       </div>
-                      <button class="button button--accent form__button button--form" type="submit"><span>Subscribe</span>
-                      </button>
+                      <div class="wrap wrap--ac wrap--message">
+                        <button class="button--accent button button--form" type="submit"><span>Subscribe</span></button><img class="submit__icon submit__icon--light submit__icon--absolute" src="/img/loader.gif"/>
+                        <div class="submit__message submit__message--absolute"><span>Thanks for request</span></div>
+                      </div>
                     </div>
                   </form>
                 </div>
@@ -237,28 +239,28 @@ Slack only allows you to build chatbots with limited access to your own data.
             <div class="form__wrapper form__wrapper--modal">
               <h2 class="form__title form__title--modal">Get a request</h2>
               <div class="form__form">
-                <form autocomplete="on" id="form-offer-modal" onsubmit="event.preventDefault();emailSendOffer('en',true);">
+                <form autocomplete="on" id="form-offer-modal" onsubmit="event.preventDefault();emailSendOffer('en',true,'post');">
                   <input type="text" id="location" name="location" value="form sent from main page" hidden="hidden"/>
                   <input type="text" id="language" name="language" value="en" hidden="hidden"/>
                   <div class="form__input-text-wrap">
                     <div class="form__form-field form__form-field--text form__form-field--m form__form-field--1 form__form-field--modal">
-                      <input type="text" id="name-2" name="name" pattern="([A-Za-zА-ЯЁа-яё-]{2,}\s?)+" placeholder="How to address you" title="Имя может состоять только из букв, пробелов и дефиса" required="required"/>
+                      <input type="text" id="name-2" name="name" pattern="([A-Za-zА-ЯЁа-яё-]{2,}\s?)+" placeholder="How to address you" title="Имя может состоять только из букв, пробелов и дефиса"/>
                       <label for="name-2">How to address you</label>
                     </div>
                     <div class="form__form-field form__form-field--text form__form-field--m form__form-field--3 form__form-field--modal">
-                      <input type="email" id="email-2" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" placeholder="Work e-mail" title="Email адрес должен быть типа: user@mail.com" required="required"/>
+                      <input type="email" id="email-2" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" placeholder="Work e-mail" title="Email адрес должен быть типа: user@mail.com"/>
                       <label for="email-2">Work e-mail</label>
                     </div>
                     <div class="form__form-field form__form-field--text form__form-field--s form__form-field--2 form__form-field--modal">
-                      <input type="tel" id="phone-2" name="phone" placeholder="Phone Number" title="Номер телефона должен начинаться с символов +7 и содержать 11 цифр" pattern="\+7[0-9]{10}" required="required"/>
+                      <input type="tel" id="phone-2" name="phone" placeholder="Phone Number" title="Номер телефона должен начинаться с символов +7 и содержать 11 цифр" pattern="\+7[0-9]{10}"/>
                       <label for="phone-2">Phone Number</label>
                     </div>
                     <div class="form__form-field form__form-field--text form__form-field--s form__form-field--4 form__form-field--modal">
-                      <input type="text" id="company-2" name="company" placeholder="Company name" required="required"/>
+                      <input type="text" id="company-2" name="company" placeholder="Company name"/>
                       <label for="company-2">Company name</label>
                     </div>
                     <div class="form__form-field form__form-field--text form__form-field--5 form__form-field--modal">
-                      <select id="quantity-2" name="quantity-users" required="required">
+                      <select id="quantity-2" name="quantity-users">
                         <option value="1-100">1-100</option>
                         <option value="101-500">101-500</option>
                         <option value="501-1000">501-1000</option>
@@ -269,7 +271,7 @@ Slack only allows you to build chatbots with limited access to your own data.
                   </div>
                   <div class="form__checkbox-wrap">
                     <div class="form__form-field form__form-field--checkbox form__form-field--modal">
-                      <input class="visually-hidden" type="checkbox" id="accept-2" name="terms" required="required" checked="checked"/>
+                      <input class="visually-hidden" type="checkbox" id="accept-2" name="terms" checked="checked"/>
                       <label for="accept-2">I agree with personal data processing</label>
                     </div>
                     <div class="form__form-field form__form-field--checkbox form__form-field--modal">
@@ -279,7 +281,7 @@ Slack only allows you to build chatbots with limited access to your own data.
                   </div>
                   <div class="wrap wrap--ac">
                     <button class="button--accent button button--form" type="submit"><span>Send request</span></button><img class="submit__icon" src="/img/loader.gif"/>
-                    <div class="submit__message"><span>Спасибо за заявку</span></div>
+                    <div class="submit__message"><span>Thanks for request</span></div>
                   </div>
                 </form>
               </div>

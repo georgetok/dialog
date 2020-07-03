@@ -12,7 +12,7 @@ block variables
     const title = t.meta.main_title;
     const desc = t.meta.main_desc;
     const routeClass = "js-route-main";
-    const pageName = "main";
+    const pageName = "";
 
 block content
   -
@@ -344,4 +344,4 @@ block content
 
   section.box.box--gray
     +blog(t.blog.cards)
-  +form-offer(false, 1, 'form-offer')
+  +form-offer(false, 1, 'form-offer', pageName)

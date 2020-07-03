@@ -1,9 +1,14 @@
 include ./button
 
-mixin form-cta (idNumber,formId)
+mixin form-blog (idNumber,formId,type)
   .form.form--cta
     .form__wrapper
-      form(action="#" method="POST" autocomplete="on" id!=formId class="form__content")
+      form(
+        autocomplete="on"
+        id!=formId
+        class="form__content"
+        onsubmit=`event.preventDefault();emailSendBlog('${lang}','${type}');`
+      )
         h3.form__title=t.cta.form_title
         .form__row
           .form__input-text-wrap
@@ -18,5 +23,12 @@ mixin form-cta (idNumber,formId)
                 required
               )
               label(for=`email-${idNumber}`)=t.form.email
-
-          +button(t.button.subscribe, {styleType: 'accent', type: 'submit', additionalClassName: 'form__button button--form'})
+          .wrap.wrap--ac.wrap--message
+            button(
+              class="button--accent button button--form"
+              type="submit"
+            )
+              span=t.button.subscribe
+            img.submit__icon.submit__icon--light.submit__icon--absolute(src="/img/loader.gif")
+            .submit__message.submit__message--absolute
+              span=t.form.sent

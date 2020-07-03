@@ -548,7 +548,7 @@ gulp.task('server', function () {
   gulp.watch(Paths.html.srcWatch, gulp.series('build', 'refresh'));
   gulp.watch(Paths.home.src, gulp.series('home', 'refresh'));
   gulp.watch(Paths.images.src, gulp.series('graphic', 'refresh'));
-  gulp.watch(Paths.blog.src, gulp.series('blog', 'refresh'));
+  gulp.watch([Paths.blog.src, Paths.post.src], gulp.series('blog', 'refresh'));
   gulp.watch(Paths.scripts.src, gulp.series('js'));
 
 });

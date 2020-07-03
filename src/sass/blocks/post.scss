@@ -41,6 +41,10 @@
       width: 100%;
     }
 
+    blockquote {
+      margin-left: 0;
+    }
+
     button {
       background: $color-base;
       color: $color-contrast;
@@ -55,7 +59,7 @@
     ;
     }
 
-    br{
+    br {
       display: none;
     }
 
@@ -75,26 +79,38 @@
     h2 {
       @include typography-h3;
       line-height: 1.2;
-      margin-bottom: 30px;
+      margin-bottom: 28px;
       margin-top: 70px;
     }
 
     h3 {
       @include typography-h4;
+      margin-top: 70px;
+      margin-bottom: 28px;
+    }
+
+    h4 {
+      @include typography-h5;
+      margin-top: 70px;
+      margin-bottom: 28px;
     }
 
     h6 {
-      @include typography-txt-big;
+      @include typography-h6;
       font-weight: 500;
       color: $color-base;
       display: block;
       margin-bottom: 40px;
     }
 
+    p + ol{
+      margin-top: -5px;
+    }
+
     ul, ol {
       list-style: none;
       padding-left: 30px;
-      margin-bottom: 65px;
+      margin-bottom: 60px;
 
       li {
         position: relative;

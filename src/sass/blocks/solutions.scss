@@ -8,7 +8,7 @@
 
   @include mobile-md {
     padding-top: 50px;
-    padding-bottom: 62px;
+    padding-bottom: 50px;
   }
 }
 
@@ -27,6 +27,7 @@
   @include typography-h2;
   margin-bottom: 50px;
   letter-spacing: -0.005em;
+  line-height: 1.2;
 
   @include laptop {
     margin-bottom: 56px;
@@ -36,6 +37,9 @@
     margin-bottom: 45px;
     padding-left: var(--indent);
     padding-right: var(--indent);
+  }
+  @include mobile-sm {
+    margin-bottom: 30px;
   }
 }
 
@@ -189,6 +193,9 @@
     grid-row-end: 4;
     padding-left: var(--indent);
     padding-right: var(--indent);
+  }
+  @include mobile-sm {
+    margin-bottom: 0;
   }
 }
 

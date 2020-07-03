@@ -60,12 +60,11 @@
 
     p {
       @include typography-txt;
-
-      @include laptop {
-        &:not(:last-child) {
-          margin-bottom: 22px;
-        }
+      margin-bottom: 22px;
+      &:nth-child(2){
+        margin-bottom: 0;
       }
+
     }
   }
 
@@ -89,7 +88,7 @@
     }
   }
 
-  &__sub{
+  &__sub {
     @include typography-h4;
     max-width: 790px;
     margin-top: 20px;
@@ -102,21 +101,15 @@
 
   &__link {
     &--more {
-      margin-top: 30px;
+      margin-top: 50px;
     }
   }
 
   .wrap {
     &--img {
+      @include gap-sm;
       padding-left: 28px;
-      @include gap-xxs;
-      @include tablet {
-        @include gap-sm;
-      }
-      @include mobile-sm {
-        flex-wrap: wrap;
-        @include gap-xxs;
-      }
+      flex-wrap: wrap;
 
       img {
         width: 100%;
@@ -125,13 +118,10 @@
       }
 
       .col {
-        @include col-3;
         @include row;
+        @include col-auto;
         flex-direction: column;
         justify-content: space-between;
-        @include mobile-sm {
-          @include col-6;
-        }
       }
     }
 
@@ -142,9 +132,13 @@
 
     &--preview {
       width: 100%;
+      flex-grow: 1;
+      justify-content: center;
+      background: $color-contrast;
+      border: 1px solid $color-accent-light;
 
       img {
-        max-width: 80px;
+        max-width: 84px;
       }
     }
 

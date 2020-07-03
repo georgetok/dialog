@@ -5,7 +5,6 @@
 }
 
 .footer-nav__container {
-  // display: flex;
   display: grid;
   grid-auto-columns: auto;
   grid-row: max-content;
@@ -17,16 +16,15 @@
   @include laptop {
     grid-gap: 63px;
   }
-
-  @include mobile-md {
-    grid-gap: 94px;
+  @include mobile-sm {
+    grid-gap: 10vw;
   }
+
 }
 
 .footer-nav__content-box {
   h3 {
     margin: 0 0 16px;
-
     font-size: 14px;
     font-weight: 500;
     line-height: 21px;
@@ -62,17 +60,15 @@
   }
 
   li + li {
-    margin-top: 10px;
+    margin-top: 20px;
 
-    @include laptop {
-      margin-top: 7px;
-    }
   }
 
   a {
     @include laptop {
       font-size: 14px;
-      line-height: 21px;
+      line-height: 1.4;
+      display: inline-block;
     }
   }
 }

@@ -1,7 +1,8 @@
 .icon {
-  svg{
+  svg {
     fill: none;
   }
+
   &--round {
     display: flex;
     justify-content: center;
@@ -11,8 +12,9 @@
 
   &--accent {
     background-color: $color-accent;
-    svg{
-      stroke: $color-contrast;
+
+    svg {
+      fill: $color-contrast;
     }
   }
 
@@ -26,11 +28,11 @@
     border: 1px solid $color-gray-light-2;
     box-shadow: 0px 2px 4px rgba(47, 27, 73, 0.08), 0px 1px 1px rgba(47, 41, 64, 0.1);
 
-    svg{
+    svg {
       position: absolute;
       top: 50%;
       left: 50%;
-      transform: translate(-50%,-50%);
+      transform: translate(-50%, -50%);
     }
 
     @include mobile-md {
@@ -45,18 +47,39 @@
     min-width: 90px;
     width: 90px;
     height: 90px;
+    @include mobile-md {
+      width: 75px;
+      height: 75px;
+      min-width: 75px;
+      svg {
+        transform: scale(0.93);
+      }
+    }
   }
-
 
   &--md {
     width: 70px;
     height: 70px;
     min-width: 70px;
+    @include mobile-md {
+      width: 60px;
+      height: 60px;
+      min-width: 60px;
+      svg {
+        transform: scale(0.93);
+      }
+    }
   }
 
   &--sm {
     width: 50px;
     height: 50px;
     min-width: 50px;
+    @include mobile-md {
+      width: 35px;
+      height: 35px;
+      min-width: 35px;
+
+    }
   }
 }

@@ -3,5 +3,10 @@
     @include make-block-wrapper;
     padding-left: var(--indent);
     padding-right: var(--indent);
+    @include mobile-sm{
+      padding-left: 0;
+      padding-right: 0;
+      width: calc(100% - var(--indent) * 2);
+    }
   }
 }

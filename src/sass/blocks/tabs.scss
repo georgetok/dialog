@@ -60,6 +60,9 @@
     background-size: 14px 12px;
     justify-content: flex-start;
   }
+  @include mobile-sm {
+    background-position: center right 15px;
+  }
 
   &:last-of-type {
     margin-right: 0;
@@ -80,7 +83,6 @@
       content: none;
     }
   }
-
 
   svg {
     width: 39px;

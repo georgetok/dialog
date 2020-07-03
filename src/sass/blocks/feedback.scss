@@ -1,7 +1,9 @@
 .feedback {
   .wrap {
     &--main {
+      @include gap-lg;
       @include mobile-md {
+        @include gap-no;
         flex-wrap: wrap;
       }
     }

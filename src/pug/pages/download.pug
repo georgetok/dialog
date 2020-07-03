@@ -1,9 +1,4 @@
 extends ../global/layout
-include ../mixins/svg
-include ../mixins/button
-include ../mixins/button-play
-include ../mixins/picture
-include ../mixins/form
 include ../mixins/download
 
 block variables
@@ -13,10 +8,9 @@ block variables
     const routeClass = "js-route-download";
     const pageName = "download";
 
-
 block content
 
-  section.hero.hero--download.box--lilac
+  section.hero.hero--main.hero--download.box--lilac
     +hero({
       id: "macos",
       title: "macOS",
@@ -49,7 +43,7 @@ block content
     +hero({
       id: "android",
       title: "Android",
-      text: `${t.download.works} iOS 8.1 ${t.download.more}`,
+      text: `${t.download.works} Android 8.1 ${t.download.more}`,
       link: "/",
       buttonText: `${t.download.dfrom} Google Play`,
       icon: 'google-play'

@@ -147,8 +147,6 @@ const requireJSON = (file) =>
 /*
  * TASKS
  */
-
-
 gulp.task('json', async function () {
   const posts = await api.posts.browse({
     include: "tags,authors",
@@ -547,12 +545,13 @@ gulp.task('server', function () {
     cors: true,
     ui: false,
   });
-  gulp.watch(Paths.styles.src, gulp.series('css'));
-  gulp.watch(Paths.html.srcWatch, gulp.series('build', 'refresh'));
-  gulp.watch(Paths.home.src, gulp.series('home', 'refresh'));
-  gulp.watch(Paths.images.src, gulp.series('graphic', 'refresh'));
-  gulp.watch([Paths.blog.src, Paths.post.src], gulp.series('blog', 'refresh'));
-  gulp.watch(Paths.scripts.src, gulp.series('js'));
+  gulp.watch(`${SOURCE_PATH}sass/**/*.scss`, gulp.series('css', 'refresh'));
+  gulp.watch(`${SOURCE_PATH}pug/**/*.pug`, gulp.series('build', 'refresh'));
+  gulp.watch(`${SOURCE_PATH}pug/pages/main.pug`, gulp.series('home', 'refresh'));
+  gulp.watch(`${SOURCE_PATH}img/**/*.svg`, gulp.series('images:svg-sprite', 'refresh'));
+  gulp.watch(`${SOURCE_PATH}img/**/*.{png,jpg,gif}`, gulp.series('graphic', 'refresh'));
+  gulp.watch([`${SOURCE_PATH}pug/pages/blog.pug`, `${SOURCE_PATH}pug/pages/post.pug`], gulp.series('blog', 'refresh'));
+  gulp.watch(`${SOURCE_PATH}js/**/*.js`, gulp.series('js', 'refresh'));
 
 });
 
@@ -566,7 +565,13 @@ gulp.task('clean', function () {
     `build/**`,
     '!build/img',
     '!build/video',
+    '!build/ru',
+    '!build/en',
     '!build/docs',
+    'build/ru/**/*.*',
+    'build/en/**/*.*',
+    '!build/en/blog',
+    '!build/ru/blog',
   ], {force: true});
 });
 
@@ -595,7 +600,8 @@ gulp.task('html', gulp.series('html:ru', 'html:en'));
 gulp.task('home', gulp.series('home:ru', 'home:en'));
 gulp.task('index', gulp.series('index:redirect', 'index:404'));
 gulp.task('copy', gulp.series('copy:fonts', 'copy:docs', 'copy:videos', 'copy:robots'));
-gulp.task('build', gulp.series('clean', 'copy', 'index', 'html', 'css', 'js', 'home'));
+gulp.task('build', gulp.series('copy', 'index', 'html', 'css', 'js', 'home'));
 gulp.task('start', gulp.series('build', 'server'));
 gulp.task('images', gulp.series('graphic'));
+gulp.task('svg', gulp.series('images:svg-sprite'));
 gulp.task('blog', gulp.series('blog:ru', 'blog:en', 'posts:ru', 'posts:en', 'json'));

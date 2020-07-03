@@ -45,6 +45,7 @@ mixin form-career (idNumber, formId)
                 placeholder=t.form.phone
                 title="Номер телефона должен начинаться с символов +7 и содержать 11 цифр"
                 pattern="\\+7[0-9]{10}"
+                required
               )
               label(for=`phone-${idNumber}`)=t.form.phone
 
@@ -52,11 +53,11 @@ mixin form-career (idNumber, formId)
               select(
                 id=`city-${idNumber}`
                 name="city"
+                required
               )
                 option(value="undefined")=t.form.select_work
                 option(value="Москва")=t.form.select_work_o_1
-                option(value="Питер")=t.form.select_work_o_2
-                option(value="Новосибирск")=t.form.select_work_o_3
+                option(value="Санкт-Петербург")=t.form.select_work_o_2
               label(for=`city-${idNumber}`)=t.form.select_work
 
             .form__form-field--5.form__form-field--fw
@@ -96,6 +97,6 @@ mixin form-career (idNumber, formId)
               type="submit"
             )
               span= t.button.request
-            img.submit__icon(src="/img/loader.gif")
+            img.submit__icon(src="/img/loader.gif" alt=t.alt.loader)
             .submit__message
               span=t.form.sent

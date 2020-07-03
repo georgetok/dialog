@@ -5,7 +5,7 @@
     letter-spacing: -0.005em;
 
     @include mobile-md {
-      margin-bottom: 31px;
+      margin-bottom: 25px;
     }
   }
 
@@ -30,6 +30,10 @@
 
   .wrap--message {
     position: relative;
+    @include mobile-sm {
+      margin-top: 40px;
+      width: 100%;
+    }
   }
 
   .submit__message {
@@ -180,7 +184,7 @@
   }
 
   @include mobile-md {
-    padding-top: 58px;
+    padding-top: 55px;
     padding-bottom: 51px;
   }
 }
@@ -265,7 +269,6 @@
 
     @include mobile-md {
       flex-direction: column;
-      margin-bottom: 30px;
     }
   }
 
@@ -427,7 +430,7 @@
       background-color: $color-contrast;
       background-image: url("../img/library/arrow-select.svg");
       background-repeat: no-repeat;
-      background-position: right 6px top 16px;
+      background-position: right 5px center;
       border: none;
       border-radius: 0;
       border-bottom: 1px solid $color-gray-light;
@@ -436,7 +439,8 @@
       transition: border-bottom $transition-props;
 
       @include mobile-md {
-        padding-bottom: 15px;
+        padding-top: 14px;
+        padding-bottom: 14px;
         font-size: 18px;
         line-height: 23px;
       }
@@ -502,9 +506,10 @@
   .form__form-field--checkbox {
     flex-direction: row;
     align-items: center;
+    min-height: 33px;
 
     @include mobile-md {
-      margin-bottom: 30px;
+      margin-bottom: 25px;
 
       &:last-child {
         margin-bottom: 0;
@@ -526,7 +531,7 @@
       @include mobile-md {
         padding-left: 41px;
         font-size: 14px;
-        line-height: 20px;
+        line-height: 18px;
       }
 
       &::before {
@@ -600,7 +605,7 @@
     }
 
     @include mobile-md {
-      margin-bottom: 38px;
+      margin-bottom: 30px;
     }
   }
 

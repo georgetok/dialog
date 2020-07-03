@@ -11,6 +11,10 @@
     padding-top: 60px;
     padding-bottom: 53px;
   }
+
+  @include mobile-sm {
+    padding-top: 35px;
+  }
 }
 
 .safety__wrapper {

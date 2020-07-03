@@ -65,6 +65,12 @@
   flex: 0 0 auto;
 }
 
+@mixin col-auto {
+  @include col;
+
+  flex-basis: auto;
+  max-width: none;
+}
 @mixin col-1 {
   @include col;
 
@@ -277,5 +283,25 @@
     padding-left: 40px;
     padding-right: 40px;
     margin-top: 80px;
+  }
+}
+@mixin gap-lg {
+  margin: 0 -40px;
+  width: calc(100% + 80px);
+
+  & > [class*="col"] {
+    padding-left: 40px;
+    padding-right: 40px;
+    margin-top: 80px;
+  }
+}
+
+@mixin gap-no {
+  margin: 0;
+  width: 100%;
+
+  & > [class*="col"] {
+    padding-left: 0px;
+    padding-right: 0px;
   }
 }

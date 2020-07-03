@@ -24,9 +24,25 @@
       "ru": "Цифровая гигиена: как уберечь переписку в мессенджерах от конкурентов",
       "en": "Explaining the main hosting models: On-premise (Server, Self-hosted), Hosted, Cloud"
     },
+    "jan": {
+      "ru": "Января",
+      "en": "January"
+    },
     "feb": {
       "ru": "Февраля",
       "en": "February"
+    },
+    "mar": {
+      "ru": "Марта",
+      "en": "March"
+    },
+    "apr": {
+      "ru": "Апреля",
+      "en": "April"
+    },
+    "may": {
+      "ru": "Мая",
+      "en": "May"
     },
     "jun": {
       "ru": "Июня",
@@ -36,9 +52,25 @@
       "ru": "Июля",
       "en": "July"
     },
-    "apr": {
-      "ru": "Апреля",
-      "en": "April"
+    "aug": {
+      "ru": "Августа",
+      "en": "August"
+    },
+    "sep": {
+      "ru": "Сентября",
+      "en": "September"
+    },
+    "oct": {
+      "ru": "Октября",
+      "en": "October"
+    },
+    "nov": {
+      "ru": "Ноября",
+      "en": "November"
+    },
+    "dec": {
+      "ru": "Декабря",
+      "en": "December"
     },
     "min": {
       "ru": "мин",
@@ -388,12 +420,8 @@
       "en": "Moscow"
     },
     "select_work_o_2": {
-      "ru": "Питер",
+      "ru": "Санкт-Петербург",
       "en": "St. Petersburg"
-    },
-    "select_work_o_3": {
-      "ru": "Новосибирск",
-      "en": "Novosibirsk"
     },
     "cv": {
       "ru": "Прикрепить резюме",
@@ -918,6 +946,10 @@
   },
 
   "alt": {
+    "logo": {
+      "ru": "Логотип мессенджера Диалог",
+      "en": "Dialog messenger logo"
+    },
     "license": {
       "ru": "Изображение лицензии",
       "en": "License image"
@@ -953,6 +985,14 @@
     "people": {
       "ru": "Изображение людей",
       "en": "Image with peoole on it"
+    },
+    "loader": {
+      "ru": "Анимирование изображение загрузки",
+      "en": "Animated loading"
+    },
+    "sk": {
+      "ru": "Надпись: участник Сколково",
+      "en": "Text: Skolkovo participant"
     }
   },
 

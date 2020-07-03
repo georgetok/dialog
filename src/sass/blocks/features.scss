@@ -13,6 +13,19 @@
   }
 }
 
+.features__button-box {
+  @include mobile-sm {
+    width: 100%;
+  }
+
+  .button {
+    @include mobile-sm {
+      min-width: auto;
+      max-width: none;
+    }
+  }
+}
+
 .features__wrapper {
   @include make-block-wrapper;
   padding-left: var(--indent);

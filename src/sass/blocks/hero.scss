@@ -25,6 +25,9 @@
       line-height: 1.4;
       margin-top: 35px;
       margin-bottom: 25px;
+      @include mobile-sm{
+        margin-top: 20px;
+      }
     }
 
     .hero__img {
@@ -115,10 +118,11 @@
           background-size: 150%;
         }
         @include mobile-sm {
-          background-size: 200%;
-          bottom: -10%;
+          background-size: 230%;
+          bottom: -20%;
           width: 70%;
-          height: 75%;
+          height: 73%;
+          left: -25%;
         }
       }
 
@@ -141,8 +145,8 @@
           transform: translate(24%, -40%);
         }
         @include mobile-sm {
-          background-size: 150%;
-          right: -10%;
+          background-size: 130%;
+          right: -15%;
           top: 0;
           width: 70%;
           padding-bottom: 50%;
@@ -175,7 +179,7 @@
 
       @include mobile-sm {
         text-align: center;
-        margin-bottom: 20px;
+        margin-bottom: 0;
       }
     }
 
@@ -185,11 +189,12 @@
       @include tablet {
         position: relative;
         margin: 0 auto;
-
-        @include mobile-md {
-          width: calc(100% - (var(--indent) * 2));
-          margin: 0 auto;
-        }
+      }
+      @include mobile-md {
+        margin: 0 auto;
+      }
+      @include mobile-sm {
+        width: calc(100% - (var(--indent) * 2));
       }
 
       img {
@@ -203,6 +208,8 @@
     .hero__wrapper {
       display: flex;
       flex-wrap: nowrap;
+      padding-top: 90px;
+      padding-bottom: 70px;
 
       @include tablet {
         padding-left: 0;
@@ -211,6 +218,8 @@
       }
       @include mobile-sm {
         flex-wrap: wrap;
+        padding-top: 55px;
+        padding-bottom: 0;
       }
     }
 
@@ -218,44 +227,41 @@
       min-width: 30%;
       margin-right: auto;
       padding-right: 90px;
-      padding-top: 100px;
+      padding-top: 30px;
+      max-width: 400px;
 
       @include laptop {
         padding-right: 10px;
       }
 
       @include tablet {
-        min-width: 50%;
-        margin-bottom: 60px;
+        min-width: 35%;
         margin-left: var(--indent);
       }
 
       @include mobile-md {
         padding-right: 0;
         width: calc(100% - (var(--indent) * 2));
+        max-width: none;
+        min-width: auto;
       }
 
       @include mobile-sm {
         display: flex;
         flex-direction: column;
         align-items: center;
-        padding-top: 50px;
+        padding-top: 0;
         margin-bottom: 30px;
       }
     }
 
     .hero__right {
       min-width: 60%;
-      padding-top: 90px;
-      padding-bottom: 70px;
-      @include mid {
-        margin-right: calc(var(--indent) * -1);
-        min-width: 90%;
-      }
+
 
       @include tablet {
+        min-width: 800px;
         position: relative;
-        padding-bottom: 55px;
       }
 
       @include mobile-sm {
@@ -279,8 +285,8 @@
     .hero__link {
       margin-top: 40px;
       display: block;
-      @include mobile-md {
-        margin-top: 20px;
+      @include mobile-sm {
+        margin-top: 10px;
       }
     }
   }
@@ -487,5 +493,4 @@
       }
     }
   }
-
 }

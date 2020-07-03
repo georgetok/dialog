@@ -19,22 +19,22 @@ block content
     const advantages = [
     {
     iconPath: "icon-hands",
-    iconWidth: 35,
-    iconHeight: 31,
+    iconWidth: 47,
+    iconHeight: 41,
     title: t.main.adv_title_1,
     text: t.main.adv_sub_1
     },
     {
     iconPath: "icon-purse",
-    iconWidth: 28,
-    iconHeight: 26,
+    iconWidth: 38,
+    iconHeight: 35,
     title: t.main.adv_title_2,
     text: t.main.adv_sub_2
     },
     {
     iconPath: "icon-lock",
-    iconWidth: 30,
-    iconHeight: 30,
+    iconWidth: 49,
+    iconHeight: 49,
     title: t.main.adv_title_3,
     text: t.main.adv_sub_3
     }
@@ -129,7 +129,7 @@ block content
             div.pseudo--1
             div.pseudo--2
             div.pseudo--3
-            .advantages__icon
+            .icon.icon--round.icon--accent.icon--md
               +svg(item.iconPath, item.iconWidth, item.iconHeight)
             h2= item.title
             p= item.text
@@ -167,8 +167,8 @@ block content
       ul.safety__list
         li.safety__item.safety__item--safe
           .wrap.wrap--ac.wrap--icon
-            .safety__icon
-              +svg('icon-safe', 50, 50)
+            .icon.icon--accent.icon--lg.icon--round
+              +svg('icon-safe', 52, 47)
             h3=t.main.sec_title_1
           p=t.main.sec_sub_1
           ul.safety__listbox
@@ -186,8 +186,8 @@ block content
               p=t.main.sec_li_1_6
         li.safety__item.safety__item--cloud
           .wrap.wrap--ac.wrap--icon
-            .safety__icon
-              +svg('icon-cloud', 50, 50)
+            .icon.icon--accent.icon--lg.icon--round
+              +svg('icon-cloud', 48, 52)
             h3=t.main.sec_title_2
           p=t.main.sec_sub_2
           ul.safety__listbox

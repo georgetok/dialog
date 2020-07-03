@@ -92,12 +92,7 @@ block content
           .card.card--security
             h4=t.security.card_title_3
             p=t.security.card_text_3
-            +picture(
-              '/img/pages/security/logo-audit',
-              'png',
-              t.alt.pm,
-              456
-            )
+            +svg('icon-bizone', 40, 40)
   section.compliance.box.box--lilac
     .wrapper.wrapper--main
       .wrap.wrap--icon.wrap--ac
@@ -118,7 +113,7 @@ block content
                     .wrap.wrap--preview
                       picture
                         source(type="image/webp" srcset=`${it.imgPath}@2x.webp`)
-                        img(src=`${it.imgPath}@2x.${it.imgType}` alt=it.imgAlt width=it.imgWidth loading="lazy")
+                        img(src=`${it.imgPath}@2x.${it.imgType}` alt=it.imgAlt loading="lazy")
                     .wrap.wrap--link.wrap--ac
                       a(class="link link--icon-accent link--with-icon link--patents" href=`${it.imgPath}@2x.${it.imgType}` download)=it.linkName
                         +svg('arrow-bottom', 20, 16)

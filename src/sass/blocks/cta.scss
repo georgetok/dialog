@@ -1,6 +1,5 @@
 .cta {
   padding: 80px;
-  overflow: hidden;
   @include mobile-md {
     padding-left: 0;
     padding-right: 0;
@@ -59,10 +58,13 @@
     }
     @include mobile-sm {
       font-size: 24px;
-      width: 190%;
+      width: calc(100% + 20px);
+      margin-left: -10px;
+      margin-right: -10px;
       line-height: 1.2;
-      margin-left: -10vw;
-      margin-right: -10vw;
+    }
+    @include mobile-xs {
+      font-size: 7vw;
     }
   }
 

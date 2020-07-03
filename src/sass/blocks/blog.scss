@@ -1,5 +1,5 @@
 .blog {
-  padding-top: 80px;
+  padding-top: 70px;
   padding-bottom: 80px;
 
   @include mobile-md {
@@ -128,7 +128,7 @@
 
 .blog__title {
   @include typography-h2;
-  margin-bottom: 30px;
+  margin-bottom: 35px;
 }
 
 .blog__card-title {

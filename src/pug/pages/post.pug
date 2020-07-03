@@ -35,7 +35,7 @@ block content
     .post__wrapper
       .post__nav
         .wrap.wrap--sb.wrap--ac
-          a(class="link link--with-icon-reverse link--accent link--icon-accent" href=`${lang === "ru" ? '/ru/blog' : '/en/blog'}`)
+          a(class="link link--with-icon-reverse link--icon-accent" href=`${lang === "ru" ? '/ru/blog' : '/en/blog'}`)
             +svg('arrow-left', 16, 15)
             span=t.blog.back
           .wrap.post__time
@@ -45,11 +45,11 @@ block content
             span ,&nbsp;
             span=post.created_at.substr(0, 4)
       .post__header
-        h1.post__title.post__title--h1=post.title
-        h6.post__title.post__title--sub=post.custom_excerpt
+        h1=post.title
+        p.post__sub=post.custom_excerpt
         .post__image.post__image--header
           img(src=post.feature_image alt=post.custom_excerpt)
-        .box--pattern
+        .box--post
       .post__content
         | !{post.html}
 

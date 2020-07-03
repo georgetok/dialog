@@ -549,7 +549,7 @@ gulp.task('server', function () {
   gulp.watch(`${SOURCE_PATH}pug/**/*.pug`, gulp.series('build', 'refresh'));
   gulp.watch(`${SOURCE_PATH}pug/pages/main.pug`, gulp.series('home', 'refresh'));
   gulp.watch(`${SOURCE_PATH}img/**/*.svg`, gulp.series('images:svg-sprite', 'refresh'));
-  gulp.watch(`${SOURCE_PATH}img/**/*.{png,jpg,gif, svg}`, gulp.series('graphic', 'refresh'));
+  gulp.watch(`${SOURCE_PATH}img/**/*.{png,jpg,gif,svg}`, gulp.series('graphic', 'refresh'));
   gulp.watch([`${SOURCE_PATH}pug/pages/blog.pug`, `${SOURCE_PATH}pug/pages/post.pug`], gulp.series('blog', 'refresh'));
   gulp.watch(`${SOURCE_PATH}js/**/*.js`, gulp.series('js', 'refresh'));
 

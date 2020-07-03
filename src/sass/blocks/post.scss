@@ -1,7 +1,11 @@
 .post {
   padding-top: 40px;
-  padding-bottom: 86px;
+  padding-bottom: 80px;
   overflow: hidden;
+
+  @include laptop {
+    padding-bottom: 60px;
+  }
 
   @include mobile-md {
     padding-top: 0;
@@ -10,11 +14,27 @@
 
   .post__content, .post__header {
     p {
-      @include typography-txt-big;
+      font-size: 21px;
       color: $color-base;
       display: block;
-      margin-top: 30px;
-      margin-bottom: 35px;
+      line-height: 1.5;
+
+      &:not(#_) {
+        margin-bottom: 25px;
+      }
+
+      @include mobile-md {
+        font-size: 16px;
+      }
+
+      img{
+        display: block;
+        margin-top: 60px;
+      }
+    }
+
+    .post__sub {
+      @include typography-subhead;
     }
 
     img {
@@ -26,14 +46,23 @@
       color: $color-contrast;
     }
 
+    strong {
+      font-weight: 500;
+
+      strong {
+        @include typography-h5;
+      }
+    ;
+    }
+
     a {
       color: $color-accent;
     }
 
     h1 {
-      @include typography-h2;
+      @include typography-h1;
       margin-top: 40px;
-      margin-bottom: 40px;
+      margin-bottom: 25px;
       @include mobile-md {
         margin-top: 20px;
       }
@@ -41,6 +70,9 @@
 
     h2 {
       @include typography-h3;
+      line-height: 1.2;
+      margin-bottom: 30px;
+      margin-top: 70px;
     }
 
     h3 {
@@ -62,6 +94,7 @@
       li {
         position: relative;
         margin-top: 20px;
+        font-size: 21px;
       }
 
       li::before {
@@ -77,15 +110,43 @@
     }
   }
 
+  .link {
+    @include typography-txt-sm;
+    font-weight: 500;
+
+    &:not(#_) {
+      margin-bottom: 0;
+    }
+
+    &:not(:hover) {
+      color: $color-gray-dark
+    }
+  }
 }
 
 .post__nav {
-  padding-top: 30px;
-  padding-bottom: 25px;
+  @include pseudo-absolute;
 
-  border-bottom: 1px dashed $color-accent-light;
+  padding-top: 20px;
+  padding-bottom: 15px;
+  position: relative;
   @include mobile-md {
-    border-bottom: none;
+    padding-top: 40px;
+    padding-bottom: 15px;
+  }
+
+  &:after {
+    background-image: url("../img/line-pattern.svg");
+    background-repeat: no-repeat;
+    background-size: 180%;
+    background-position: center;
+    width: 100%;
+    height: 3px;
+    left: 0;
+    bottom: 0;
+    @include mobile-md {
+      display: none;
+    }
   }
 }
 
@@ -126,18 +187,8 @@
 
 .post__image {
   margin-top: 50px;
-  margin-bottom: 50px;
   display: flex;
   justify-content: center;
-
 }
 
-.post__header {
-  .box--pattern {
-    margin-top: -7vw;
-    @include mobile-sm {
-      margin-top: -50px;
-    }
-  }
-}
 

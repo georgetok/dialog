@@ -4,6 +4,9 @@
     @include laptop{
       padding: var(--indent);
     }
+    @include mobile-sm{
+      padding: 0;
+    }
   }
 
   .wrap--mission {

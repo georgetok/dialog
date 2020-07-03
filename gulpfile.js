@@ -229,8 +229,9 @@ gulp.task('blog:ru', async function () {
   let i18nRu = removeProp(i18n, "en", "ru");
   const posts = await api.posts.browse({
     include: "tags,authors",
+    order: "published_at DESC",
     limit: "all",
-    filter: "tags.name:#ru"
+    filter: "tags.name:#ru",
   }).catch(err => {
     console.error("error getting data");
   }).then((posts) => {
@@ -258,7 +259,8 @@ gulp.task('blog:en', async function () {
   const posts = await api.posts.browse({
     include: "tags,authors",
     limit: "all",
-    filter: "tags.name:#en"
+    filter: "tags.name:#en",
+    order: "published_at DESC"
   }).catch(err => {
     console.error("error getting data");
   }).then((posts) => {
@@ -548,7 +550,6 @@ gulp.task('server', function () {
   gulp.watch(`${SOURCE_PATH}sass/**/*.scss`, gulp.series('css', 'refresh'));
   gulp.watch(`${SOURCE_PATH}pug/**/*.pug`, gulp.series('build', 'refresh'));
   gulp.watch(`${SOURCE_PATH}pug/pages/main.pug`, gulp.series('home', 'refresh'));
-  gulp.watch(`${SOURCE_PATH}img/**/*.svg`, gulp.series('images:svg-sprite', 'refresh'));
   gulp.watch(`${SOURCE_PATH}img/**/*.{png,jpg,gif,svg}`, gulp.series('graphic', 'refresh'));
   gulp.watch([`${SOURCE_PATH}pug/pages/blog.pug`, `${SOURCE_PATH}pug/pages/post.pug`], gulp.series('blog', 'refresh'));
   gulp.watch(`${SOURCE_PATH}js/**/*.js`, gulp.series('js', 'refresh'));
@@ -594,14 +595,16 @@ gulp.task('copy:robots', function () {
     .src('src/robots.txt').pipe(gulp.dest('build/'));
 });
 
-gulp.task('graphic', gulp.series('images:minify', 'images:webp', 'images:svg-sprite'));
+gulp.task('graphic', gulp.series('images:webp', 'images:svg-sprite'));
 gulp.task('js', gulp.series('js:module', 'js:vendor'));
 gulp.task('html', gulp.series('html:ru', 'html:en'));
 gulp.task('home', gulp.series('home:ru', 'home:en'));
 gulp.task('index', gulp.series('index:redirect', 'index:404'));
 gulp.task('copy', gulp.series('copy:fonts', 'copy:docs', 'copy:videos', 'copy:robots'));
-gulp.task('build', gulp.series('copy', 'index', 'html', 'css', 'js', 'home'));
-gulp.task('start', gulp.series('build', 'server'));
-gulp.task('images', gulp.series('graphic'));
-gulp.task('svg', gulp.series('images:svg-sprite'));
+gulp.task('minify', gulp.series('images:minify'));
 gulp.task('blog', gulp.series('blog:ru', 'blog:en', 'posts:ru', 'posts:en', 'json'));
+
+gulp.task('files', gulp.series('graphic', 'copy'));
+gulp.task('build', gulp.series('index', 'html', 'home'));
+gulp.task('start', gulp.series('css', 'js', 'build', 'server'));
+gulp.task('recreate', gulp.series('clean', 'start', 'blog', 'files'));

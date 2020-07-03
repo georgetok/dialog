@@ -26,7 +26,7 @@ block variables
       t.blog.dec
     ];
     const getMonth = function(post) {
-      let month = post.created_at.substr(5, 2);
+      let month = post.published_at.substr(5, 2);
       if (month.charAt(0) == 0){
         month = month.replace(0, '')
       }
@@ -48,11 +48,11 @@ block content
                 p(class="blog__text")=post.custom_excerpt
                 .blog__text-info
                   p.blog__date
-                    span=post.created_at.substr(8, 2)
+                    span=post.published_at.substr(8, 2)
                     span &nbsp;
                     span=months[getMonth(post) - 1]
                     span ,&nbsp;
-                    span=post.created_at.substr(0, 4)
+                    span=post.published_at.substr(0, 4)
 
 
       .wrap.wrap--c

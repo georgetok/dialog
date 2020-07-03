@@ -110,7 +110,7 @@
 }
 
 .blog__text {
-  @include typography-txt-sm;
+  @include typography-txt;
   color: $color-base;
   display: block;
 

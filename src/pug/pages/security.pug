@@ -92,7 +92,12 @@ block content
           .card.card--security
             h4=t.security.card_title_3
             p=t.security.card_text_3
-            +svg('icon-bizone', 40, 40)
+            +picture(
+              '/img/pages/security/logo-audit',
+              'png',
+              t.alt.pm,
+              456
+            )
   section.compliance.box.box--lilac
     .wrapper.wrapper--main
       .wrap.wrap--icon.wrap--ac

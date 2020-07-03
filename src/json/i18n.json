@@ -385,8 +385,12 @@
       "en": "Support center "
     },
     "connect": {
-      "ru": "Связаться со службой поддержки можно также по  email: ",
-      "en": "You can also contact technical support via"
+      "ru": "Связаться со службой поддержки можно также по email: ",
+      "en": "You can also contact technical support via email:"
+    },
+    "letter": {
+      "ru": "Написать письмо",
+      "en": "Write a letter"
     }
   },
 
@@ -993,6 +997,10 @@
     "sk": {
       "ru": "Надпись: участник Сколково",
       "en": "Text: Skolkovo participant"
+    },
+    "support": {
+      "ru": "Иконка спасательного круга",
+      "en": "Help icon"
     }
   },
 

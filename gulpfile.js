@@ -77,7 +77,7 @@ const Paths = {
     ru: `${BUILD_PATH}/ru`,
   },
   images: {
-    src: `${SOURCE_PATH}img/**/*.{png,jpg,svg}`,
+    src: `${SOURCE_PATH}img/**/*.{png,jpg,svg,gif}`,
     spriteSrc: `${SOURCE_PATH}/img/svg-sprite/*.svg`,
     webpSrc: `${SOURCE_PATH}img/**/*.{png,jpg}`,
     dest: `${BUILD_PATH}img/`,
@@ -287,6 +287,7 @@ gulp.task('images:minify', function () {
     .src([Paths.images.src, `!${Paths.images.spriteSrc}`])
     .pipe(
       imagemin([
+        imagemin.gifsicle(),
         imagemin.optipng({
           optimizationLevel: 6,
         }),

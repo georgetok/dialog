@@ -75,7 +75,7 @@ let emailSendOffer = function (lang, isModal, pageName) {
 
   Email.send({
     SecureToken: "b940ea1d-6d82-42f5-b85a-67de942b89ac",
-    To: ["secretkto2@gmail.com", "artyponomarty@gmail.com"],
+    To: ["ivjubt8x@robot.zapier.com", "info@dlg.im"],
     From: "site-srv@dlg.im",
     Subject: 'Заявка с сайта dlg.im',
     Body: body

@@ -28,6 +28,7 @@
     "gulp-sourcemaps": "2.6.x",
     "gulp-svgo": "^2.2.1",
     "gulp-svgstore": "^7.0.1",
+    "gulp-terser": "^1.2.0",
     "gulp-uglify": "^3.0.2",
     "gulp-webp": "^4.0.1",
     "imagemin-mozjpeg": "^8.0.0",
@@ -51,8 +52,7 @@
     "images": "gulp images",
     "blog": "gulp blog",
     "start": "gulp start",
-    "webp": "gulp webp",
-    "sprite": "gulp sprite"
+    "clean": "gulp clean"
   },
   "browserslist": [
     "last 2 versions",

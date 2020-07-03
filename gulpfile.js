@@ -30,7 +30,7 @@ const commonjs = require('rollup-plugin-commonjs');
 const resolveNodeModules = require('rollup-plugin-node-resolve');
 const replace = require('@rollup/plugin-replace');
 const concat = require('gulp-concat');
-const uglify = require('gulp-uglify');
+const terser = require('gulp-terser');
 
 // styles
 const sass = require('gulp-sass');
@@ -147,6 +147,8 @@ const requireJSON = (file) =>
 /*
  * TASKS
  */
+
+
 gulp.task('json', async function () {
   const posts = await api.posts.browse({
     include: "tags,authors",
@@ -502,7 +504,7 @@ gulp.task('js:vendor', function () {
   return gulp
     .src(Paths.scripts.vendor.src)
     .pipe(sourcemaps.init())
-    .pipe(uglify())
+    .pipe(terser())
     .pipe(concat(Paths.scripts.vendor.outputFileName))
     .pipe(sourcemaps.write('.'))
     .pipe(gulp.dest(Paths.scripts.dest));
@@ -559,19 +561,31 @@ gulp.task('refresh', function (done) {
 });
 
 gulp.task('clean', function () {
-  return del(['/build', '!/build/img/*.*', '!/build/docs/*.*']);
+  return del([
+    `build/**`,
+    '!build/img',
+    '!build/video',
+    '!build/docs',
+  ], {force: true});
 });
 
 gulp.task('copy:fonts', function () {
   return gulp.src(Paths.fonts.src).pipe(gulp.dest(Paths.fonts.output));
 });
 
-gulp.task('copy:favicons', function () {
-  return gulp.src(Paths.favicons.src).pipe(gulp.dest(Paths.favicons.output));
+gulp.task('copy:docs', function () {
+  return gulp
+    .src('src/docs/*.*').pipe(gulp.dest('build/docs/'));
 });
 
-gulp.task('copy:manifest', function () {
-  return gulp.src(Paths.manifest.src).pipe(gulp.dest(Paths.manifest.output));
+gulp.task('copy:videos', function () {
+  return gulp
+    .src('src/video/*.*').pipe(gulp.dest('build/video/'));
+});
+
+gulp.task('copy:robots', function () {
+  return gulp
+    .src('src/robots.txt').pipe(gulp.dest('build/'));
 });
 
 gulp.task('graphic', gulp.series('images:minify', 'images:webp', 'images:svg-sprite'));
@@ -579,7 +593,7 @@ gulp.task('js', gulp.series('js:module', 'js:vendor'));
 gulp.task('html', gulp.series('html:ru', 'html:en'));
 gulp.task('home', gulp.series('home:ru', 'home:en'));
 gulp.task('index', gulp.series('index:redirect', 'index:404'));
-gulp.task('copy', gulp.series('copy:fonts'));
+gulp.task('copy', gulp.series('copy:fonts', 'copy:docs', 'copy:videos', 'copy:robots'));
 gulp.task('build', gulp.series('clean', 'copy', 'index', 'html', 'css', 'js', 'home'));
 gulp.task('start', gulp.series('build', 'server'));
 gulp.task('images', gulp.series('graphic'));

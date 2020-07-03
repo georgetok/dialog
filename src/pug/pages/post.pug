@@ -25,7 +25,7 @@ block variables
       t.blog.nov,
       t.blog.dec
     ];
-    let month = post.created_at.substr(5, 2);
+    let month = post.published_at.substr(5, 2);
     if (month.charAt(0) == 0){
       month = month.replace(0, '')
     }

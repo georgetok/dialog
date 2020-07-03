@@ -27,7 +27,7 @@ block variables
     ];
     const getMonth = function(post) {
       let month = post.published_at.substr(5, 2);
-      if (month.charAt(0) == 0){
+      if (month.charAt(0) === "0"){
         month = month.replace(0, '')
       }
       return month

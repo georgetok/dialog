@@ -550,7 +550,7 @@ gulp.task('server', function () {
   gulp.watch(`${SOURCE_PATH}sass/**/*.scss`, gulp.series('css', 'refresh'));
   gulp.watch(`${SOURCE_PATH}pug/**/*.pug`, gulp.series('build', 'refresh'));
   gulp.watch(`${SOURCE_PATH}pug/pages/main.pug`, gulp.series('home', 'refresh'));
-  gulp.watch(`${SOURCE_PATH}img/**/*.{png,jpg,gif,svg}`, gulp.series('graphic', 'refresh'));
+  gulp.watch(`${SOURCE_PATH}img/**/*.{png,jpg,gif,svg}`, gulp.series('graphic', 'minify', 'refresh'));
   gulp.watch([`${SOURCE_PATH}pug/pages/blog.pug`, `${SOURCE_PATH}pug/pages/post.pug`], gulp.series('blog', 'refresh'));
   gulp.watch(`${SOURCE_PATH}js/**/*.js`, gulp.series('js', 'refresh'));
 
@@ -561,19 +561,22 @@ gulp.task('refresh', function (done) {
   done();
 });
 
+// gulp.task('clean', function () {
+//   return del([
+//     `build/**`,
+//     '!build/img',
+//     '!build/video',
+//     '!build/ru',
+//     '!build/en',
+//     '!build/docs',
+//     'build/ru/**/*.*',
+//     'build/en/**/*.*',
+//     '!build/en/blog',
+//     '!build/ru/blog',
+//   ], {force: true});
+// });
 gulp.task('clean', function () {
-  return del([
-    `build/**`,
-    '!build/img',
-    '!build/video',
-    '!build/ru',
-    '!build/en',
-    '!build/docs',
-    'build/ru/**/*.*',
-    'build/en/**/*.*',
-    '!build/en/blog',
-    '!build/ru/blog',
-  ], {force: true});
+  return del(`build/**`, {force: true});
 });
 
 gulp.task('copy:fonts', function () {
@@ -601,10 +604,10 @@ gulp.task('html', gulp.series('html:ru', 'html:en'));
 gulp.task('home', gulp.series('home:ru', 'home:en'));
 gulp.task('index', gulp.series('index:redirect', 'index:404'));
 gulp.task('copy', gulp.series('copy:fonts', 'copy:docs', 'copy:videos', 'copy:robots'));
-gulp.task('minify', gulp.series('images:minify'));
 gulp.task('blog', gulp.series('blog:ru', 'blog:en', 'posts:ru', 'posts:en', 'json'));
 
+gulp.task('minify', gulp.series('images:minify'));
 gulp.task('files', gulp.series('graphic', 'copy'));
 gulp.task('build', gulp.series('index', 'html', 'home'));
 gulp.task('start', gulp.series('css', 'js', 'build', 'server'));
-gulp.task('recreate', gulp.series('clean', 'start', 'blog', 'files'));
+gulp.task('recreate', gulp.series('clean', 'blog', 'files', 'start'));

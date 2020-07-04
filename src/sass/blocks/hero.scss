@@ -387,10 +387,55 @@
 
   &--404 {
     height: 100%;
+    padding-top: 85px;
+    padding-bottom: 110px;
+    @include laptop {
+      padding-top: calc(5vw);
+      padding-bottom: calc(5vw);
+    }
+    @include mobile-sm {
+      padding-bottom: 0;
+    }
 
     .button {
-      @include mobile-sm {
+      @include mobile-md {
         width: 100%;
+        background: none;
+        color: $color-accent;
+        min-width: auto;
+        width: auto;
+        span {
+          padding-left: 0;
+          padding-right: 10px;
+        }
+        svg {
+          fill: $color-accent;
+          height: 13px;
+          top: 1px;
+          position: relative;
+        }
+      }
+    }
+
+    .hero__title {
+      @include typography-h2;
+      @include mid {
+        line-height: 1.1;
+      }
+      @media(max-width: 880px) {
+        font-size: 32px;
+        line-height: 1.2;
+      }
+    }
+
+    .hero__text {
+      @include mid {
+        font-size: 1.8vw;
+        line-height: 1.5;
+      }
+      @media(max-width: 880px) {
+        @include typography-txt;
+        margin-top: 20px;
       }
     }
 
@@ -403,64 +448,54 @@
 
     .hero__left {
       padding-right: 0;
-
+      min-width: 250px;
+      max-width: 500px;
+      @media(max-width: 880px) {
+        min-width: 300px;
+      }
+      @include mobile-md {
+        width: 50%;
+      }
       @include mobile-sm {
-        margin-top: 50px;
-      }
-
-      h1 {
-        @include tablet {
-          font-size: 3.65vw;
-          line-height: 1.1;
-        }
-        @include mobile-sm {
-          font-size: 36px;
-          padding-right: 33vw;
-        }
-        @include mobile-xs {
-          padding-right: 0;
-        }
-      }
-
-      p {
-        @include tablet {
-          font-size: 2.1vw;
-          line-height: 1.5;
-        }
-        @include mobile-sm {
-          padding-right: 33vw;
-          font-size: 16px;
-          margin-bottom: 52px;
-          margin-top: 30px;
-        }
-        @include mobile-xs {
-          padding-right: 0;
-        }
+        width: 100%;
+        padding-bottom: 50px;
+        min-width: 0;
       }
     }
 
     .hero__img {
-      @include mobile-sm {
-        width: 100%;
-      }
+      max-width: 100%;
+      width: 100%;
     }
 
     .hero__right {
-      width: 50%;
-      min-width: 600px;
-      @include tablet {
-        margin-right: -200px;
+      min-width: 610px;
+      @include laptop {
+        margin-right: calc((90.1vw - 1190px) / 2.75);
+      }
+      @media(max-width: 1110px) {
+        margin-right: calc((90.1vw - 1190px) / 2.75);
+      }
+      @media(max-width: 880px) {
+        width: 100%;
       }
       @include mobile-md {
-        margin-top: -50px;
-        margin-right: -170px;
-        min-width: 80vw;
+        width: 100%;
+        margin: 0;
+        transform: translateX(calc((100.1vw - 710px) / 1.75))
       }
       @include mobile-sm {
-        width: 131%;
+        min-width: 110vw;
+        max-width: 100%;
         position: relative;
         left: 50%;
-        transform: translateX(-52%);
+        transform: translateX(-51.1%);
+        order: -1;
+        margin-top: -11vw;
+        margin-bottom: 10vw;
+      }
+      @include mobile-xs {
+        max-width: 290px;
       }
     }
   }

@@ -180,7 +180,7 @@
   padding-bottom: 81px;
 
   @include laptop {
-    padding-top: 82px;
+    padding-top: 112px;
   }
 
   @include mobile-md {
@@ -540,8 +540,8 @@
         top: 50%;
         left: 0;
         transform: translateY(-50%);
-        width: 32px;
-        height: 32px;
+        width: 30px;
+        height: 30px;
         background-color: $color-contrast;
         border: 1px solid $color-gray-light;
         border-radius: 2px;
@@ -564,8 +564,8 @@
         top: 50%;
         left: 0;
         transform: translateY(-50%);
-        width: 32px;
-        height: 32px;
+        width: 30px;
+        height: 30px;
         background-color: $color-accent;
         background-image: url("../img/library/check.svg");
         background-repeat: no-repeat;
@@ -665,29 +665,6 @@
       background-position: center;
     }
   }
-
-  .form__form-field--file {
-    display: flex;
-    align-items: center;
-    margin-right: 40px;
-    cursor: pointer;
-
-    label {
-      cursor: pointer;
-    }
-
-    .icon {
-      border-radius: 50%;
-      margin-right: 10px;
-      width: 40px;
-      height: 40px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background: $bg-gray;
-      box-shadow: 0 2px 4px rgba(47, 27, 73, 0.08), 0 1px 1px rgba(47, 41, 64, 0.1);
-    }
-  }
 }
 
 .form--feedback {
@@ -732,6 +709,9 @@
     color: $color-gray-dark;
     margin-bottom: 20px;
     margin-top: -15px;
+    @include mobile-md {
+      margin-top: 0;
+    }
   }
 
   .form__checkbox-wrap {
@@ -743,37 +723,26 @@
     }
   }
 
-  .form__form-field--file {
-    svg:nth-child(2),
-    svg:nth-child(3) {
-      display: none;
-    }
+  .file-name {
+    display: none;
+  }
 
+  .form__form-field--checkbox {
+    @include laptop {
+      width: 100%;
+    }
+  }
+
+  .form__form-field--select {
     label {
-      display: flex;
-      align-items: center;
-      font-weight: 500;
-
-      &.is-file {
-        svg:nth-child(1) {
-          display: none;
-        }
-
-        svg:nth-child(2) {
-          display: block;
-        }
-
-        &:hover {
-          svg:nth-child(3) {
-            display: block;
-          }
-
-          svg:nth-child(2) {
-            display: none;
-          }
-        }
-      }
+      visibility: hidden;
     }
+  }
+
+  .form__form-field--file {
+    display: flex;
+    align-items: center;
+    margin-right: 50px;
 
     @include mobile-md {
       margin-bottom: 30px;
@@ -782,11 +751,76 @@
       width: 100%;
       margin-right: 0;
     }
-  }
 
-  .form__form-field--checkbox {
-    @include laptop {
-      width: 100%;
+    .icon {
+      border-radius: 50%;
+      margin-right: 10px;
+      width: 40px;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: $bg-gray;
+      box-shadow: 0 2px 4px rgba(47, 27, 73, 0.08), 0 1px 1px rgba(47, 41, 64, 0.1);
+    }
+
+    .upload {
+      fill: $color-accent;
+    }
+
+    .close {
+      display: none;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      right: 0;
+      cursor: pointer;
+      fill: $color-accent-mid-1;
+      stroke: $color-accent-mid-1;
+
+      &:hover {
+        fill: $color-accent;
+        stroke: $color-accent;
+      }
+    }
+
+    label {
+      display: flex;
+      align-items: center;
+      font-weight: 500;
+      position: relative;
+      cursor: pointer;
+
+      &.is-file {
+        padding-right: 35px;
+        pointer-events: none;
+        cursor: not-allowed;
+
+        @include mobile-sm{
+          width: 100%;
+        }
+
+        .upload {
+          fill: $color-contrast
+        }
+
+        .icon {
+          background: $color-accent;
+        }
+
+        .file-name {
+          display: block;
+        }
+
+        .file-send {
+          display: none;
+        }
+
+        .close {
+          display: block;
+          pointer-events: all;
+        }
+      }
     }
   }
 }

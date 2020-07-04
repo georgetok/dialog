@@ -215,9 +215,9 @@
                     <input type="tel" id="phone-1" name="phone" placeholder="Телефон" title="Номер телефона должен начинаться с символов +7 и содержать 11 цифр" pattern="\+7[0-9]{10}" required="required"/>
                     <label for="phone-1">Телефон</label>
                   </div>
-                  <div class="form__form-field form__form-field--text form__form-field--s form__form-field--4">
+                  <div class="form__form-field form__form-field--select form__form-field--text form__form-field--s form__form-field--4">
                     <select id="city-1" name="city" required="required">
-                      <option value="undefined">В каком городе хотите работать</option>
+                      <option value="undefined" selected="selected">В каком городе хотите работать</option>
                       <option value="Москва">Москва</option>
                       <option value="Санкт-Петербург">Санкт-Петербург</option>
                     </select>
@@ -235,22 +235,19 @@
                   <div class="form__form-field--file">
                     <label for="file">
                       <div class="icon">
-                        <svg width="40" height="40" aria-hidden="true">
-                          <use xlink:href="/img/sprite.svg#icon-upload"></use>
-                        </svg>
-                        <svg width="40" height="40" aria-hidden="true">
-                          <use xlink:href="/img/sprite.svg#icon-accepted"></use>
-                        </svg>
-                        <svg width="33" height="33" aria-hidden="true">
+                        <svg class="close" width="22" height="22" aria-hidden="true">
                           <use xlink:href="/img/sprite.svg#icon-reupload"></use>
                         </svg>
+                        <svg class="upload" width="37" height="37" aria-hidden="true">
+                          <use xlink:href="/img/sprite.svg#icon-upload"></use>
+                        </svg>
                       </div>
-                      <input class="visually-hidden" type="file" id="file" name="file" onchange="fileResend()"/><span>Прикрепить резюме</span>
+                      <input class="visually-hidden" type="file" id="file" name="file" onchange="fileResend()"/><span class="file-send">Прикрепить резюме</span><span class="file-name"></span>
                     </label>
                   </div>
                   <div class="form__form-field form__form-field--checkbox">
                     <input class="visually-hidden" type="checkbox" id="terms-1" name="terms" required="required" checked="checked"/>
-                    <label for="accept-1">Я согласен на обработку данных</label>
+                    <label for="terms-1">Я согласен на обработку данных</label>
                   </div>
                 </div>
                 <div class="wrap wrap--ac">
@@ -350,9 +347,9 @@
                       <input type="text" id="company-2" name="company" placeholder="Название компании" required="required"/>
                       <label for="company-2">Название компании</label>
                     </div>
-                    <div class="form__form-field form__form-field--text form__form-field--5 form__form-field--modal">
+                    <div class="form__form-field form__form-field--text form__form-field--select form__form-field--5 form__form-field--modal">
                       <select id="quantity-2" name="quantity-users" required="required">
-                        <option value="1-100">1-100</option>
+                        <option value="1-100" selected="selected">1-100</option>
                         <option value="101-500">101-500</option>
                         <option value="501-1000">501-1000</option>
                         <option value="1000+">1000+</option>

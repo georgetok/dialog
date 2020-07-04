@@ -25,6 +25,9 @@
     @include laptop {
       margin-top: 30px;
     }
+    @include mobile-md {
+      margin-top: 50px;
+    }
     @include mobile-xs {
       font-size: 32px;
     }
@@ -52,6 +55,9 @@
   &__right {
     min-width: 300px;
 
+    @include laptop {
+      min-width: calc(25vw - 10%);
+    }
     @include mobile-md {
       margin-top: 60px;
       margin-bottom: 40px;
@@ -63,7 +69,7 @@
     padding-right: 150px;
 
     @include laptop {
-      padding-right: 15vw;
+      padding-right: calc(20vw - 10%);
     }
 
     @include mobile-md {

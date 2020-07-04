@@ -194,7 +194,7 @@
     padding-left: var(--indent);
     padding-right: var(--indent);
   }
-  @include mobile-sm {
+  @include mobile-md {
     margin-bottom: 0;
   }
 }

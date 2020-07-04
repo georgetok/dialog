@@ -78,8 +78,7 @@
 }
 
 .features__item--direct {
-  grid-template: "img desc" minmax(195px, auto) "img example" auto/
-    51.6% 48.4%;
+  grid-template: "img desc" minmax(195px, auto) "img example" auto/ 51.6% 48.4%;
   margin-bottom: 131px;
 
   @include laptop {
@@ -90,30 +89,26 @@
   }
 
   @include tablet {
-    grid-template: "desc" auto "img" auto "example" auto/
-      100%;
+    grid-template: "desc" auto "img" auto "example" auto/ 100%;
     row-gap: 0;
     margin-bottom: 43px;
   }
 }
 
 .features__item--reverse {
-  grid-template: "desc-1 img-1" minmax(155px, auto) "example-1 img-1" auto/
-    48.4% 51.6%;
+  grid-template: "desc-1 img-1" minmax(155px, auto) "example-1 img-1" auto/ 42.4% 57.6%;
   margin-bottom: 93px;
 
   @include laptop {
-    grid-template: "desc-1 desc-1" auto "example-1 img-1" auto/
-      34.75% 65.25%;
+    grid-template: "desc-1 desc-1" auto "example-1 img-1" auto/ 34.75% 65.25%;
     row-gap: 52px;
     margin-bottom: 70px;
   }
 
   @include tablet {
-    grid-template: "desc-1" auto "img-1" auto "example-1" auto/
-      auto;
+    grid-template: "desc-1" auto "img-1" auto "example-1" auto/ auto;
     row-gap: 0;
-    margin-bottom: 33px;
+    margin-bottom: 53px;
   }
 }
 
@@ -145,7 +140,6 @@
   @include tablet {
     max-width: 630px;
     margin: 0 auto;
-    margin: 0 auto;
     border-radius: 0 0 6px 6px;
     box-shadow: 0 4px 12px rgba(47, 27, 73, 0.12),
     0 1px 1px rgba(47, 41, 64, 0.08);
@@ -158,10 +152,8 @@
   video {
     position: relative;
     display: block;
-    width: calc(100% + 2px);
-    position: relative;
-    left: 50%;
-    transform: translateX(-50%) translateY(2px);
+    width: 100%;
+    transform: scale(1.009);
 
     @include tablet {
       margin: 0 auto;
@@ -195,7 +187,7 @@
 
 .features__desc {
   position: relative;
-  padding-bottom: 28px;
+  padding-bottom: 20px;
   padding-left: 64px;
   padding-right: 40px;
 
@@ -203,7 +195,6 @@
     padding-left: 49px;
     padding-right: 32%;
   }
-
   @include tablet {
     margin-bottom: 39px;
     padding-left: var(--indent);
@@ -262,7 +253,7 @@
       padding-left: 47px;
     }
     @include mobile-md {
-      padding-left: 0px;
+      padding-left: 0;
     }
   }
 }
@@ -344,10 +335,7 @@
 
   @include tablet {
     margin-bottom: 0;
-    padding-top: 29px;
-    padding-bottom: 37px;
-    padding-left: 40px;
-    padding-right: 40px;
+    padding: 7vw calc(var(--indent) + 47px);
   }
 
   @include mobile-md {
@@ -402,12 +390,17 @@
   padding-right: 40px;
   grid-area: example-1;
 
-  @include tablet {
-    padding-left: 40px;
-    padding-right: 40px;
+  @include mid {
+    padding: 20px;
   }
 
+  @include tablet {
+    padding: 7vw calc(var(--indent) + 47px);
+  }
   @include mobile-md {
+    margin-bottom: 0;
+    padding-top: 29px;
+    padding-bottom: 37px;
     padding-left: var(--indent);
     padding-right: var(--indent);
   }

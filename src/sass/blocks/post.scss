@@ -30,6 +30,16 @@
       img {
         display: block;
         margin-top: 60px;
+        margin-bottom: 40px;
+      }
+
+      &[style^="display: flex"] {
+        margin-top: 0;
+        img{
+          @include mobile-sm{
+            margin-top: 0;
+          }
+        }
       }
     }
 
@@ -103,7 +113,7 @@
       margin-bottom: 40px;
     }
 
-    p + ol{
+    p + ol {
       margin-top: -5px;
     }
 

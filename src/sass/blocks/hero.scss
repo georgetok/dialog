@@ -23,7 +23,7 @@
     .hero__text {
       @include typography-subhead;
       line-height: 1.4;
-      margin-top: 35px;
+      margin-top: 30px;
       margin-bottom: 25px;
       @include mobile-sm {
         margin-top: 20px;

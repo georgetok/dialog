@@ -49,13 +49,13 @@ mixin form-career (idNumber, formId)
               )
               label(for=`phone-${idNumber}`)=t.form.phone
 
-            .form__form-field.form__form-field--text.form__form-field--s.form__form-field--4
+            .form__form-field.form__form-field--select.form__form-field--text.form__form-field--s.form__form-field--4
               select(
                 id=`city-${idNumber}`
                 name="city"
                 required
               )
-                option(value="undefined")=t.form.select_work
+                option(value="undefined" selected)=t.form.select_work
                 option(value="Москва")=t.form.select_work_o_1
                 option(value="Санкт-Петербург")=t.form.select_work_o_2
               label(for=`city-${idNumber}`)=t.form.select_work
@@ -71,16 +71,16 @@ mixin form-career (idNumber, formId)
             .form__form-field--file
               label(for=`file`)
                 .icon
-                  +svg('icon-upload', 40, 40)
-                  +svg('icon-accepted', 40, 40)
-                  +svg('icon-reupload', 33, 33)
+                  +svg('icon-reupload', 22, 22, 'close')
+                  +svg('icon-upload', 37, 37, 'upload')
                 input.visually-hidden(
                   type='file'
                   id='file'
                   name='file'
                   onchange="fileResend()"
                 )
-                span=t.form.cv
+                span.file-send=t.form.cv
+                span.file-name
             .form__form-field.form__form-field--checkbox
               input.visually-hidden(
                 type="checkbox"
@@ -89,7 +89,7 @@ mixin form-career (idNumber, formId)
                 required
                 checked
               )
-              label(for=`accept-${idNumber}`)=t.form.agree
+              label(for=`terms-${idNumber}`)=t.form.agree
 
           .wrap.wrap--ac
             button(

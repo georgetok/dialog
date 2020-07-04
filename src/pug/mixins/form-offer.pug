@@ -53,13 +53,13 @@ mixin form-offer (isModal, idNumber, formId, pageName)
                 required
               )
               label(for=`company-${idNumber}`)=t.form.company
-            .form__form-field.form__form-field--text.form__form-field--5(class=(isModal ? 'form__form-field--modal' : null))
+            .form__form-field.form__form-field--text.form__form-field--select.form__form-field--5(class=(isModal ? 'form__form-field--modal' : null))
               select(
                 id=`quantity-${idNumber}`
                 name="quantity-users"
                 required
               )
-                option(value="1-100") 1-100
+                option(value="1-100" selected) 1-100
                 option(value="101-500") 101-500
                 option(value="501-1000") 501-1000
                 option(value="1000+") 1000+

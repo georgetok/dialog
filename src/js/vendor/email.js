@@ -131,13 +131,17 @@ let emailSendFeedback = function (lang, isModal) {
 
 let fileResend = function () {
   let form = document.getElementById(`form-career`);
+  let filePlaceholder = form.querySelector('.file-name');
+  let close = form.querySelector('.close');
   let fileInput = form.querySelector('[name="file"]');
   let label = form.querySelector('[for="file"]');
   fileInput.parentNode.classList.add('is-file');
-  label.addEventListener('click', function () {
+  filePlaceholder.innerHTML = fileInput.files[0].name;
+  close.addEventListener('click', function (e) {
     fileInput.value = '';
     fileInput.parentNode.classList.remove('is-file');
-  }, false);
+    return false;
+  });
 };
 
 let emailSendCV = function (lang) {

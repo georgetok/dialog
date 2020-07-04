@@ -265,17 +265,18 @@
   .form__input-text-wrap {
     display: flex;
     flex-wrap: wrap;
-    margin-bottom: 40px;
+    margin-bottom: 35px;
 
     @include mobile-md {
       flex-direction: column;
+      margin-bottom: 18px;
     }
   }
 
   .form__checkbox-wrap {
     display: flex;
     flex-wrap: wrap;
-    margin-bottom: 50px;
+    margin-bottom: 40px;
 
     @include laptop {
       margin-bottom: 47px;
@@ -745,16 +746,17 @@
     margin-right: 50px;
 
     @include mobile-md {
-      margin-bottom: 30px;
-      padding-bottom: 20px;
+      margin-bottom: 25px;
+      padding-bottom: 18px;
       border-bottom: 1px solid $color-gray-light-1;
       width: 100%;
       margin-right: 0;
+      margin-left: -3px;
     }
 
     .icon {
       border-radius: 50%;
-      margin-right: 10px;
+      margin-right: 11px;
       width: 40px;
       height: 40px;
       display: flex;

@@ -35,7 +35,6 @@
     font-size: 21px;
     line-height: 23px;
     letter-spacing: 0.275px;
-    color: $color-accent;
     transition: color $transition-props;
     @include mobile-md{
       font-size: 18px;

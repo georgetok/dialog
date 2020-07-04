@@ -50,6 +50,7 @@
     "test": "npm run editorconfig && npm run stylelint && eslint src/js/",
     "blog": "gulp blog",
     "start": "gulp start",
+    "files": "gulp files",
     "minify": "gulp minify",
     "recreate": "gulp recreate"
   },

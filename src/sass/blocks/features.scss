@@ -137,33 +137,35 @@
 
 .features__img {
   position: relative;
+  box-shadow: 0 4px 12px rgba(47, 27, 73, 0.12),
+  0 1px 1px rgba(47, 41, 64, 0.08);
+  border-radius: 0 0 12px 12px;
+  overflow: hidden;
 
   @include tablet {
     max-width: 630px;
     margin: 0 auto;
+    margin: 0 auto;
+    border-radius: 0 0 6px 6px;
+    box-shadow: 0 4px 12px rgba(47, 27, 73, 0.12),
+    0 1px 1px rgba(47, 41, 64, 0.08);
   }
   @include mobile-md {
-    max-width: 100%;
-    width: 100%;
+    width: calc(100% - var(--indent) * 2);
+    margin: auto;
   }
 
   video {
     position: relative;
     display: block;
-    width: 100%;
-    border-radius: 0 0 12px 12px;
-    box-shadow: 0 4px 12px rgba(47, 27, 73, 0.12),
-    0 1px 1px rgba(47, 41, 64, 0.08);
+    width: calc(100% + 2px);
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%) translateY(2px);
 
     @include tablet {
-      width: calc(100% - 60px);
       margin: 0 auto;
       border-radius: 0 0 6px 6px;
-      box-shadow: 0 4px 12px rgba(47, 27, 73, 0.12),
-      0 1px 1px rgba(47, 41, 64, 0.08);
-    }
-    @include mobile-md {
-      width: calc(100% - var(--indent) * 2);
     }
   }
 }
@@ -174,29 +176,6 @@
     position: absolute;
     top: -30px;
     left: -30px;
-    width: 133px;
-    height: 133px;
-    background-repeat: no-repeat;
-    background-position: 0 0;
-    background-size: 133px 133px;
-
-    @include laptop {
-      top: -33px;
-    }
-
-    @include tablet {
-      left: -20px;
-      background-size: 112px 112px;
-    }
-  }
-}
-
-.features__img--reverse {
-  &::before {
-    content: "";
-    position: absolute;
-    top: -30px;
-    right: -30px;
     width: 133px;
     height: 133px;
     background-repeat: no-repeat;
@@ -229,6 +208,9 @@
     margin-bottom: 39px;
     padding-left: var(--indent);
     padding-right: var(--indent);
+  }
+  @include mobile-md {
+    margin-bottom: 30px;
   }
 
   span {
@@ -387,9 +369,10 @@
   h3 {
     @include typography-h4;
     margin-bottom: 12px;
+    margin-top: 5px;
 
     @include laptop {
-      margin-bottom: 8px;
+      margin-bottom: 20px;
     }
 
     @include tablet {
@@ -401,12 +384,10 @@
     @include typography-txt;
 
     @include laptop {
-      font-size: 14px;
-      line-height: 20px;
+      font-size: 16px;
     }
 
     @include tablet {
-      font-size: 16px;
       line-height: 24px;
     }
   }
@@ -427,8 +408,8 @@
   }
 
   @include mobile-md {
-    padding-left: 30px;
-    padding-right: 30px;
+    padding-left: var(--indent);
+    padding-right: var(--indent);
   }
 }
 

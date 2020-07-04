@@ -376,6 +376,7 @@
     border: 1px solid $color-gray-light-1;
     border-radius: 4px;
     overflow: hidden;
+    flex-wrap: wrap;
 
     @include mobile-md {
       border: none;
@@ -402,6 +403,7 @@
     display: block;
     margin-left: auto;
     height: 100%;
+    cursor: pointer;
 
     @include laptop {
       max-width: unset;

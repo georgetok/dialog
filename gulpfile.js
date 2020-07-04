@@ -547,10 +547,20 @@ gulp.task('server', function () {
     cors: true,
     ui: false,
   });
+  gulp.watch(`${SOURCE_PATH}video/*.*`, gulp.series('css', 'refresh'));
   gulp.watch(`${SOURCE_PATH}sass/**/*.scss`, gulp.series('css', 'refresh'));
   gulp.watch(`${SOURCE_PATH}pug/**/*.pug`, gulp.series('build', 'refresh'));
   gulp.watch(`${SOURCE_PATH}img/**/*.{png,jpg,gif,svg}`, gulp.series('graphic', 'minify', 'refresh'));
-  gulp.watch([`${SOURCE_PATH}pug/pages/blog.pug`, `${SOURCE_PATH}pug/pages/post.pug`], gulp.series('blog', 'refresh'));
+  gulp.watch([
+    `${SOURCE_PATH}docs/*.*`,
+    `${SOURCE_PATH}video/*.*`,
+    `${SOURCE_PATH}robots.txt`,
+    `${SOURCE_PATH}fonts/**/*.{woff,woff2}`,
+  ], gulp.series('copy', 'refresh'));
+  gulp.watch([
+    `${SOURCE_PATH}pug/pages/blog.pug`,
+    `${SOURCE_PATH}pug/pages/post.pug`
+  ], gulp.series('blog', 'refresh'));
   gulp.watch(`${SOURCE_PATH}js/**/*.js`, gulp.series('js', 'refresh'));
 
 });

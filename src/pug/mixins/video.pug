@@ -1,4 +1,4 @@
 mixin video(name)
   video(loop muted playsinline autoplay)
-    source(src=`/video/${name}.webm` type="video/webm")
-    source(src=`/video/${name}.mp4` type="video/mp4")
+    source(src=`/video/${name}.mp4` media='(min-width: 1200px)' type='video/mp4')
+    source(src=`/video/${name}.webm` type='video/webm')

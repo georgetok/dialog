@@ -24,9 +24,18 @@ const main = () => {
   let tabsDesktop = document.querySelectorAll(".tabs__controls .tabs__control");
   let tabsMobile = document.querySelectorAll(".tabs__controls--mobile .tabs__wrapper .tabs__control");
   if (tabsDesktop.length) {
-    for (let y = 0; y < 5; y++) {
-      tabsDesktop[y].addEventListener('click', function () {
-        videos[y].play();
+    for (let i = 0; i < 5; i++) {
+      tabsDesktop[i].addEventListener('click', function () {
+        if (videos[i].paused === true) {
+          videos[i].play();
+        }
+      });
+      videos[i].addEventListener('click', function () {
+        if (this.paused === true) {
+          this.play();
+        } else {
+          this.pause();
+        }
       });
     }
     for (let j = 0; j < 5; j++) {

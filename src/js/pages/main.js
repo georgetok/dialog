@@ -27,6 +27,11 @@ const main = () => {
     for (let i = 0; i < 5; i++) {
       tabsDesktop[i].addEventListener('click', function () {
         if (videos[i].paused === true) {
+          for (let g = 0; g < 5; g++) {
+            if (g !== i) {
+              videos[g].pause();
+            }
+          }
           videos[i].play();
         }
       });

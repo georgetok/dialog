@@ -470,7 +470,7 @@
     .hero__right {
       min-width: 610px;
       @include laptop {
-        margin-right: calc((90.1vw - 1190px) / 2.75);
+        margin-right: -70px;
       }
       @media(max-width: 880px) {
         width: 100%;

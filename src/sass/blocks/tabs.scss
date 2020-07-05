@@ -351,8 +351,8 @@
     width: 33.5%;
     height: 0;
     padding-bottom: 33%;
-    background-size: 200%;
-    background-image: url(../img/pattern-2.svg);
+    background-size: 100%;
+    background-image: url(../img/pattern-3.svg);
 
     @include mobile-md {
       display: none;

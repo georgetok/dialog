@@ -390,7 +390,6 @@
     padding-top: 85px;
     padding-bottom: 110px;
     @include laptop {
-      padding-top: calc(5vw);
       padding-bottom: calc(5vw);
     }
     @include mobile-sm {
@@ -399,7 +398,6 @@
 
     .button {
       @include mobile-md {
-        width: 100%;
         background: none;
         color: $color-accent;
         min-width: auto;
@@ -418,19 +416,19 @@
     }
 
     .hero__title {
-      @include typography-h2;
       @include mid {
-        line-height: 1.1;
+        font-size: 3.5vw;
+        line-height: 1.2;
       }
       @media(max-width: 880px) {
         font-size: 32px;
-        line-height: 1.2;
       }
     }
 
     .hero__text {
+      z-index: 2;
       @include mid {
-        font-size: 1.8vw;
+        font-size: 1.6vw;
         line-height: 1.5;
       }
       @media(max-width: 880px) {
@@ -449,7 +447,7 @@
     .hero__left {
       padding-right: 0;
       min-width: 250px;
-      max-width: 500px;
+      max-width: 710px;
       @media(max-width: 880px) {
         min-width: 300px;
       }
@@ -480,22 +478,24 @@
         width: 100%;
       }
       @include mobile-md {
-        width: 100%;
+        width: 80%;
+        transform: rotate(90deg) translateY(calc(45% - 15vw));
         margin: 0;
-        transform: translateX(calc((100.1vw - 710px) / 1.75))
       }
       @include mobile-sm {
-        min-width: 110vw;
-        max-width: 100%;
+        --width: calc((570px - 168vw) / -0.55);
+        min-width: var(--width);
         position: relative;
         left: 50%;
         transform: translateX(-51.1%);
         order: -1;
-        margin-top: -11vw;
+        margin-top: -2vw;
         margin-bottom: 10vw;
       }
+      @media (max-width: 450px) {
+        min-width: 100%;
+      }
       @include mobile-xs {
-        max-width: 290px;
       }
     }
   }

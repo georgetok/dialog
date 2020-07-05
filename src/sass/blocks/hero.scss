@@ -389,8 +389,9 @@
     height: 100%;
     padding-top: 85px;
     padding-bottom: 110px;
-    @include laptop {
+    @include tablet {
       padding-bottom: calc(5vw);
+      padding-top: calc(5vw);
     }
     @include mobile-sm {
       padding-bottom: 0;
@@ -471,15 +472,12 @@
       @include laptop {
         margin-right: calc((90.1vw - 1190px) / 2.75);
       }
-      @media(max-width: 1110px) {
-        margin-right: calc((90.1vw - 1190px) / 2.75);
-      }
       @media(max-width: 880px) {
         width: 100%;
+        transform: translateX(-5vw);
       }
       @include mobile-md {
-        width: 80%;
-        transform: rotate(90deg) translateY(calc(45% - 15vw));
+        transform: translateX(calc((121.1vw - 1070PX) / 8.75));
         margin: 0;
       }
       @include mobile-sm {

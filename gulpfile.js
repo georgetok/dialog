@@ -538,9 +538,10 @@ gulp.task('server', function () {
   server.init({
     server: BUILD_PATH,
     notify: false,
-    open: true,
+    open: false,
     cors: true,
     ui: false,
+    host: "0.0.0.0",
   });
   gulp.watch(Paths.styles.src, gulp.series('css'));
   gulp.watch(Paths.html.srcWatch, gulp.series('build', 'refresh'));
@@ -579,6 +580,6 @@ gulp.task('home', gulp.series('home:ru', 'home:en'));
 gulp.task('index', gulp.series('index:redirect', 'index:404'));
 gulp.task('copy', gulp.series('copy:fonts'));
 gulp.task('build', gulp.series('clean', 'copy', 'index', 'html', 'css', 'js', 'home'));
-gulp.task('start', gulp.series('build', 'server'));
+gulp.task('start', gulp.series('server'));
 gulp.task('images', gulp.series('graphic'));
 gulp.task('blog', gulp.series('blog:ru', 'blog:en', 'posts:ru', 'posts:en', 'json'));

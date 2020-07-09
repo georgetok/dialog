@@ -1,0 +1,14 @@
+services:
+    this:
+      deploy:
+        resources:
+          minimal: 
+            requests:
+              cpu: 50m
+              memory: 50Mi
+            limits:
+              cpu: 150m
+              memory: 80Mi
+      ingress:
+        http-api:
+          port: 3000

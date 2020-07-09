@@ -8,6 +8,7 @@ ARG NPM_REGISTRY
 ENV PATH="/opt/node/bin:${PATH}"
 
 WORKDIR /opt/
+RUN rm -rf src/
 COPY . .
 USER 1001
 

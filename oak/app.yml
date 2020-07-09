@@ -12,3 +12,9 @@ services:
       ingress:
         http-api:
           port: 3000
+          controllers:
+            router:
+            - path: /
+              host: ${project.endpoints.site}
+              options:
+                ssl_verify_client: ${project.router.mutual-tls.enabled}

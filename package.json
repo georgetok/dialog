@@ -52,6 +52,7 @@
     "start": "gulp start",
     "files": "gulp files",
     "minify": "gulp minify",
+    "minify": "gulp build",
     "recreate": "gulp recreate"
   },
   "browserslist": [

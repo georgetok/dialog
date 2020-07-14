@@ -12,9 +12,9 @@
   <body>
     <div class="page">
       <header class="header js-header">
-        <div class="header__wrapper"><a class="header__logo" href="/ru"><img src="/img/library/logo-dialog.svg" alt="Логотип мессенджера Dialog"/></a>
+        <div class="header__wrapper"><a class="header__logo" href="/ru"><img src="/img/library/logo-dialog.svg" alt="Логотип мессенджера Диалог"/></a>
           <div class="header__content-box">
-            <div class="header__top-panel"><a class="header__nav-logo" href="/"><img src="/img/library/logo-dialog.svg" alt="Логотип мессенджера Dialog"/></a>
+            <div class="header__top-panel"><a class="header__nav-logo" href="/"><img src="/img/library/logo-dialog.svg" alt="Логотип мессенджера Диалог"/></a>
               <button class="header__close-button" aria-label="Закрыть меню" type="button"></button>
             </div>
             <nav class="header__nav-container main-nav">
@@ -39,20 +39,18 @@
         <section class="post">
           <div class="post__wrapper">
             <div class="post__nav">
-              <div class="wrap wrap--sb wrap--ac"><a class="link link--with-icon-reverse link--accent link--icon-accent" href="/ru/blog">
+              <div class="wrap wrap--sb wrap--ac"><a class="link link--with-icon-reverse link--icon-accent" href="/ru/blog">
                   <svg width="16" height="15" aria-hidden="true">
                     <use xlink:href="/img/sprite.svg#arrow-left"></use>
                   </svg><span>Назад</span></a>
-                <div class="wrap post__time">
-                  <p>2019.06.04</p>
-                </div>
+                <div class="wrap post__time"><span>17</span><span>&nbsp;</span><span>Августа</span><span>,&nbsp;</span><span>2017</span></div>
               </div>
             </div>
             <div class="post__header">
-              <h1 class="post__title post__title--h1">dialog vs Slack</h1>
-              <h6 class="post__title post__title--sub">Альтернатива мессенджеру Slack для средних и крупных компаний.</h6>
+              <h1>dialog vs Slack</h1>
+              <p class="post__sub">Альтернатива мессенджеру Slack для средних и крупных компаний.</p>
               <div class="post__image post__image--header"><img src="https://georgetokmakov.ghost.io/content/images/2019/07/-----------.jpg" alt="Альтернатива мессенджеру Slack для средних и крупных компаний."></div>
-              <div class="box--pattern"></div>
+              <div class="box--post"></div>
             </div>
             <div class="post__content"><!--kg-card-begin: markdown--><p><b>dialog – это альтернатива мессенджеру Slack</b> для средних и крупных компаний, которые осознают значимость безопасности данных и ценят инструменты, повышающие продуктивность коммуникаций сотрудников.</p>
 <p>Мы расскажем, почему вам стоит задуматься о переходе на dialog:</p>
@@ -118,7 +116,7 @@ Slack позволяет компаниям разрабатывать бото�
                     </div>
                     <div class="blog__text-box">
                       <h3 class="blog__card-title">Корпоративный мессенджер для локальной сети</h3>
-                      <p class="blog__date"><span>02</span>&nbsp;&nbsp;<span>Февраля</span><span>, &nbsp;</span><span>2019</span></p>
+                      <p class="blog__date"><span>02</span>&nbsp;&nbsp;<span>Октября</span><span>, &nbsp;</span><span>2019</span></p>
                     </div></a></li>
                 <li class="blog__item"><a class="blog__card" href="/ru/blog/korporativnyi-miessiendzhier-vidy-vozmozhnosti-i-sfiery-primienieniia/">
                     <div class="blog__img-box">
@@ -128,7 +126,7 @@ Slack позволяет компаниям разрабатывать бото�
                     </div>
                     <div class="blog__text-box">
                       <h3 class="blog__card-title">Корпоративный мессенджер - виды, возможности и сферы применения</h3>
-                      <p class="blog__date"><span>02</span>&nbsp;&nbsp;<span>Февраля</span><span>, &nbsp;</span><span>2019</span></p>
+                      <p class="blog__date"><span>02</span>&nbsp;&nbsp;<span>Октября</span><span>, &nbsp;</span><span>2019</span></p>
                     </div></a></li>
                 <li class="blog__item"><a class="blog__card" href="/ru/blog/cifrovaya_gigiena/">
                     <div class="blog__img-box">
@@ -138,7 +136,7 @@ Slack позволяет компаниям разрабатывать бото�
                     </div>
                     <div class="blog__text-box">
                       <h3 class="blog__card-title">Цифровая гигиена: как уберечь переписку в мессенджерах от конкурентов</h3>
-                      <p class="blog__date"><span>15</span>&nbsp;&nbsp;<span>Июля</span><span>, &nbsp;</span><span>2020</span></p>
+                      <p class="blog__date"><span>20</span>&nbsp;&nbsp;<span>Июля</span><span>, &nbsp;</span><span>2019</span></p>
                     </div></a></li>
               </ul><a class="link link--with-icon link--icon-accent" href="/ru/blog">Смотреть все
                 <svg width="16" height="15" aria-hidden="true">
@@ -152,7 +150,7 @@ Slack позволяет компаниям разрабатывать бото�
             <div class="cta cta--form">
               <div class="form form--cta">
                 <div class="form__wrapper">
-                  <form class="form__content" action="#" method="POST" autocomplete="on" id="cta-main">
+                  <form class="form__content" autocomplete="on" id="form-blog" onsubmit="event.preventDefault();emailSendBlog('ru','dialog-slack-alternative-2');">
                     <h3 class="form__title">Подпишитесь на свежие статьи блога!</h3>
                     <div class="form__row">
                       <div class="form__input-text-wrap">
@@ -161,8 +159,10 @@ Slack позволяет компаниям разрабатывать бото�
                           <label for="email-1">Ваша эл.почта</label>
                         </div>
                       </div>
-                      <button class="button button--accent form__button button--form" type="submit"><span>Подписаться</span>
-                      </button>
+                      <div class="wrap wrap--ac wrap--message">
+                        <button class="button--accent button button--form" type="submit"><span>Подписаться</span></button><img class="submit__icon submit__icon--light submit__icon--absolute" src="/img/loader.gif" alt="Анимирование изображение загрузки"/>
+                        <div class="submit__message submit__message--absolute"><span>Спасибо за заявку</span></div>
+                      </div>
                     </div>
                   </form>
                 </div>
@@ -174,7 +174,7 @@ Slack позволяет компаниям разрабатывать бото�
       <div class="page__footer">
         <footer class="footer">
           <div class="footer__wrapper">
-            <div class="footer__logo"><a class="footer__link" href="/"><img src="/img/library/logo-dialog-white.svg" alt="Логотип мессенджера Dialog" width="139"/></a></div>
+            <div class="footer__logo"><a class="footer__link" href="/"><img src="/img/library/logo-dialog-white.svg" alt="Логотип мессенджера Диалог" width="139"/></a></div>
             <ul class="footer__contacts">
               <li><a class="footer__link" href="tel:+78007758202">+7 (800) 775-82-02</a></li>
               <li><a class="footer__link footer__link--underline" href="mailto:info@dlg.im">info@dlg.im</a></li>
@@ -228,7 +228,7 @@ Slack позволяет компаниям разрабатывать бото�
               <p>© 2016—2020 ООО «Диалог»</p>
               <p>ИНН: 7804568396</p>
             </div>
-            <div class="footer__promo-link"><a class="footer__link" href="#!" target="_blank" rel="noopener noreferrer" aria-label="Сколково"><img src="/img/footer/sk-logo.svg" alt="Надпись: участник Сколково" width="100"/></a></div>
+            <div class="footer__promo-link"><a class="footer__link" href="https://sk.ru/" target="_blank" rel="noopener noreferrer" aria-label="Сколково"><img src="/img/footer/sk-logo.svg" alt="Надпись: участник Сколково" width="100"/></a></div>
           </div>
         </footer>
       </div>
@@ -241,9 +241,7 @@ Slack позволяет компаниям разрабатывать бото�
             <div class="form__wrapper form__wrapper--modal">
               <h2 class="form__title form__title--modal">Получить предложение</h2>
               <div class="form__form">
-                <form autocomplete="on" id="form-offer-modal" onsubmit="event.preventDefault();emailSendOffer('ru',true);">
-                  <input type="text" id="location" name="location" value="form sent from main page" hidden="hidden"/>
-                  <input type="text" id="language" name="language" value="ru" hidden="hidden"/>
+                <form autocomplete="on" id="form-offer-modal" onsubmit="event.preventDefault();emailSendOffer('ru',true,'post');">
                   <div class="form__input-text-wrap">
                     <div class="form__form-field form__form-field--text form__form-field--m form__form-field--1 form__form-field--modal">
                       <input type="text" id="name-2" name="name" pattern="([A-Za-zА-ЯЁа-яё-]{2,}\s?)+" placeholder="Ваше имя" title="Имя может состоять только из букв, пробелов и дефиса" required="required"/>
@@ -282,7 +280,7 @@ Slack позволяет компаниям разрабатывать бото�
                     </div>
                   </div>
                   <div class="wrap wrap--ac">
-                    <button class="button--accent button button--form" type="submit"><span>Отправить заявку</span></button><img class="submit__icon" src="/img/loader.gif"/>
+                    <button class="button--accent button button--form" type="submit"><span>Отправить заявку</span></button><img class="submit__icon" src="/img/loader.gif" alt="Анимирование изображение загрузки"/>
                     <div class="submit__message"><span>Спасибо за заявку</span></div>
                   </div>
                 </form>
@@ -294,6 +292,5 @@ Slack позволяет компаниям разрабатывать бото�
     </div>
     <script src="/js/vendor.min.js"></script>
     <script src="/js/index.min.js"></script>
-    <script src="/js/email.js"></script>
   </body>
 </html>

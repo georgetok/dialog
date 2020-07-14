@@ -1,6 +1,6 @@
 include ./button
 
-mixin form-offer (isModal, idNumber, formId)
+mixin form-offer (isModal, idNumber, formId, pageName)
   .form.form--main(class=(isModal ? 'form--modal' : null)).box.box--white
     .form__wrapper(class=(isModal ? 'form__wrapper--modal' : null))
       h2.form__title(class=(isModal ? 'form__title--modal' : null))=t.form.request_title
@@ -8,22 +8,8 @@ mixin form-offer (isModal, idNumber, formId)
         form(
           autocomplete="on"
           id!=formId
-          onsubmit=`event.preventDefault();emailSendOffer('${lang}',${isModal});`
+          onsubmit=`event.preventDefault();emailSendOffer('${lang}',${isModal},'${pageName}');`
         )
-          input(
-            type="text"
-            id=`location`
-            name="location"
-            value='form sent from main page'
-            hidden
-          )
-          input(
-            type="text"
-            id=`language`
-            name="language"
-            value=lang
-            hidden
-          )
           .form__input-text-wrap
             .form__form-field.form__form-field--text.form__form-field--m.form__form-field--1(class=(isModal ? 'form__form-field--modal' : null))
               input(
@@ -67,11 +53,10 @@ mixin form-offer (isModal, idNumber, formId)
                 required
               )
               label(for=`company-${idNumber}`)=t.form.company
-            .form__form-field.form__form-field--text.form__form-field--5(class=(isModal ? 'form__form-field--modal' : null))
+            .form__form-field.form__form-field--text.form__form-field--select.form__form-field--5(class=(isModal ? 'form__form-field--modal' : null))
               select(
                 id=`quantity-${idNumber}`
                 name="quantity-users"
-                required
               )
                 option(value="1-100") 1-100
                 option(value="101-500") 101-500
@@ -101,6 +86,6 @@ mixin form-offer (isModal, idNumber, formId)
               type="submit"
             )
               span= t.button.request
-            img.submit__icon(src="/img/loader.gif")
+            img.submit__icon(src="/img/loader.gif" alt=t.alt.loader)
             .submit__message
-              span Спасибо за заявку
+              span=t.form.sent

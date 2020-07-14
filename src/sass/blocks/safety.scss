@@ -11,6 +11,20 @@
     padding-top: 60px;
     padding-bottom: 53px;
   }
+
+  @include mobile-sm {
+    padding-top: 35px;
+  }
+
+  .icon {
+    position: absolute;
+    top: 0;
+    left: 20px;
+    top: 40px;
+    @include laptop {
+      position: static;
+    }
+  }
 }
 
 .safety__wrapper {
@@ -55,9 +69,8 @@
 .safety__item {
   position: relative;
   width: calc(100% / 2 - 12px);
-  padding-left: 106px;
   background: #fff;
-  box-shadow: 0px 2px 20px rgba(152, 136, 196, 0.16);
+  box-shadow: 0 2px 20px rgba(152, 136, 196, 0.16);
   padding: 35px 20px 20px 130px;
 
   @include laptop {
@@ -117,22 +130,6 @@
   }
 }
 
-.safety__icon {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-width: 90px;
-  min-height: 90px;
-  border-radius: 50%;
-  background-color: $color-accent;
-  position: absolute;
-  top: 0;
-  left: 20px;
-  top: 40px;
-  @include laptop {
-    position: static;
-  }
-}
 
 .safety__listbox {
   @include no-list;

@@ -4,7 +4,7 @@ const download = () => {
   let os = 'Not known';
   console.log(os);
   if (navigator.userAgent.indexOf('Mac') !== -1 && navigator.userAgent.indexOf('iPhone') !== -1) {
-    os = 'iOS OS';
+    // os = 'iOS OS';
     document.getElementById('ios-hero').classList.add('is-visible');
     document.getElementById('ios-col').classList.remove('is-visible');
   } else if (navigator.userAgent.indexOf('Win') !== -1) {
@@ -25,13 +25,13 @@ const download = () => {
     document.getElementById('macos-col').classList.remove('is-visible');
   }
 
-  console.log('MacOS', navigator.userAgent.indexOf('Mac') !== -1);
-  console.log('like Mac', navigator.userAgent.indexOf('like Mac') !== -1);
-  console.log('Android', navigator.userAgent.indexOf('Android') !== -1);
-  console.log('Linux', navigator.userAgent.indexOf('Linux') !== -1);
-  console.log('Windows', navigator.userAgent.indexOf('Windows') !== -1);
-  console.log(JSON.stringify(os));
-  console.log(JSON.stringify(navigator.userAgent));
+  // console.log('MacOS', navigator.userAgent.indexOf('Mac') !== -1);
+  // console.log('like Mac', navigator.userAgent.indexOf('like Mac') !== -1);
+  // console.log('Android', navigator.userAgent.indexOf('Android') !== -1);
+  // console.log('Linux', navigator.userAgent.indexOf('Linux') !== -1);
+  // console.log('Windows', navigator.userAgent.indexOf('Windows') !== -1);
+  // console.log(JSON.stringify(os));
+  // console.log(JSON.stringify(navigator.userAgent));
 
 };
 

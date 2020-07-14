@@ -7,7 +7,9 @@
     flex-wrap: wrap;
 
     @include mobile-sm {
-      margin-top: 0;
+      @include gap-no;
+      margin: 0;
+      width: 100%;
     }
   }
 
@@ -28,8 +30,6 @@
       max-width: 100%;
     }
   }
-
-
 }
 
 #ios-hero,

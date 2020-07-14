@@ -5,15 +5,35 @@
     letter-spacing: -0.005em;
 
     @include mobile-md {
-      margin-bottom: 31px;
+      margin-bottom: 25px;
     }
   }
 
   .submit__icon {
     display: none;
-    width: 35px;
-    height: 35px;
-    margin-left: 30px;
+    width: 25px;
+    height: 25px;
+    margin-left: 15px;
+
+    &--absolute {
+      position: absolute;
+      bottom: 50%;
+      right: 0;
+      transform: translateX(-20px) translateY(50%);
+      margin-left: 0;
+    }
+
+    &--light {
+      filter: invert(1) contrast(1.5) grayscale(1) brightness(1.5);
+    }
+  }
+
+  .wrap--message {
+    position: relative;
+    @include mobile-sm {
+      margin-top: 40px;
+      width: 100%;
+    }
   }
 
   .submit__message {
@@ -21,13 +41,24 @@
     display: none;
     color: $color-gray-light-1;
     margin-left: 30px;
+
+    &--absolute {
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%) translateY(calc(100% + 10px));
+      text-align: center;
+      width: 100%;
+      margin-left: 0;
+    }
   }
 
   .submit-started {
     .submit__icon {
       display: block;
     }
-    .button{
+
+    .button {
       cursor: not-allowed;
     }
   }
@@ -115,7 +146,7 @@
       font-size: 14px;
       line-height: 18px;
       letter-spacing: 0.01em;
-      color: $color-accent-light;
+      color: $color-accent;
       opacity: 0;
       transition: opacity $transition-props;
     }
@@ -142,7 +173,6 @@
       color: transparent;
     }
   }
-
 }
 
 .form--main, .form--feedback {
@@ -150,11 +180,11 @@
   padding-bottom: 81px;
 
   @include laptop {
-    padding-top: 82px;
+    padding-top: 112px;
   }
 
   @include mobile-md {
-    padding-top: 58px;
+    padding-top: 55px;
     padding-bottom: 51px;
   }
 }
@@ -235,18 +265,18 @@
   .form__input-text-wrap {
     display: flex;
     flex-wrap: wrap;
-    margin-bottom: 30px;
+    margin-bottom: 35px;
 
     @include mobile-md {
       flex-direction: column;
-      margin-bottom: 30px;
+      margin-bottom: 18px;
     }
   }
 
   .form__checkbox-wrap {
     display: flex;
     flex-wrap: wrap;
-    margin-bottom: 50px;
+    margin-bottom: 40px;
 
     @include laptop {
       margin-bottom: 47px;
@@ -401,7 +431,7 @@
       background-color: $color-contrast;
       background-image: url("../img/library/arrow-select.svg");
       background-repeat: no-repeat;
-      background-position: right 6px top 16px;
+      background-position: right 5px center;
       border: none;
       border-radius: 0;
       border-bottom: 1px solid $color-gray-light;
@@ -410,7 +440,8 @@
       transition: border-bottom $transition-props;
 
       @include mobile-md {
-        padding-bottom: 15px;
+        padding-top: 14px;
+        padding-bottom: 14px;
         font-size: 18px;
         line-height: 23px;
       }
@@ -476,9 +507,10 @@
   .form__form-field--checkbox {
     flex-direction: row;
     align-items: center;
+    min-height: 33px;
 
     @include mobile-md {
-      margin-bottom: 30px;
+      margin-bottom: 25px;
 
       &:last-child {
         margin-bottom: 0;
@@ -500,7 +532,7 @@
       @include mobile-md {
         padding-left: 41px;
         font-size: 14px;
-        line-height: 20px;
+        line-height: 18px;
       }
 
       &::before {
@@ -509,8 +541,8 @@
         top: 50%;
         left: 0;
         transform: translateY(-50%);
-        width: 32px;
-        height: 32px;
+        width: 30px;
+        height: 30px;
         background-color: $color-contrast;
         border: 1px solid $color-gray-light;
         border-radius: 2px;
@@ -533,8 +565,8 @@
         top: 50%;
         left: 0;
         transform: translateY(-50%);
-        width: 32px;
-        height: 32px;
+        width: 30px;
+        height: 30px;
         background-color: $color-accent;
         background-image: url("../img/library/check.svg");
         background-repeat: no-repeat;
@@ -574,7 +606,7 @@
     }
 
     @include mobile-md {
-      margin-bottom: 38px;
+      margin-bottom: 30px;
     }
   }
 
@@ -634,29 +666,6 @@
       background-position: center;
     }
   }
-
-  .form__form-field--file {
-    display: flex;
-    align-items: center;
-    margin-right: 40px;
-    cursor: pointer;
-
-    label {
-      cursor: pointer;
-    }
-
-    .icon {
-      border-radius: 50%;
-      margin-right: 10px;
-      width: 40px;
-      height: 40px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background: $bg-gray;
-      box-shadow: 0px 2px 4px rgba(47, 27, 73, 0.08), 0px 1px 1px rgba(47, 41, 64, 0.1);
-    }
-  }
 }
 
 .form--feedback {
@@ -699,8 +708,11 @@
     font-weight: 400;
     max-width: 900px;
     color: $color-gray-dark;
-    margin-bottom: 20px;
+    margin-bottom: 25px;
     margin-top: -15px;
+    @include mobile-md {
+      margin-top: 0;
+    }
   }
 
   .form__checkbox-wrap {
@@ -712,19 +724,105 @@
     }
   }
 
-  .form__form-field--file {
-    @include mobile-md {
-      margin-bottom: 30px;
-      padding-bottom: 20px;
-      border-bottom: 1px solid $color-gray-light-1;
-      width: 100%;
-      margin-right: 0;
-    }
+  .file-name {
+    display: none;
   }
 
   .form__form-field--checkbox {
     @include laptop {
       width: 100%;
+    }
+  }
+
+  .form__form-field--select {
+    label {
+      visibility: hidden;
+    }
+  }
+
+  .form__form-field--file {
+    display: flex;
+    align-items: center;
+    margin-right: 50px;
+
+    @include mobile-md {
+      margin-bottom: 25px;
+      padding-bottom: 18px;
+      border-bottom: 1px solid $color-gray-light-1;
+      width: 100%;
+      margin-right: 0;
+      margin-left: -3px;
+    }
+
+    .icon {
+      border-radius: 50%;
+      margin-right: 11px;
+      width: 40px;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: $bg-gray;
+      box-shadow: 0 2px 4px rgba(47, 27, 73, 0.08), 0 1px 1px rgba(47, 41, 64, 0.1);
+    }
+
+    .upload {
+      fill: $color-accent;
+    }
+
+    .close {
+      display: none;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      right: 0;
+      cursor: pointer;
+      fill: $color-accent-mid-1;
+      stroke: $color-accent-mid-1;
+
+      &:hover {
+        fill: $color-accent;
+        stroke: $color-accent;
+      }
+    }
+
+    label {
+      display: flex;
+      align-items: center;
+      font-weight: 500;
+      position: relative;
+      cursor: pointer;
+
+      &.is-file {
+        padding-right: 35px;
+        pointer-events: none;
+        cursor: not-allowed;
+
+        @include mobile-sm{
+          width: 100%;
+        }
+
+        .upload {
+          fill: $color-contrast
+        }
+
+        .icon {
+          background: $color-accent;
+        }
+
+        .file-name {
+          display: block;
+        }
+
+        .file-send {
+          display: none;
+        }
+
+        .close {
+          display: block;
+          pointer-events: all;
+        }
+      }
     }
   }
 }

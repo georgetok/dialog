@@ -3,7 +3,7 @@ include ../mixins/page-title
 include ../mixins/svg
 include ../mixins/button
 include ../mixins/picture
-include ../mixins/form-cta
+include ../mixins/form-blog
 
 block variables
   -
@@ -11,10 +11,30 @@ block variables
     const desc = t.meta.main_desc;
     const routeClass = "js-route-blog";
     const pageName = "blog";
+    const months = [
+      t.blog.jan,
+      t.blog.feb,
+      t.blog.mar,
+      t.blog.apr,
+      t.blog.may,
+      t.blog.jun,
+      t.blog.jul,
+      t.blog.aug,
+      t.blog.sep,
+      t.blog.oct,
+      t.blog.nov,
+      t.blog.dec
+    ];
+    const getMonth = function(post) {
+      let month = post.published_at.substr(5, 2);
+      if (month.charAt(0) === "0"){
+        month = month.replace(0, '')
+      }
+      return month
+    }
 
 block content
   +page-title(t.blog.title)
-  div=isPost
   section.blog.blog--main.box
     .wrapper.wrapper--main
       ul.blog__list
@@ -27,7 +47,13 @@ block content
                 h3(class="blog__card-title")=post.title
                 p(class="blog__text")=post.custom_excerpt
                 .blog__text-info
-                  p.blog__date=post.created_at.slice(0, 10).split("-").join(".")
+                  p.blog__date
+                    span=post.published_at.substr(8, 2)
+                    span &nbsp;
+                    span=months[getMonth(post) - 1]
+                    span ,&nbsp;
+                    span=post.published_at.substr(0, 4)
+
 
       .wrap.wrap--c
         +button(t.button.view, {styleType: 'dark', type: 'button', additionalClassName: 'show-posts'})
@@ -35,4 +61,4 @@ block content
   section.box.box--lilac
     .wrapper.wrapper--main
       .cta.cta--form.cta--lilac
-        +form-cta(1,'cta-main')
+        +form-blog(1,'form-blog', 'blog')

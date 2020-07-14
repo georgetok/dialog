@@ -75,23 +75,29 @@
   }
 
   &--support {
-    padding: 30px 40px;
+    padding: 33px;
+    box-shadow: $shadow-card;
     @include tablet {
       padding: 30px;
     }
 
     @include mobile-md {
-      padding: 20px
+      padding: 35px 20px
     }
 
-    .card__sub {
-      @include typography-txt;
+    p {
+      margin-bottom: 0;
       margin-top: 0;
     }
 
-    .card__title {
+    h2 {
       @include typography-h3;
-      margin-top: 0;
+      margin-top: 10px;
+      margin-bottom: 20px;
+    }
+
+    .link{
+      margin-top: 35px;
     }
   }
 

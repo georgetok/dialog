@@ -45,8 +45,8 @@ mixin form-feedback (isModal, idNumber, formId)
             class=(isModal ? 'form__form-field--modal' : null))
             input.visually-hidden(
               type="checkbox"
-              id=`accept-${idNumber}`
-              name="accepted"
+              id=`terms-${idNumber}`
+              name="terms"
               checked
               required
             )
@@ -58,7 +58,6 @@ mixin form-feedback (isModal, idNumber, formId)
           )
             span= t.button.request
 
-          img.submit__icon(src="/img/loader.gif")
+          img.submit__icon(src="/img/loader.gif" alt=t.alt.loader)
           .submit__message
-            span
-              | Заявка успешно отправлена
+            span=t.form.sent

@@ -1,5 +1,5 @@
 .protection {
-  padding-top: 55px;
+  padding-top: 35px;
   padding-bottom: 95px;
 
   @include tablet {
@@ -17,6 +17,10 @@
     @include typography-h2;
     margin-left: 15px;
     letter-spacing: -0.005em;
+    white-space: nowrap;
+    @include mobile-xs {
+      white-space: pre-wrap;
+    }
   }
 
   p {
@@ -30,7 +34,12 @@
 
   .wrap {
     &--img {
-      margin-top: 20px;
+      padding-top: 40px;
+      padding-bottom: 40px;
+      @include mobile-sm{
+        padding-top: 20px;
+        padding-bottom: 0;
+      }
 
       .col {
         margin-top: 0;
@@ -38,15 +47,13 @@
 
       .col--right {
         @include col-6;
-        @include row-end;
+        display: flex;
+        justify-content: flex-end;
 
         @include tablet {
-          @include col-8;
-          padding-right: 50px;
-          img {
-            width: 450px !important;
-            margin-top: 20px;
-          }
+          @include col-4;
+          justify-content: flex-start;
+          margin-left: -5vw;
         }
 
         @include mobile-md {
@@ -61,11 +68,10 @@
       .col--left {
         @include col-6;
         z-index: 1;
-
+        padding-right: 25px;
 
         @include tablet {
           @include col-8;
-          padding-right: 50px;
         }
 
         @include mobile-sm {
@@ -80,7 +86,6 @@
             margin-top: 30px;
           }
         }
-
       }
     }
 

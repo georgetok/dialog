@@ -3,7 +3,7 @@ include ../mixins/page-title
 include ../mixins/svg
 include ../mixins/button
 include ../mixins/picture
-include ../mixins/form-cta
+include ../mixins/form-blog
 include ../mixins/blog
 
 block variables
@@ -11,23 +11,45 @@ block variables
     const title = post.meta_title ? post.meta_title : t.meta.post_title;
     const desc = post.meta_description ? post.meta_description : t.meta.main_desc;
     const pageName = "post";
+    const months = [
+      t.blog.jan,
+      t.blog.feb,
+      t.blog.mar,
+      t.blog.apr,
+      t.blog.may,
+      t.blog.jun,
+      t.blog.jul,
+      t.blog.aug,
+      t.blog.sep,
+      t.blog.oct,
+      t.blog.nov,
+      t.blog.dec
+    ];
+    let month = post.published_at.substr(5, 2);
+    if (month.charAt(0) == 0){
+      month = month.replace(0, '')
+    }
 
 block content
   section.post
     .post__wrapper
       .post__nav
         .wrap.wrap--sb.wrap--ac
-          a(class="link link--with-icon-reverse link--accent link--icon-accent" href=`${lang === "ru" ? '/ru/blog' : '/en/blog'}`)
+          a(class="link link--with-icon-reverse link--icon-accent" href=`${lang === "ru" ? '/ru/blog' : '/en/blog'}`)
             +svg('arrow-left', 16, 15)
             span=t.blog.back
           .wrap.post__time
-            p=post.created_at.slice(0, 10).split("-").join(".")
+            span=post.published_at.substr(8, 2)
+            span &nbsp;
+            span=months[month-1]
+            span ,&nbsp;
+            span=post.published_at.substr(0, 4)
       .post__header
-        h1.post__title.post__title--h1=post.title
-        h6.post__title.post__title--sub=post.custom_excerpt
+        h1=post.title
+        p.post__sub=post.custom_excerpt
         .post__image.post__image--header
           img(src=post.feature_image alt=post.custom_excerpt)
-        .box--pattern
+        .box--post
       .post__content
         | !{post.html}
 
@@ -37,4 +59,4 @@ block content
   section.box
     .wrapper.wrapper--main
       .cta.cta--form
-        +form-cta(1,'cta-main')
+        +form-blog(1,'form-blog', post.slug)

@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg"
+     width="1440"
+     height="1"
+     viewBox="0 0 1440 1"
+     fill="none">
+  <line x1="0"
+        y1="0.5"
+        x2="1440"
+        y2="0.5"
+        stroke="#9888C4"
+        stroke-linecap="round"
+        stroke-dasharray="0.1 5"/>
+</svg>

@@ -5,6 +5,7 @@
   label {
     display: flex;
     flex-direction: column-reverse;
+    margin-top: 30px;
   }
 
   textarea {
@@ -34,8 +35,10 @@
     font-size: 21px;
     line-height: 23px;
     letter-spacing: 0.275px;
-    color: inherit;
     transition: color $transition-props;
+    @include mobile-md{
+      font-size: 18px;
+    }
   }
 
   textarea:hover,

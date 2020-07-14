@@ -13,6 +13,19 @@
   }
 }
 
+.features__button-box {
+  @include mobile-sm {
+    width: 100%;
+  }
+
+  .button {
+    @include mobile-sm {
+      min-width: auto;
+      max-width: none;
+    }
+  }
+}
+
 .features__wrapper {
   @include make-block-wrapper;
   padding-left: var(--indent);
@@ -65,8 +78,7 @@
 }
 
 .features__item--direct {
-  grid-template: "img desc" minmax(195px, auto) "img example" auto/
-    51.6% 48.4%;
+  grid-template: "img desc" minmax(195px, auto) "img example" auto/ 51.6% 48.4%;
   margin-bottom: 131px;
 
   @include laptop {
@@ -77,30 +89,26 @@
   }
 
   @include tablet {
-    grid-template: "desc" auto "img" auto "example" auto/
-      100%;
+    grid-template: "desc" auto "img" auto "example" auto/ 100%;
     row-gap: 0;
     margin-bottom: 43px;
   }
 }
 
 .features__item--reverse {
-  grid-template: "desc-1 img-1" minmax(155px, auto) "example-1 img-1" auto/
-    48.4% 51.6%;
+  grid-template: "desc-1 img-1" minmax(155px, auto) "example-1 img-1" auto/ 42.4% 57.6%;
   margin-bottom: 93px;
 
   @include laptop {
-    grid-template: "desc-1 desc-1" auto "example-1 img-1" auto/
-      34.75% 65.25%;
+    grid-template: "desc-1 desc-1" auto "example-1 img-1" auto/ 34.75% 65.25%;
     row-gap: 52px;
     margin-bottom: 70px;
   }
 
   @include tablet {
-    grid-template: "desc-1" auto "img-1" auto "example-1" auto/
-      auto;
+    grid-template: "desc-1" auto "img-1" auto "example-1" auto/ auto;
     row-gap: 0;
-    margin-bottom: 33px;
+    margin-bottom: 53px;
   }
 }
 
@@ -124,33 +132,32 @@
 
 .features__img {
   position: relative;
+  box-shadow: 0 4px 12px rgba(47, 27, 73, 0.12),
+  0 1px 1px rgba(47, 41, 64, 0.08);
+  border-radius: 0 0 12px 12px;
+  overflow: hidden;
 
   @include tablet {
     max-width: 630px;
     margin: 0 auto;
+    border-radius: 0 0 6px 6px;
+    box-shadow: 0 4px 12px rgba(47, 27, 73, 0.12),
+    0 1px 1px rgba(47, 41, 64, 0.08);
   }
   @include mobile-md {
-    max-width: 100%;
-    width: 100%;
+    width: calc(100% - var(--indent) * 2);
+    margin: auto;
   }
 
   video {
     position: relative;
     display: block;
     width: 100%;
-    border-radius: 0 0 12px 12px;
-    box-shadow: 0 4px 12px rgba(47, 27, 73, 0.12),
-    0 1px 1px rgba(47, 41, 64, 0.08);
+    transform: scale(1.009);
 
     @include tablet {
-      width: calc(100% - 60px);
       margin: 0 auto;
       border-radius: 0 0 6px 6px;
-      box-shadow: 0 4px 12px rgba(47, 27, 73, 0.12),
-      0 1px 1px rgba(47, 41, 64, 0.08);
-    }
-    @include mobile-md {
-      width: calc(100% - var(--indent) * 2);
     }
   }
 }
@@ -178,32 +185,9 @@
   }
 }
 
-.features__img--reverse {
-  &::before {
-    content: "";
-    position: absolute;
-    top: -30px;
-    right: -30px;
-    width: 133px;
-    height: 133px;
-    background-repeat: no-repeat;
-    background-position: 0 0;
-    background-size: 133px 133px;
-
-    @include laptop {
-      top: -33px;
-    }
-
-    @include tablet {
-      left: -20px;
-      background-size: 112px 112px;
-    }
-  }
-}
-
 .features__desc {
   position: relative;
-  padding-bottom: 28px;
+  padding-bottom: 20px;
   padding-left: 64px;
   padding-right: 40px;
 
@@ -211,11 +195,13 @@
     padding-left: 49px;
     padding-right: 32%;
   }
-
   @include tablet {
     margin-bottom: 39px;
     padding-left: var(--indent);
     padding-right: var(--indent);
+  }
+  @include mobile-md {
+    margin-bottom: 30px;
   }
 
   span {
@@ -267,7 +253,7 @@
       padding-left: 47px;
     }
     @include mobile-md {
-      padding-left: 0px;
+      padding-left: 0;
     }
   }
 }
@@ -349,10 +335,7 @@
 
   @include tablet {
     margin-bottom: 0;
-    padding-top: 29px;
-    padding-bottom: 37px;
-    padding-left: 40px;
-    padding-right: 40px;
+    padding: 7vw calc(var(--indent) + 47px);
   }
 
   @include mobile-md {
@@ -374,9 +357,10 @@
   h3 {
     @include typography-h4;
     margin-bottom: 12px;
+    margin-top: 5px;
 
     @include laptop {
-      margin-bottom: 8px;
+      margin-bottom: 20px;
     }
 
     @include tablet {
@@ -388,12 +372,10 @@
     @include typography-txt;
 
     @include laptop {
-      font-size: 14px;
-      line-height: 20px;
+      font-size: 16px;
     }
 
     @include tablet {
-      font-size: 16px;
       line-height: 24px;
     }
   }
@@ -408,14 +390,19 @@
   padding-right: 40px;
   grid-area: example-1;
 
-  @include tablet {
-    padding-left: 40px;
-    padding-right: 40px;
+  @include mid {
+    padding: 20px;
   }
 
+  @include tablet {
+    padding: 7vw calc(var(--indent) + 47px);
+  }
   @include mobile-md {
-    padding-left: 30px;
-    padding-right: 30px;
+    margin-bottom: 0;
+    padding-top: 29px;
+    padding-bottom: 37px;
+    padding-left: var(--indent);
+    padding-right: var(--indent);
   }
 }
 

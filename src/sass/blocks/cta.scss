@@ -1,5 +1,10 @@
 .cta {
   padding: 80px;
+
+  @include tablet {
+    padding: 60px;
+  }
+
   @include mobile-md {
     padding-left: 0;
     padding-right: 0;
@@ -13,6 +18,7 @@
   .button {
     @include mobile-sm {
       width: 100%;
+      min-width: auto;
     }
   }
 
@@ -33,7 +39,7 @@
   &--form {
     padding-top: 90px;
     padding-bottom: 95px;
-    @include mobile-sm{
+    @include mobile-sm {
       padding-bottom: 60px;
       padding-top: 60px;
     }
@@ -56,14 +62,14 @@
       margin-bottom: 20px;
     }
     @include mobile-sm {
-      font-size: 6.8vw;
-      width: 190%;
+      font-size: 24px;
+      width: calc(100% + 20px);
+      margin-left: -10px;
+      margin-right: -10px;
       line-height: 1.2;
-      margin-left: -10vw;
-      margin-right: -10vw;
     }
-    @include mobile-xxs {
-      font-size: 21px;
+    @include mobile-xs {
+      font-size: 7vw;
     }
   }
 

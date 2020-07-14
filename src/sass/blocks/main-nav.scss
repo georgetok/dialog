@@ -40,13 +40,13 @@
 
   @include laptop {
     display: flex;
-    padding: 10px 40px 14px;
+    padding: 14px 40px 14px;
     line-height: 25px;
     border-bottom: 1px solid $color-accent-light;
   }
 
   @include mobile-md {
-    padding: 10px 20px 14px;
+    padding: 14px 20px 14px;
   }
 
   &:hover,

@@ -1,24 +1,58 @@
 .post {
-  padding-top: 42px;
-  padding-bottom: 86px;
+  padding-top: 40px;
+  padding-bottom: 80px;
   overflow: hidden;
 
+  @include laptop {
+    padding-bottom: 60px;
+  }
+
   @include mobile-md {
-    padding-top: 20px;
+    padding-top: 0;
     padding-bottom: 35px;
   }
 
   .post__content, .post__header {
     p {
-      @include typography-txt-big;
+      font-size: 21px;
       color: $color-base;
       display: block;
-      margin-top: 30px;
-      margin-bottom: 35px;
+      line-height: 1.5;
+
+      &:not(#_) {
+        margin-bottom: 25px;
+      }
+
+      @include mobile-md {
+        font-size: 16px;
+      }
+
+      img {
+        display: block;
+        margin-top: 60px;
+        margin-bottom: 40px;
+      }
+
+      &[style^="display: flex"] {
+        margin-top: 0;
+        img{
+          @include mobile-sm{
+            margin-top: 0;
+          }
+        }
+      }
+    }
+
+    .post__sub {
+      @include typography-subhead;
     }
 
     img {
       width: 100%;
+    }
+
+    blockquote {
+      margin-left: 0;
     }
 
     button {
@@ -26,14 +60,27 @@
       color: $color-contrast;
     }
 
+    strong {
+      font-weight: 500;
+
+      strong {
+        @include typography-h5;
+      }
+    ;
+    }
+
+    br {
+      display: none;
+    }
+
     a {
       color: $color-accent;
     }
 
     h1 {
-      @include typography-h2;
+      @include typography-h1;
       margin-top: 40px;
-      margin-bottom: 40px;
+      margin-bottom: 25px;
       @include mobile-md {
         margin-top: 20px;
       }
@@ -41,27 +88,47 @@
 
     h2 {
       @include typography-h3;
+      line-height: 1.2;
+      margin-bottom: 28px;
+      margin-top: 70px;
     }
 
     h3 {
       @include typography-h4;
+      margin-top: 70px;
+      margin-bottom: 28px;
+    }
+
+    h4 {
+      @include typography-h5;
+      margin-top: 70px;
+      margin-bottom: 28px;
     }
 
     h6 {
-      @include typography-txt-big;
+      @include typography-h6;
       font-weight: 500;
       color: $color-base;
       display: block;
       margin-bottom: 40px;
     }
 
+    p + ol {
+      margin-top: -5px;
+    }
+
     ul, ol {
       list-style: none;
       padding-left: 30px;
+      margin-bottom: 60px;
 
       li {
         position: relative;
         margin-top: 20px;
+        font-size: 21px;
+        @include mobile-md {
+          font-size: 16px;
+        }
       }
 
       li::before {
@@ -77,12 +144,43 @@
     }
   }
 
+  .link {
+    @include typography-txt-sm;
+    font-weight: 500;
+
+    &:not(#_) {
+      margin-bottom: 0;
+    }
+
+    &:not(:hover) {
+      color: $color-gray-dark
+    }
+  }
 }
 
 .post__nav {
-  border-bottom: 1px dashed $color-accent-light;
+  @include pseudo-absolute;
+
+  padding-top: 20px;
+  padding-bottom: 15px;
+  position: relative;
   @include mobile-md {
-    border-bottom: none;
+    padding-top: 35px;
+    padding-bottom: 25px;
+  }
+
+  &:after {
+    background-image: url("../img/line-pattern.svg");
+    background-repeat: no-repeat;
+    background-size: 1440px;
+    background-position: center;
+    width: 100%;
+    height: 3px;
+    left: 0;
+    bottom: 0;
+    @include mobile-md {
+      display: none;
+    }
   }
 }
 
@@ -123,18 +221,8 @@
 
 .post__image {
   margin-top: 50px;
-  margin-bottom: 50px;
   display: flex;
   justify-content: center;
-
 }
 
-.post__header {
-  .box--pattern {
-    margin-top: -7vw;
-    @include mobile-sm {
-      margin-top: -50px;
-    }
-  }
-}
 

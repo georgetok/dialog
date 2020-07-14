@@ -83,10 +83,8 @@
   color: $color-contrast;
 }
 
-.box--pattern {
-  position: relative;
-  height: 100px;
-
+.box--post {
+  margin-bottom: 40px;
 
   &:after {
     content: "";
@@ -95,18 +93,43 @@
     width: 100vw;
     left: 50%;
     transform: translateX(-50%);
-    height: 260px;
-    position: absolute;
     bottom: 0;
     z-index: -1;
+    background-size: 250px;
+    height: 210px;
+    position: relative;
+    margin-top: -18%;
+
+    @include tablet {
+      height: calc(100px + 15vw);
+      margin-top: calc(-30px + -15vw);
+    }
+  }
+}
+
+.box--integrations {
+  position: relative;
+  height: 95px;
+  @include tablet {
+    height: 80px;
+  }
+  @include mobile-sm {
+    height: 90px;
+    margin-bottom: 30px;
   }
 
-  @include mobile-xs {
-    &:after {
-      background: url("/img/pattern.svg") repeat;
-      background-size: 89%;
-      width: 115%;
-      background-position: 95% 91%;
-    }
+  &:after {
+    content: "";
+    background: url("/img/pattern.svg") repeat;
+    background-position: center;
+    display: block;
+    width: 100vw;
+    left: 50%;
+    height: 263px;
+    position: absolute;
+    transform: translateX(-50%);
+    bottom: 0;
+    z-index: -1;
+    background-size: 280px;
   }
 }

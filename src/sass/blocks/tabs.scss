@@ -60,6 +60,9 @@
     background-size: 14px 12px;
     justify-content: flex-start;
   }
+  @include mobile-sm {
+    background-position: center right 15px;
+  }
 
   &:last-of-type {
     margin-right: 0;
@@ -80,7 +83,6 @@
       content: none;
     }
   }
-
 
   svg {
     width: 39px;
@@ -170,7 +172,7 @@
   @include mobile-md {
     display: block;
     margin-bottom: 20px;
-    box-shadow: 0px 2px 20px rgba(152, 136, 196, 0.16);
+    box-shadow: 0 2px 20px rgba(152, 136, 196, 0.16);
   }
 }
 
@@ -280,12 +282,10 @@
   padding-bottom: 66px;
   display: flex;
   justify-content: flex-end;
-  align-items: center;
   width: 55%;
   background-repeat: no-repeat;
   background-position: bottom 16px left 116px;
   background-size: 112px 112px;
-  display: flex;
   align-items: flex-end;
 
   @include laptop {
@@ -349,8 +349,8 @@
     width: 33.5%;
     height: 0;
     padding-bottom: 33%;
-    background-size: 200%;
-    background-image: url(../img/pattern-2.svg);
+    background-size: 100%;
+    background-image: url(../img/pattern-3.svg);
 
     @include mobile-md {
       display: none;
@@ -374,6 +374,7 @@
     border: 1px solid $color-gray-light-1;
     border-radius: 4px;
     overflow: hidden;
+    flex-wrap: wrap;
 
     @include mobile-md {
       border: none;
@@ -400,6 +401,7 @@
     display: block;
     margin-left: auto;
     height: 100%;
+    cursor: pointer;
 
     @include laptop {
       max-width: unset;

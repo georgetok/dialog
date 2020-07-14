@@ -28,6 +28,7 @@
     "gulp-sourcemaps": "2.6.x",
     "gulp-svgo": "^2.2.1",
     "gulp-svgstore": "^7.0.1",
+    "gulp-terser": "^1.2.0",
     "gulp-uglify": "^3.0.2",
     "gulp-webp": "^4.0.1",
     "imagemin-mozjpeg": "^8.0.0",
@@ -47,12 +48,11 @@
     "editorconfig": "editorconfig-cli",
     "stylelint": "stylelint \"src/sass/**/*.scss\" --syntax scss",
     "test": "npm run editorconfig && npm run stylelint && eslint src/js/",
-    "build": "gulp build",
-    "images": "gulp images",
     "blog": "gulp blog",
     "start": "gulp start",
-    "webp": "gulp webp",
-    "sprite": "gulp sprite"
+    "files": "gulp files",
+    "minify": "gulp minify",
+    "recreate": "gulp recreate"
   },
   "browserslist": [
     "last 2 versions",

@@ -7,6 +7,6 @@ include ./form-offer
   const isModal = true;
   const formID = 'form-offer-modal'
 
-mixin modal-offer
+mixin form-modal(pageName)
   +modal(modalID)
-    +form-offer(isModal, formIDNumber, formID)
+    +form-offer(isModal, formIDNumber, formID, pageName)

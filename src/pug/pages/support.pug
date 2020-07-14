@@ -17,21 +17,17 @@ block content
   +page-title(t.support.title)
   .feedback
     .wrapper.wrapper--main
-      .wrap.wrap--gap-lg.wrap--as.wrap--sb.wrap--main
+      .wrap.wrap--as.wrap--sb.wrap--main
         .col.col--left
           +form-feedback(false, 1, 'form-feedback')
         .col.col--right
-          .card.card--dark.card--support
-            h2.card__title=t.support.sub
-            p.card__sub=t.support.text
-            .wrap.wrap--mt
-              a.link.link--accent.link--icon-accent.link--with-icon(href="https://support.dlg.im/" target="_blank")
-                | !{t.support.link}
-                +svg('arrow-right',12, 10)
           .card.card--support
-            p.card__sub
-              span
-                | !{t.support.connect}
-              .wrap.wrap--mt
-                a.link.link--accent(href="mailto:support@dlg.im" target="_blank")
-                  | support@dlg.im
+            .wrap
+              img(src='/img/icon-support.svg' alt=t.alt.support)
+            h2.card__title=t.support.letter
+            p.card__sub=t.support.connect
+            a.link--with-icon.link.link--accent.link--icon-accent(
+              href="https://support.dlg.im/"
+              target="_blank"
+            ) support@dlg.im
+              +svg('arrow-right',15, 13)

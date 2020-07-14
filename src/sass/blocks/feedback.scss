@@ -1,40 +1,35 @@
 .feedback {
   .wrap {
     &--main {
+      @include gap-lg;
       @include mobile-md {
+        @include gap-no;
         flex-wrap: wrap;
       }
-    }
 
-    &--mt {
-      margin-top: 5px;
-    }
-  }
+      .col {
+        &--left {
+          width: calc(100% / 12 * 7);
 
+          @include tablet {
+            width: 100%;
+          }
+          @include mobile-md {
+            margin-top: 30px;
+          }
+        }
 
-  .col {
-    &--left:not(#_) {
-      width: calc(100% / 12 * 7);
+        &--right {
+          width: calc(100% / 12 * 4.8);
 
-      @include tablet {
-        width: 100%;
-      }
-      @include mobile-md {
-        margin-top: 30px;
-      }
-    }
-
-    &--right:not(#_) {
-      width: calc(100% / 12 * 4.8);
-
-      @include tablet {
-        width: 100%;
-      }
-      @include mobile-md {
-        margin-top: 0;
-        width: calc(100% + var(--indent) * 2);
-        margin-left: calc(var(--indent) * -1);
-        margin-right: calc(var(--indent) * -1);
+          @include tablet {
+            width: 100%;
+          }
+          @include mobile-md {
+            margin-top: 0;
+            margin-bottom: 50px;
+          }
+        }
       }
     }
   }

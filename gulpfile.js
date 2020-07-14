@@ -287,7 +287,6 @@ gulp.task('images:minify', function () {
     .src([Paths.images.src, `!${Paths.images.spriteSrc}`])
     .pipe(
       imagemin([
-        imagemin.gifsicle(),
         imagemin.optipng({
           optimizationLevel: 6,
         }),

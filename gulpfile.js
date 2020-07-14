@@ -603,7 +603,7 @@ gulp.task('blog', gulp.series('blog:ru', 'blog:en', 'posts:ru', 'posts:en', 'jso
 
 gulp.task('minify', gulp.series('images:minify'));
 gulp.task('files', gulp.series('graphic', 'copy'));
-gulp.task('build', gulp.series('index', 'html', 'home'));
-gulp.task('start', gulp.series('css', 'js', 'build', 'server'));
+gulp.task('main', gulp.series('index', 'html', 'home'));
+gulp.task('start', gulp.series('css', 'js', 'main', 'server'));
 gulp.task('recreate', gulp.series('clean', 'blog', 'files', 'start'));
 gulp.task('build', gulp.series('clean', 'blog', 'files', 'minify', 'start'));

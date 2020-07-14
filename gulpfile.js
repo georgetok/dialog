@@ -546,6 +546,7 @@ gulp.task('server', function () {
     open: true,
     cors: true,
     ui: false,
+    ghostMode: false
   });
   gulp.watch(`${SOURCE_PATH}sass/**/*.scss`, gulp.series('css'));
   gulp.watch(`${SOURCE_PATH}pug/**/*.pug`, gulp.series('build', 'refresh'));

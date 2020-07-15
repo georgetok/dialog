@@ -543,9 +543,10 @@ gulp.task('server', function () {
   server.init({
     server: BUILD_PATH,
     notify: false,
-    open: true,
+    open: false,
     cors: true,
     ui: false,
+    host: "0.0.0.0",
   });
   gulp.watch(`${SOURCE_PATH}sass/**/*.scss`, gulp.series('css'));
   gulp.watch(`${SOURCE_PATH}pug/**/*.pug`, gulp.series('build', 'refresh'));
@@ -616,6 +617,6 @@ gulp.task('blog', gulp.series('blog:ru', 'blog:en', 'posts:ru', 'posts:en', 'jso
 
 gulp.task('minify', gulp.series('images:minify'));
 gulp.task('files', gulp.series('graphic', 'copy'));
-gulp.task('build', gulp.series('index', 'html', 'home'));
+gulp.task('build', gulp.series('copy', 'index', 'html', 'css', 'js', 'home'));
 gulp.task('start', gulp.series('css', 'js', 'build', 'server'));
-gulp.task('recreate', gulp.series('clean', 'blog', 'files', 'start'));
+gulp.task('recreate', gulp.series('blog', 'files'));

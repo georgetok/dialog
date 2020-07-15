@@ -609,6 +609,6 @@ gulp.task('blog', gulp.series('blog:ru', 'blog:en', 'posts:ru', 'posts:en', 'jso
 gulp.task('minify', gulp.series('images:minify'));
 gulp.task('files', gulp.series('graphic', 'copy'));
 gulp.task('main', gulp.series('index', 'html', 'home'));
-gulp.task('start', gulp.series('css', 'js', 'main', 'server'));
+gulp.task('start', gulp.series('server'));
 gulp.task('recreate', gulp.series('clean', 'blog', 'files'));
-gulp.task('build', gulp.series('clean', 'blog', 'files', 'minify'));
+gulp.task('build', gulp.series('clean', 'blog', 'files', 'minify', 'css', 'js', 'main'));

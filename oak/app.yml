@@ -1,0 +1,20 @@
+services:
+    this:
+      deploy:
+        resources:
+          minimal: 
+            requests:
+              cpu: 50m
+              memory: 50Mi
+            limits:
+              cpu: 150m
+              memory: 200Mi
+      ingress:
+        http-api:
+          port: 3000
+          controllers:
+            router:
+            - path: /
+              host: ${project.endpoints.site}
+              options:
+                ssl_verify_client: ${project.router.mutual-tls.enabled}

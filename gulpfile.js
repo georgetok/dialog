@@ -542,9 +542,10 @@ gulp.task('server', function () {
   server.init({
     server: BUILD_PATH,
     notify: false,
-    open: true,
+    open: false,
     cors: true,
     ui: false,
+    host: "0.0.0.0",
     ghostMode: false
   }, (err, bs) => {
     bs.addMiddleware("*", (req, res) => {
@@ -609,5 +610,5 @@ gulp.task('minify', gulp.series('images:minify'));
 gulp.task('files', gulp.series('graphic', 'copy'));
 gulp.task('main', gulp.series('index', 'html', 'home'));
 gulp.task('start', gulp.series('css', 'js', 'main', 'server'));
-gulp.task('recreate', gulp.series('clean', 'blog', 'files', 'start'));
-gulp.task('build', gulp.series('clean', 'blog', 'files', 'minify', 'start'));
+gulp.task('recreate', gulp.series('clean', 'blog', 'files'));
+gulp.task('build', gulp.series('clean', 'blog', 'files', 'minify'));

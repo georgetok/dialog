@@ -546,6 +546,11 @@ gulp.task('server', function () {
     cors: true,
     ui: false,
     ghostMode: false
+  }, (err, bs) => {
+    bs.addMiddleware("*", (req, res) => {
+      res.write(fs.readFileSync('build/404.html'));
+      res.end();
+    });
   });
   gulp.watch(`${SOURCE_PATH}sass/**/*.scss`, gulp.series('css'));
   gulp.watch(`${SOURCE_PATH}pug/**/*.pug`, gulp.series('build', 'refresh'));

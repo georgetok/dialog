@@ -1,5 +1,20 @@
 <!DOCTYPE html>
 <html lang="ru">
+  <script>
+    (function (w, d, s, l, i) {
+      w[l] = w[l] || [];
+      w[l].push({
+        'gtm.start':
+          new Date().getTime(), event: 'gtm.js'
+      });
+      var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : '';
+      j.async = true;
+      j.src =
+        'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+      f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-MHX7HL6');
+  </script>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="format-detection" content="telephone=no">
@@ -10,6 +25,7 @@
   <link rel="stylesheet" href="/css/style.min.css">
   <link rel="shortcut icon" href="/img/favicon.png">
   <body>
+    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MHX7HL6" height="0" width="0" style="display:none;visibility:hidden"></iframe>
     <div class="page">
       <header class="header js-header">
         <div class="header__wrapper"><a class="header__logo" href="/ru"><img src="/img/library/logo-dialog.svg" alt="Логотип мессенджера Диалог"/></a>
@@ -89,7 +105,7 @@
                     </div>
                     <div class="blog__text-box">
                       <h3 class="blog__card-title">Цифровая гигиена: как уберечь переписку в мессенджерах от конкурентов</h3>
-                      <p class="blog__date"><span>20</span>&nbsp;&nbsp;<span>Июля</span><span>, &nbsp;</span><span>2019</span></p>
+                      <p class="blog__date"><span>20</span>&nbsp;&nbsp;<span>Марта</span><span>, &nbsp;</span><span>2019</span></p>
                     </div></a></li>
               </ul><a class="link link--with-icon link--icon-accent" href="/ru/blog">Смотреть все
                 <svg width="16" height="15" aria-hidden="true">
@@ -185,65 +201,65 @@
           </div>
         </footer>
       </div>
-    </div>
-    <div class="modal" id="modal-offer">
-      <div class="modal__overlay">
-        <div class="modal__content">
-          <button class="modal__close" type="button" aria-label="Закрыть"></button>
-          <div class="form form--main form--modal box box--white">
-            <div class="form__wrapper form__wrapper--modal">
-              <h2 class="form__title form__title--modal">Получить предложение</h2>
-              <div class="form__form">
-                <form autocomplete="on" id="form-offer-modal" onsubmit="event.preventDefault();emailSendOffer('ru',true,'post');">
-                  <div class="form__input-text-wrap">
-                    <div class="form__form-field form__form-field--text form__form-field--m form__form-field--1 form__form-field--modal">
-                      <input type="text" id="name-2" name="name" pattern="([A-Za-zА-ЯЁа-яё-]{2,}\s?)+" placeholder="Ваше имя" title="Имя может состоять только из букв, пробелов и дефиса" required="required"/>
-                      <label for="name-2">Ваше имя</label>
+      <div class="modal" id="modal-offer">
+        <div class="modal__overlay">
+          <div class="modal__content">
+            <button class="modal__close" type="button" aria-label="Закрыть"></button>
+            <div class="form form--main form--modal box box--white">
+              <div class="form__wrapper form__wrapper--modal">
+                <h2 class="form__title form__title--modal">Получить предложение</h2>
+                <div class="form__form">
+                  <form autocomplete="on" id="form-offer-modal" onsubmit="event.preventDefault();emailSendOffer('ru',true,'post');">
+                    <div class="form__input-text-wrap">
+                      <div class="form__form-field form__form-field--text form__form-field--m form__form-field--1 form__form-field--modal">
+                        <input type="text" id="name-2" name="name" pattern="([A-Za-zА-ЯЁа-яё-]{2,}\s?)+" placeholder="Ваше имя" title="Имя может состоять только из букв, пробелов и дефиса" required="required"/>
+                        <label for="name-2">Ваше имя</label>
+                      </div>
+                      <div class="form__form-field form__form-field--text form__form-field--m form__form-field--3 form__form-field--modal">
+                        <input type="email" id="email-2" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" placeholder="Ваша эл.почта" title="Email адрес должен быть типа: user@mail.com" required="required"/>
+                        <label for="email-2">Ваша эл.почта</label>
+                      </div>
+                      <div class="form__form-field form__form-field--text form__form-field--s form__form-field--2 form__form-field--modal">
+                        <input type="tel" id="phone-2" name="phone" placeholder="Телефон" title="Номер телефона должен начинаться с символов +7 и содержать 11 цифр" pattern="\+7[0-9]{10}" required="required"/>
+                        <label for="phone-2">Телефон</label>
+                      </div>
+                      <div class="form__form-field form__form-field--text form__form-field--s form__form-field--4 form__form-field--modal">
+                        <input type="text" id="company-2" name="company" placeholder="Название компании" required="required"/>
+                        <label for="company-2">Название компании</label>
+                      </div>
+                      <div class="form__form-field form__form-field--text form__form-field--select form__form-field--5 form__form-field--modal">
+                        <select id="quantity-2" name="quantity-users">
+                          <option value="1-100">1-100</option>
+                          <option value="101-500">101-500</option>
+                          <option value="501-1000">501-1000</option>
+                          <option value="1000+">1000+</option>
+                        </select>
+                        <label for="quantity-2">Количество пользователей</label>
+                      </div>
                     </div>
-                    <div class="form__form-field form__form-field--text form__form-field--m form__form-field--3 form__form-field--modal">
-                      <input type="email" id="email-2" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" placeholder="Ваша эл.почта" title="Email адрес должен быть типа: user@mail.com" required="required"/>
-                      <label for="email-2">Ваша эл.почта</label>
+                    <div class="form__checkbox-wrap">
+                      <div class="form__form-field form__form-field--checkbox form__form-field--modal">
+                        <input class="visually-hidden" type="checkbox" id="accept-2" name="terms" required="required" checked="checked"/>
+                        <label for="accept-2">Я согласен на обработку данных</label>
+                      </div>
+                      <div class="form__form-field form__form-field--checkbox form__form-field--modal">
+                        <input class="visually-hidden" type="checkbox" id="subscribe-2" name="subscribe"/>
+                        <label for="subscribe-2">Подписаться на новостную рассылку</label>
+                      </div>
                     </div>
-                    <div class="form__form-field form__form-field--text form__form-field--s form__form-field--2 form__form-field--modal">
-                      <input type="tel" id="phone-2" name="phone" placeholder="Телефон" title="Номер телефона должен начинаться с символов +7 и содержать 11 цифр" pattern="\+7[0-9]{10}" required="required"/>
-                      <label for="phone-2">Телефон</label>
+                    <div class="wrap wrap--ac">
+                      <button class="button--accent button button--form" type="submit"><span>Отправить заявку</span></button><img class="submit__icon" src="/img/loader.gif" alt="Анимирование изображение загрузки"/>
+                      <div class="submit__message"><span>Спасибо за заявку</span></div>
                     </div>
-                    <div class="form__form-field form__form-field--text form__form-field--s form__form-field--4 form__form-field--modal">
-                      <input type="text" id="company-2" name="company" placeholder="Название компании" required="required"/>
-                      <label for="company-2">Название компании</label>
-                    </div>
-                    <div class="form__form-field form__form-field--text form__form-field--5 form__form-field--modal">
-                      <select id="quantity-2" name="quantity-users" required="required">
-                        <option value="1-100">1-100</option>
-                        <option value="101-500">101-500</option>
-                        <option value="501-1000">501-1000</option>
-                        <option value="1000+">1000+</option>
-                      </select>
-                      <label for="quantity-2">Количество пользователей</label>
-                    </div>
-                  </div>
-                  <div class="form__checkbox-wrap">
-                    <div class="form__form-field form__form-field--checkbox form__form-field--modal">
-                      <input class="visually-hidden" type="checkbox" id="accept-2" name="terms" required="required" checked="checked"/>
-                      <label for="accept-2">Я согласен на обработку данных</label>
-                    </div>
-                    <div class="form__form-field form__form-field--checkbox form__form-field--modal">
-                      <input class="visually-hidden" type="checkbox" id="subscribe-2" name="subscribe"/>
-                      <label for="subscribe-2">Подписаться на новостную рассылку</label>
-                    </div>
-                  </div>
-                  <div class="wrap wrap--ac">
-                    <button class="button--accent button button--form" type="submit"><span>Отправить заявку</span></button><img class="submit__icon" src="/img/loader.gif" alt="Анимирование изображение загрузки"/>
-                    <div class="submit__message"><span>Спасибо за заявку</span></div>
-                  </div>
-                </form>
+                  </form>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
+      <script src="/js/vendor.min.js"></script>
+      <script src="/js/index.min.js"></script>
     </div>
-    <script src="/js/vendor.min.js"></script>
-    <script src="/js/index.min.js"></script>
   </body>
 </html>

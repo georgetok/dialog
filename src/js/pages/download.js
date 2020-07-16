@@ -42,40 +42,27 @@ const choiceOptions = {
     containerOuter: 'card__select select select--choice select--dark choices',
   }
 };
-const windowsChoiceSelector = document.getElementById('choice-windows');
 const linuxChoiceSelector = document.getElementById('choice-linux');
-const macosChoiceSelector = document.getElementById('choice-macos');
 
-if (windowsChoiceSelector) {
-  windowsChoiceSelector.addEventListener('choice', function (event) {
-    let a = document.createElement('a');
-    document.body.appendChild(a);
-    a.download = 'file test';
-    a.href = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAOCAYAAAAmL5yKAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAABWSURBVDhPY0xISPh//0UOA7mAiVyNMH2jBjAwkBQGjD9KGBTEJ6OEO0kG2NvbMwCjnXwDsEU5SS5ANuDhjRCGJbPFSQsDdBfIyMhQZgDIQLK9QLWkDABPsQw5I+5qmAAAAABJRU5ErkJggg==';
-    a.click();
-    a.parentNode.removeChild(a);
-  });
+const generateLink = function (link) {
+  let a = document.createElement('a');
+  document.body.appendChild(a);
+  a.download = 'event';
+  a.href = link;
+  a.click();
+  a.parentNode.removeChild(a);
+};
 
-  linuxChoiceSelector.addEventListener('choice', function (event) {
-    let a = document.createElement('a');
-    document.body.appendChild(a);
-    a.download = 'event';
-    a.href = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAOCAYAAAAmL5yKAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAABWSURBVDhPY0xISPh//0UOA7mAiVyNMH2jBjAwkBQGjD9KGBTEJ6OEO0kG2NvbMwCjnXwDsEU5SS5ANuDhjRCGJbPFSQsDdBfIyMhQZgDIQLK9QLWkDABPsQw5I+5qmAAAAABJRU5ErkJggg==';
-    a.click();
-    a.parentNode.removeChild(a);
-  });
-
-  macosChoiceSelector.addEventListener('choice', function (event) {
-    let a = document.createElement('a');
-    document.body.appendChild(a);
-    a.download = 'event';
-    a.href = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAOCAYAAAAmL5yKAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAABWSURBVDhPY0xISPh//0UOA7mAiVyNMH2jBjAwkBQGjD9KGBTEJ6OEO0kG2NvbMwCjnXwDsEU5SS5ANuDhjRCGJbPFSQsDdBfIyMhQZgDIQLK9QLWkDABPsQw5I+5qmAAAAABJRU5ErkJggg==';
-    a.click();
-    a.parentNode.removeChild(a);
-  });
-  const windowsChoice = new Choices(windowsChoiceSelector, choiceOptions);
+if (linuxChoiceSelector) {
   const linuxChoice = new Choices(linuxChoiceSelector, choiceOptions);
-  const macosChoice = new Choices(macosChoiceSelector, choiceOptions);
+  linuxChoiceSelector.addEventListener('choice', function (event) {
+    if (event.detail.choice.label === 'Linux 64') {
+      generateLink('https://dialog-enterprise-x-desktop.s3.eu-west-2.amazonaws.com/dialog_ee_x_2.3.2_amd64.deb');
+    }
+    if (event.detail.choice.label === 'Linux 32') {
+      generateLink('https://dialog-enterprise-x-desktop.s3.eu-west-2.amazonaws.com/dialog_ee_x_2.3.2_x86_64.rpm');
+    }
+  });
 }
 
 

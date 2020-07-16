@@ -5,13 +5,13 @@ mixin hero(props)
         h1.hero__title
           span Dialog !{t.download.for}&nbsp;
           span=props.title
-        button.button.button--dark.hero__button
+        a.button.button--dark.hero__button(href=props.file)
           if props.icon
             +svg(`icon-${props.icon}`, 15, 15)
           span= props.buttonText
 
         p.hero__text=props.text
-        a.link.link--accent.hero__link(href=props.link)=t.download.instruction
+        //a.link.link--accent.hero__link(href=props.link)=t.download.instruction
 
       .hero__right
         .hero__img
@@ -40,7 +40,7 @@ mixin col(props)
     .card.card--download.wrap.wrap--dc
       h5.card__title=props.title
       if props.iconName
-        .card__icon
+        .card__icon.icon.icon--outline.icon--round
           +svg(`icon-${props.iconName}`, '70','70')
       if props.qrName
         .card__qr
@@ -52,13 +52,26 @@ mixin col(props)
             option(name=index)=val
       if !props.isNoInstruction
         a.link.link--accent.card__link(href=props.link)=t.download.instruction
-      if props.isButton
+      if props.isButtonDownload
+        +button(
+          t.download.d,
+          {
+            styleType: 'dark',
+            type: 'submit',
+            isLink: true,
+            href: props.link,
+            additionalClassName: 'card__button'
+          }
+        )
+      if props.isButtonOpen
         +button(
           t.button.open,
           {
             styleType: 'dark',
             type: 'submit',
             isLink: true,
+            blank: true,
+            href: 'https://demo.dlg.im',
             additionalClassName: 'card__button'
           }
         )

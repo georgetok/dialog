@@ -93,23 +93,23 @@
       "en": "Efficient teamwork"
     },
     "adv_title_2": {
-      "ru": "Сокращение расходов на коммуникации",
+      "ru": "Сокращение расходов на связь",
       "en": "Reduce communication costs"
     },
     "adv_title_3": {
-      "ru": "Защищенная коммуникация",
+      "ru": "Защищенное общение",
       "en": "Secure communication"
     },
     "adv_sub_1": {
-      "ru": "Легко находите коллег, общайтесь в групповых чатах, обменивайтесь файлами и совершайте аудио- и видеозвонки.",
+      "ru": "Легко находите коллег, общайтесь в групповых чатах, обменивайтесь файлами, совершайте аудио- и видеозвонки.",
       "en": "Find colleagues easily, communicate in group chats, share files and make audio and video calls."
     },
     "adv_sub_2": {
-      "ru": "Объединение разрозненных инструментов в одном решении позволяет сократить расходы на ПО, оборудование, обслуживание и поддержку",
+      "ru": "Объединение разрозненных инструментов в одном решении позволяет сократить расходы на ПО, оборудование, обслуживание и поддержку.",
       "en": "Combining various tools in one platform optimizes the cost of software, hardware, maintenance and support."
     },
     "adv_sub_3": {
-      "ru": "Архитектура enterprise уровня, интеграция с системами корпоративной безопасности.",
+      "ru": "Защита информации и интеграция с системами корпоративной безопасности.",
       "en": "Hosting on company servers and integration with corporate security systems."
     },
 
@@ -173,7 +173,7 @@
       "en": "Integration with Information Security Infrastructure"
     },
     "sec_li_1_1": {
-      "ru": "Интеграция с Active Directory AD / LDAP",
+      "ru": "Интеграция с Active Directory / LDAP",
       "en": "Active Directory AD / LDAP Integration"
     },
     "sec_li_1_2": {
@@ -638,7 +638,7 @@
       "en": "GraphQL"
     },
     "card_text_3": {
-      "ru": "Интегрируйте Dialog с внешними системами и управляйте данными через команды GraphQL",
+      "ru": "Интегрируйте Dialog с внешними системами и управляйте данными через команды GraphQL.",
       "en": "Integrate Dialog with external systems and manage data through GraphQL commands."
     },
     "card_title_4": {
@@ -658,7 +658,7 @@
       "en": "SIEM"
     },
     "card_text_5": {
-      "ru": "Функции Dialog в WebHooks как простой способ получения автоматических сообщений и обновления данных, отправленных в текстовый канал на вашем сервере.",
+      "ru": "Функции Dialog в Webhooks как простой способ получения автоматических сообщений и обновления данных, отправленных в текстовый канал на вашем сервере.",
       "en": "Dialog features in WebHooks are an easy way to receive automatic messages and update data sent to a text channel on your server."
     }
   },

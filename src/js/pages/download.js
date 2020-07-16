@@ -57,10 +57,10 @@ if (linuxChoiceSelector) {
   const linuxChoice = new Choices(linuxChoiceSelector, choiceOptions);
   linuxChoiceSelector.addEventListener('choice', function (event) {
     if (event.detail.choice.label === 'Linux 64') {
-      generateLink('https://dialog-enterprise-x-desktop.s3.eu-west-2.amazonaws.com/dialog_ee_x_2.3.2_amd64.deb');
+      generateLink('https://dialog-enterprise-x-desktop.s3.eu-west-2.amazonaws.com/dialog_ee_x_2.3.3.150_amd64.deb');
     }
     if (event.detail.choice.label === 'Linux 32') {
-      generateLink('https://dialog-enterprise-x-desktop.s3.eu-west-2.amazonaws.com/dialog_ee_x_2.3.2_x86_64.rpm');
+      generateLink('https://dialog-enterprise-x-desktop.s3.eu-west-2.amazonaws.com/dialog_ee_x_2.3.3.150_x86_64.rpm');
     }
   });
 }

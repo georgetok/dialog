@@ -609,4 +609,4 @@ gulp.task('minify', gulp.series('images:minify'));
 gulp.task('files', gulp.series('graphic', 'copy'));
 gulp.task('main', gulp.series('index', 'html', 'home'));
 gulp.task('start', gulp.series('css', 'js', 'main', 'server'));
-gulp.task('build', gulp.series('clean', 'blog', 'files', 'minify', 'css', 'js', 'start'));
+gulp.task('build', gulp.series('clean', 'blog', 'files', 'minify', 'start'));

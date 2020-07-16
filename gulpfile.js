@@ -147,20 +147,20 @@ const requireJSON = (file) =>
 /*
  * TASKS
  */
-gulp.task('json', async function () {
-  const posts = await api.posts.browse({
-    include: "tags,authors",
-    limit: "all"
-  }).catch(err => {
-    console.error("error getting data");
-  });
-  const file = new File({
-    path: `posts.json`,
-    contents: Buffer.from(JSON.stringify(posts))
-  });
-  // noinspection JSUnresolvedFunction
-  return streamArray([file]).pipe(gulp.dest(`${SOURCE_PATH}json/`));
-});
+// gulp.task('json', async function () {
+//   const posts = await api.posts.browse({
+//     include: "tags,authors",
+//     limit: "all"
+//   }).catch(err => {
+//     console.error("error getting data");
+//   });
+//   const file = new File({
+//     path: `posts.json`,
+//     contents: Buffer.from(JSON.stringify(posts))
+//   });
+//   // noinspection JSUnresolvedFunction
+//   return streamArray([file]).pipe(gulp.dest(`${SOURCE_PATH}json/`));
+// });
 
 gulp.task('posts:ru', async function () {
   const i18n = requireJSON(`${SOURCE_PATH}/json/i18n.json`);
@@ -568,6 +568,7 @@ gulp.task('server', function () {
   gulp.watch(`${SOURCE_PATH}js/**/*.js`, gulp.series('js', 'refresh'));
 
 });
+
 gulp.task('refresh', function (done) {
   server.reload();
   done();
@@ -608,5 +609,4 @@ gulp.task('minify', gulp.series('images:minify'));
 gulp.task('files', gulp.series('graphic', 'copy'));
 gulp.task('main', gulp.series('index', 'html', 'home'));
 gulp.task('start', gulp.series('css', 'js', 'main', 'server'));
-gulp.task('recreate', gulp.series('clean', 'blog', 'files', 'start'));
 gulp.task('build', gulp.series('clean', 'blog', 'files', 'minify', 'start'));

@@ -14,7 +14,7 @@ build:
 	$(call run-in-docker, \
 	npm config set //$(NPM_SOURCE_REGISTRY)/:_authToken $(NPM_SOURCE_REGISTRY_TOKEN); \
 	npm i; \
-	npm run build; \
+	npm run build \
 	)
 
 run:
@@ -23,4 +23,3 @@ run:
 	npm start,, \
 	-p 3000:3000 \
 	)
-

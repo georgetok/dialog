@@ -56,10 +56,9 @@
           <div id="macos-hero">
             <div class="hero__wrapper">
               <div class="hero__left">
-                <h1 class="hero__title"><span>Dialog for&nbsp;</span><span>macOS</span></h1>
-                <button class="button button--dark hero__button"><span>Download</span>
-                </button>
-                <p class="hero__text">Works with macOS 10.10 (Yosemite) and higher</p><a class="link link--accent hero__link" href="/">Installation instruction</a>
+                <h1 class="hero__title"><span>Dialog for&nbsp;</span><span>macOS</span></h1><a class="button button--dark hero__button" href="https://dialog-enterprise-x-desktop.s3.eu-west-2.amazonaws.com/dialog-ee-x-2.3.2.dmg"><span>Download</span></a>
+                <p class="hero__text">Works with macOS 10.10 (Yosemite) and higher</p>
+                <!--a.link.link--accent.hero__link(href=props.link)=t.download.instruction-->
               </div>
               <div class="hero__right">
                 <div class="hero__img">
@@ -73,10 +72,9 @@
           <div id="windows-hero">
             <div class="hero__wrapper">
               <div class="hero__left">
-                <h1 class="hero__title"><span>Dialog for&nbsp;</span><span>Windows</span></h1>
-                <button class="button button--dark hero__button"><span>Download</span>
-                </button>
-                <p class="hero__text">Works with Windows 8 and higher</p><a class="link link--accent hero__link" href="/">Installation instruction</a>
+                <h1 class="hero__title"><span>Dialog for&nbsp;</span><span>Windows</span></h1><a class="button button--dark hero__button" href="https://dialog-enterprise-x-desktop.s3.eu-west-2.amazonaws.com/dialog-ee-x-setup-2.3.2.exe"><span>Download</span></a>
+                <p class="hero__text">Works with Windows 8 and higher</p>
+                <!--a.link.link--accent.hero__link(href=props.link)=t.download.instruction-->
               </div>
               <div class="hero__right">
                 <div class="hero__img">
@@ -90,10 +88,9 @@
           <div id="linux-hero">
             <div class="hero__wrapper">
               <div class="hero__left">
-                <h1 class="hero__title"><span>Dialog for&nbsp;</span><span>Linux</span></h1>
-                <button class="button button--dark hero__button"><span>Download</span>
-                </button>
-                <p class="hero__text">Works with Linux 4.6.x and higher</p><a class="link link--accent hero__link" href="/">Installation instruction</a>
+                <h1 class="hero__title"><span>Dialog for&nbsp;</span><span>Linux</span></h1><a class="button button--dark hero__button" href="https://dialog-enterprise-x-desktop.s3.eu-west-2.amazonaws.com/dialog_ee_x_2.3.2_amd64.deb"><span>Download</span></a>
+                <p class="hero__text">Works with Linux 4.6.x and higher</p>
+                <!--a.link.link--accent.hero__link(href=props.link)=t.download.instruction-->
               </div>
               <div class="hero__right">
                 <div class="hero__img">
@@ -107,13 +104,12 @@
           <div id="ios-hero">
             <div class="hero__wrapper">
               <div class="hero__left">
-                <h1 class="hero__title"><span>Dialog for&nbsp;</span><span>iOS</span></h1>
-                <button class="button button--dark hero__button">
+                <h1 class="hero__title"><span>Dialog for&nbsp;</span><span>iOS</span></h1><a class="button button--dark hero__button" href="https://apps.apple.com/ru/app/dialog-enterprise/id1475749650">
                   <svg width="15" height="15" aria-hidden="true">
                     <use xlink:href="/img/sprite.svg#icon-apple"></use>
-                  </svg><span>Download for App Store</span>
-                </button>
-                <p class="hero__text">Works with iOS 8.1 and higher</p><a class="link link--accent hero__link" href="/">Installation instruction</a>
+                  </svg><span>Download for App Store</span></a>
+                <p class="hero__text">Works with iOS 8.1 and higher</p>
+                <!--a.link.link--accent.hero__link(href=props.link)=t.download.instruction-->
               </div>
               <div class="hero__right">
                 <div class="hero__img">
@@ -127,13 +123,12 @@
           <div id="android-hero">
             <div class="hero__wrapper">
               <div class="hero__left">
-                <h1 class="hero__title"><span>Dialog for&nbsp;</span><span>Android</span></h1>
-                <button class="button button--dark hero__button">
+                <h1 class="hero__title"><span>Dialog for&nbsp;</span><span>Android</span></h1><a class="button button--dark hero__button" href="https://play.google.com/store/apps/details?id=im.dlg.dialogx">
                   <svg width="15" height="15" aria-hidden="true">
                     <use xlink:href="/img/sprite.svg#icon-google-play"></use>
-                  </svg><span>Download for Google Play</span>
-                </button>
-                <p class="hero__text">Works with Android 8.1 and higher</p><a class="link link--accent hero__link" href="/">Installation instruction</a>
+                  </svg><span>Download for Google Play</span></a>
+                <p class="hero__text">Works with Android 8.1 and higher</p>
+                <!--a.link.link--accent.hero__link(href=props.link)=t.download.instruction-->
               </div>
               <div class="hero__right">
                 <div class="hero__img">
@@ -151,56 +146,42 @@
               <div class="col is-visible" id="windows-col">
                 <div class="card card--download wrap wrap--dc">
                   <h5 class="card__title">Download for Windows</h5>
-                  <div class="card__icon">
+                  <div class="card__icon icon icon--outline icon--round">
                     <svg width="70" height="70" aria-hidden="true">
                       <use xlink:href="/img/sprite.svg#icon-windows"></use>
                     </svg>
-                  </div>
-                  <select id="choice-windows">
-                    <option selected="selected" disabled="disabled">Download</option>
-                    <option name="0">.exe</option>
-                    <option name="1">.msi</option>
-                  </select><a class="link link--accent card__link" href="/">Installation instruction</a>
+                  </div><a class="button button--dark card__button" href="https://dialog-enterprise-x-desktop.s3.eu-west-2.amazonaws.com/dialog-ee-x-setup-2.3.2.exe" target="_self"><span>Download</span></a>
                 </div>
               </div>
               <div class="col is-visible" id="macos-col">
                 <div class="card card--download wrap wrap--dc">
                   <h5 class="card__title">Download for macOS</h5>
-                  <div class="card__icon">
+                  <div class="card__icon icon icon--outline icon--round">
                     <svg width="70" height="70" aria-hidden="true">
                       <use xlink:href="/img/sprite.svg#icon-macos"></use>
                     </svg>
-                  </div>
-                  <select id="choice-macos">
-                    <option selected="selected" disabled="disabled">Download</option>
-                    <option name="0">.deb</option>
-                    <option name="1">.deb x86</option>
-                    <option name="2">.rpm x86</option>
-                    <option name="3">.rpm</option>
-                  </select><a class="link link--accent card__link" href="/">Installation instruction</a>
+                  </div><a class="button button--dark card__button" href="https://dialog-enterprise-x-desktop.s3.eu-west-2.amazonaws.com/dialog-ee-x-2.3.2.dmg" target="_self"><span>Download</span></a>
                 </div>
               </div>
               <div class="col is-visible" id="linux-col">
                 <div class="card card--download wrap wrap--dc">
                   <h5 class="card__title">Download for Linux</h5>
-                  <div class="card__icon">
+                  <div class="card__icon icon icon--outline icon--round">
                     <svg width="70" height="70" aria-hidden="true">
                       <use xlink:href="/img/sprite.svg#icon-linux"></use>
                     </svg>
                   </div>
                   <select id="choice-linux">
                     <option selected="selected" disabled="disabled">Download</option>
-                    <option name="0">.deb</option>
-                    <option name="1">.deb x86</option>
-                    <option name="2">.rpm x86</option>
-                    <option name="3">.rpm</option>
-                  </select><a class="link link--accent card__link" href="/">Installation instruction</a>
+                    <option name="0">Linux 64</option>
+                    <option name="1">Linux 32</option>
+                  </select>
                 </div>
               </div>
               <div class="col is-visible" id="ios-col">
                 <div class="card card--download wrap wrap--dc">
                   <h5 class="card__title">Download for iOS</h5>
-                  <div class="card__icon">
+                  <div class="card__icon icon icon--outline icon--round">
                     <svg width="70" height="70" aria-hidden="true">
                       <use xlink:href="/img/sprite.svg#icon-ios"></use>
                     </svg>
@@ -209,13 +190,13 @@
                     <svg width="150" height="150" aria-hidden="true">
                       <use xlink:href="/img/sprite.svg#qr-ios"></use>
                     </svg>
-                  </div><a class="link link--accent card__link" href="/">Installation instruction</a>
+                  </div>
                 </div>
               </div>
               <div class="col is-visible" id="android-col">
                 <div class="card card--download wrap wrap--dc">
                   <h5 class="card__title">Download for Android</h5>
-                  <div class="card__icon">
+                  <div class="card__icon icon icon--outline icon--round">
                     <svg width="70" height="70" aria-hidden="true">
                       <use xlink:href="/img/sprite.svg#icon-android"></use>
                     </svg>
@@ -224,17 +205,17 @@
                     <svg width="150" height="150" aria-hidden="true">
                       <use xlink:href="/img/sprite.svg#qr-android"></use>
                     </svg>
-                  </div><a class="link link--accent card__link" href="/">Installation instruction</a>
+                  </div>
                 </div>
               </div>
               <div class="col is-visible" id="web-col">
                 <div class="card card--download wrap wrap--dc">
                   <h5 class="card__title">Open Web version</h5>
-                  <div class="card__icon">
+                  <div class="card__icon icon icon--outline icon--round">
                     <svg width="70" height="70" aria-hidden="true">
                       <use xlink:href="/img/sprite.svg#icon-chrome"></use>
                     </svg>
-                  </div><a class="button button--dark card__button" href="#" target="_self"><span>open</span></a>
+                  </div><a class="button button--dark card__button" href="https://demo.dlg.im" target="_blank"><span>Open</span></a>
                 </div>
               </div>
             </div>

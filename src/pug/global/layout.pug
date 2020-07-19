@@ -14,6 +14,15 @@ block variables
 html(lang=lang class=routeClass)
   block head
     script.
+      if ('caches' in window) {
+        caches.keys()
+          .then(function(keyList) {
+            return Promise.all(keyList.map(function(key) {
+              return caches.delete(key);
+            }));
+          })
+      }
+    script.
       self.addEventListener('activate', function(e) {
         self.registration.unregister()
           .then(function() {

@@ -3,11 +3,11 @@ services:
       deploy:
         readinessProbe:
           failureThreshold: 1
-          initialDelaySeconds: 2
+          initialDelaySeconds: 30
           periodSeconds: 3
           successThreshold: 1
           tcpSocket:
-            port: ${this.ingress.http-api}
+            port: ${this.ingress.http-api.port}
           timeoutSeconds: 1
         resources:
           minimal: 

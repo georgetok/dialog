@@ -1,6 +1,14 @@
 services:
     this:
       deploy:
+        readinessProbe:
+          failureThreshold: 1
+          initialDelaySeconds: 30
+          periodSeconds: 3
+          successThreshold: 1
+          tcpSocket:
+            port: ${this.ingress.http-api.port}
+          timeoutSeconds: 1
         resources:
           minimal: 
             requests:
@@ -9,6 +17,13 @@ services:
             limits:
               cpu: 150m
               memory: 200Mi
+          normal: 
+            requests:
+              cpu: 1
+              memory: 512Mi
+            limits:
+              cpu: 4
+              memory: 512Mi
       ingress:
         http-api:
           port: 3000

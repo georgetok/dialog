@@ -6,7 +6,7 @@ ARG NPM_TOKEN
 ARG NPM_REGISTRY
 
 ENV PATH="/opt/node/bin:${PATH}"
-yum install wget
+RUN yum install wget
 
 WORKDIR /opt/
 RUN rm -rf src/

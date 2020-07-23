@@ -3,7 +3,7 @@ services:
       deploy:
         readinessProbe:
           failureThreshold: 1
-          initialDelaySeconds: 30
+          initialDelaySeconds: 45
           periodSeconds: 3
           successThreshold: 1
           tcpSocket:

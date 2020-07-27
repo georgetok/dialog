@@ -3,21 +3,21 @@ services:
       deploy:
         readinessProbe:
           failureThreshold: 1
-          initialDelaySeconds: 30
+          initialDelaySeconds: 20
           periodSeconds: 3
           successThreshold: 1
-          tcpSocket:
-            port: ${this.ingress.http-api.port}
+          httpGet:
+            port: http-api
           timeoutSeconds: 1
         resources:
-          minimal: 
+          minimal:
             requests:
               cpu: 50m
               memory: 50Mi
             limits:
               cpu: 150m
               memory: 200Mi
-          normal: 
+          normal:
             requests:
               cpu: 1
               memory: 512Mi

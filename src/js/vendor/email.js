@@ -26,7 +26,7 @@ let Email = {
 };
 
 let domain = "https://dlg.im";
-let token = "a814f055-1379-4aa3-9e08-758dd972b6be";
+let token = "33c7a54a-b161-451e-8d7b-afea07e21bfc";
 
 let emailSendOffer = function (lang, isModal, pageName) {
   let form = document.getElementById(`form-offer${isModal ? '-modal' : ''}`);
@@ -76,7 +76,7 @@ let emailSendOffer = function (lang, isModal, pageName) {
 
   Email.send({
     SecureToken: token,
-    To: "secretkto2@gmail.com",
+    To: ["ivjubt8x@robot.zapier.com", "info@dlg.im"],
     From: "site-srv@dlg.im",
     Subject: 'Заявка с сайта dlg.im',
     Body: body

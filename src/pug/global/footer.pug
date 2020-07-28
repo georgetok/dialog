@@ -79,9 +79,9 @@ mixin footer()
         li
           a(href=`/${lang === "ru" ? "ru" : "en"}/legal` target="_blank" rel="noopener noreferrer")=t.nav.legal
         li
-          a(href=`/docs/privacy_policy.pdf` download="privacy policy" target="_blank" rel="noopener noreferrer")=t.nav.data
+          a(href='/docs/privacy_policy.pdf' target="_blank" rel="noopener noreferrer")=t.nav.data
         li
-          a(href=`/docs/anti_corruption_policy.pdf` download="anti corruption policy" target="_blank" rel="noopener noreferrer")=t.nav.corruption
+          a(href='/docs/anti_corruption_policy.pdf' target="_blank" rel="noopener noreferrer")=t.nav.corruption
 
       .footer__copyright
         p © 2016—2020 ООО «Диалог»

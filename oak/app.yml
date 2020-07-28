@@ -10,14 +10,14 @@ services:
             port: http-api
           timeoutSeconds: 1
         resources:
-          minimal: 
+          minimal:
             requests:
               cpu: 50m
               memory: 50Mi
             limits:
               cpu: 150m
               memory: 200Mi
-          normal: 
+          normal:
             requests:
               cpu: 1
               memory: 512Mi

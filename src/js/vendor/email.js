@@ -25,7 +25,8 @@ let Email = {
   }
 };
 
-let domain = "https://artponomariov.github.io";
+let domain = "https://dlg.im";
+let token = "33c7a54a-b161-451e-8d7b-afea07e21bfc";
 
 let emailSendOffer = function (lang, isModal, pageName) {
   let form = document.getElementById(`form-offer${isModal ? '-modal' : ''}`);
@@ -74,7 +75,7 @@ let emailSendOffer = function (lang, isModal, pageName) {
     `;
 
   Email.send({
-    SecureToken: "b940ea1d-6d82-42f5-b85a-67de942b89ac",
+    SecureToken: token,
     To: ["ivjubt8x@robot.zapier.com", "info@dlg.im"],
     From: "site-srv@dlg.im",
     Subject: 'Заявка с сайта dlg.im',
@@ -99,7 +100,7 @@ let emailSendFeedback = function (lang, isModal) {
   let button = form.querySelector('button');
 
   Email.send({
-    SecureToken: "b940ea1d-6d82-42f5-b85a-67de942b89ac",
+    SecureToken: token,
     To: "support@dlg.im",
     From: "site-srv@dlg.im",
     Subject: 'Заявка со страницы “Помощь"',
@@ -190,7 +191,7 @@ let emailSendCV = function (lang) {
     reader.onload = function () {
       let dataUri = "data:" + file.type + ";base64," + btoa(reader.result);
       Email.send({
-        SecureToken: "b940ea1d-6d82-42f5-b85a-67de942b89ac",
+        SecureToken: token,
         To: "hire@dlg.im",
         From: "site-srv@dlg.im",
         Subject: 'Заявка со страницы “Вакансии”',
@@ -209,7 +210,7 @@ let emailSendCV = function (lang) {
     };
   } else {
     Email.send({
-      SecureToken: "b940ea1d-6d82-42f5-b85a-67de942b89ac",
+      SecureToken: token,
       To: "hire@dlg.im",
       From: "site-srv@dlg.im",
       Subject: 'Заявка со страницы “Вакансии”',
@@ -249,7 +250,7 @@ let emailSendBlog = function (lang, type) {
   </div>`;
 
   Email.send({
-    SecureToken: "b940ea1d-6d82-42f5-b85a-67de942b89ac",
+    SecureToken: token,
     To: "38jvzegk@robot.zapier.com",
     From: "site-srv@dlg.im",
     Subject: 'Подписка на новостную рассылку',

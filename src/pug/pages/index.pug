@@ -1,18 +1,18 @@
 doctype html
 
-html(lang=lang)
+html(lang="")
   head
     meta(charset="utf-8")
     meta(name="viewport" content="width=device-width, initial-scale=1")
     meta(name="format-detection" content="telephone=no")
     title redirect to main...
-  body(lang="")
+  body
     script.
       let lang = navigator.language || navigator.userLanguage;
       if (lang.indexOf('ru') === 0) {
+        document.querySelector("html").setAttribute("lang", "ru");
         window.location = '/ru/';
-        document.querySelector("body").setAttribute("lang", "ru");
       } else {
+        document.querySelector("html").setAttribute("lang", "en");
         window.location = '/en/';
-        document.querySelector("body").setAttribute("lang", "en");
       }

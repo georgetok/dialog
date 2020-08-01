@@ -7,19 +7,22 @@ let Email = {
         n(e);
       });
     });
-  }, ajaxPost: function (e, n, t) {
+  },
+  ajaxPost: function (e, n, t) {
     let a = Email.createCORSRequest("POST", e);
     a.setRequestHeader("Content-type", "application/x-www-form-urlencoded"), a.onload = function () {
       let e = a.responseText;
       null != t && t(e);
     }, a.send(n);
-  }, ajax: function (e, n) {
+  },
+  ajax: function (e, n) {
     let t = Email.createCORSRequest("GET", e);
     t.onload = function () {
       let e = t.responseText;
       null != n && n(e);
     }, t.send();
-  }, createCORSRequest: function (e, n) {
+  },
+  createCORSRequest: function (e, n) {
     let t = new XMLHttpRequest;
     return "withCredentials" in t ? t.open(e, n, !0) : "undefined" != typeof XDomainRequest ? (t = new XDomainRequest).open(e, n) : t = null, t;
   }
@@ -76,7 +79,7 @@ let emailSendOffer = function (lang, isModal, pageName) {
 
   Email.send({
     SecureToken: token,
-    To: ["ivjubt8x@robot.zapier.com", "info@dlg.im"],
+    To: ["artyponomarty@gmail.com"],
     From: "site-srv@dlg.im",
     Subject: 'Заявка с сайта dlg.im',
     Body: body

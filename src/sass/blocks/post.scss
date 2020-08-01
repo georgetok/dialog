@@ -59,10 +59,16 @@
 
       &.md {
         width: 60%;
+
+        @include mobile-sm {
+          &:not(.selector) {
+            width: 100%;
+          }
+        }
       }
 
       &.lg {
-        width: 80%;
+        width: 100%;
       }
     }
 

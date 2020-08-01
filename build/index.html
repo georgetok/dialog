@@ -1,18 +1,21 @@
-
+<!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1"/>
-    <meta name="format-detection" content="telephone=no"/>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="format-detection" content="telephone=no">
     <title>redirect to main...</title>
   </head>
-  <body>
+  <body lang="">
     <script>
       let lang = navigator.language || navigator.userLanguage;
-      if (lang.indexOf('ru') === 0)
-        window.location = '/ru/'
-      else
-        window.location = '/en/'
+      if (lang.indexOf('ru') === 0) {
+        window.location = '/ru/';
+        document.querySelector("body").setAttribute("lang", "ru");
+      } else {
+        window.location = '/en/';
+        document.querySelector("body").setAttribute("lang", "en");
+      }
     </script>
   </body>
 </html>

@@ -7,7 +7,7 @@
   background-color: $color-contrast;
   box-shadow: 0 1px 6px rgba(146, 135, 193, 0.15);
 
-  @include laptop {
+  @include tablet {
     padding: 18px 0 17px;
   }
 
@@ -26,7 +26,7 @@
   align-items: center;
   padding: 0 var(--indent);
 
-  @include laptop {
+  @include tablet {
     justify-content: space-between;
   }
 }
@@ -38,7 +38,7 @@
   width: 118px;
   margin-right: 20px;
 
-  @include laptop {
+  @include tablet {
     width: 105px;
   }
 
@@ -52,7 +52,7 @@
   width: 100%;
   transform: translateX(0);
 
-  @include laptop {
+  @include tablet {
     position: fixed;
     top: 0;
     left: 0;
@@ -69,7 +69,7 @@
   }
 
   &--open {
-    @include laptop {
+    @include tablet {
       transform: translateX(0);
       transition: transform $transition-props;
     }
@@ -92,7 +92,7 @@
     width: 100%;
   }
 
-  @include laptop {
+  @include tablet {
     display: block;
   }
 }
@@ -120,7 +120,7 @@
     background-position: center;
   }
 
-  @include laptop {
+  @include tablet {
     display: flex;
   }
 }
@@ -139,7 +139,7 @@
   cursor: pointer;
   outline: none;
 
-  @include laptop {
+  @include tablet {
     display: block;
   }
 }
@@ -147,11 +147,11 @@
 .header__top-panel {
   display: none;
 
-  @include laptop {
+  @include tablet {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 13px 33px 10px 40px;
+    padding: 13px var(--indent) 10px var(--indent);
     background-color: $color-contrast;
     box-shadow: 0 1px 6px rgba(146, 135, 193, 0.15);
   }

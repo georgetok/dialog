@@ -8,16 +8,16 @@ if ('serviceWorker' in navigator) {
   window.addEventListener('load',() => {
     navigator.serviceWorker
       .register('../sw.js')
-      .then(reg => console.log('Service Worker: Registered'))
-      .catch(err => console.log('Service Worker Error'))
+      .then(reg => console.log(reg))
+      .catch(err => console.log(err))
   })
 }
 
 const global = () => {
   setPageHeight();
   header();
-
 };
+
 const router = {
   pages: {
     main: main,

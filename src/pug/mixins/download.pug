@@ -11,7 +11,7 @@ mixin hero(props)
           span= props.buttonText
 
         p.hero__text=props.text
-        //a.link.link--accent.hero__link(href=props.link)=t.download.instruction
+        //- a.link.link--accent.hero__link(href=props.link)=t.download.instruction
 
       .hero__right
         .hero__img
@@ -49,7 +49,7 @@ mixin col(props)
         select(id=`choice-${props.id}`)
           option(selected disabled)=t.download.d
           each val, index in props.select
-            option(name=index)=val
+            option(id=index)=val
       if !props.isNoInstruction
         a.link.link--accent.card__link(href=props.link)=t.download.instruction
       if props.isButtonDownload

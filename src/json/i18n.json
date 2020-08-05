@@ -1033,6 +1033,10 @@
       "ru": "Карьера | Dialog",
       "en": "Career | Dialog"
     },
+    "download_title": {
+      "ru": "Скачать | Dialog",
+      "en": "Download | Dialog"
+    },
     "public_title": {
       "ru": "Социальная ответственность | Dialog",
       "en": "Social respoinsibility | Dialog"

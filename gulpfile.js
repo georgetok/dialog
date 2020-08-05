@@ -543,6 +543,7 @@ gulp.task('server', function () {
     open: false,
     cors: true,
     ui: false,
+    host: "0.0.0.0",
     ghostMode: false
   }, (err, bs) => {
     bs.addMiddleware("*", (req, res) => {

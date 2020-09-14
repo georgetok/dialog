@@ -289,7 +289,7 @@ gulp.task('images:minify', function () {
           optimizationLevel: 6,
         }),
         imageminMozjpeg({
-          quality: 90,
+          quality: 70,
         }),
         imagemin.svgo(),
       ])
@@ -302,7 +302,7 @@ gulp.task('images:webp', function () {
     .src(Paths.images.webpSrc)
     .pipe(
       webp({
-        quality: 90,
+        quality: 70,
       })
     )
     .pipe(gulp.dest(Paths.images.dest));

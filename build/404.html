@@ -1,0 +1,16 @@
+
+<html>
+  <head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta name="format-detection" content="telephone=no"/>
+    <title>redirect to 404...</title>
+    <script>
+      let lang = navigator.language || navigator.userLanguage;
+        if (lang.indexOf('ru') === 0)
+          window.location = '/ru/404'
+        else
+          window.location = '/en/404'
+    </script>
+  </head>
+</html>
